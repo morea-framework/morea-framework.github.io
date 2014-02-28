@@ -140,7 +140,7 @@ To run the local version, cd to the src/ directory and invoke:
 
     [~/moreatest/master/src] $ jekyll serve --baseurl "" --watch
 
-The results are at http://localhost:4000.  The --watch options means rerun jekyll when files change.
+The results are at [http://localhost:4000].  The --watch options means rerun jekyll when files change.
 
 Combine this with [LiveReload](http://livereload.com/) and your browser will refresh whenever a change is made. Sweet!
 
