@@ -19,7 +19,7 @@ Why Morea?
 
 After years of recreating class websites from scratch using WordPress, I started this project to make easier for
 me to create, share, and modify educational material. Initially, I just wanted to get away from a traditional CMS
-and use git for course content management.  As I started prototyping, I realized that my educational approach typically
+and use git, GitHub, and GitHub Pages for course content development and publication.  As I started prototyping, I realized that my educational approach typically
 contains the same five building blocks, and so I baked them into the framework as well.
 
 The content for a Morea-based course is contained in a [GitHub](http://github.com) repository.  Note that educators (with a .edu account) can get a
