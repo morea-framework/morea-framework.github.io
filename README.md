@@ -138,7 +138,7 @@ version of your source files.
 
 To run the local version, cd to the src/ directory and invoke:
 
-    jekyll serve --baseurl "" --watch
+    [~/moreatest/master/src] $ jekyll serve --baseurl "" --watch
 
 The results are at http://localhost:4000.  The --watch options means rerun jekyll when files change.
 
