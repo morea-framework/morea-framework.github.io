@@ -122,7 +122,8 @@ the files in the master/src/ subdirectory and generate the website in the gh-pag
 Now, use git to commit the website to GitHub:
 
     [~/moreatest/master/src] $ cd ../../gh-pages
-    [~/moreatest/gh-pages] $ git commit -a -m "Commit latest html sources"
+    [~/moreatest/gh-pages] $ git add .
+    [~/moreatest/gh-pages] $ git commit -m "Commit latest html sources"
     [~/moreatest/gh-pages] $ git push origin gh-pages
 
 If everything worked correctly, you should now be able to view the template at your project's GitHub pages URL (replace
