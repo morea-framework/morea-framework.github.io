@@ -42,8 +42,8 @@ blockquote {
 }
 
 .home-page-margins {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 
@@ -55,6 +55,10 @@ blockquote {
    E9F2F9 (light gray blue)
    FFFFFF (white)
 */
+
+.gray-background {
+    background-color: #eeeeee;
+}
 
 .dark-blue-background {
     background-color: #3C8DC5;
