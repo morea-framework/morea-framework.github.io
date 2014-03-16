@@ -47,106 +47,184 @@
 <div class="container">
   <h1>Morea Quick Start</h1>
 
-<h2>Join GitHub</h2>
+<h2>1. Installation</h2>
+
+<p>To use Morea, you need to have git and jekyll installed and have an account at GitHub.</p>
+
+<h4>Join GitHub</h4>
 
 <p>If you haven&#39;t already, <a href="https://help.github.com/articles/signing-up-for-a-new-github-account">sign up for GitHub</a>.
 If you are associated with an educational institution (i.e. have a .edu email account), you can <a href="https://education.github.com/">request a free micro account</a> providing you with 5 private repos.</p>
 
-<h2>Install git</h2>
+<h4>Install git</h4>
 
 <p>Follow these instructions to <a href="https://help.github.com/articles/set-up-git">install git</a>. (Be sure to click the tab corresponding to your OS.)</p>
 
-<h2>Install Jekyll</h2>
+<h4>Install Jekyll</h4>
 
-<p>Next, <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source
+<p>Finally, <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source
 files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
 If you have problems, you might want to consider using <a href="http://dwradcliffe.com/2013/04/12/vagrant-to-compile-jekyll.html">Vagrant for Jekyll site generation</a>.</p>
 
-<h2>Fork the basic-tempate repo</h2>
+<h2>2. Create a course</h2>
 
-<p>Morea provides the <a href="https://github.com/morea-framework/basic-template">template-basic</a> repo for new users. Go to this page,
+<p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to
+generate a Morea course website.  You do this by forking a current Morea repository on GitHub into your own account,
+then setting up local branches for development.</p>
+
+<h4>Fork a Morea repo</h4>
+
+<p>While you can fork any Morea repo, this Quickstart will use
+the <a href="https://github.com/morea-framework/basic-template">basic-template</a> repo. Go to this page in a browser,
 then press the &quot;Fork&quot; button in the upper right corner.  This will create a copy of that repo in your own account and
 take you to your new repo&#39;s home page.</p>
 
 <p>Now click the &quot;Settings&quot; link on the right side of the page, and rename the repo from &quot;basic-template&quot;
-to the name of the course you wish to develop (such as &quot;CS300&quot;).  If you are just experimenting, you might name
-it &quot;MoreaTest&quot;.</p>
+to the name of the course you wish to develop (such as &quot;cs300&quot;).</p>
 
-<p>You now have a Morea repo, but it&#39;s in the cloud. To actually develop your site, you need to create a local environment.</p>
+<p>You now have a Morea repo, but it&#39;s in the cloud, and it doesn&#39;t have your course content. To fix this, you need
+to set up a local environment and download the files to it.</p>
 
-<h2>Set up your local directory structure</h2>
+<h4>Set up your local directory structure</h4>
 
-<p>Developing a Morea site requires managing (at a minimum) two branches for each repo: the &quot;master&quot; branch containing the source
-files for your course, and the &quot;gh-pages&quot; branch containing the website files produced by running Jekyll over your
-source files. So, development of your course involves (at a minimum) the following workflow:</p>
+<p>Developing a Morea site requires managing (at a minimum) two branches for each repo: a &quot;master&quot; branch containing the source
+files for your course, and a special orphan &quot;gh-pages&quot; branch containing the website files produced by running Jekyll over your
+source files.</p>
+
+<p>First, make a top-level directory for your course. Let&#39;s call it &quot;cs300&quot;, and let&#39;s assume
+that&#39;s the name of your GitHub repo as well. Make the directory and enter it as follows:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~] $ mkdir cs300
+[~] $ cd cs300
+</code></pre></div>
+<p>Second, &quot;clone&quot; the master branch of your repo residing on GitHub into a subdirectory of cs300/ named &quot;master&quot;. </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ git clone git@github.com:accountname/cs300.git master
+</code></pre></div>
+<p>Replace &quot;accountname&quot; by your own account.</p>
+
+<p>Third, create an &quot;orphan&quot; branch called &quot;gh-pages&quot; next to the &quot;master&quot; branch following <a href="https://help.github.com/articles/creating-project-pages-manually">GitHub&#39;s approach</a>
+(again replacing &quot;accountname&quot; by your own account):</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ git clone git@github.com:accountname/cs300.git gh-pages
+ [~/cs300/] $ cd gh-pages
+ [~/cs300/gh-pages] $ git checkout --orphan gh-pages
+ [~/cs300/gh-pages] $ git rm -rf .
+</code></pre></div>
+<p>At this point you have a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory
+which is empty.</p>
+
+<h2>3. Develop your course content</h2>
+
+<p>Development of your course content involves the following basic workflow:</p>
 
 <ul>
-<li>Improve your content by editing the source files in your master branch.</li>
-<li>Run Jekyll to produce the improved website in your gh-pages branch.</li>
+<li>Edit your markdown files in the master/ directory</li>
+<li>Run Jekyll locally to see the resulting HTML website in your browser.</li>
+<li>Once you are satisfied with your content, run Jekyll to place the HTML files into your gh-pages/ directory.</li>
 <li>Commit the gh-pages branch to GitHub to make the improved website publicly available.</li>
-<li>Commit the master branch to GitHub to back up your improvements to the cloud and make your sources available to others.</li>
+<li>Commit the master branch to GitHub to back up your edits and make your sources available to others.</li>
 </ul>
 
-<p>A simple way to facilitate this workflow is to create a top-level directory containing two subdirectories, one
-containing the master branch of your repo, and one containing the gh-pages branch of your repo. For example, if your repo is
-named &quot;MoreaTest&quot;, then your directory structure would be:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">moreatest/
-  master/
-  gh-pages/
+<p>This section documents the first two steps, and the next section documents the final three steps.</p>
+
+<h4>Edit markdown files.</h4>
+
+<p>For more information on the structure and content of Morea markdown files, see the <a href="/userguide.html">User Guide</a>.</p>
+
+<p>For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
+have a Markdown mode are generally preferable.</p>
+
+<h4>Run Jekyll locally</h4>
+
+<p>To generate the HTML sources locally and view them in a browser, cd to the master/src/ directory and invoke:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300/master/src] $ jekyll serve --baseurl &quot;&quot; --watch
 </code></pre></div>
-<p>An additional complexity is that GitHub <a href="https://help.github.com/articles/creating-project-pages-manually">requires the gh-pages branch to be an &quot;orphan&quot; branch</a>.</p>
-
-<p>To create this directory structure in the proper way, do the following:</p>
-
-<p>Create the top level directory manually and move into it:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~] $ mkdir moreatest
- [~] $ cd moreatest
+<p>The expected output from running this command with the basic-template is:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/basic-template/master/src]-&gt; jekyll serve --baseurl &quot;&quot; --watch
+Configuration file: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_config.yml
+            Source: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src
+       Destination: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_site
+      Generating...
+Starting Morea page processing...
+  Processing Morea file:     assessment-1.md
+  Processing Morea file:     assessment-2.md
+  Processing Morea file:     assessment-3.md
+  Processing Morea file:     experience-1.md
+  Processing Morea file:     experience-2.md
+  Processing Morea file:     experience-3.md
+  Processing Morea file:     footer.md
+  Processing Morea file:     home.md
+  Processing Morea file:     module-1.md
+  Processing Morea file:     module-2.md
+  Processing Morea file:     module-3.md
+  Processing Morea file:     module-4.md
+  Processing Morea file:     outcome-1.md
+  Processing Morea file:     outcome-2.md
+  Processing Morea file:     outcome-3.md
+  Processing Morea file:     reading-1.md
+  Processing Morea file:     reading-2.md
+  Processing Morea file:     reading-3.md
+  Processing Morea file:     reading-4.md
+  Processing non-Morea file: javacoding.png
+  Issues discovered in module-2.md:
+    Warning(s): Missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+  Issues discovered in module-3.md:
+    Warning(s): Missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+  Issues discovered in module-4.md:
+    Warning(s): Missing optional front matter: morea_outcomes, morea_readings, morea_experiences, morea_assessments, morea_icon_url (set to /modules/default-icon.png)
+  Summary:
+    20 total, 19 published, 0 unpublished, 19 morea, 1 non-morea
+    4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
+    0 errors, 7 warnings
+done.
+ Auto-regeneration: enabled
+    Server address: http://0.0.0.0:4000
+  Server running... press ctrl-c to stop.
 </code></pre></div>
-<p>Clone the master branch of your repo into a subdirectory of moreatest/ named master (replace &#39;accountname&#39; by your
-GitHub accountname):</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/moreatest/] $ git clone https://github.com/accountname/moreatest.git master
+<p>This output indicates that the Morea plugin to Jekyll processed 20 Morea files to generate the website.  It also noticed
+some issues and generated warnings. These are OK.</p>
+
+<p>The resulting site will be available at <a href="">http://localhost:4000</a>.</p>
+
+<p>The --watch option tells jekyll to regenerate the HTML files whenever the markdown sources change.  Combine --watch with
+a browser plugin like <a href="http://livereload.com/">LiveReload</a> and your browser will automatically refresh whenever a change is made
+to the Morea markdown files. Sweet!</p>
+
+<p><strong>Note:</strong> Sometimes you run this Jekyll command and it crashes with lots of error messages.  This is usually due to running
+Jekyll in a directory other than master/src.  If you have a problem with this step, the first thing to do is to make
+sure you are in the master/src directory.</p>
+
+<h2>4. Publish your website</h2>
+
+<p>The final step is to make your Morea course site available to the world using GitHub&#39;s free <a href="http://pages.github.com/">Pages</a> facility.</p>
+
+<h4>Generate your website into gh-pages</h4>
+
+<p>Start by running
+the following command to place the HTML files into the gh-pages directory. Note that you must run this command
+from the master/src directory:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300/] $ cd master/src
+[~/cs300/master/src] $ jekyll build --destination ../../gh-pages
 </code></pre></div>
-<p>Next, create the gh-pages &quot;orphan&quot; branch next to the &quot;master&quot; branch following <a href="https://help.github.com/articles/creating-project-pages-manually">GitHub&#39;s approach</a>:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/moreatest/] $ git clone https://github.com/accountname/moreatest.git gh-pages
- [~/moreatest/] $ cd gh-pages
- [~/moreatest/gh-pages] $ git checkout --orphan gh-pages
- [~/moreatest/gh-pages] $ git rm -rf .
+<h4>Commit the gh-pages branch</h4>
+
+<p>Now you need to upload the content to GitHub. First change to the gh-pages directory, then use the following
+git commands to upload the content to the gh-pages branch:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300/master/src] $ cd ../../gh-pages
+[~/cs300/gh-pages] $ git add .
+[~/cs300/gh-pages] $ git commit -m &quot;Commit latest html sources&quot;
+[~/cs300/gh-pages] $ git push origin gh-pages
 </code></pre></div>
-<p>Now the gh-pages subdirectory will be empty, ready to receive the website files generated by Jekyll.</p>
-
-<h2>Create and commit your website</h2>
-
-<p>To make sure everything is working, let&#39;s generate the website from the template. First, run Jekyll to take
-the files in the master/src/ subdirectory and generate the website in the gh-pages/ subdirectory:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/moreatest/] $ cd master/src
-[~/moreatest/master/src] $ jekyll build --destination ../../gh-pages
+<p>If everything worked correctly, you should now be able to view your published course website at the following
+address (substituting your account for &quot;accountname&quot;):</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">http://accountname.github.io/cs300
 </code></pre></div>
-<p>Now, use git to commit the website to GitHub:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/moreatest/master/src] $ cd ../../gh-pages
-[~/moreatest/gh-pages] $ git add .
-[~/moreatest/gh-pages] $ git commit -m &quot;Commit latest html sources&quot;
-[~/moreatest/gh-pages] $ git push origin gh-pages
+<h4>Commit the master branch</h4>
+
+<p>Of course you will also want to commit the master branch as well:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300/master/src] $ cd ../../master
+[~/cs300/gh-pages] $ git add .
+[~/cs300/gh-pages] $ git commit -m &quot;Commit latest html sources&quot;
+[~/cs300/gh-pages] $ git push origin master
 </code></pre></div>
-<p>If everything worked correctly, you should now be able to view the template at your project&#39;s GitHub pages URL (replace
-&quot;accountname&quot; with your account):</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">http://accountname.github.io/moreatest
-</code></pre></div>
-<h2>Viewing the site locally</h2>
-
-<p>You don&#39;t want to have to push your changes to GitHub and make the website public in order to see the rendered
-version of your source files.</p>
-
-<p>To run the local version, cd to the src/ directory and invoke:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/moreatest/master/src] $ jekyll serve --baseurl &quot;&quot; --watch
-</code></pre></div>
-<p>The results are at <a href="">http://localhost:4000</a>.  The --watch options means rerun jekyll when files change.</p>
-
-<p>Combine this with <a href="http://livereload.com/">LiveReload</a> and your browser will refresh whenever a change is made. Sweet!</p>
-
-<h1>Misc stuff</h1>
-
-<p>The <a href="http://jekyllrb.com/docs/github-pages/">jekyll github-pages</a> page contains important info on setting the baseurl property in _config.yml.  If you don&#39;t configure this correctly, then the links and css may not resolve correctly.</p>
-
 </div>
 
 <div class="dark-blue-background">
