@@ -46,6 +46,10 @@ blockquote {
     margin-left: 15px;
 }
 
+.btn {
+    white-space: normal;
+}
+
 
 /* Color Palette (from box.com)
    Shades of blue from darkest to white.
