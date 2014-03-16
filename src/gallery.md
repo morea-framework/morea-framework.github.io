@@ -45,6 +45,10 @@ title: Gallery
    <p style="margin-top: 20px">
    A more realistic example consisting of a partial implementation of an undergraduate algorithms class.
    </p>
+   <p>
+   This site also illustrates the addition of a "Schedule" page using a JQuery
+   plugin to display a Google calendar.
+   </p>
    <p style="text-align: center; padding-top: 10px">
      <a href="http://philipmjohnson.github.io/ics311s14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
      <a href="https://github.com/philipmjohnson/ics311s14" class="btn btn-primary btn-md" role="button">Github repo <span class="glyphicon glyphicon-chevron-right"></span> </a>
