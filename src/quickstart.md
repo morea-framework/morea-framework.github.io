@@ -17,6 +17,7 @@ If you are associated with an educational institution (i.e. have a .edu email ac
 #### Install git
 
 Follow these instructions to [install git](https://help.github.com/articles/set-up-git). (Be sure to click the tab corresponding to your OS.)
+Note that you 
 
 #### Install Jekyll
 
@@ -49,30 +50,63 @@ Developing a Morea site requires managing (at a minimum) two branches for each r
 files for your course, and a special orphan "gh-pages" branch containing the website files produced by running Jekyll over your
 source files.
 
-First, make a top-level directory for your course. Let's call it "cs300", and let's assume
-that's the name of your GitHub repo as well. Make the directory and enter it as follows:
-
+First, make a top-level directory for your course. Let's assume that your Github repo is called "cs300", so we'll 
+name this directory the same way:
 
     [~] $ mkdir cs300
+
+Next, go into this directory:
+
     [~] $ cd cs300
 
+The set of git commands needed to create the master and gh-pages branches in this directory are rather tedious, so we've created
+the [morea-install.sh](https://github.com/morea-framework/scripts/blob/master/morea-install.sh) script to make this setup process easier. 
 
-Second, "clone" the master branch of your repo residing on GitHub into a subdirectory of cs300/ named "master". 
+You can download this script from the command line with the following command:
 
-     [~/cs300/] $ git clone git@github.com:accountname/cs300.git master
-     
-Replace "accountname" by your own account.
+     [~/cs300/] $ curl https://raw.github.com/morea-framework/scripts/master/morea-install.sh >> morea-install.sh
 
-Third, create an "orphan" branch called "gh-pages" next to the "master" branch following [GitHub's approach](https://help.github.com/articles/creating-project-pages-manually)
-(again replacing "accountname" by your own account):
+Now change the permissions to make this script executable:
 
-     [~/cs300/] $ git clone git@github.com:accountname/cs300.git gh-pages
-     [~/cs300/] $ cd gh-pages
-     [~/cs300/gh-pages] $ git checkout --orphan gh-pages
-     [~/cs300/gh-pages] $ git rm -rf .
+     [~/cs300/] $ chmod u+x morea-install.sh
 
-At this point you have a "master" directory containing a clone of the basic-template files, and a "gh-pages" directory
-which is empty.
+Now run this script to clone your new repo locally into a subdirectory named "master" and create a new orphan branch named "gh-pages". You 
+pass the script two arguments: your github account and the name of your repo.  If your account is named "johndoe" and your repo is named
+"cs300", the script invocation and its output would be similar to this:
+
+     [~/cs300/] $ ./morea-install.sh johndoe cs300 
+                  Creating master/ directory with repo.
+                  + git clone git@github.com:johndoe/cs300.git master
+                  Cloning into 'master'...
+                  remote: Counting objects: 5, done.
+                  remote: Compressing objects: 100% (3/3), done.
+                  remote: Total 5 (delta 0), reused 0 (delta 0)
+                  Receiving objects: 100% (5/5), 4.17 KiB, done.
+
+                  Creating orphan branch, empty gh-pages/ directory.
+                  + git clone git@github.com:johndoe/cs300.git gh-pages
+                  Cloning into 'gh-pages'...
+                  remote: Counting objects: 5, done.
+                  remote: Compressing objects: 100% (3/3), done.
+                  remote: Total 5 (delta 0), reused 0 (delta 0)
+                  Receiving objects: 100% (5/5), 4.17 KiB, done.
+                  + cd gh-pages
+                  + git checkout --orphan gh-pages
+                  Switched to a new branch 'gh-pages'
+                  + git rm -rf .
+                  rm '.gitignore'
+                  rm 'LICENSE'
+                  rm 'README.md'
+
+                  master/ and gh-pages/ directories created.
+
+The script has created a "master" directory containing a clone of the basic-template files, and a "gh-pages" directory
+which is empty:
+
+     [~/cs300/] $ ls 
+                  gh-pages		master			morea-install.sh
+
+  
 
 ## 3. Develop your course content
 
@@ -93,104 +127,147 @@ For more information on the structure and content of Morea markdown files, see t
 For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
 have a Markdown mode are generally preferable.
 
-#### Run Jekyll locally
+#### Display your site locally
 
-To generate the HTML sources locally and view them in a browser, cd to the master/src/ directory and invoke:
+We have developed a script called [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) to generate and display your site locally. As before, download it into your top-level directory and
+change its permissions to allow execution:
 
-    [~/cs300/master/src] $ jekyll serve --baseurl "" --watch
+    [~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-run-local.sh >> morea-run-local.sh
+    [~/cs300] $ chmod u+x morea-run-local.sh
 
-The expected output from running this command with the basic-template is:
+Now you can invoke this command to get Jekyll to both compile the source files into HTML and serve them at [http://localhost:4000](http://localhost:4000). 
 
-    [~/basic-template/master/src]-> jekyll serve --baseurl "" --watch
-    Configuration file: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_config.yml
-                Source: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src
-           Destination: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_site
-          Generating...
-    Starting Morea page processing...
-      Processing Morea file:     assessment-1.md
-      Processing Morea file:     assessment-2.md
-      Processing Morea file:     assessment-3.md
-      Processing Morea file:     experience-1.md
-      Processing Morea file:     experience-2.md
-      Processing Morea file:     experience-3.md
-      Processing Morea file:     footer.md
-      Processing Morea file:     home.md
-      Processing Morea file:     module-1.md
-      Processing Morea file:     module-2.md
-      Processing Morea file:     module-3.md
-      Processing Morea file:     module-4.md
-      Processing Morea file:     outcome-1.md
-      Processing Morea file:     outcome-2.md
-      Processing Morea file:     outcome-3.md
-      Processing Morea file:     reading-1.md
-      Processing Morea file:     reading-2.md
-      Processing Morea file:     reading-3.md
-      Processing Morea file:     reading-4.md
-      Processing non-Morea file: javacoding.png
-      Issues discovered in module-2.md:
-        Warning(s): Missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
-      Issues discovered in module-3.md:
-        Warning(s): Missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
-      Issues discovered in module-4.md:
-        Warning(s): Missing optional front matter: morea_outcomes, morea_readings, morea_experiences, morea_assessments, morea_icon_url (set to /modules/default-icon.png)
-      Summary:
-        20 total, 19 published, 0 unpublished, 19 morea, 1 non-morea
-        4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
-        0 errors, 7 warnings
-    done.
-     Auto-regeneration: enabled
-        Server address: http://0.0.0.0:4000
-      Server running... press ctrl-c to stop.
+    [~/cs300] $ ./morea-run-local.sh
+              Configuration file: /Users/johnson/cs300/master/src/_config.yml
+                Source: /Users/johnson/cs300/master/src
+                Destination: /Users/johnson/cs300/master/src/_site
+              Generating...
+              Starting Morea page processing...
+                Processing Morea file:     assessment-1.md
+                Processing Morea file:     assessment-2.md
+                Processing Morea file:     assessment-3.md
+                Processing Morea file:     experience-1.md
+                Processing Morea file:     experience-2.md
+                Processing Morea file:     experience-3.md
+                Processing Morea file:     footer.md
+                Processing Morea file:     home.md
+                Processing Morea file:     module-1.md
+                Processing Morea file:     module-2.md
+                Processing Morea file:     module-3.md
+                Processing Morea file:     module-4.md
+                Processing Morea file:     outcome-1.md
+                Processing Morea file:     outcome-2.md
+                Processing Morea file:     outcome-3.md
+                Processing Morea file:     reading-1.md
+                Processing Morea file:     reading-2.md
+                Processing Morea file:     reading-3.md
+                Processing Morea file:     reading-4.md
+                Processing non-Morea file: javacoding.png
+                Issues discovered in module-2.md:
+                Warning(s): module-2.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+                Warning(s): module-3.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+                Warning(s): module-4.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences,
+                Summary:
+                  20 total, 19 published, 0 unpublished, 19 morea, 1 non-morea
+                  4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
+                  0 errors, 7 warnings
+                done.
+                Auto-regeneration: enabled
+                   Server address: http://0.0.0.0:4000
+                  Server running... press ctrl-c to stop.
 
 This output indicates that the Morea plugin to Jekyll processed 20 Morea files to generate the website.  It also noticed
 some issues and generated warnings. These are OK.
 
-The resulting site will be available at [http://localhost:4000]().
-
-The --watch option tells jekyll to regenerate the HTML files whenever the markdown sources change.  Combine --watch with
-a browser plugin like [LiveReload](http://livereload.com/) and your browser will automatically refresh whenever a change is made
-to the Morea markdown files. Sweet!
-
-**Note:** Sometimes you run this Jekyll command and it crashes with lots of error messages.  This is usually due to running
-Jekyll in a directory other than master/src.  If you have a problem with this step, the first thing to do is to make
-sure you are in the master/src directory.
+The script tells Jekyll to regenerate the HTML files whenever the markdown sources change.  If you use 
+a browser plugin like [LiveReload](http://livereload.com/) and tell it to monitor the master/src/_site directory, your browser will automatically re-render and re-display the page whenever a change is made to your source files. This makes development quite efficient.
 
 ## 4. Publish your website
 
-The final step is to make your Morea course site available to the world using GitHub's free [Pages](http://pages.github.com/) facility.
+The final step is to make your Morea course site available to the world using GitHub's free [Pages](http://pages.github.com/) facility. As
+you might be expecting by now, we have created a script called [morea-publish.sh](https://github.com/morea-framework/scripts/blob/master/morea-publish.sh) to simplify this process. 
 
-#### Generate your website into gh-pages
+Download it into your top-level directory and make it executable as follows:
 
-Start by running
-the following command to place the HTML files into the gh-pages directory. Note that you must run this command
-from the master/src directory:
+    [~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-publish.sh >> morea-publish.sh
+    [~/cs300] $ chmod u+x morea-publish.sh
 
-    [~/cs300/] $ cd master/src
-    [~/cs300/master/src] $ jekyll build --destination ../../gh-pages
+Running the script generates the HTML files into the gh-pages directory, then commits the contents of both the gh-pages and the master 
+directories to their respective branches on GitHub.  You must supply the commit message as an argument. Here's an example:
 
-#### Commit the gh-pages branch
+    [~/cs300] $ ./morea-publish.sh "Fixing typo"
+              Generating HTML site into gh-pages directory
+              + jekyll build --source ./master/src --destination ./gh-pages
+              Configuration file: ./master/src/_config.yml
+                          Source: ./master/src
+                     Destination: ./gh-pages
+                    Generating... 
+              Starting Morea page processing...
+                Processing Morea file:     assessment-1.md
+                Processing Morea file:     assessment-2.md
+                Processing Morea file:     assessment-3.md
+                Processing Morea file:     experience-1.md
+                Processing Morea file:     experience-2.md
+                Processing Morea file:     experience-3.md
+                Processing Morea file:     footer.md
+                Processing Morea file:     home.md
+                Processing Morea file:     module-1.md
+                Processing Morea file:     module-2.md
+                Processing Morea file:     module-3.md
+                Processing Morea file:     module-4.md
+                Processing Morea file:     outcome-1.md
+                Processing Morea file:     outcome-2.md
+                Processing Morea file:     outcome-3.md
+                Processing Morea file:     reading-1.md
+                Processing Morea file:     reading-2.md
+                Processing Morea file:     reading-3.md
+                Processing Morea file:     reading-4.md
+                Processing non-Morea file: javacoding.png
+                Warning(s): module-2.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+                Warning(s): module-3.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+                Warning(s): module-4.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences,
+                Summary:
+                  20 total, 19 published, 0 unpublished, 19 morea, 1 non-morea
+                  4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
+                  0 errors, 7 warnings
+              done.
+              Committing the gh-pages branch.
+              + cd ./gh-pages
+              + git add .
+              + git commit -a -m 'Fixing typo'
+              [gh-pages 8bb768e] Fixing typo
+               18 files changed, 19 insertions(+), 19 deletions(-)
+              + git push origin gh-pages
+              Counting objects: 60, done.
+              Delta compression using up to 8 threads.
+              Compressing objects: 100% (23/23), done.
+              Writing objects: 100% (31/31), 2.75 KiB, done.
+              Total 31 (delta 19), reused 0 (delta 0)
+              To git@github.com:morea-framework/basic-template.git
+                 fd19896..8bb768e  gh-pages -> gh-pages
+              Committing the master branch
+              + cd ./master
+              + git add .
+              + git commit -a -m 'Fixing typo'
+              [master 6fe3b5e] Fixing typo
+               2 files changed, 4 insertions(+), 2 deletions(-)
+               rename master.iml => src/_plugins/_plugins.iml (70%)
+              + git push origin master
+              Counting objects: 12, done.
+              Delta compression using up to 8 threads.
+              Compressing objects: 100% (7/7), done.
+              Writing objects: 100% (7/7), 881 bytes, done.
+              Total 7 (delta 3), reused 0 (delta 0)
+              To git@github.com:morea-framework/basic-template.git
+                 683ff6d..6fe3b5e  master -> master
 
-Now you need to upload the content to GitHub. First change to the gh-pages directory, then use the following
-git commands to upload the content to the gh-pages branch:
+Now your site should be publically available.  For example, if your account is "johndoe" and your repo is "cs300", then you should be able to 
+retrieve your site at [http://johndoe.github.io/cs300](http://johndoe.github.io/cs300). 
 
-    [~/cs300/master/src] $ cd ../../gh-pages
-    [~/cs300/gh-pages] $ git add .
-    [~/cs300/gh-pages] $ git commit -m "Commit latest html sources"
-    [~/cs300/gh-pages] $ git push origin gh-pages
+**Note:** the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you'll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.
 
-If everything worked correctly, you should now be able to view your published course website at the following
-address (substituting your account for "accountname"):
 
-    http://accountname.github.io/cs300
 
-#### Commit the master branch
-
-Of course you will also want to commit the master branch as well:
-
-    [~/cs300/master/src] $ cd ../../master
-    [~/cs300/gh-pages] $ git add .
-    [~/cs300/gh-pages] $ git commit -m "Commit latest html sources"
-    [~/cs300/gh-pages] $ git push origin master
 
 
 
