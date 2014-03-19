@@ -184,7 +184,7 @@ a browser plugin like [LiveReload](http://livereload.com/) and tell it to monito
 ## 4. Publish your website
 
 The final step is to make your Morea course site available to the world using GitHub's free [Pages](http://pages.github.com/) facility. As
-you might be expecting by now, we have created a script called [morea-publish.sh](https://github.com/morea-framework/scripts/blob/master/morea-publish.sh) to simplify this process. 
+you might be expecting by now, we have created a script (this time called [morea-publish.sh](https://github.com/morea-framework/scripts/blob/master/morea-publish.sh)) to simplify this process. 
 
 Download it into your top-level directory and make it executable as follows:
 
