@@ -265,6 +265,21 @@ retrieve your site at [http://johndoe.github.io/cs300](http://johndoe.github.io/
 
 **Note:** the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you'll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.
 
+## Summary
+
+While the setup process requires some time and effort, the benefit is that once you're done, the actual development workflow is quite straightforward:
+
+* Invoke the morea-run-local.sh script.
+* Edit the contents of the morea/ directory.
+* Review your changes privately at [http://localhost:4000](http://localhost:4000).
+* When ready, invoke the morea-publish.sh script to publish your changes to the world.
+
+Once you've successfully installed Morea and set up your course, it's now time to learn more about Morea data files in the User Guide.
+
+<p style="text-align: center; padding-top: 10px">
+     <a href="http://morea-framework.github.io/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
+   </p>
+
 
 
 
