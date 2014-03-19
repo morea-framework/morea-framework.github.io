@@ -163,7 +163,6 @@ Now you can invoke this command to get Jekyll to both compile the source files i
                 Processing Morea file:     reading-3.md
                 Processing Morea file:     reading-4.md
                 Processing non-Morea file: javacoding.png
-                Issues discovered in module-2.md:
                 Warning(s): module-2.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
                 Warning(s): module-3.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
                 Warning(s): module-4.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences,
