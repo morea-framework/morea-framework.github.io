@@ -17,7 +17,7 @@ If you are associated with an educational institution (i.e. have a .edu email ac
 #### Install git
 
 Follow these instructions to [install git](https://help.github.com/articles/set-up-git). (Be sure to click the tab corresponding to your OS.)
-Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download their GUI app.
+Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.
 
 #### Install Jekyll
 
