@@ -19,6 +19,7 @@
   <!-- Load Bootstrap JavaScript components -->
   <script src="http://code.jquery.com/jquery.min.js"></script>
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <!-- Responsive navbar -->
@@ -44,17 +45,96 @@
 </div>
 
 
-<div class="container">
-  <h1>User Guide</h1>
+<!-- Load tocify css and js -->
+<link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css" />
 
-<p>This page will contain the user guide.</p>
+<!-- Load tocify Javascript components -->
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.tocify.js"></script>
 
+
+<div class="row">
+  <div class="col-sm-3" >
+    <!-- Our table of contents will be here !-->
+    <div id="nav"></div>
+  </div>
+  <div class="col-sm-9">
+   <h1>Basic concepts</h1>
+
+<p>To begin, here are some basic ideas underlying the framework.</p>
+
+<h3>One markdown file for each Morea entity</h3>
+
+<p>Every Morea entity (module, outcome, reading, experience, assessment) is represented by a single markdown file.</p>
+
+<p>There can also be other markdown files and other non-markdown files (such as the logo image file associated with each module).</p>
+
+<h3>Content is in morea/</h3>
+
+<p>When you first clone a Morea site, you will find a potentially bewildering number of files and directories:</p>
+
+<p><img src="images/morea-source.png" width="200px" /></p>
+
+<p>Fortunately, the only files you need to maintain are all located in the src/morea directory.</p>
+
+<p>All other files can be ignored until you want to do advanced modification of the framework itself.</p>
+
+<h3>Organize the morea/ directory as you like</h3>
+
+<p>The way you organize the morea/ directory is up to you.  You can place all of the files directly within
+this directory, or create subdirectories.</p>
+
+<h3>Name Morea files as you like</h3>
+
+<p>The way you name Morea files is also up to you.</p>
+
+<h1>Morea file documentation</h1>
+
+<p>Here is the Morea file documentation.</p>
+
+<h3>Module</h3>
+
+<p>This is the module documentation.</p>
+
+<h3>Outcome</h3>
+
+<p>This is the outcome documentation.</p>
+
+<h3>Reading</h3>
+
+<p>Readings documentation.</p>
+
+<h3>Experience</h3>
+
+<p>Experiences.</p>
+
+<h3>Assessment</h3>
+
+<p>Assessment.</p>
+
+<h1>Workflow</h1>
+
+<p>Some typical issues in workflow.</p>
+
+<h3>An example editing session.</h3>
+
+<p>Example editing.</p>
+
+<h3>Upstream merging.</h3>
+
+<p>Upstream merging. </p>
+
+  </div>
 </div>
+
+<script>
+  $("#nav").tocify({scrollTo: "40"});
+</script>
 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>27 Mar 2014</span></p>
+      <p>Last update on: <span>22 Apr 2014</span></p>
   </div>
 </footer>
 </div>
