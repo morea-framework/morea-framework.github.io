@@ -54,39 +54,129 @@
 
 
 <div class="row">
-  <div class="col-sm-3" >
+  <div class="col-xs-3" >
     <!-- Our table of contents will be here !-->
     <div id="nav"></div>
   </div>
-  <div class="col-sm-9">
-   <h1>Basic concepts</h1>
+  <div class="col-xs-9">
+     <h1>Basic concepts</h1>
 
-<p>To begin, here are some basic ideas underlying the framework.</p>
+<p>To begin, here are the most important principles underlying the framework.</p>
 
-<h3>One markdown file for each Morea entity</h3>
+<p><strong>Morea defines five &quot;entity types&quot;: module, outcome, reading, experience, and assessment.</strong></p>
 
-<p>Every Morea entity (module, outcome, reading, experience, assessment) is represented by a single markdown file.</p>
+<p>A <em>module</em> is a container that holds a set of outcomes, readings, experiences, and assessments related
+to course content. Modules have a sort order, which allows you to organize modules into a sequence. Most
+courses consist of 6 to 30+ modules.  A module can contain zero to many instances of outcomes, readings,
+experiences, and assessments. It is possible to define a module without any outcomes, readings, experiences,
+or assessments, though we&#39;re not sure what the utility of such a module would be.</p>
 
-<p>There can also be other markdown files and other non-markdown files (such as the logo image file associated with each module).</p>
+<p>An <em>outcome</em> represents some kind of knowledge or capability that the student should acquire as a result of
+the readings and experiences in the associated module.  A module can have multiple outcomes.  Conversely, a
+single outcome can be associated with multiple modules. We find that a useful way to organize and express learning outcomes
+ is through <a href="http://www.utar.edu.my/fegt/file/Revised_Blooms_Info.pdf">Bloom&#39;s revised taxonomy</a>, which classifies
+ outcomes as one of: remembering, understanding, applying, analyzing, evaluating, and creating. The latter outcomes
+ represent &quot;high-order&quot; cognitive skills.</p>
 
-<h3>Content is in morea/</h3>
+<p>A <em>reading</em> is an artifact that the student studies: it represents &quot;passive&quot; learning. Readings are typically
+chapters in a book, online web pages, and so forth.</p>
 
-<p>When you first clone a Morea site, you will find a potentially bewildering number of files and directories:</p>
+<p>In contrast to a reading, an <em>experience</em> represents a more &quot;active&quot; form of learning in which the student solves
+problems or performs other activities in order to assimilate the module material. Morea distinguishes between
+readings and experiences because modules containing readings without experiences will tend to have outcomes associated
+with lower levels of Bloom&#39;s taxonomy, while modules containing a mixture of readings and experiences are more
+suited to outcomes at higher levels of Bloom&#39;s taxonomy.</p>
+
+<p>An <em>assessment</em> is an activity that evaluates the success of the student in achieving the educational goals
+of the module.  Hopefully, the educational goals are expressed by learning outcomes, in which case each assessment
+can tie back to one or more outcomes.  The graphic
+<a href="images/Stobaugh_BloomsTaxonomy.png">Applying Bloom&#39;s Taxonomy in your Classroom</a> provides various examples of how
+outcomes and assessments can be tied together.</p>
+
+<p><strong>Morea generates five &quot;views&quot; of the content, each organized according to an entity.</strong></p>
+
+<p>Morea sites all provide a navigation bar at the top of the page with links to pages that organize the content
+according to each of the five entities.  Here is an example of the &quot;readings&quot; view:</p>
+
+<p><img src="images/ics311-readings.png" width="600px" /></p>
+
+<p>And here is an example of the &quot;outcomes&quot; view:</p>
+
+<p><img src="images/ics311-outcomes.png" width="600px" /></p>
+
+<p>You can see that each view focuses on a different entity type, but includes links to other entities.</p>
+
+<p>We believe that presenting the content organized according to different entity types makes it easier for
+students and teachers to understand the conceptual structure of the course.   For teachers, it also
+provides a useful way to see if the course is structurally coherent. For example, when the learning
+objectives are examined together, do they create a coherent set?   For another example, are there assessments for each module,
+and if not, is that appropriate?</p>
+
+<p><strong>Every Morea entity has its own markdown file.</strong></p>
+
+<p>Every instance of a Morea entity (module, outcome, reading, experience, assessment) is represented by a single markdown file.
+There can also be other markdown files and other non-markdown files (such as the logo image file associated with each module).</p>
+
+<p><strong>All of your course content is located in the src/morea/ directory.</strong></p>
+
+<p>When you first clone a Morea site, you will find a potentially bewildering number of files and directories. For example:</p>
 
 <p><img src="images/morea-source.png" width="200px" /></p>
 
-<p>Fortunately, the only files you need to maintain are all located in the src/morea directory.</p>
+<p>This organization exists because the Morea framework is basically just a Jekyll site with a custom plugin to process the Morea markdown files.</p>
 
-<p>All other files can be ignored until you want to do advanced modification of the framework itself.</p>
+<p>Fortunately, the only files you will typically need to manage are all located in the src/morea directory. Here is
+an example of the src/morea directory from the basic-template system:</p>
 
-<h3>Organize the morea/ directory as you like</h3>
+<p><img src="images/morea-folder.png" width="200px" /></p>
 
-<p>The way you organize the morea/ directory is up to you.  You can place all of the files directly within
-this directory, or create subdirectories.</p>
+<p>This folder contains all of the files you will want to manage as part of your course content.</p>
 
-<h3>Name Morea files as you like</h3>
+<p><strong>You can organize the src/morea/ directory any way you like.</strong></p>
 
-<p>The way you name Morea files is also up to you.</p>
+<p>The Morea framework does not care how you organize the files within the src/morea directory.
+For example, you can place all of your files at the top level of this directory.
+Alternatively, and more typically, you can create subdirectories within the src/morea directory, one
+per module, as shown in the previous screenshot.</p>
+
+<p>In addition, Morea does not care how you name files.  In fact, it is
+possible to use the same file name in multiple modules (i.e. foo/module.md, bar/module.md, baz/module.md, and
+qux/module.md in the screenshot above)</p>
+
+<p><strong>It is the &quot;front matter&quot; in each Morea entity file that uniquely identifies it.</strong></p>
+
+<p>Morea does not care about directory structure nor file name, because it uses the <em>front matter</em> in the
+markdown file to uniquely identify each Morea entity and determine how they relate to each other. &quot;Front matter&quot; is a Jekyll term for key-value pairs
+represented via YAML notation and separated from the rest of the file contents by three dashes. For example,
+here is the front matter for a hypothetical module entity:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+title: &quot;Learn to Foo&quot;
+morea_id: foo
+morea_outcomes:
+  - foo-outcome1
+  - foo-outcome2
+morea_readings:
+  - foo-reading
+morea_experiences:
+  - foo-experience
+morea_assessments:
+  - foo-assessment
+morea_type: module
+morea_icon_url: /morea/images/foo.png
+morea_labels:
+  - required
+  - intro
+morea_sort_order: 2
+---
+</code></pre></div>
+<p>So, in the screenshot above, the front matter in foo/module.md will be different from the front matter in bar/module.md,
+baz/module.md, and qux/module.md.</p>
+
+<p>We will explain the front matter in more detail later in this User Guide.</p>
+
+<h1>Anatomy of a Module</h1>
+
+<p>The</p>
 
 <h1>Morea file documentation</h1>
 
@@ -122,19 +212,19 @@ this directory, or create subdirectories.</p>
 
 <h3>Upstream merging.</h3>
 
-<p>Upstream merging. </p>
+<p>Upstream merging.</p>
 
   </div>
 </div>
 
 <script>
-  $("#nav").tocify({scrollTo: "40"});
+  $("#nav").tocify({theme: "bootstrap3", scrollTo: "40"});
 </script>
 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>22 Apr 2014</span></p>
+      <p>Last update on: <span>23 Apr 2014</span></p>
   </div>
 </footer>
 </div>
