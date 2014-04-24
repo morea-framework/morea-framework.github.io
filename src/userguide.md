@@ -39,8 +39,6 @@ outcomes and assessments can be linked together.  While Morea can help make link
 assessments clear, it is common to assess skills not encapsulated by outcomes, or desire outcomes that are not
 assessed.
 
-
-
 **Morea generates five "views" of the content, each organized according to an entity.**
 
 Morea sites contain a navigation bar at the top of the page with links to pages that organize the content
@@ -56,7 +54,7 @@ And here is an example of the Outcomes page:
 You can see that the two pages highlight a single entity type but provide links to other entities for context.
 
 We believe that presenting the content organized according to different entity types makes it easier for
-students and teachers to understand the conceptual structure of the course.   For teachers, it also
+students and educators to understand the conceptual structure of the course.   For educators, it also
 provides a useful way to see if the course is structurally coherent. For example, when the learning
 objectives are examined together, do they create a coherent set?   For another example, are there assessments for each module,
 and if not, is that appropriate?
@@ -145,15 +143,62 @@ over without change. So, for example, here is the src/morea directory (on the le
 As you can see, the markdown files have become HTML, and the sole non-markdown file (logo.png) has been copied over
 unchanged.  The directory structure below the morea/ directory is unchanged.
 
+# Related systems
+
+Another way to understand Morea is by contrasting it with other tools used by educators to create course content.
+
+[GitBook](http://www.gitbook.io/), like Morea, creates educational websites using Markdown and Git.  If you want to
+write a textbook, GitBook is a better choice.  Morea is preferred when you want to create a course curriculum from
+a variety of sources including your own and/or other sources, and when you want to make learning objectives and
+assessments explicit.
+
+[Blackboard](http://www.blackboard.com/) is a commercial offering that provides comprehensive support for all
+aspects of course management: content management, testing, grading, etc.
+Morea provides a small subset of the capabilities of Blackboard, but is free, simpler to use, and facilitates
+sharing through its underlying use of Git and GitHub.  Morea is oriented toward "public" materials, since by default
+the materials you create can be accessed by anyone.
+
+[Metacademy](http://www.metacademy.org/) is a site for community curated educational content.  Unlike Morea,
+Metacademy supports a single version of curriculum material for any given topic.  In contrast, Morea tries to make it
+as easy as possible for each educator to have their own, slightly (or radically) different version of curriculum
+material for any given topic.  It's much like the difference between centralized version control (i.e. SVN) where there is
+always a single "golden" version of a system, and distributed version control (i.e. git) where there can be many "different
+but equal" versions of a system.
+
 # Anatomy of a Module
 
 This section overviews the structure of a single module (called "Foo" in the basic-template system).  Here is a
- graphic to help illustrates the various components:
+graphic to help illustrates the various components:
 
  <img src="images/module-anatomy.png" />
 
- The top row illustrates various "source" files, and the bottom row illustrates various "output" HTML pages
-  produced from these files. 
+The top row illustrates various "source" files, and the bottom row illustrates various "output" HTML pages
+produced from these files.
+
+The top right window shows the contents of the src/morea/foo directory. There are various files in there that define
+the content associated with the Foo module.  Interestingly, there are a couple of files in this directory that are
+not associated with the Foo module.  The presence of non-Foo content in the foo directory illustrates that the directory and file organization
+of the morea/ directory is arbitrary.
+
+The second window on the top row shows the content of module.md.  The content of this file is mostly Front Matter,
+and provides the definition of the Foo module.  The outcomes, readings, experiences, and assessments associated with
+the Foo module are all referenced by unique IDs.
+
+The third and fourth windows on the top row show the content of two files that define a reading and an experience entity.
+These entities have unique IDs that are referenced in the definition of the Foo module, and that is the way that Morea
+connects them together.
+
+The bottom row shows a variety of pages produced by Morea.  Because a module was defined in the module.md file, it
+will show up in the modules/ page.  Clicking on the link in the modules page takes you to a page which details the
+contents of that module. As you can see, the content associated with each of the unique IDs referenced in the module.md file shows up in this
+page.  The other pages illustrate the content (such as a Reading) will not only appear in the module (or modules) with
+which it is associated, but also in the Readings page.
+
+In summary, Morea markdown files create a set of entities, each of which are identified by a unique ID.  The
+contents of a module (outcomes, readings, experiences, and assessments) are specified by providing unique IDs. The
+relationship between modules and its content entities is many-to-many. First, a module can refer to multiple outcomes,
+readings, experiences, and assessments. Conversely, any given outcome, reading, experiences, and assessment can
+appear in multiple modules. 
 
 
 
