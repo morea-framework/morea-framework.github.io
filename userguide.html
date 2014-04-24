@@ -68,43 +68,46 @@
 <p>A <em>module</em> is a container that holds a set of outcomes, readings, experiences, and assessments related
 to course content. Modules have a sort order, which allows you to organize modules into a sequence. Most
 courses consist of 6 to 30+ modules.  A module can contain zero to many instances of outcomes, readings,
-experiences, and assessments. It is possible to define a module without any outcomes, readings, experiences,
-or assessments, though we&#39;re not sure what the utility of such a module would be.</p>
+experiences, and assessments. It is possible to define a module without zero outcomes, zero readings, zero experiences,
+and zero assessments, though we&#39;re not sure of the utility of such a module.</p>
 
 <p>An <em>outcome</em> represents some kind of knowledge or capability that the student should acquire as a result of
-the readings and experiences in the associated module.  A module can have multiple outcomes.  Conversely, a
-single outcome can be associated with multiple modules. We find that a useful way to organize and express learning outcomes
+the readings and experiences in the associated module.  A module can have multiple outcomes.  Conversely, the same
+outcome can be associated with multiple modules. We find that a useful way to organize and express learning outcomes
  is through <a href="http://www.utar.edu.my/fegt/file/Revised_Blooms_Info.pdf">Bloom&#39;s revised taxonomy</a>, which classifies
- outcomes as one of: remembering, understanding, applying, analyzing, evaluating, and creating. The latter outcomes
- represent &quot;high-order&quot; cognitive skills.</p>
+ outcomes into six categories: remembering, understanding, applying, analyzing, evaluating, and creating. The latter outcomes
+ (analyzing, evaluating, and creating) are supposed to represent &quot;high-order&quot; cognitive skills.</p>
 
 <p>A <em>reading</em> is an artifact that the student studies: it represents &quot;passive&quot; learning. Readings are typically
 chapters in a book, online web pages, and so forth.</p>
 
 <p>In contrast to a reading, an <em>experience</em> represents a more &quot;active&quot; form of learning in which the student solves
-problems or performs other activities in order to assimilate the module material. Morea distinguishes between
-readings and experiences because modules containing readings without experiences will tend to have outcomes associated
+problems or performs other activities in order to acquire understanding and capability. Morea distinguishes between
+readings and experiences because modules that contain only readings without experiences will tend to have outcomes associated
 with lower levels of Bloom&#39;s taxonomy, while modules containing a mixture of readings and experiences are more
-suited to outcomes at higher levels of Bloom&#39;s taxonomy.</p>
+likely to support outcomes at higher levels of Bloom&#39;s taxonomy.</p>
 
 <p>An <em>assessment</em> is an activity that evaluates the success of the student in achieving the educational goals
-of the module.  Hopefully, the educational goals are expressed by learning outcomes, in which case each assessment
-can tie back to one or more outcomes.  The graphic
+of the module.  In the best case, the educational goals of the module are adequately expressed by learning outcomes,
+in which case each assessment should relate to one or more outcomes.  The graphic
 <a href="images/Stobaugh_BloomsTaxonomy.png">Applying Bloom&#39;s Taxonomy in your Classroom</a> provides various examples of how
-outcomes and assessments can be tied together.</p>
+outcomes and assessments can be linked together.  While Morea can help make linkages between outcomes and
+assessments clear, it is common to assess skills not encapsulated by outcomes, or desire outcomes that are not
+assessed.</p>
 
 <p><strong>Morea generates five &quot;views&quot; of the content, each organized according to an entity.</strong></p>
 
-<p>Morea sites all provide a navigation bar at the top of the page with links to pages that organize the content
-according to each of the five entities.  Here is an example of the &quot;readings&quot; view:</p>
+<p>Morea sites contain a navigation bar at the top of the page with links to pages that organize the content
+according to each of the five entities: modules, outcomes, readings, experiences, and assessments.
+For example, here is an example of the Readings page:</p>
 
 <p><img src="images/ics311-readings.png" width="600px" /></p>
 
-<p>And here is an example of the &quot;outcomes&quot; view:</p>
+<p>And here is an example of the Outcomes page:</p>
 
 <p><img src="images/ics311-outcomes.png" width="600px" /></p>
 
-<p>You can see that each view focuses on a different entity type, but includes links to other entities.</p>
+<p>You can see that the two pages highlight a single entity type but provide links to other entities for context.</p>
 
 <p>We believe that presenting the content organized according to different entity types makes it easier for
 students and teachers to understand the conceptual structure of the course.   For teachers, it also
@@ -146,7 +149,8 @@ qux/module.md in the screenshot above)</p>
 <p><strong>It is the &quot;front matter&quot; in each Morea entity file that uniquely identifies it.</strong></p>
 
 <p>Morea does not care about directory structure nor file name, because it uses the <em>front matter</em> in the
-markdown file to uniquely identify each Morea entity and determine how they relate to each other. &quot;Front matter&quot; is a Jekyll term for key-value pairs
+markdown file to uniquely identify each Morea entity and determine how they relate to each other.
+&quot;Front matter&quot; is a <a href="http://jekyllrb.com/">Jekyll</a> term for key-value pairs
 represented via YAML notation and separated from the rest of the file contents by three dashes. For example,
 here is the front matter for a hypothetical module entity:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">---
@@ -169,14 +173,39 @@ morea_labels:
 morea_sort_order: 2
 ---
 </code></pre></div>
-<p>So, in the screenshot above, the front matter in foo/module.md will be different from the front matter in bar/module.md,
-baz/module.md, and qux/module.md.</p>
+<p>So, even though each module (foo, bar, baz, qux) in the basic template system contains a file with the name module.md,
+the front matter in that file will be different in order to represent the unique structure of the four modules.</p>
+
+<p>Note that while you <em>can</em> use the same name, you <em>don&#39;t have to</em>.   You could name the file containing the front
+matter for the Foo module &quot;module-foo.md&quot;.  You could even name it &quot;outcome.md&quot; (although that would be really
+confusing.) The point is:  Morea does not utilize file name information.</p>
 
 <p>We will explain the front matter in more detail later in this User Guide.</p>
 
+<p><strong>Morea makes a &quot;mirror image&quot; of the src/morea directory in the published HTML site.</strong></p>
+
+<p>Because we want you to provide course content in the src/morea directory, and because course content can include
+(for example) image files, Morea creates a kind of &quot;mirror image&quot; of the src/morea directory in the published site
+so that your content can include links within itself as well as to external sites.</p>
+
+<p>The basic rule is that markdown files are converted to HTML in the published site, and all other files get copied
+over without change. So, for example, here is the src/morea directory (on the left) and the site&#39;s published morea directory
+(on the right):</p>
+
+<p><img src="images/mirror-image.png" width="400px" /></p>
+
+<p>As you can see, the markdown files have become HTML, and the sole non-markdown file (logo.png) has been copied over
+unchanged.  The directory structure below the morea/ directory is unchanged.</p>
+
 <h1>Anatomy of a Module</h1>
 
-<p>The</p>
+<p>This section overviews the structure of a single module (called &quot;Foo&quot; in the basic-template system).  Here is a
+ graphic to help illustrates the various components:</p>
+
+<p><img src="images/module-anatomy.png" /></p>
+
+<p>The top row illustrates various &quot;source&quot; files, and the bottom row illustrates various &quot;output&quot; HTML pages
+  produced from these files. </p>
 
 <h1>Morea file documentation</h1>
 
