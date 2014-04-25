@@ -167,10 +167,10 @@ but equal" versions of a system.
 
 # Anatomy of a Module
 
-This section overviews the structure of a single module (called "Foo" in the basic-template system).  Here is a
-graphic to help illustrates the various components:
+This section overviews the structure of the module [Foo](https://github.com/morea-framework/basic-template/tree/master/src/morea/foo) in the [basic-template](https://github.com/morea-framework/basic-template) system.  Here is a
+graphic to help illustrate the various components:
 
- <img src="images/module-anatomy.png" />
+ <img src="images/module-anatomy.jpg" width="800px"/>
 
 The top row illustrates various "source" files, and the bottom row illustrates various "output" HTML pages
 produced from these files.
@@ -198,45 +198,651 @@ In summary, Morea markdown files create a set of entities, each of which are ide
 contents of a module (outcomes, readings, experiences, and assessments) are specified by providing unique IDs. The
 relationship between modules and its content entities is many-to-many. First, a module can refer to multiple outcomes,
 readings, experiences, and assessments. Conversely, any given outcome, reading, experiences, and assessment can
-appear in multiple modules. 
+appear in multiple modules.
 
 
+# Morea entity types
 
-# Morea file documentation
-
-Here is the Morea file documentation.
+This section documents the structure and behavior of the five Morea entity types.
 
 ### Module
 
-This is the module documentation.
+Modules are represented by a markdown file where the Front Matter defines the structure of the module
+and the body of the file (typically a sentence or two) summarizes the module contents.
+
+**Sample module markdown file contents**
+
+    ---
+    title: "Learn to Foo"
+    published: true
+    morea_id: foo
+    morea_outcomes:
+     - outcome1
+    morea_readings:
+     - reading1
+    morea_experiences:
+     - experience1
+    morea_assessments:
+     - assessment1
+    morea_type: module
+    morea_icon_url: /morea/foo/logo.png
+    morea_labels:
+     - required
+     - intro
+    morea_sort_order: 1
+    ---
+
+    Provides everything you need to know to learn to Foo.
+
+**Module Front Matter keywords and values**
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>module</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of the module. The module title appears in all of the top-level pages
+ whereever the module is referenced.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, the module will appear in the output. If false, the module will not appear. Default: true
+</td>
+</tr>
+
+<tr>
+<td>morea_outcomes</td>
+<td>optional</td>
+<td>If present, a list of Morea IDs indicating the Outcomes associated with this module.</td>
+</tr>
+
+<tr>
+<td>morea_readings</td>
+<td>optional</td>
+<td>If present, a list of Morea IDs indicating the Readings associated with this module.</td>
+</tr>
+
+<tr>
+<td>morea_experiences</td>
+<td>optional</td>
+<td>If present, a list of Morea IDs indicating the Experiences associated with this module.</td>
+</tr>
+
+<tr>
+<td>morea_assessments</td>
+<td>optional</td>
+<td>If present, a list of Morea IDs indicating the Assessments associated with this module.</td>
+</tr>
+
+<tr>
+<td>morea_icon_url</td>
+<td>optional</td>
+<td>If present, the URL of the icon appearing with this module in the modules/ page.  For best
+effect, the icon image should be square. Defaults to <a href="https://github.com/morea-framework/basic-template/blob/master/src/modules/default-icon.png">modules/default-icon.png</a>.
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+ in the module's thumbnail on the modules/ page.
+</td>
+</tr>
+
+<tr>
+<td>morea_sort_order</td>
+<td>optional</td>
+<td>If present, an integer used to sort the set of published modules for presentation from low to high.
+Defaults to zero.
+</td>
+</tr>
+
+
+
+</table>
+
+**Module body text**
+
+In a module definition, the text following the Front Matter is typically one to two sentences that
+summarizes the module content. This text appears with the module's <a href="http://getbootstrap.com/components/#thumbnails">thumbnail</a> in the module summary page and at the top
+of the module's page.
 
 ### Outcome
 
-This is the outcome documentation.
+Each outcome represents knowledge or capability that the educator hopes the students will acquire as a
+result of the module or modules in which this outcome appears.
+
+**Sample outcome markdown file contents**
+
+    ---
+    title: "Remember concepts of asymptotic growth."
+    published: true
+    morea_id: outcome-growth
+    morea_type: outcome
+    morea_sort_order: 30
+    morea_labels:
+      - "Bloom: Remember"
+    ---
+
+    Learn the concepts of asymptotic growth and recognize them in context.
+
+**Outcome Front Matter keywords and values**
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>outcome</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of this outcome. The outcome title appears in all of the top-level pages
+ whereever the outcome is referenced.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, the outcome will appear in the output. If false, the outcome will not appear. Default: true.
+<strong>Note:</strong> if an outcome is not referenced by at least one module, it will not appear in the output
+even if published is true.
+</td>
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+in this outcome's description.
+</td>
+</tr>
+
+<tr>
+<td>morea_sort_order</td>
+<td>optional</td>
+<td>If present, an integer used to sort the set of published outcomes for presentation from low to high
+in the outcomes/ page.  Defaults to zero.
+</td>
+</tr>
+</table>
+
+
+**Outcome body text**
+
+ In an outcome definition, the text following the Front Matter describes
+ the outcome. This text appears both in all of the Module pages referring to this outcome,
+ as well as on the Outcomes page
 
 ### Reading
 
-Readings documentation.
+Each reading represents a "passive" learning opportunity associated with the module.
+There are two types of readings:
+
+  1. Readings in which the material is "inline", as the body text associated with the file.
+  2. Readings in which the material is "online", and the Front Matter provides a link to that material.
+
+Whether or not the reading is "inline" or "online" depends upon whether the keyword morea_url appears
+in the Front Matter.   Here are examples of each:
+
+**Sample "inline" reading markdown file contents**
+
+    ---
+    title: "Chapter 3 Notes"
+    published: true
+    morea_id: reading-notes-3
+    morea_summary: "Introduction to asymptotic analysis"
+    morea_type: reading
+    morea_sort_order: 9
+    morea_labels:
+      - Notes
+    ---
+
+    ## Outline
+
+      1. Intro to Asymptotic Analysis
+      2. Big-O
+      3. Omega
+      4. Theta
+
+    (remaining inline reading material deleted)
+
+**Sample "online" reading markdown file contents**
+
+    ---
+    title: "CLRS 3 - Growth of functions"
+    published: true
+    morea_id: reading-cormen-3
+    morea_summary: "Asymptotic notation, standard notation, and common functions."
+    morea_type: reading
+    morea_sort_order: 8
+    morea_url: http://mitpress.mit.edu/books/introduction-algorithms
+    morea_labels:
+     - Textbook
+     - 22 pages
+    ----
+
+**Reading Front Matter keywords and values**
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>reading</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of this reading. The title appears in all of the top-level pages
+ where ever this entity is referenced.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, this reading will appear in the output. If false, the reading will not appear. Default: true.
+<strong>Note:</strong> if a reading is not referenced by at least one module, it will not appear in the output
+even if published is true.
+</td>
+</tr>
+
+<tr>
+<td>morea_url</td>
+<td>optional</td>
+<td>If present, specifies the URL of an external reading. If absent, then the body text of this file
+is the reading.
+</td>
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+in this reading's description.
+</td>
+</tr>
+
+<tr>
+<td>morea_sort_order</td>
+<td>optional</td>
+<td>If present, an integer used to sort the set of published readings for presentation from low to high
+when listed as part of the module.  Defaults to zero.
+</td>
+</tr>
+</table>
+
+
+**Reading body text**
+
+When the morea\_url keyword is provided to specify the URL, then no body text need appear. When the
+morea\_url keyword is absent, then the body text should be the intended reading.
 
 ### Experience
 
-Experiences.
+Each experience represents an active learning opportunity associated with the module.
+Experiences appear as the body text of the file.
+
+**Sample experience markdown file contents**
+
+    ---
+    title: "Asymptotic concepts"
+    published: true
+    morea_id: experience-asymptotic-concepts
+    morea_type: experience
+    morea_summary: "Practice analysis of functions with respect to their limiting behavior"
+    morea_sort_order: 1
+    morea_labels:
+     - In class
+    ---
+
+    ## Asymptotic Concepts
+
+    #### 5 points
+
+    **1\. (1 pt)** We can extend asymptotic notation to the case of two parameters n and m that can go to infinity independently at different rates. For example, we denote by O(g(n,m)) the set of functions:
+
+    > O(_g_(_n_,_m_)) = {_f_(_n_,_m_) : there exists positive constants _c_, _n_0
+    and _m_0 such that 0 ≤ _f_(_n_,_m_) ≤ _c__g_(_n_,_m_) for all _n_ ≥ _ _n0 or
+    _m_ ≥ _m_0}
+
+    Give a corresponding definition for Θ(_g_(_n_,_m_)).
+    ---
+
+    (remaining experience material deleted)
+
+
+**Experience Front Matter keywords and values**
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>experience</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of this experience. The title appears in all of the top-level pages
+ where ever this entity is referenced.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, this experience will appear in the output. If false, the experience will not appear. Default: true.
+<strong>Note:</strong> if an experience is not referenced by at least one module, it will not appear in the output
+even if published is true.
+</td>
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+in this experience's description.
+</td>
+</tr>
+
+<tr>
+<td>morea_sort_order</td>
+<td>optional</td>
+<td>If present, an integer used to sort the set of published experiences for presentation from low to high
+when listed as part of the module.  Defaults to zero.
+</td>
+</tr>
+</table>
+
+
+**Experience body text**
+
+The body text should describe the experience in markdown format.
 
 ### Assessment
 
-Assessment.
+Each assessment represents the results of some activity intended to determine whether or not the students
+have acquired the knowledge and/or capabilities intended by the module's readings and experiences.
 
-# Workflow
+Assessments appear as the body text of the file, typically as charts. We recommend that
+you publish the assessment results in a manner that preserves student anonymity.
 
-Some typical issues in workflow.
+Publishing assessment results has a number of benefits:
 
-### An example editing session.
+  * Students get a sense for both how they are performing relative to others during the course.
+  * Students understand how the educator is attempting to assess the learning associated with the module.
+  * Assessment results become part of the "public record" associated with the module, facilitating future
+    modification and improvement of the assessment technique.
 
-Example editing.
+To present assessment results as charts, you can include Javascript directly in the markdown file, as illustrated in the following example:
 
-### Upstream merging.
+**Sample assessment markdown file contents**
 
-Upstream merging.
+    ---
+    title: "Ability to recall asymptotic concepts"
+    published: true
+    morea_id: assessment-asymptotic-concepts
+    morea_type: assessment
+    morea_sort_order: 1
+    morea_labels:
+     - "Bloom: Remember"
+    ---
+
+    Assessed ability to remember asymptotic concepts through an in-class multiple choice exam:
+
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+    <div class="well">
+      <div id="assessment" style="height: 250px;"></div>
+    </div>
+
+    <script>
+    Morris.Bar({
+      element: 'assessment',
+      hideHover: false,
+      data: [
+            { y: 'Very satisfactory (%)', num: 15 },
+            { y: 'Satisfactory (%)', num: 55 },
+            { y: 'Unsatisfactory (%)', num: 25 },
+            { y: 'Absent (%)', num: 5 },
+            ],
+      xkey: 'y',
+      ykeys: ['num'],
+      resize: true,
+      labels: ['Students']
+    });
+    </script>
+
+
+**Assessment Front Matter keywords and values**
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>assessment</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of this assessment. The title appears in all of the top-level pages
+ where ever this entity is referenced.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, this assessment will appear in the output. If false, the assessment will not appear. Default: true.
+<strong>Note:</strong> if an assessment is not referenced by at least one module, it will not appear in the output
+even if published is true.
+</td>
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+in this assessment's description.
+</td>
+</tr>
+
+<tr>
+<td>morea_sort_order</td>
+<td>optional</td>
+<td>If present, an integer used to sort the set of published assessment for presentation from low to high
+when listed as part of the module.  Defaults to zero.
+</td>
+</tr>
+</table>
+
+**Assessment body text**
+
+The body text should describe the assessment in markdown format.
+
+# Content development
+
+The material in this section assumes that you have set up your local environment according to
+the instructions in the [QuickStart page](/quickstart.html).
+
+## Edit>Compile>Review>Publish
+
+Development of course content with Morea follows this general sequence:
+
+  1. Edit: Modify the files in the morea/ directory.
+  2. Compile: Invoke the "Morea compiler" (i.e. jekyll) using the [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) script
+  3. Review: Fix any errors that occur, or if no errors occur, then review the results at http://localhost:4000.
+  4. Publish: When satisfied with your content, publish it using the [morea-publish.sh](https://github.com/morea-framework/scripts/blob/master/morea-publish.sh) script.
+
+
+## Edit phase
+
+Just edit the files using any programming text editor (vi, emacs, sublime, etc.) Don't use Word.
+
+## Compile phase
+
+The morea-run-local script invokes the Jekyll compiler in "watch" mode, which means it will automatically
+recompile the markdown files whenever it notices that they have been edited. So, for example, this is what happens
+when morea-run-local is invoked in the basic-template system:
+
+    [~/projecthosting/github/morea-framework/basic-template]-> ./morea-run-local.sh
+    + jekyll serve --source /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src --destination /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_site --baseurl '' --watch
+    Configuration file: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_config.yml
+                Source: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src
+           Destination: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_site
+          Generating...
+    Starting Morea page processing...
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     module.md
+      Processing file:     outcome.md
+      Processing file:     reading-1.md
+      Processing file:     reading-2.md
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     module.md
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     logo.png
+      Processing file:     module.md
+      Processing file:     outcome-1.md
+      Processing file:     outcome-2.md
+      Processing file:     reading-1.md
+      Processing file:     reading-2.md
+      Processing file:     footer.md
+      Processing file:     home.md
+      Processing file:     module.md
+      Warning: module.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+      Warning: module.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+      Warning: module.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences, morea_assessments, morea_icon_url (set to /modules/default-icon.png)
+      Summary:
+        20 total, 19 published, 0 unpublished, 19 markdown, 1 other
+        4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
+        0 errors, 7 warnings
+    done.
+     Auto-regeneration: enabled
+        Server address: http://0.0.0.0:4000
+      Server running... press ctrl-c to stop.
+
+This normal output shows the markdown files found by Morea, followed by any "warnings" (non-fatal issues) discovered during
+processing of the markdown, followed by a summary of processing. At the very end, it indicates that the server
+is running and that you can retrieve the site at http://localhost:4000.
+
+If you edit the content associated with a file and save it out, then the compiler will be automatically invoked
+and you will see more output appear similar to the above.  If you decide to install a browser
+plugin like [LiveReload](http://livereload.com/), then the browser page displaying your output will be
+refreshed automatically each time you save your source files.  This is highly recommended.
+
+Now let's see what happens when we make an error creating our content. For example, let's put a typo into
+the Foo module definition file so that we reference "outcome12" rather than "outcome1". Here's what results:
+
+    Starting Morea page processing...
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     module.md
+      Processing file:     outcome.md
+      Processing file:     reading-1.md
+      Processing file:     reading-2.md
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     module.md
+      Processing file:     assessment.md
+      Processing file:     experience.md
+      Processing file:     logo.png
+      Processing file:     module.md
+      Processing file:     outcome-1.md
+      Processing file:     outcome-2.md
+      Processing file:     reading-1.md
+      Processing file:     reading-2.md
+      Processing file:     footer.md
+      Processing file:     home.md
+      Processing file:     module.md
+      Warning: module.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+      Warning: module.md missing optional front matter: morea_icon_url (set to /modules/default-icon.png)
+      Warning: module.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences, morea_assessments, morea_icon_url (set to /modules/default-icon.png)
+      Error: module.md references undefined morea_id: outcome12
+      Warning: module.md missing optional front matter: morea_outcomes, morea_readings, morea_experiences, morea_assessments, morea_icon_url (set to /modules/default-icon.png)
+      Summary:
+        20 total, 19 published, 0 unpublished, 19 markdown, 1 other
+        4 modules, 3 outcomes, 4 readings, 3 experiences, 3 assessments
+        1 errors, 7 warnings
+    Errors found. Exiting.
+    >
+
+Instead of "0 errors, 7 warnings", the compiler reports "1 errors, 7 warnings" and exits back to the
+command line.  At this point, find the place(s) in the output where the error is reported. In this case,
+you'll find:
+
+      Error: module.md references undefined morea_id: outcome12
+
+This tells you name of the file with the error and the problem: in this case, a reference to an
+undefined Morea ID.   Fix the problem and reinvoke morea-run-local.sh to see if the error goes away.
+
+## Publish phase
+
+When you are ready to publish your content to GitHub so it can be seen publicly, invoke the
+morea-publish.sh script, providing it with a commit message. For example:
+
 
 
 

@@ -278,7 +278,7 @@ Now that you've successfully installed Morea and set up your course, it's time t
 is covered in the User Guide.
 
 <p style="text-align: center; padding-top: 10px">
-     <a href="http://morea-framework.github.io/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
    </p>
 
 
