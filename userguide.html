@@ -176,7 +176,7 @@ morea_sort_order: 2
 <p>So, even though each module (foo, bar, baz, qux) in the basic template system contains a file with the name module.md,
 the front matter in that file will be different in order to represent the unique structure of the four modules.</p>
 
-<p>Note that while you <em>can</em> use the same name, you <em>don&#39;t have to</em>.   You could name the file containing the front
+<p>Note that while you <em>can</em> use the same file name, you <em>don&#39;t have to</em>.   You could name the file containing the front
 matter for the Foo module &quot;module-foo.md&quot;.  You could even name it &quot;outcome.md&quot; (although that would be really
 confusing.) The point is:  Morea does not utilize file name information.</p>
 
@@ -219,6 +219,8 @@ material for any given topic.  It&#39;s much like the difference between central
 always a single &quot;golden&quot; version of a system, and distributed version control (i.e. git) where there can be many &quot;different
 but equal&quot; versions of a system.</p>
 
+<p>If you know of a related system, please let us know and we&#39;ll include it here.</p>
+
 <h1>Anatomy of a Module</h1>
 
 <p>This section overviews the structure of the module <a href="https://github.com/morea-framework/basic-template/tree/master/src/morea/foo">Foo</a> in the <a href="https://github.com/morea-framework/basic-template">basic-template</a> system.  Here is a
@@ -229,10 +231,9 @@ graphic to help illustrate the various components:</p>
 <p>The top row illustrates various &quot;source&quot; files, and the bottom row illustrates various &quot;output&quot; HTML pages
 produced from these files.</p>
 
-<p>The top right window shows the contents of the src/morea/foo directory. There are various files in there that define
-the content associated with the Foo module.  Interestingly, there are a couple of files in this directory that are
-not associated with the Foo module.  The presence of non-Foo content in the foo directory illustrates that the directory and file organization
-of the morea/ directory is arbitrary.</p>
+<p>The top right window shows the contents of the src/morea/foo directory. This directory defines
+the content associated with the Foo module.  Note that the directory contains two files that are
+not associated with the Foo module.  This is unusual but permissible in Morea.</p>
 
 <p>The second window on the top row shows the content of module.md.  The content of this file is mostly Front Matter,
 and provides the definition of the Foo module.  The outcomes, readings, experiences, and assessments associated with
@@ -450,7 +451,7 @@ in the outcomes/ page.  Defaults to zero.
 
 <p>In an outcome definition, the text following the Front Matter describes
  the outcome. This text appears both in all of the Module pages referring to this outcome,
- as well as on the Outcomes page</p>
+ as well as on the Outcomes page.</p>
 
 <h3>Reading</h3>
 
@@ -771,6 +772,21 @@ when listed as part of the module.  Defaults to zero.
 <p>The material in this section assumes that you have set up your local environment according to
 the instructions in the <a href="/quickstart.html">QuickStart page</a>.</p>
 
+<h2>Develop by duplicating modules</h2>
+
+<p>Development of curriculum content seems to be easiest by organizing module material by
+directories. Then, to create a new module, just:</p>
+
+<ol>
+<li>Duplicate an existing module directory using your operating system commands.</li>
+<li>Edit the module definition markdown file.  Define a new unique ID for that module, and change
+the references to outcome IDs, reading IDs, experience IDs, and assessment IDs appropriately.</li>
+<li>Edit the markdown files within the new directory files to define the outcomes, readings,
+experiences, and assessments associated with the new module.</li>
+<li>Check to make sure the new module displays correctly in your local browser and that the sort order
+numbers result in the correct ordering on all pages.</li>
+</ol>
+
 <h2>Edit&gt;Compile&gt;Review&gt;Publish</h2>
 
 <p>Development of course content with Morea follows this general sequence:</p>
@@ -784,7 +800,8 @@ the instructions in the <a href="/quickstart.html">QuickStart page</a>.</p>
 
 <h2>Edit phase</h2>
 
-<p>Just edit the files using any programming text editor (vi, emacs, sublime, etc.) Don&#39;t use Word.</p>
+<p>Just edit the files using any programming text editor (vi, emacs, sublime, etc.) Don&#39;t use
+a word processor such as Word.</p>
 
 <h2>Compile phase</h2>
 
@@ -885,7 +902,49 @@ undefined Morea ID.   Fix the problem and reinvoke morea-run-local.sh to see if 
 <h2>Publish phase</h2>
 
 <p>When you are ready to publish your content to GitHub so it can be seen publicly, invoke the
-morea-publish.sh script, providing it with a commit message. For example:</p>
+<a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a> script, providing it with a commit message. For example:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/projecthosting/github/morea-framework/morea-github-io]-&gt; ./morea-publish.sh &quot;Latest content updates&quot;
+Generating HTML site into master directory
++ jekyll build --source ./src/src --destination ./master
+Configuration file: ./src/src/_config.yml
+            Source: ./src/src
+       Destination: ./master
+      Generating... done.
+Committing the master branch.
++ cd ./master
++ git add .
++ git commit -a -m &#39;Latest content updates&#39;
+[master 9d767b6] Latest content updates
+ 5 files changed, 617 insertions(+), 19 deletions(-)
+ create mode 100644 images/module-anatomy.jpg
+ delete mode 100644 images/module-anatomy.png
++ git push origin master
+Counting objects: 12, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 248.63 KiB, done.
+Total 7 (delta 4), reused 0 (delta 0)
+To git@github.com:morea-framework/morea-framework.github.io.git
+   57a32b3..9d767b6  master -&gt; master
+Committing the src branch
++ cd ./src
++ git add .
++ git commit -a -m &#39;Latest content updates&#39;
+[src 4fabb97] Latest content updates
+ 7 files changed, 627 insertions(+), 20 deletions(-)
+ create mode 100644 src/images/module-anatomy.jpg
+ delete mode 100644 src/images/module-anatomy.png
++ git push origin src
+Counting objects: 20, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 247.83 KiB, done.
+Total 11 (delta 8), reused 0 (delta 0)
+To git@github.com:morea-framework/morea-framework.github.io.git
+   0cd10d5..4fabb97  src -&gt; src
+[~/projecthosting/github/morea-framework/morea-github-io]-&gt;
+</code></pre></div>
+<p>This should typically run without errors. If there are errors, use manual git commands to resolve them.</p>
 
   </div>
 </div>
