@@ -274,8 +274,9 @@ While the setup process requires some time and effort, the benefit is that once 
 * Review your changes privately at [http://localhost:4000](http://localhost:4000).
 * When ready, invoke the morea-publish.sh script to publish your changes to the world.
 
-Now that you've successfully installed Morea and set up your course, it's time to learn about the various Morea data files. This information
-is covered in the User Guide.
+Now that you've successfully installed Morea, it's time to learn about the system in more detail through
+the User Guide.
+
 
 <p style="text-align: center; padding-top: 10px">
      <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
