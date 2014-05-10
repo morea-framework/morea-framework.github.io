@@ -914,63 +914,63 @@ The default value (i.e. the value that comes with the basic-template) is "cerule
 
 It is possible to modify these themes or define new ones of your own.  This process will be documented in the developer guide later.
 
-The following sections show a sample page for each of the pre-installed themes in alphabetical order.
+The following sections show a sample page for each of the pre-installed themes in alphabetical order. Click image to see full-size.
 
 ## amelia
 
-<img src="images/themes/amelia.png" width="600px" />
+<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="600px" /></a>
 
 ## cerulean
 
-<img src="images/themes/cerulean.png" width="600px" />
+<a href="images/themes/cerulean.png"><img src="images/themes/cerulean.png" width="600px" /></a>
 
 ## cyborg
 
-<img src="images/themes/cyborg.png" width="600px" />
+<a href="images/themes/cyborg.png"><img src="images/themes/cyborg.png" width="600px" /></a>
 
 ## darkly
 
-<img src="images/themes/darkly.png" width="600px" />
+<a href="images/themes/darkly.png"><img src="images/themes/darkly.png" width="600px" /></a>
 
 ## flatly
 
-<img src="images/themes/flatly.png" width="600px" />
+<a href="images/themes/flatly.png"><img src="images/themes/flatly.png" width="600px" /></a>
 
 ## journal
 
-<img src="images/themes/journal.png" width="600px" />
+<a href="images/themes/journal.png"><img src="images/themes/journal.png" width="600px" /></a>
 
 ## lumen
 
-<img src="images/themes/lumen.png" width="600px" />
+<a href="images/themes/lumen.png"><img src="images/themes/lumen.png" width="600px" /></a>
 
 ## readable
 
-<img src="images/themes/readable.png" width="600px" />
+<a href="images/themes/readable.png"><img src="images/themes/readable.png" width="600px" /></a>
 
 ## simplex
 
-<img src="images/themes/simplex.png" width="600px" />
+<a href="images/themes/amelia.png"><img src="images/themes/simplex.png" width="600px" /></a>
 
 ## slate
 
-<img src="images/themes/slate.png" width="600px" />
+<a href="images/themes/slate.png"><img src="images/themes/slate.png" width="600px" /></a>
 
 ## spacelab
 
-<img src="images/themes/spacelab.png" width="600px" />
+<a href="images/themes/spacelab.png"><img src="images/themes/spacelab.png" width="600px" /></a>
 
 ## superhero
 
-<img src="images/themes/superhero.png" width="600px" />
+<a href="images/themes/superhero.png"><img src="images/themes/superhero.png" width="600px" /></a>
 
 ## united
 
-<img src="images/themes/united.png" width="600px" />
+<a href="images/themes/united.png"><img src="images/themes/united.png" width="600px" /></a>
 
 ## yeti
 
-<img src="images/themes/yeti.png" width="600px" />
+<a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="600px" /></a>
 
 
 
