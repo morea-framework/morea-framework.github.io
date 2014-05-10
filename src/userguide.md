@@ -902,4 +902,75 @@ When you are ready to publish your content to GitHub so it can be seen publicly,
 
 This should typically run without errors. If there are errors, use manual git commands to resolve them.
 
+# Themes
+
+Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the [Bootswatch](http://bootswatch.com) themes for Bootstrap. 
+
+To select a theme for your site, edit the morea_theme parameter in the _config.yml file in the src/ directory of your site:
+
+    morea_theme: cerulean
+
+The default value (i.e. the value that comes with the basic-template) is "cerulean".  The theme in use appears in the footer area of your site.  After changing the value of the theme, you must restart Jekyll (i.e. control-c and re-invoke morea-run-local.sh) to see the change.
+
+It is possible to modify these themes or define new ones of your own.  This process will be documented in the developer guide later.
+
+The following sections show a sample page for each of the pre-installed themes in alphabetical order.
+
+## amelia
+
+<img src="images/themes/amelia.png" width="600px" />
+
+## cerulean
+
+<img src="images/themes/cerulean.png" width="600px" />
+
+## cyborg
+
+<img src="images/themes/cyborg.png" width="600px" />
+
+## darkly
+
+<img src="images/themes/darkly.png" width="600px" />
+
+## flatly
+
+<img src="images/themes/flatly.png" width="600px" />
+
+## journal
+
+<img src="images/themes/journal.png" width="600px" />
+
+## lumen
+
+<img src="images/themes/lumen.png" width="600px" />
+
+## readable
+
+<img src="images/themes/readable.png" width="600px" />
+
+## simplex
+
+<img src="images/themes/simplex.png" width="600px" />
+
+## slate
+
+<img src="images/themes/slate.png" width="600px" />
+
+## spacelab
+
+<img src="images/themes/spacelab.png" width="600px" />
+
+## superhero
+
+<img src="images/themes/superhero.png" width="600px" />
+
+## united
+
+<img src="images/themes/united.png" width="600px" />
+
+## yeti
+
+<img src="images/themes/yeti.png" width="600px" />
+
+
 
