@@ -95,24 +95,24 @@ source files.</p>
 
 <p>First, make a top-level directory for your course. Let&#39;s assume that your Github repo is called &quot;cs300&quot;, so we&#39;ll 
 name this directory the same way:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~] $ mkdir cs300
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ mkdir cs300
 </code></pre></div>
 <p>Next, go into this directory:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~] $ cd cs300
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd cs300
 </code></pre></div>
 <p>The set of git commands needed to create the master and gh-pages branches in this directory are rather tedious, so we&#39;ve created
 the <a href="https://github.com/morea-framework/scripts/blob/master/morea-install.sh">morea-install.sh</a> script to make this setup process easier. </p>
 
 <p>You can download this script from the command line with the following command:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ curl https://raw.github.com/morea-framework/scripts/master/morea-install.sh &gt;&gt; morea-install.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ curl https://raw.github.com/morea-framework/scripts/master/morea-install.sh &gt;&gt; morea-install.sh
 </code></pre></div>
 <p>Now change the permissions to make this script executable:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ chmod u+x morea-install.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ chmod u+x morea-install.sh
 </code></pre></div>
 <p>Now run this script to clone your new repo locally into a subdirectory named &quot;master&quot; and create a new orphan branch named &quot;gh-pages&quot;. You 
 pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named
 &quot;cs300&quot;, the script invocation and its output would be similar to this:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ ./morea-install.sh johndoe cs300 
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ ./morea-install.sh johndoe cs300 
               Creating master/ directory with repo.
               + git clone git@github.com:johndoe/cs300.git master
               Cloning into &#39;master&#39;...
@@ -140,7 +140,7 @@ pass the script two arguments: your github account and the name of your repo.  I
 </code></pre></div>
 <p>The script has created a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory
 which is empty:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text"> [~/cs300/] $ ls 
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ ls 
               gh-pages      master          morea-install.sh
 </code></pre></div>
 <h2>3. Develop your course content</h2>
@@ -168,11 +168,11 @@ have a Markdown mode are generally preferable.</p>
 
 <p>We have developed a script called <a href="https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh">morea-run-local.sh</a> to generate and display your site locally. As before, download it into your top-level directory and
 change its permissions to allow execution:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-run-local.sh &gt;&gt; morea-run-local.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-run-local.sh &gt;&gt; morea-run-local.sh
 [~/cs300] $ chmod u+x morea-run-local.sh
 </code></pre></div>
 <p>Now you can invoke this command to get Jekyll to both compile the source files into HTML and serve them at <a href="http://localhost:4000">http://localhost:4000</a>. </p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300] $ ./morea-run-local.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ ./morea-run-local.sh
           Configuration file: /Users/johnson/cs300/master/src/_config.yml
             Source: /Users/johnson/cs300/master/src
             Destination: /Users/johnson/cs300/master/src/_site
@@ -222,12 +222,12 @@ a browser plugin like <a href="http://livereload.com/">LiveReload</a> and tell i
 you might be expecting by now, we have created a script (this time called <a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a>) to simplify this process. </p>
 
 <p>Download it into your top-level directory and make it executable as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-publish.sh &gt;&gt; morea-publish.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-publish.sh &gt;&gt; morea-publish.sh
 [~/cs300] $ chmod u+x morea-publish.sh
 </code></pre></div>
 <p>Running the script generates the HTML files into the gh-pages directory, then commits the contents of both the gh-pages and the master 
 directories to their respective branches on GitHub.  You must supply the commit message as an argument. Here&#39;s an example:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/cs300] $ ./morea-publish.sh &quot;Fixing typo&quot;
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ ./morea-publish.sh &quot;Fixing typo&quot;
           Generating HTML site into gh-pages directory
           + jekyll build --source ./master/src --destination ./gh-pages
           Configuration file: ./master/src/_config.yml
@@ -321,7 +321,7 @@ the User Guide.</p>
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>24 Apr 2014</span></p>
+      <p>Last update on: <span>09 May 2014</span></p>
   </div>
 </footer>
 </div>

@@ -153,7 +153,7 @@ markdown file to uniquely identify each Morea entity and determine how they rela
 &quot;Front matter&quot; is a <a href="http://jekyllrb.com/">Jekyll</a> term for key-value pairs
 represented via YAML notation and separated from the rest of the file contents by three dashes. For example,
 here is the front matter for a hypothetical module entity:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Learn to Foo&quot;
 morea_id: foo
 morea_outcomes:
@@ -265,7 +265,7 @@ appear in multiple modules.</p>
 and the body of the file (typically a sentence or two) summarizes the module contents.</p>
 
 <p><strong>Sample module markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Learn to Foo&quot;
 published: true
 morea_id: foo
@@ -383,7 +383,7 @@ of the module&#39;s page.</p>
 result of the module or modules in which this outcome appears.</p>
 
 <p><strong>Sample outcome markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Remember concepts of asymptotic growth.&quot;
 published: true
 morea_id: outcome-growth
@@ -467,7 +467,7 @@ There are two types of readings:</p>
 in the Front Matter.   Here are examples of each:</p>
 
 <p><strong>Sample &quot;inline&quot; reading markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Chapter 3 Notes&quot;
 published: true
 morea_id: reading-notes-3
@@ -488,7 +488,7 @@ morea_labels:
 (remaining inline reading material deleted)
 </code></pre></div>
 <p><strong>Sample &quot;online&quot; reading markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;CLRS 3 - Growth of functions&quot;
 published: true
 morea_id: reading-cormen-3
@@ -572,7 +572,7 @@ morea_url keyword is absent, then the body text should be the intended reading.<
 Experiences appear as the body text of the file.</p>
 
 <p><strong>Sample experience markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Asymptotic concepts&quot;
 published: true
 morea_id: experience-asymptotic-concepts
@@ -674,7 +674,7 @@ modification and improvement of the assessment technique.</li>
 <p>To present assessment results as charts, you can include Javascript directly in the markdown file, as illustrated in the following example:</p>
 
 <p><strong>Sample assessment markdown file contents</strong></p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">---
+<div class="highlight"><pre><code class="language-text" data-lang="text">---
 title: &quot;Ability to recall asymptotic concepts&quot;
 published: true
 morea_id: assessment-asymptotic-concepts
@@ -808,7 +808,7 @@ a word processor such as Word.</p>
 <p>The morea-run-local script invokes the Jekyll compiler in &quot;watch&quot; mode, which means it will automatically
 recompile the markdown files whenever it notices that they have been edited. So, for example, this is what happens
 when morea-run-local is invoked in the basic-template system:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/projecthosting/github/morea-framework/basic-template]-&gt; ./morea-run-local.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/projecthosting/github/morea-framework/basic-template]-&gt; ./morea-run-local.sh
 + jekyll serve --source /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src --destination /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_site --baseurl &#39;&#39; --watch
 Configuration file: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src/_config.yml
             Source: /Users/johnson/projecthosting/github/morea-framework/basic-template/master/src
@@ -858,7 +858,7 @@ refreshed automatically each time you save your source files.  This is highly re
 
 <p>Now let&#39;s see what happens when we make an error creating our content. For example, let&#39;s put a typo into
 the Foo module definition file so that we reference &quot;outcome12&quot; rather than &quot;outcome1&quot;. Here&#39;s what results:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">Starting Morea page processing...
+<div class="highlight"><pre><code class="language-text" data-lang="text">Starting Morea page processing...
   Processing file:     assessment.md
   Processing file:     experience.md
   Processing file:     module.md
@@ -894,7 +894,7 @@ Errors found. Exiting.
 <p>Instead of &quot;0 errors, 7 warnings&quot;, the compiler reports &quot;1 errors, 7 warnings&quot; and exits back to the
 command line.  At this point, find the place(s) in the output where the error is reported. In this case,
 you&#39;ll find:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">  Error: module.md references undefined morea_id: outcome12
+<div class="highlight"><pre><code class="language-text" data-lang="text">  Error: module.md references undefined morea_id: outcome12
 </code></pre></div>
 <p>This tells you name of the file with the error and the problem: in this case, a reference to an
 undefined Morea ID.   Fix the problem and reinvoke morea-run-local.sh to see if the error goes away.</p>
@@ -903,7 +903,7 @@ undefined Morea ID.   Fix the problem and reinvoke morea-run-local.sh to see if 
 
 <p>When you are ready to publish your content to GitHub so it can be seen publicly, invoke the
 <a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a> script, providing it with a commit message. For example:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">[~/projecthosting/github/morea-framework/morea-github-io]-&gt; ./morea-publish.sh &quot;Latest content updates&quot;
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/projecthosting/github/morea-framework/morea-github-io]-&gt; ./morea-publish.sh &quot;Latest content updates&quot;
 Generating HTML site into master directory
 + jekyll build --source ./src/src --destination ./master
 Configuration file: ./src/src/_config.yml
@@ -946,6 +946,75 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 </code></pre></div>
 <p>This should typically run without errors. If there are errors, use manual git commands to resolve them.</p>
 
+<h1>Themes</h1>
+
+<p>Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the <a href="http://bootswatch.com">Bootswatch</a> themes for Bootstrap. </p>
+
+<p>To select a theme for your site, edit the morea_theme parameter in the _config.yml file in the src/ directory of your site:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">morea_theme: cerulean
+</code></pre></div>
+<p>The default value (i.e. the value that comes with the basic-template) is &quot;cerulean&quot;.  The theme in use appears in the footer area of your site.  After changing the value of the theme, you must restart Jekyll (i.e. control-c and re-invoke morea-run-local.sh) to see the change.</p>
+
+<p>It is possible to modify these themes or define new ones of your own.  This process will be documented in the developer guide later.</p>
+
+<p>The following sections show a sample page for each of the pre-installed themes in alphabetical order.</p>
+
+<h2>amelia</h2>
+
+<p><img src="images/themes/amelia.png" width="600px" /></p>
+
+<h2>cerulean</h2>
+
+<p><img src="images/themes/cerulean.png" width="600px" /></p>
+
+<h2>cyborg</h2>
+
+<p><img src="images/themes/cyborg.png" width="600px" /></p>
+
+<h2>darkly</h2>
+
+<p><img src="images/themes/darkly.png" width="600px" /></p>
+
+<h2>flatly</h2>
+
+<p><img src="images/themes/flatly.png" width="600px" /></p>
+
+<h2>journal</h2>
+
+<p><img src="images/themes/journal.png" width="600px" /></p>
+
+<h2>lumen</h2>
+
+<p><img src="images/themes/lumen.png" width="600px" /></p>
+
+<h2>readable</h2>
+
+<p><img src="images/themes/readable.png" width="600px" /></p>
+
+<h2>simplex</h2>
+
+<p><img src="images/themes/simplex.png" width="600px" /></p>
+
+<h2>slate</h2>
+
+<p><img src="images/themes/slate.png" width="600px" /></p>
+
+<h2>spacelab</h2>
+
+<p><img src="images/themes/spacelab.png" width="600px" /></p>
+
+<h2>superhero</h2>
+
+<p><img src="images/themes/superhero.png" width="600px" /></p>
+
+<h2>united</h2>
+
+<p><img src="images/themes/united.png" width="600px" /></p>
+
+<h2>yeti</h2>
+
+<p><img src="images/themes/yeti.png" width="600px" /></p>
+
   </div>
 </div>
 </div>
@@ -957,7 +1026,7 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>24 Apr 2014</span></p>
+      <p>Last update on: <span>09 May 2014</span></p>
   </div>
 </footer>
 </div>
