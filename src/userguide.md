@@ -950,7 +950,7 @@ The following sections show a sample page for each of the pre-installed themes i
 
 ## simplex
 
-<a href="images/themes/amelia.png"><img src="images/themes/simplex.png" width="600px" /></a>
+<a href="images/themes/simplex.png"><img src="images/themes/simplex.png" width="600px" /></a>
 
 ## slate
 
