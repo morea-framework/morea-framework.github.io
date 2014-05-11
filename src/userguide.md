@@ -972,5 +972,92 @@ The following sections show a sample page for each of the pre-installed themes i
 
 <a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="600px" /></a>
 
+# Scripts
+
+Because Morea development involves the management of two branches (master, gh-pages) of your repo, we provide a set of Unix/Mac scripts to simplify various development actions.  These scripts are maintained in the [morea-framework/scripts](https://github.com/morea-framework/scripts) repository.  
+
+All of these scripts run from the top-level directory of your local Morea site (in other words, the directory containing the master/ and gh-pages/ subdirectories).  
+
+After downloading the scripts, you must make them executable by running the `chmod` command. For example:
+
+    % chmod 775 morea-publish.sh
+
+Once they are made executable, you can invoke them. For example:
+
+    % ./morea-publish.sh
+
+Here is an overview of the scripts we currently provide.
+
+## morea-install 
+
+The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh) script downloads a GitHub repository containing a Morea site (such as basic-template).  It assumes that the site contains both a master and gh-pages branch.
+
+This script requires two arguments: a github user and the Morea site repo to download. For example:
+
+    % ./morea-install.sh philipmjohnson ics314f13
+
+## morea-merge-upstream
+
+The Morea Framework is still under active development, and the changes and improvements are generally reflected in updates to the basic-template system.   
+
+The [morea-merge-upstream.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-merge-upstream.sh) script incorporates updates to the basic-template system into your local site.  The script defines the basic-template repo as an "upstream" repo, then fetches and merges changes in the master branch of basic-template into your local repo. 
+
+This script requires no arguments.  For example:
+
+    % ./morea-merge-upstream.sh
+
+In some cases merge conflicts can result from this merge.  Don't worry, they are generally very easy to resolve. Contact the Morea framework development team if you need assistance with this process.
+
+
+## morea-publish
+
+The [morea-publish.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-publish.sh) script pushes your local version of your Morea site to GitHub so that it will now be publicly accessable at `http://<username>.github.io/<repo>`. 
+
+It does this by first running Jekyll over your source files, placing the generated HTML into your gh-pages subdirectory, then commiting this branch and the master branch to your GitHub repo.  
+
+This script requires a string containing the commit message. For example:
+
+    % ./morea-publish.sh "Adding the Intro to CSS module."
+
+## morea-pull
+
+The default workflow when working in a team is for each member to commit their changes to the master and gh-pages branches of the GitHub repository as they complete enhancements. Thus, when starting a work session, you will want to first perform a `git pull` to update your local repository on your laptop to the latest version available on GitHub. 
+
+The [morea-pull.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-pull.sh) script simply performs a `git pull` in both the master/ and gh-pages/ subdirectories so that they contain the latest version available from GitHub.
+
+This script requires no arguments.  For example:
+
+    % ./morea-pull.sh
+
+
+If merge errors occur, you will need to resolve them. Contact the Morea framework development team if you need assistance with this process.
+
+## morea-run-local
+
+When doing development, it is convenient to be able to review your work in a browser without publishing the changes to GitHub.
+
+The [morea-run-local.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh) script runs the Jekyll compiler in --watch mode, regenerating the HTML version of the site whenever your source files change and displaying the results at `http://localhost:4000`.
+
+This script requires no arguments.  For example:
+
+    % ./morea-run-local.sh
+
+Note that the Morea plugin forces an exit from the Jekyll compiler when it detects errors in the setup of your Morea site. So, for example, when creating a new module, you typically make a copy of a previously developed module directory in your morea/ directory.  As soon as this happens, the Jekyll compiler will re-run, the plugin will detect a duplicate Morea id, and the compiler will exit.  This is normal and desirable behavior: simply fix the problem, then re-invoke morea-run-local.sh to continue development.
+
+Also note that a few kinds of changes require exiting and restarting the Jekyll compiler with morea-run-local. These include:
+
+  * Changes to the _config.yml file.
+  * Updates to the Morea plugin (which might occur after merging upstream changes). 
+
+If in doubt, simply exit and re-invoke morea-run-local.
+
+
+
+
+
+
+
+ 
+
 
 
