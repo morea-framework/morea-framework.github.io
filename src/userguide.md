@@ -1049,6 +1049,8 @@ Also note that a few kinds of changes require exiting and restarting the Jekyll 
   * Changes to the _config.yml file.
   * Updates to the Morea plugin (which might occur after merging upstream changes). 
 
+Finally, we highly recommend that you install a browser plugin such as [LiveReload](http://livereload.com/), which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.
+
 If in doubt, simply exit and re-invoke morea-run-local.
 
 
