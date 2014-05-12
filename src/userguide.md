@@ -1062,7 +1062,11 @@ The [morea-vanilla-install.sh](https://raw.githubusercontent.com/morea-framework
   * Create a new, empty repo on GitHub using the browser-based mechanisms. 
   * Create a new, empty local directory in which you will develop your site. 
   * Download the morea-vanilla-install.sh script and set its permissions using `chmod 755 morea-vanilla-install.sh`.
-  * Invoke the morea-vanilla-install.sh script.  
+  * Invoke the morea-vanilla-install.sh script. 
+
+This script requires two arguments: a github user and the Morea site repo to download. For example:
+
+    % ./morea-vanilla-install.sh philipmjohnson ics314f13
 
 The script does the following actions:
 
