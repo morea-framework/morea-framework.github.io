@@ -1053,6 +1053,31 @@ Finally, we highly recommend that you install a browser plugin such as [LiveRelo
 
 If in doubt, simply exit and re-invoke morea-run-local.
 
+## morea-vanilla-install
+
+The recommended way to get started using Morea is to fork the basic-template repo into your own account. Unfortunately, GitHub only allows you to fork a given repo once. Thus, this approach will not work when you want to create a second Morea site.   
+
+The [morea-vanilla-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh) script implements an alternative way to set up a Morea site which does not require forking.  To use this script:
+
+  * Create a new, empty repo on GitHub using the browser-based mechanisms. 
+  * Create a new, empty local directory in which you will develop your site. 
+  * Download the morea-vanilla-install.sh script and set its permissions using `chmod 755 morea-vanilla-install.sh`.
+  * Invoke the morea-vanilla-install.sh script.  
+
+The script does the following actions:
+
+  * Creates master/ and gh-pages directories
+  * Clones the master branch of your repo into the master/ directory
+  * Creates a new, orphan gh-pages branch of your repo and checks out that branch into the gh-pages/ directory
+  * Sets 'upstream' to the basic-template repo.
+  * Merges the upstream branch into your new master branch in the master/ directory.
+
+When completed, your master/ branch should contain a copy of the basic-template.  If you encounter merge errors during the execution of this script, simply fix your local files.
+
+It is a good idea after running morea-vanilla-install to run morea-run-local.sh to see that the new site can be created successfully, then morea-publish.sh to commit your site to your GitHub repo.
+
+
+
 
 
 
