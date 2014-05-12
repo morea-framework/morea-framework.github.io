@@ -1089,6 +1089,33 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 
 <p>If in doubt, simply exit and re-invoke morea-run-local.</p>
 
+<h2>morea-vanilla-install</h2>
+
+<p>The recommended way to get started using Morea is to fork the basic-template repo into your own account. Unfortunately, GitHub only allows you to fork a given repo once. Thus, this approach will not work when you want to create a second Morea site.   </p>
+
+<p>The <a href="https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh">morea-vanilla-install.sh</a> script implements an alternative way to set up a Morea site which does not require forking.  To use this script:</p>
+
+<ul>
+<li>Create a new, empty repo on GitHub using the browser-based mechanisms. </li>
+<li>Create a new, empty local directory in which you will develop your site. </li>
+<li>Download the morea-vanilla-install.sh script and set its permissions using <code>chmod 755 morea-vanilla-install.sh</code>.</li>
+<li>Invoke the morea-vanilla-install.sh script.<br></li>
+</ul>
+
+<p>The script does the following actions:</p>
+
+<ul>
+<li>Creates master/ and gh-pages directories</li>
+<li>Clones the master branch of your repo into the master/ directory</li>
+<li>Creates a new, orphan gh-pages branch of your repo and checks out that branch into the gh-pages/ directory</li>
+<li>Sets &#39;upstream&#39; to the basic-template repo.</li>
+<li>Merges the upstream branch into your new master branch in the master/ directory.</li>
+</ul>
+
+<p>When completed, your master/ branch should contain a copy of the basic-template.  If you encounter merge errors during the execution of this script, simply fix your local files.</p>
+
+<p>It is a good idea after running morea-vanilla-install to run morea-run-local.sh to see that the new site can be created successfully, then morea-publish.sh to commit your site to your GitHub repo.</p>
+
   </div>
 </div>
 </div>
@@ -1100,7 +1127,7 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>11 May 2014</span></p>
+      <p>Last update on: <span>12 May 2014</span></p>
   </div>
 </footer>
 </div>
