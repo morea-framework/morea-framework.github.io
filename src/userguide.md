@@ -1064,7 +1064,7 @@ The [morea-vanilla-install.sh](https://raw.githubusercontent.com/morea-framework
   * Download the morea-vanilla-install.sh script and set its permissions using `chmod 755 morea-vanilla-install.sh`.
   * Invoke the morea-vanilla-install.sh script. 
 
-This script requires two arguments: a github user and the Morea site repo to download. For example:
+This script requires two arguments: your github account and the new repo to download. For example:
 
     % ./morea-vanilla-install.sh philipmjohnson ics314f13
 
