@@ -152,11 +152,12 @@ write a textbook, GitBook is a better choice.  Morea is preferred when you want 
 a variety of sources including your own and/or other sources, and when you want to make learning objectives and
 assessments explicit.
 
-[Blackboard](http://www.blackboard.com/) is a commercial offering that provides comprehensive support for all
-aspects of course management: content management, testing, grading, etc.
-Morea provides a small subset of the capabilities of Blackboard, but is free, simpler to use, and facilitates
-sharing through its underlying use of Git and GitHub.  Morea is oriented toward "public" materials, since by default
-the materials you create can be accessed by anyone.
+[Blackboard](http://www.blackboard.com/) is one instance of an "enterprise learning management system (LMS)" that provides comprehensive support for all
+aspects of course management: content management, testing, grading, etc. (Others include [eFront](http://www.efrontlearning.net/), [Moodle](https://moodle.org/), [Ilias](http://www.ilias.de/docu/goto.php?target=st_229_35&client_id=docu), [Dokeos](http://www.dokeos.com/), [Sakai](http://www.sakaiproject.org/), 
+[Claroline](http://www.claroline.net/), [Atutor](http://www.atutor.ca/), and [Olat](http://www.olat.org/)).  
+Morea provides a small subset of the capabilities of these systems, but is oriented toward the needs of institutions
+rather than individual teachers. 
+
 
 [Metacademy](http://www.metacademy.org/) is a site for community curated educational content.  Unlike Morea,
 Metacademy supports a single version of curriculum material for any given topic.  In contrast, Morea tries to make it
@@ -617,6 +618,9 @@ have acquired the knowledge and/or capabilities intended by the module's reading
 Assessments appear as the body text of the file, typically as charts. We recommend that
 you publish the assessment results in a manner that preserves student anonymity.
 
+For each assessment, you can provide a list of outcomes that the assessment checked. This list
+ of outcomes will be listed with the assessment, and the assessment will appear with the outcome.
+
 Publishing assessment results has a number of benefits:
 
   * Students get a sense for both how they are performing relative to others during the course.
@@ -634,6 +638,8 @@ To present assessment results as charts, you can include Javascript directly in 
     morea_id: assessment-asymptotic-concepts
     morea_type: assessment
     morea_sort_order: 1
+    morea_outcomes_assessed:
+     - outcome-technical-writing
     morea_labels:
      - "Bloom: Remember"
     ---
@@ -714,6 +720,13 @@ in this assessment's description.
 <td>optional</td>
 <td>If present, an integer used to sort the set of published assessment for presentation from low to high
 when listed as part of the module.  Defaults to zero.
+</td>
+</tr>
+
+<tr>
+<td>morea_outcomes_assessed</td>
+<td>optional</td>
+<td>If present, a list of outcome morea_ids which are checked by this assessment.
 </td>
 </tr>
 </table>
