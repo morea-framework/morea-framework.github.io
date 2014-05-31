@@ -1,37 +1,35 @@
 ---
-layout: documentation
+layout: userguide
 title: Quick Start
 ---
 
-# Morea Quick Start
-
-## 1. Installation
+# Installation
 
 To use Morea, you need to have git and jekyll installed and have an account at GitHub.
 
-#### Join GitHub
+### Join GitHub
 
 If you haven't already, [sign up for GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account).
 If you are associated with an educational institution (i.e. have a .edu email account), you can [request a free micro account](https://education.github.com/) providing you with 5 private repos.
 
-#### Install git
+### Install git
 
 Follow these instructions to [install git](https://help.github.com/articles/set-up-git). (Be sure to click the tab corresponding to your OS.)
 Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.
 
-#### Install Jekyll
+### Install Jekyll
 
 Finally, [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source
 files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
 If you have problems, you might want to consider using [Vagrant for Jekyll site generation](http://dwradcliffe.com/2013/04/12/vagrant-to-compile-jekyll.html).
 
-## 2. Create a course
+# Create a course
 
 Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to
 generate a Morea course website.  You do this by forking a current Morea repository on GitHub into your own account,
 then setting up local branches for development.
 
-#### Fork a Morea repo
+### Fork a Morea repo
 
 While you can fork any Morea repo, this Quickstart will use
 the [basic-template](https://github.com/morea-framework/basic-template) repo. Go to this page in a browser,
@@ -44,7 +42,7 @@ to the name of the course you wish to develop (such as "cs300").
 You now have a Morea repo, but it's in the cloud, and it doesn't have your course content. To fix this, you need
 to set up a local environment and download the files to it.
 
-#### Set up your local directory structure
+### Set up local directory structure
 
 Developing a Morea site requires managing (at a minimum) two branches for each repo: a "master" branch containing the source
 files for your course, and a special orphan "gh-pages" branch containing the website files produced by running Jekyll over your
@@ -108,7 +106,7 @@ which is empty:
 
   
 
-## 3. Develop your course content
+# Develop course content
 
 Development of your course content involves the following basic workflow:
 
@@ -120,14 +118,14 @@ Development of your course content involves the following basic workflow:
 
 This section documents the first two steps, and the next section documents the final three steps.
 
-#### Edit markdown files.
+### Edit markdown files.
 
 For more information on the structure and content of Morea markdown files, see the [User Guide](/userguide.html).
 
 For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
 have a Markdown mode are generally preferable.
 
-#### Display your site locally
+### Display your site locally
 
 We have developed a script called [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) to generate and display your site locally. As before, download it into your top-level directory and
 change its permissions to allow execution:
@@ -181,7 +179,7 @@ some issues and generated warnings. These are OK.
 The script tells Jekyll to regenerate the HTML files whenever the markdown sources change.  If you use 
 a browser plugin like [LiveReload](http://livereload.com/) and tell it to monitor the master/src/_site directory, your browser will automatically re-render and re-display the page whenever a change is made to your source files. This makes development quite efficient.
 
-## 4. Publish your website
+# Publish your website
 
 The final step is to make your Morea course site available to the world using GitHub's free [Pages](http://pages.github.com/) facility. As
 you might be expecting by now, we have created a script (this time called [morea-publish.sh](https://github.com/morea-framework/scripts/blob/master/morea-publish.sh)) to simplify this process. 
@@ -265,7 +263,7 @@ retrieve your site at [http://johndoe.github.io/cs300](http://johndoe.github.io/
 
 **Note:** the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you'll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.
 
-## Summary
+# Summary
 
 While the setup process requires some time and effort, the benefit is that once you're done, the actual development workflow is quite straightforward:
 
