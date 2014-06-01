@@ -125,6 +125,9 @@ For more information on the structure and content of Morea markdown files, see t
 For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
 have a Markdown mode are generally preferable.
 
+The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
+your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. 
+
 ### Display your site locally
 
 We have developed a script called [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) to generate and display your site locally. As before, download it into your top-level directory and
