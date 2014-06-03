@@ -62,7 +62,7 @@ the [morea-install.sh](https://github.com/morea-framework/scripts/blob/master/mo
 
 You can download this script from the command line with the following command:
 
-     [~/cs300/] $ curl https://raw.github.com/morea-framework/scripts/master/morea-install.sh >> morea-install.sh
+     [~/cs300/] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh >> morea-install.sh
 
 Now change the permissions to make this script executable:
 
@@ -133,7 +133,7 @@ your course.  Your changes will show up on the home page of the site. You can al
 We have developed a script called [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) to generate and display your site locally. As before, download it into your top-level directory and
 change its permissions to allow execution:
 
-    [~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-run-local.sh >> morea-run-local.sh
+    [~/cs300] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh >> morea-run-local.sh
     [~/cs300] $ chmod u+x morea-run-local.sh
 
 Now you can invoke this command to get Jekyll to both compile the source files into HTML and serve them at [http://localhost:4000](http://localhost:4000). 
@@ -189,7 +189,7 @@ you might be expecting by now, we have created a script (this time called [morea
 
 Download it into your top-level directory and make it executable as follows:
 
-    [~/cs300] $ curl https://raw.github.com/morea-framework/scripts/master/morea-publish.sh >> morea-publish.sh
+    [~/cs300] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-publish.sh >> morea-publish.sh
     [~/cs300] $ chmod u+x morea-publish.sh
 
 Running the script generates the HTML files into the gh-pages directory, then commits the contents of both the gh-pages and the master 
