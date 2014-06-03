@@ -5,6 +5,7 @@
 
 /* The Table of Contents container element */
 .tocify {
+    width: 18%;
     margin-top: 25px;
     margin-left: 10px;
     position: fixed;  /* This messes up responsiveness, but is needed to "fix" the menu. */
