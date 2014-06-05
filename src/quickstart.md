@@ -111,7 +111,7 @@ which is empty:
 
 # Develop course content
 
-## Configure the config.yml file
+## Configure the \_config.yml file
 
 The first step in developing course content is to configure the master/src/\_config.yml file. There are three fields to edit:
 
