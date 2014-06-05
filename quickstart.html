@@ -7,6 +7,7 @@
 
   <!--  Load site-specific customizations after bootstrap. -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:normal,italic,bold">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -106,8 +107,9 @@ source files.</p>
 
 <p>First, make a top-level directory for your course. Let&#39;s assume that your Github repo is called &quot;cs300&quot;, so we&#39;ll 
 name this directory the same way:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ mkdir cs300
-</code></pre></div>
+
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir cs300</code></pre></div>
+
 <p>Next, go into this directory:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd cs300
 </code></pre></div>
@@ -124,30 +126,31 @@ the <a href="https://github.com/morea-framework/scripts/blob/master/morea-instal
 pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named
 &quot;cs300&quot;, the script invocation and its output would be similar to this:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ ./morea-install.sh johndoe cs300 
-              Creating master/ directory with repo.
-              + git clone git@github.com:johndoe/cs300.git master
-              Cloning into &#39;master&#39;...
-              remote: Counting objects: 5, done.
-              remote: Compressing objects: 100% (3/3), done.
-              remote: Total 5 (delta 0), reused 0 (delta 0)
-              Receiving objects: 100% (5/5), 4.17 KiB, done.
 
-              Creating orphan branch, empty gh-pages/ directory.
-              + git clone git@github.com:johndoe/cs300.git gh-pages
-              Cloning into &#39;gh-pages&#39;...
-              remote: Counting objects: 5, done.
-              remote: Compressing objects: 100% (3/3), done.
-              remote: Total 5 (delta 0), reused 0 (delta 0)
-              Receiving objects: 100% (5/5), 4.17 KiB, done.
-              + cd gh-pages
-              + git checkout --orphan gh-pages
-              Switched to a new branch &#39;gh-pages&#39;
-              + git rm -rf .
-              rm &#39;.gitignore&#39;
-              rm &#39;LICENSE&#39;
-              rm &#39;README.md&#39;
+            Creating master/ directory with repo.
+            + git clone git@github.com:johndoe/cs300.git master
+            Cloning into &#39;master&#39;...
+            remote: Counting objects: 5, done.
+            remote: Compressing objects: 100% (3/3), done.
+            remote: Total 5 (delta 0), reused 0 (delta 0)
+            Receiving objects: 100% (5/5), 4.17 KiB, done.
 
-              master/ and gh-pages/ directories created.
+            Creating orphan branch, empty gh-pages/ directory.
+            + git clone git@github.com:johndoe/cs300.git gh-pages
+            Cloning into &#39;gh-pages&#39;...
+            remote: Counting objects: 5, done.
+            remote: Compressing objects: 100% (3/3), done.
+            remote: Total 5 (delta 0), reused 0 (delta 0)
+            Receiving objects: 100% (5/5), 4.17 KiB, done.
+            + cd gh-pages
+            + git checkout --orphan gh-pages
+            Switched to a new branch &#39;gh-pages&#39;
+            + git rm -rf .
+            rm &#39;.gitignore&#39;
+            rm &#39;LICENSE&#39;
+            rm &#39;README.md&#39;
+
+            master/ and gh-pages/ directories created.
 </code></pre></div>
 <p>The script has created a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory
 which is empty:</p>
@@ -156,29 +159,41 @@ which is empty:</p>
 </code></pre></div>
 <h1>Develop course content</h1>
 
-<p>Development of your course content involves the following basic workflow:</p>
+<h2>Configure the config.yml file</h2>
+
+<p>The first step in developing course content is to configure the master/src/_config.yml file. There are three fields to edit:</p>
 
 <ul>
-<li>Edit your markdown files in the master/ directory</li>
-<li>Run Jekyll locally to see the resulting HTML website in your browser.</li>
-<li>Once you are satisfied with your content, run Jekyll to place the HTML files into your gh-pages/ directory.</li>
-<li>Commit the gh-pages branch to GitHub to make the improved website publicly available.</li>
-<li>Commit the master branch to GitHub to back up your edits and make your sources available to others.</li>
+<li><strong>name</strong>:  change this from &quot;Basic Template&quot; to the name of your course.</li>
+<li><strong>baseurl</strong>: change this from /basic-template to your repo name.</li>
+<li><strong>morea_theme</strong>:  if you wish, you can change this to any of the supported <a href="userguide.html#Themes">Morea themes</a>.</li>
 </ul>
 
-<p>This section documents the first two steps, and the next section documents the final three steps.</p>
+<p>For example, here&#39;s how we might configure the _config.yml file for our cs300 example course:</p>
 
-<h3>Edit markdown files.</h3>
+<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS 300</span>
+<span class="l-Scalar-Plain">highlighter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pygments</span>
+<span class="l-Scalar-Plain">safe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/cs300</span>
+<span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">superhero</span></code></pre></div>
 
-<p>For more information on the structure and content of Morea markdown files, see the <a href="/userguide.html">User Guide</a>.</p>
+<p>In general, you only need to touch the _config.yml file once. Anytime you edit the _config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. </p>
 
-<p>For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
-have a Markdown mode are generally preferable.</p>
+<h2>Edit markdown files.</h2>
 
-<p>The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
+<p>The next step is to edit the markdown files to present additional course content. </p>
+
+<p>For details on the structure and content of Morea markdown files, see the <a href="/userguide.html">User Guide</a>.</p>
+
+<p>For now, just make some simple changes.  The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
 your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. </p>
 
-<h3>Display your site locally</h3>
+<p>Use any editor you like, although those that have a Markdown mode are generally preferable.</p>
+
+<h2>Display your site locally</h2>
+
+<p>Once you&#39;ve edited markdown files, you&#39;ll want to review the formatted version in a browser.  </p>
 
 <p>We have developed a script called <a href="https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh">morea-run-local.sh</a> to generate and display your site locally. As before, download it into your top-level directory and
 change its permissions to allow execution:</p>
@@ -341,7 +356,7 @@ the User Guide.</p>
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>03 Jun 2014</span></p>
+      <p>Last update on: <span>05 Jun 2014</span></p>
   </div>
 </footer>
 </div>
