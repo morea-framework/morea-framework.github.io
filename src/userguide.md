@@ -959,6 +959,11 @@ produces:
 
 {% gist philipmjohnson/5288814 %}
 
+### Code repo
+
+For documenting executable systems, as opposed to code samples, your best bet is to create a GitHub repo containing the system and provide links to it 
+in your markdown. 
+
 
 # Themes
 
