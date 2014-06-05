@@ -915,6 +915,51 @@ When you are ready to publish your content to GitHub so it can be seen publicly,
 
 This should typically run without errors. If there are errors, use manual git commands to resolve them.
 
+## Formatted code options
+
+### Jekyll highlight tag
+
+To put code into your pages, one option is to use [Jekyll code snippet highlighting](http://jekyllrb.com/docs/templates/#code-snippet-highlighting).
+
+For example, 
+
+{% raw %}
+<pre>
+{% highlight java %}
+public static void main(String args[]) {
+  System.out.println("Hello world");
+}
+{% endhighlight %}
+</pre>
+{% endraw %}
+
+produces:
+
+{% highlight java %}
+public static void main(String args[]) {
+  System.out.println("Hello world");
+}
+{% endhighlight %}
+
+Don't forget to include syntax.css in your page, or else the code won't be shown with colors. 
+
+### Jekyll gist tag
+
+For larger code samples, you might prefer to use the [Jekyll gist tag](http://jekyllrb.com/docs/templates/#gist). 
+
+For example, 
+
+{% raw %}
+<pre>
+{% gist philipmjohnson/5288814 %}
+</pre>
+{% endraw %}
+
+produces:
+
+{% gist philipmjohnson/5288814 %}
+
+
 # Themes
 
 Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the [Bootswatch](http://bootswatch.com) themes for Bootstrap. 

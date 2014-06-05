@@ -51,7 +51,9 @@ source files.
 First, make a top-level directory for your course. Let's assume that your Github repo is called "cs300", so we'll 
 name this directory the same way:
 
-    [~] $ mkdir cs300
+{% highlight bash %}
+[~] $ mkdir cs300
+{% endhighlight %}
 
 Next, go into this directory:
 
@@ -73,62 +75,78 @@ pass the script two arguments: your github account and the name of your repo.  I
 "cs300", the script invocation and its output would be similar to this:
 
      [~/cs300/] $ ./morea-install.sh johndoe cs300 
-                  Creating master/ directory with repo.
-                  + git clone git@github.com:johndoe/cs300.git master
-                  Cloning into 'master'...
-                  remote: Counting objects: 5, done.
-                  remote: Compressing objects: 100% (3/3), done.
-                  remote: Total 5 (delta 0), reused 0 (delta 0)
-                  Receiving objects: 100% (5/5), 4.17 KiB, done.
 
-                  Creating orphan branch, empty gh-pages/ directory.
-                  + git clone git@github.com:johndoe/cs300.git gh-pages
-                  Cloning into 'gh-pages'...
-                  remote: Counting objects: 5, done.
-                  remote: Compressing objects: 100% (3/3), done.
-                  remote: Total 5 (delta 0), reused 0 (delta 0)
-                  Receiving objects: 100% (5/5), 4.17 KiB, done.
-                  + cd gh-pages
-                  + git checkout --orphan gh-pages
-                  Switched to a new branch 'gh-pages'
-                  + git rm -rf .
-                  rm '.gitignore'
-                  rm 'LICENSE'
-                  rm 'README.md'
+                Creating master/ directory with repo.
+                + git clone git@github.com:johndoe/cs300.git master
+                Cloning into 'master'...
+                remote: Counting objects: 5, done.
+                remote: Compressing objects: 100% (3/3), done.
+                remote: Total 5 (delta 0), reused 0 (delta 0)
+                Receiving objects: 100% (5/5), 4.17 KiB, done.
 
-                  master/ and gh-pages/ directories created.
+                Creating orphan branch, empty gh-pages/ directory.
+                + git clone git@github.com:johndoe/cs300.git gh-pages
+                Cloning into 'gh-pages'...
+                remote: Counting objects: 5, done.
+                remote: Compressing objects: 100% (3/3), done.
+                remote: Total 5 (delta 0), reused 0 (delta 0)
+                Receiving objects: 100% (5/5), 4.17 KiB, done.
+                + cd gh-pages
+                + git checkout --orphan gh-pages
+                Switched to a new branch 'gh-pages'
+                + git rm -rf .
+                rm '.gitignore'
+                rm 'LICENSE'
+                rm 'README.md'
+
+                master/ and gh-pages/ directories created.
+
 
 The script has created a "master" directory containing a clone of the basic-template files, and a "gh-pages" directory
 which is empty:
 
      [~/cs300/] $ ls 
                   gh-pages		master			morea-install.sh
-
   
 
 # Develop course content
 
-Development of your course content involves the following basic workflow:
+## Configure the config.yml file
 
-  * Edit your markdown files in the master/ directory
-  * Run Jekyll locally to see the resulting HTML website in your browser.
-  * Once you are satisfied with your content, run Jekyll to place the HTML files into your gh-pages/ directory.
-  * Commit the gh-pages branch to GitHub to make the improved website publicly available.
-  * Commit the master branch to GitHub to back up your edits and make your sources available to others.
+The first step in developing course content is to configure the master/src/\_config.yml file. There are three fields to edit:
 
-This section documents the first two steps, and the next section documents the final three steps.
+  * **name**:  change this from "Basic Template" to the name of your course.
+  * **baseurl**: change this from /basic-template to your repo name.
+  * **morea_theme**:  if you wish, you can change this to any of the supported [Morea themes](userguide.html#Themes).
 
-### Edit markdown files.
+For example, here's how we might configure the \_config.yml file for our cs300 example course:
 
-For more information on the structure and content of Morea markdown files, see the [User Guide](/userguide.html).
+{% highlight yaml %}
+name: CS 300
+highlighter: pygments
+safe: false
+baseurl: /cs300
+exclude: [morea]
+morea_theme: superhero
+{% endhighlight %}
 
-For now, just make some simple changes to the basic-template files.  Use any editor you like, although those that
-have a Markdown mode are generally preferable.
+In general, you only need to touch the \_config.yml file once. Anytime you edit the \_config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. 
 
-The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
+## Edit markdown files.
+
+The next step is to edit the markdown files to present additional course content. 
+
+For details on the structure and content of Morea markdown files, see the [User Guide](/userguide.html).
+
+For now, just make some simple changes.  The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
 your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. 
 
-### Display your site locally
+Use any editor you like, although those that have a Markdown mode are generally preferable.
+
+
+## Display your site locally
+
+Once you've edited markdown files, you'll want to review the formatted version in a browser.  
 
 We have developed a script called [morea-run-local.sh](https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh) to generate and display your site locally. As before, download it into your top-level directory and
 change its permissions to allow execution:
