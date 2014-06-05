@@ -132,7 +132,7 @@ morea_theme: superhero
 
 In general, you only need to touch the \_config.yml file once. Anytime you edit the \_config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. 
 
-## Edit markdown files.
+## Edit markdown files
 
 The next step is to edit the markdown files to present additional course content. 
 
