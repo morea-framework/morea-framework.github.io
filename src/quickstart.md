@@ -5,23 +5,84 @@ title: Quick Start
 
 # Installation
 
-To use Morea, you need to have git and jekyll installed and have an account at GitHub.
+To use Morea, you need to have git, python, ruby, and jekyll installed and have an account at GitHub.
 
 ### Join GitHub
 
 If you haven't already, [sign up for GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account).
 If you are associated with an educational institution (i.e. have a .edu email account), you can [request a free micro account](https://education.github.com/) providing you with 5 private repos.
 
+<div class="alert alert-warning">
+<p><strong>Warning!</strong> Morea requires that you have an ssh key on your laptop and that you provide
+the public key to GitHub. If you do not do this, then you will later encounter the error "Permission denied (publickey)". 
+</p>
+
+<p>
+To define a public key and provide it to GitHub, follow the instructions on GitHub's
+<a class="alert-link" href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a> page.
+</p>
+</div>
+
 ### Install git
 
-Follow these instructions to [install git](https://help.github.com/articles/set-up-git). (Be sure to click the tab corresponding to your OS.)
+Check to see if you have git installed and can invoke it from the command line:
+
+    % git --version
+      git version 1.7.9.6 (Apple Git-31.1)
+
+If not, follow these instructions to [install git](https://help.github.com/articles/set-up-git). (Be sure to click the tab corresponding to your OS.)
 Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.
+
+<div class="alert alert-warning">
+<p><strong>Windows OS Warning!</strong> When installing Git on Windows, we recommend you select the option to 
+provide "Git Bash".   Git Bash (which is available from the Start menu as an option under the Git submenu) 
+is a way of running Git within a Unix-like command shell.  This is extremely useful for Morea, since this enables
+you to run Morea scripts without modification.
+</p>
+</div>
+
+
+### Install Ruby
+
+Check to see if you have Ruby installed and can invoke it from the command line: 
+
+    % ruby --version
+      ruby 2.1.0p0 (2013-12-25 revision 44422) [x86_64-darwin12.0]
+
+If not, follow these instructions to [install Ruby](https://www.ruby-lang.org/en/downloads/). Ruby is the programming language used to run Jekyll.
+
+Morea is compatible with either Ruby 1.9.x or 2.x.
+
+
+### Install Python
+
+Check to see if you have Python 2.x installed and can invoke it from the command line:
+
+    % python --version
+      Python 2.7.2
+
+If not, follow these instructions to [install Python](https://www.python.org/download/).
+
+<div class="alert alert-warning">
+<p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
+</div>
 
 ### Install Jekyll
 
-Finally, [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source
+Check to see if you have Jekyll 2.x installed and can invoke it from the command line:
+
+    $ jekyll --version
+      jekyll 2.0.3
+
+If not, follow these instructions to [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source
 files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
-If you have problems, you might want to consider using [Vagrant for Jekyll site generation](http://dwradcliffe.com/2013/04/12/vagrant-to-compile-jekyll.html).
+
+<div class="alert alert-warning">
+<p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
+</p>
+</div>
+
+
 
 # Create a course
 
