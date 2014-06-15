@@ -62,23 +62,76 @@
   <div class="col-xs-9">
      <h1>Installation</h1>
 
-<p>To use Morea, you need to have git and jekyll installed and have an account at GitHub.</p>
+<p>To use Morea, you need to have git, python, ruby, and jekyll installed and have an account at GitHub.</p>
 
 <h3>Join GitHub</h3>
 
 <p>If you haven&#39;t already, <a href="https://help.github.com/articles/signing-up-for-a-new-github-account">sign up for GitHub</a>.
 If you are associated with an educational institution (i.e. have a .edu email account), you can <a href="https://education.github.com/">request a free micro account</a> providing you with 5 private repos.</p>
 
+<div class="alert alert-warning">
+<p><strong>Warning!</strong> Morea requires that you have an ssh key on your laptop and that you provide
+the public key to GitHub. If you do not do this, then you will later encounter the error "Permission denied (publickey)". 
+</p>
+
+<p>
+To define a public key and provide it to GitHub, follow the instructions on GitHub's
+<a class="alert-link" href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a> page.
+</p>
+</div>
+
 <h3>Install git</h3>
 
-<p>Follow these instructions to <a href="https://help.github.com/articles/set-up-git">install git</a>. (Be sure to click the tab corresponding to your OS.)
+<p>Check to see if you have git installed and can invoke it from the command line:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% git --version
+  git version 1.7.9.6 (Apple Git-31.1)
+</code></pre></div>
+<p>If not, follow these instructions to <a href="https://help.github.com/articles/set-up-git">install git</a>. (Be sure to click the tab corresponding to your OS.)
 Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.</p>
+
+<div class="alert alert-warning">
+<p><strong>Windows OS Warning!</strong> When installing Git on Windows, we recommend you select the option to 
+provide "Git Bash".   Git Bash (which is available from the Start menu as an option under the Git submenu) 
+is a way of running Git within a Unix-like command shell.  This is extremely useful for Morea, since this enables
+you to run Morea scripts without modification.
+</p>
+</div>
+
+<h3>Install Ruby</h3>
+
+<p>Check to see if you have Ruby installed and can invoke it from the command line: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% ruby --version
+  ruby 2.1.0p0 (2013-12-25 revision 44422) [x86_64-darwin12.0]
+</code></pre></div>
+<p>If not, follow these instructions to <a href="https://www.ruby-lang.org/en/downloads/">install Ruby</a>. Ruby is the programming language used to run Jekyll.</p>
+
+<p>Morea is compatible with either Ruby 1.9.x or 2.x.</p>
+
+<h3>Install Python</h3>
+
+<p>Check to see if you have Python 2.x installed and can invoke it from the command line:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% python --version
+  Python 2.7.2
+</code></pre></div>
+<p>If not, follow these instructions to <a href="https://www.python.org/download/">install Python</a>.</p>
+
+<div class="alert alert-warning">
+<p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
+</div>
 
 <h3>Install Jekyll</h3>
 
-<p>Finally, <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source
-files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
-If you have problems, you might want to consider using <a href="http://dwradcliffe.com/2013/04/12/vagrant-to-compile-jekyll.html">Vagrant for Jekyll site generation</a>.</p>
+<p>Check to see if you have Jekyll 2.x installed and can invoke it from the command line:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
+  jekyll 2.0.3
+</code></pre></div>
+<p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source
+files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
+
+<div class="alert alert-warning">
+<p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
+</p>
+</div>
 
 <h1>Create a course</h1>
 
@@ -356,7 +409,7 @@ the User Guide.</p>
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>05 Jun 2014</span></p>
+      <p>Last update on: <span>15 Jun 2014</span></p>
   </div>
 </footer>
 </div>
