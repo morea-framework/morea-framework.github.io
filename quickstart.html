@@ -55,19 +55,18 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-xs-3 hidden-xs" >
+  <div class="hidden-xs col-sm-3" >
     <!-- Our table of contents will be here !-->
     <div id="nav"></div>
   </div>
-  <div class="col-xs-9">
+  <div class="col-xs-12 col-sm-9">
      <h1>Installation</h1>
 
 <p>To use Morea, you need to have git, python, ruby, and jekyll installed and have an account at GitHub.</p>
 
 <h3>Join GitHub</h3>
 
-<p>If you haven&#39;t already, <a href="https://help.github.com/articles/signing-up-for-a-new-github-account">sign up for GitHub</a>.
-If you are associated with an educational institution (i.e. have a .edu email account), you can <a href="https://education.github.com/">request a free micro account</a> providing you with 5 private repos.</p>
+<p>If you haven&#39;t already, <a href="https://help.github.com/articles/signing-up-for-a-new-github-account">sign up for GitHub</a>.If you are associated with an educational institution (i.e. have a .edu email account), you can  <a href="https://education.github.com/">request a free micro account</a> providing you with 5 private repos.</p>
 
 <div class="alert alert-warning">
 <p><strong>Warning!</strong> Morea requires that you have an ssh key on your laptop and that you provide
@@ -86,8 +85,7 @@ To define a public key and provide it to GitHub, follow the instructions on GitH
 <div class="highlight"><pre><code class="language-text" data-lang="text">% git --version
   git version 1.7.9.6 (Apple Git-31.1)
 </code></pre></div>
-<p>If not, follow these instructions to <a href="https://help.github.com/articles/set-up-git">install git</a>. (Be sure to click the tab corresponding to your OS.)
-Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.</p>
+<p>If not, follow these instructions to <a href="https://help.github.com/articles/set-up-git">install git</a>. (Be sure to click the tab corresponding to your OS.) Note that Morea uses a variety of scripts that invoke git from the command line, so you cannot simply download the GitHub GUI app.</p>
 
 <div class="alert alert-warning">
 <p><strong>Windows OS Warning!</strong> When installing Git on Windows, we recommend you select the option to 
@@ -125,8 +123,7 @@ you to run Morea scripts without modification.
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
   jekyll 2.0.3
 </code></pre></div>
-<p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source
-files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
+<p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
 
 <div class="alert alert-warning">
 <p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
@@ -135,84 +132,98 @@ files into the actual website. Note that Jekyll is easy to install on Linux and 
 
 <h1>Create a course</h1>
 
-<p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to
-generate a Morea course website.  You do this by forking a current Morea repository on GitHub into your own account,
-then setting up local branches for development.</p>
+<p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea basic-template as an &quot;upstream&quot; repository, and merging the contents of the upstream repo.  The net effect of all this is to 
+ initialize your repo with the contents of the basic-template, so that you can start off with a functional Morea website.</p>
 
-<h3>Fork a Morea repo</h3>
+<div class="alert alert-warning">
+<p><strong>Why not just fork the basic-template repo?</strong> If you are familiar with git, you might be wondering why we do not advise you to fork the basic-template repository.  The reason is that the basic-template repo is a public repository, and you cannot make your repository private if you forked it from a public one.  Our approach enables you to start with a working Morea site based on a public repository and allow you to make your repository private later.
+</p>
+</div>
 
-<p>While you can fork any Morea repo, this Quickstart will use
-the <a href="https://github.com/morea-framework/basic-template">basic-template</a> repo. Go to this page in a browser,
-then press the &quot;Fork&quot; button in the upper right corner.  This will create a copy of that repo in your own account and
-take you to your new repo&#39;s home page.</p>
+<h3>Create an empty repository</h3>
 
-<p>Now click the &quot;Settings&quot; link on the right side of the page, and rename the repo from &quot;basic-template&quot;
-to the name of the course you wish to develop (such as &quot;cs300&quot;).</p>
+<p>Login to GitHub and click the &quot;+&quot; icon in the upper right corner to pull down a menu that allows you to select &quot;New repository&quot;:</p>
 
-<p>You now have a Morea repo, but it&#39;s in the cloud, and it doesn&#39;t have your course content. To fix this, you need
-to set up a local environment and download the files to it.</p>
+<p><img src="images/CS300-Fall2014-create.png" class="img-responsive"></p>
 
-<h3>Set up local directory structure</h3>
+<p>Provide a name for the repository that identifies the course you are creating. Note that you typically indicate both the course and the semester in the repo name.  When you want to teach a course again, you simply clone this repo and rename it to the new semester.  Add a short description, make the repo public or private as you like, but <strong>do not initialize the repository with a README</strong> (so that you avoid a merge conflict later).  </p>
 
-<p>Developing a Morea site requires managing (at a minimum) two branches for each repo: a &quot;master&quot; branch containing the source
-files for your course, and a special orphan &quot;gh-pages&quot; branch containing the website files produced by running Jekyll over your
-source files.</p>
+<p>After clicking &quot;Create Repository&quot;, you will see the following page. </p>
 
-<p>First, make a top-level directory for your course. Let&#39;s assume that your Github repo is called &quot;cs300&quot;, so we&#39;ll 
-name this directory the same way:</p>
+<p><img src="images/CS300-Fall2014-create2.png" class="img-responsive"></p>
 
-<div class="highlight"><pre><code class="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir cs300</code></pre></div>
+<p>Once you get to this page, we&#39;re done with GitHub. Let&#39;s now set up files on your local computer.</p>
+
+<h3>Set up local development directory</h3>
+
+<p>Developing a Morea site requires managing (at a minimum) two branches for each repository: a &quot;master&quot; branch containing the source files for your course, and a special orphan &quot;gh-pages&quot; branch containing the website files produced by running Jekyll over your source files.</p>
+
+<p>First, make a top-level directory for your course. Let&#39;s assume that your GitHub repository is called &quot;CS300-Fall2014&quot;, so we&#39;ll name this directory the same way:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir CS300-Fall2014</code></pre></div>
 
 <p>Next, go into this directory:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd cs300
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd CS300-Fall2014
 </code></pre></div>
-<p>The set of git commands needed to create the master and gh-pages branches in this directory are rather tedious, so we&#39;ve created
-the <a href="https://github.com/morea-framework/scripts/blob/master/morea-install.sh">morea-install.sh</a> script to make this setup process easier. </p>
+<p>The set of git commands needed to create the master and gh-pages branches in this directory are rather tedious, so we&#39;ve created the <a href="https://github.com/morea-framework/scripts/blob/master/morea-vanilla-install.sh">morea-vanilla-install.sh</a> script to make this setup process easier. </p>
 
 <p>You can download this script from the command line with the following command:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh &gt;&gt; morea-install.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/CS300-Fall2014/] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh &gt;&gt; morea-vanilla-install.sh
 </code></pre></div>
 <p>Now change the permissions to make this script executable:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ chmod u+x morea-install.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/CS300-Fall2014/] $ chmod u+x morea-vanilla-install.sh
 </code></pre></div>
-<p>Now run this script to clone your new repo locally into a subdirectory named &quot;master&quot; and create a new orphan branch named &quot;gh-pages&quot;. You 
-pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named
-&quot;cs300&quot;, the script invocation and its output would be similar to this:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ ./morea-install.sh johndoe cs300 
+<p>Now run this script to clone your new repo locally into a subdirectory named &quot;master&quot; and create a new orphan branch named &quot;gh-pages&quot;. You pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named &quot;CS300-Fall2014&quot;, the script invocation and its output would be similar to this:</p>
 
-            Creating master/ directory with repo.
-            + git clone git@github.com:johndoe/cs300.git master
-            Cloning into &#39;master&#39;...
-            remote: Counting objects: 5, done.
-            remote: Compressing objects: 100% (3/3), done.
-            remote: Total 5 (delta 0), reused 0 (delta 0)
-            Receiving objects: 100% (5/5), 4.17 KiB, done.
+<div class="highlight"><pre><code class="bash"><span class="o">[</span>~/CS300-Fall2014<span class="o">]</span>-&gt; ./morea-vanilla-install.sh johndoe CS300-Fall2014
+Creating master/ directory with repo.
++ git clone git@github.com:johndoe/CS300-Fall2014.git master
+Cloning into <span class="s1">&#39;master&#39;</span>...
+warning: You appear to have cloned an empty repository.
 
-            Creating orphan branch, empty gh-pages/ directory.
-            + git clone git@github.com:johndoe/cs300.git gh-pages
-            Cloning into &#39;gh-pages&#39;...
-            remote: Counting objects: 5, done.
-            remote: Compressing objects: 100% (3/3), done.
-            remote: Total 5 (delta 0), reused 0 (delta 0)
-            Receiving objects: 100% (5/5), 4.17 KiB, done.
-            + cd gh-pages
-            + git checkout --orphan gh-pages
-            Switched to a new branch &#39;gh-pages&#39;
-            + git rm -rf .
-            rm &#39;.gitignore&#39;
-            rm &#39;LICENSE&#39;
-            rm &#39;README.md&#39;
+Creating orphan branch, empty gh-pages/ directory.
++ git clone git@github.com:johndoe/CS300-Fall2014.git gh-pages
+Cloning into <span class="s1">&#39;gh-pages&#39;</span>...
+warning: You appear to have cloned an empty repository.
++ <span class="nb">cd </span>gh-pages
++ git checkout --orphan gh-pages
++ git rm -rf .
+fatal: pathspec <span class="s1">&#39;&#39;</span> did not match any files
 
-            master/ and gh-pages/ directories created.
+master/ and gh-pages/ directories created.
+Setting the remote to morea-framework/basic-template <span class="o">(</span>this can fail <span class="k">if </span>already <span class="nb">set</span><span class="o">)</span>
+Here are the current upstream repos:
+origin  git@github.com:johndoe/CS300-Fall2014.git <span class="o">(</span>fetch<span class="o">)</span>
+origin  git@github.com:johndoe/CS300-Fall2014.git <span class="o">(</span>push<span class="o">)</span>
+upstream    https://github.com/morea-framework/basic-template.git <span class="o">(</span>fetch<span class="o">)</span>
+upstream    https://github.com/morea-framework/basic-template.git <span class="o">(</span>push<span class="o">)</span>
+Fetching upstream basic-template
++ <span class="nb">cd</span> ./master
++ git fetch upstream
+remote: Reusing existing pack: 2098, <span class="k">done</span>.
+remote: Total 2098 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>2098/2098<span class="o">)</span>, 685.58 KiB <span class="p">|</span> 246 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>1059/1059<span class="o">)</span>, <span class="k">done</span>.
+From https://github.com/morea-framework/basic-template
+ * <span class="o">[</span>new branch<span class="o">]</span>      gh-pages   -&gt; upstream/gh-pages
+ * <span class="o">[</span>new branch<span class="o">]</span>      jekyll-2.0 -&gt; upstream/jekyll-2.0
+ * <span class="o">[</span>new branch<span class="o">]</span>      master     -&gt; upstream/master
+From https://github.com/morea-framework/basic-template
+ * <span class="o">[</span>new tag<span class="o">]</span>         1.0.0      -&gt; 1.0.0
+ * <span class="o">[</span>new tag<span class="o">]</span>         release-jekyll-1.4.3 -&gt; release-jekyll-1.4.3
+Merging upstream into master
++ <span class="nb">cd</span> ./master
++ git merge upstream/master</code></pre></div>
+
+<p>Now you have a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory which is empty:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/CS300-Fall2014/] $ ls 
+              gh-pages      master          morea-vanilla-install.sh
 </code></pre></div>
-<p>The script has created a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory
-which is empty:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"> [~/cs300/] $ ls 
-              gh-pages      master          morea-install.sh
-</code></pre></div>
+<p>Now we can start working on the content of the course. </p>
+
 <h1>Develop course content</h1>
 
-<h2>Configure the _config.yml file</h2>
+<h3>Configure the _config.yml file</h3>
 
 <p>The first step in developing course content is to configure the master/src/_config.yml file. There are three fields to edit:</p>
 
@@ -222,42 +233,40 @@ which is empty:</p>
 <li><strong>morea_theme</strong>:  if you wish, you can change this to any of the supported <a href="userguide.html#Themes">Morea themes</a>.</li>
 </ul>
 
-<p>For example, here&#39;s how we might configure the _config.yml file for our cs300 example course:</p>
+<p>For example, here&#39;s how we might configure the _config.yml file for our CS300-Fall2014 example course:</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS 300</span>
+<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
 <span class="l-Scalar-Plain">highlighter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pygments</span>
 <span class="l-Scalar-Plain">safe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
-<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/cs300</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/CS300-Fall2014</span>
 <span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
 <span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">superhero</span></code></pre></div>
 
 <p>In general, you only need to touch the _config.yml file once. Anytime you edit the _config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. </p>
 
-<h2>Edit markdown files</h2>
+<h3>Edit markdown files</h3>
 
 <p>The next step is to edit the markdown files to present additional course content. </p>
 
 <p>For details on the structure and content of Morea markdown files, see the <a href="/userguide.html">User Guide</a>.</p>
 
-<p>For now, just make some simple changes.  The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about
-your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. </p>
+<p>For now, just make some simple changes.  The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. </p>
 
 <p>Use any editor you like, although those that have a Markdown mode are generally preferable.</p>
 
-<h2>Display your site locally</h2>
+<h3>Display your site locally</h3>
 
 <p>Once you&#39;ve edited markdown files, you&#39;ll want to review the formatted version in a browser.  </p>
 
-<p>We have developed a script called <a href="https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh">morea-run-local.sh</a> to generate and display your site locally. As before, download it into your top-level directory and
-change its permissions to allow execution:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh &gt;&gt; morea-run-local.sh
-[~/cs300] $ chmod u+x morea-run-local.sh
+<p>We have developed a script called <a href="https://github.com/morea-framework/scripts/blob/master/morea-run-local.sh">morea-run-local.sh</a> to generate and display your site locally. As before, download it into your top-level directory and change its permissions to allow execution:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/CS300-Fall2014] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh &gt;&gt; morea-run-local.sh
+[~/CS300-Fall2014] $ chmod u+x morea-run-local.sh
 </code></pre></div>
 <p>Now you can invoke this command to get Jekyll to both compile the source files into HTML and serve them at <a href="http://localhost:4000">http://localhost:4000</a>. </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ ./morea-run-local.sh
-          Configuration file: /Users/johnson/cs300/master/src/_config.yml
-            Source: /Users/johnson/cs300/master/src
-            Destination: /Users/johnson/cs300/master/src/_site
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/CS300-Fall2014] $ ./morea-run-local.sh
+          Configuration file: /Users/johnson/CS300-Fall2014/master/src/_config.yml
+            Source: /Users/johnson/CS300-Fall2014/master/src
+            Destination: /Users/johnson/CS300-Fall2014/master/src/_site
           Generating...
           Starting Morea page processing...
             Processing Morea file:     assessment-1.md
@@ -292,24 +301,21 @@ change its permissions to allow execution:</p>
                Server address: http://0.0.0.0:4000
               Server running... press ctrl-c to stop.
 </code></pre></div>
-<p>This output indicates that the Morea plugin to Jekyll processed 20 Morea files to generate the website.  It also noticed
-some issues and generated warnings. These are OK.</p>
+<p>This output indicates that the Morea plugin to Jekyll processed 20 Morea files to generate the website.  It also noticed some issues and generated warnings. These are OK.</p>
 
-<p>The script tells Jekyll to regenerate the HTML files whenever the markdown sources change.  If you use 
-a browser plugin like <a href="http://livereload.com/">LiveReload</a> and tell it to monitor the master/src/_site directory, your browser will automatically re-render and re-display the page whenever a change is made to your source files. This makes development quite efficient.</p>
+<p>The script tells Jekyll to regenerate the HTML files whenever the markdown sources change.  If you use a browser plugin like <a href="http://livereload.com/">LiveReload</a> and tell it to monitor the master/src/_site directory, your browser will automatically re-render and re-display the page whenever a change is made to your source files. This makes development quite efficient.</p>
 
 <h1>Publish your website</h1>
 
-<p>The final step is to make your Morea course site available to the world using GitHub&#39;s free <a href="http://pages.github.com/">Pages</a> facility. As
-you might be expecting by now, we have created a script (this time called <a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a>) to simplify this process. </p>
+<p>The final step is to make your Morea course site available to the world using GitHub&#39;s free <a href="http://pages.github.com/">Pages</a> facility. As you might be expecting by now, we have created a script (this time called <a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a>) to simplify this process. </p>
 
 <p>Download it into your top-level directory and make it executable as follows:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-publish.sh &gt;&gt; morea-publish.sh
-[~/cs300] $ chmod u+x morea-publish.sh
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/CS300-Fall2014] $ curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-publish.sh &gt;&gt; morea-publish.sh
+[~/CS300-Fall2014] $ chmod u+x morea-publish.sh
 </code></pre></div>
 <p>Running the script generates the HTML files into the gh-pages directory, then commits the contents of both the gh-pages and the master 
 directories to their respective branches on GitHub.  You must supply the commit message as an argument. Here&#39;s an example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[~/cs300] $ ./morea-publish.sh &quot;Fixing typo&quot;
+<div class="highlight"><pre><code class="language-text" data-lang="text">[~/CS300-Fall2014] $ ./morea-publish.sh &quot;Fixing typo&quot;
           Generating HTML site into gh-pages directory
           + jekyll build --source ./master/src --destination ./gh-pages
           Configuration file: ./master/src/_config.yml
@@ -375,8 +381,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
           To git@github.com:morea-framework/basic-template.git
              683ff6d..6fe3b5e  master -&gt; master
 </code></pre></div>
-<p>Now your site should be publically available.  For example, if your account is &quot;johndoe&quot; and your repo is &quot;cs300&quot;, then you should be able to 
-retrieve your site at <a href="http://johndoe.github.io/cs300">http://johndoe.github.io/cs300</a>. </p>
+<p>Now your site should be publicly available.  For example, if your account is &quot;johndoe&quot; and your repo is &quot;CS300-Fall2014&quot;, then you should be able to retrieve your site at <a href="http://johndoe.github.io/CS300-Fall2014">http://johndoe.github.io/CS300-Fall2014</a>. </p>
 
 <p><strong>Note:</strong> the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you&#39;ll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.</p>
 
@@ -391,12 +396,11 @@ retrieve your site at <a href="http://johndoe.github.io/cs300">http://johndoe.gi
 <li>When ready, invoke the morea-publish.sh script to publish your changes to the world.</li>
 </ul>
 
-<p>Now that you&#39;ve successfully installed Morea, it&#39;s time to learn about the system in more detail through
-the User Guide.</p>
+<p>Now that you&#39;ve successfully installed Morea, it&#39;s time to learn about the system in more detail through the User Guide.</p>
 
 <p style="text-align: center; padding-top: 10px">
-     <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
-   </p>
+  <a href="/userguide.html" class="btn btn-primary btn-md" role="button">Go to User Guide <span class="glyphicon glyphicon-chevron-right"></span> </a>
+</p>
 
   </div>
 </div>
@@ -409,7 +413,7 @@ the User Guide.</p>
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>15 Jun 2014</span></p>
+      <p>Last update on: <span>17 Jun 2014</span></p>
   </div>
 </footer>
 </div>
