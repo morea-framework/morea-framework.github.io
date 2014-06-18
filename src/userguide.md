@@ -979,6 +979,12 @@ It is possible to modify these themes or define new ones of your own.  This proc
 
 The following sections show a sample page for each of the pre-installed themes in alphabetical order. Click image to see full-size.
 
+<div class="alert alert-warning">
+<p>The themes are under regular small improvements. The following images may not reflect the latest version of the themes.
+Run the script morea-merge-upstream-master.sh to obtain the latest versions of these themes.
+</p>
+</div>
+
 ## amelia
 
 <a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="600px" /></a>
@@ -1047,17 +1053,34 @@ After downloading the scripts, you must make them executable by running the `chm
 
 Once they are made executable, you can invoke them. For example:
 
-    % ./morea-publish.sh
+    % ./morea-publish.sh "Added module on Java"
 
 Here is an overview of the scripts we currently provide.
 
-## morea-install 
+## morea-vanilla-install  
 
-The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh) script downloads a GitHub repository containing a Morea site (such as basic-template).  It assumes that the site contains both a master and gh-pages branch.
+The [morea-vanilla-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh) script implements the recommended approach to setting up a Morea site which does not require forking.  To use this script:
 
-This script requires two arguments: a github user and the Morea site repo to download. For example:
+  * Create a new, empty repo on GitHub using the browser-based mechanisms. 
+  * Create a new, empty local directory in which you will develop your site. 
+  * Download the morea-vanilla-install.sh script and set its permissions using `chmod 755 morea-vanilla-install.sh`.
+  * Invoke the morea-vanilla-install.sh script. 
 
-    % ./morea-install.sh philipmjohnson ics314f13
+This script requires two arguments: your github account and your new repo to initialize. For example:
+
+    % ./morea-vanilla-install.sh philipmjohnson ics314f13
+
+The script performs the following actions:
+
+  * Creates master/ and gh-pages directories.
+  * Clones the master branch of your repo into the master/ directory.
+  * Creates a new, orphan gh-pages branch of your repo and checks out that branch into the gh-pages/ directory.
+  * Sets 'upstream' to the basic-template repo.
+  * Merges the upstream branch into your new master branch in the master/ directory.
+
+When completed, your master/ branch should contain a copy of the basic-template.  If you encounter merge conflicts during the execution of this script, you will need to fix the files in the master/ directory, and recommit them.  Some helpful documentation is [resolving a merge conflict from the command line](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line). 
+
+It is a good idea after running morea-vanilla-install to run morea-run-local.sh to see that the new site can be created successfully, then morea-publish.sh to commit your initialized site to your GitHub repo.
 
 ## morea-merge-upstream
 
@@ -1116,32 +1139,126 @@ Finally, we highly recommend that you install a browser plugin such as [LiveRelo
 
 If in doubt, simply exit and re-invoke morea-run-local.
 
-## morea-vanilla-install
+## morea-install 
 
-The recommended way to get started using Morea is to fork the basic-template repo into your own account. Unfortunately, GitHub only allows you to fork a given repo once. Thus, this approach will not work when you want to create a second Morea site.   
+The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh) script downloads a GitHub repository containing a previously initialized Morea site (such as basic-template).  It assumes that the GitHub repo contains both a master and gh-pages branch.
 
-The [morea-vanilla-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh) script implements an alternative way to set up a Morea site which does not require forking.  To use this script:
+This script requires two arguments: a github user and the Morea site repo to download. For example:
 
-  * Create a new, empty repo on GitHub using the browser-based mechanisms. 
-  * Create a new, empty local directory in which you will develop your site. 
-  * Download the morea-vanilla-install.sh script and set its permissions using `chmod 755 morea-vanilla-install.sh`.
-  * Invoke the morea-vanilla-install.sh script. 
+    % ./morea-install.sh philipmjohnson ics314f13
+    
+# Beyond Morea
+    
+As the name implies, "Morea" provides you with mechanisms to define modules, outcomes, readings, experiences, and  assessments. 
 
-This script requires two arguments: your github account and the new repo to download. For example:
+However, most course web sites need to also provide other kinds information to students. For example, many instructors want a top-level "Schedule" page containing a calendar showing due dates and other class events.  Others may wish to have a "News" page containing announcements.  Still others may wish to store exams and other course data files in their
+ site. This chapter provides documentation on how to enhance your Morea site with all of these other kinds of information.
+ 
+To effectively go "beyond Morea", you need to have a basic conceptual understanding of the organization of your repository and the locus of control for the three fundamental tools: GitHub, Jekyll, and Morea.   This organization is illustrated by the following graphic, which shows the master branch of the basic-template repository:
+  
+<img src="images/beyond-morea.png" width="600px" />
+ 
+This graphic shows that a Morea site is organized like an onion with three layers, each "managed" by a different tool.
 
-    % ./morea-vanilla-install.sh philipmjohnson ics314f13
+**Morea managed.** In the center is the "Morea layer", which consists of all the files in the morea/ directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. The Morea plugin to Jekyll operates only on the contents of this directory.
+ 
+**Jekyll managed.** However, Morea is nothing more than a [Jekyll](http://jekyllrb.com/) static website with a custom plugin to process the contents of the morea/ directory.  The Morea scripts are set up to invoke Jekyll and pass it the contents of the src/ directory. So, everything within the src/ directory is under the control of Jekyll.  As a result, you can customize the site using any valid Jekyll technique by editing the contents of this area. 
+  
+**GitHub managed.** The outermost level, outside the src/ directory, is under the control of GitHub.  Here you can put any files or directories that you do not want to be processed by Jekyll but that you wish to be associated with the course.   
 
-The script does the following actions:
+## Add a Schedule page
 
-  * Creates master/ and gh-pages directories
-  * Clones the master branch of your repo into the master/ directory
-  * Creates a new, orphan gh-pages branch of your repo and checks out that branch into the gh-pages/ directory
-  * Sets 'upstream' to the basic-template repo.
-  * Merges the upstream branch into your new master branch in the master/ directory.
+A common enhancement is a navbar element containing a link to a page with a calendar of events. For
+example, the [ICS 314 Schedule Page](http://philipmjohnson.github.io/ics314f13/schedule/): 
 
-When completed, your master/ branch should contain a copy of the basic-template.  If you encounter merge errors during the execution of this script, simply fix your local files.
+<img src="images/ics314-schedule-page.png" width="600px" />
 
-It is a good idea after running morea-vanilla-install to run morea-run-local.sh to see that the new site can be created successfully, then morea-publish.sh to commit your site to your GitHub repo.
+This page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/).
+
+Implementing this involves the following two steps, which occur at the "Jekyll" level of the system.
+
+**Create the schedule page files.**    In the src/ directory, create a new subdirectory called "schedule" with an "index.html" page inside of it.  
+ 
+ <img src="images/schedule-directory.png" width="300px" />
+ 
+You can copy the contents of the [ICS314 schedule/index.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/schedule/index.html) to use as a template. Here is the index.html file:
+
+{% highlight xml %}
+---
+layout: default
+title: Schedule
+---
+
+<!-- Load FullCalendar for schedule page. -->
+<!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js"></script>
+<div style="margin-bottom: 10px" class="container">
+  <h1>Schedule</h1>
+  <div id='calendar'></div>
+</div>
+<script>
+  $(document).ready(function () {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+      events: 'https://www.google.com/calendar/feeds/m7nms0v3ud99ucgtn8lopo79sk%40group.calendar.google.com/public/basic'
+    })
+
+    $('#calendar').fullCalendar('gotoDate', 2013, 8, 1)
+
+  });
+</script>
+
+{% endhighlight %}
+  
+The first part of this file you will need to modify is in the invocation of the FullCalendar plugin, where you will need to change the "events" parameter value to the XML feed for your own Google Calendar. 
+
+The second part of the file to modify is the invocation of the "gotoDate" function at the end of the script. This sets the calendar to display August, 2013.  If you comment out this line, the calendar will display the current month. Or you can modify this line to have the calendar start on any month of your choosing. 
+
+**Extend the navbar with a link to this page.** The second change you need to make is to add a link to this page to the navbar.  The navbar code is available in your src/_layouts/default.html file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
+
+    <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
+
+
+For more details on the navbar, you can read the [Twitter Bootstrap navbar documentation](http://getbootstrap.com/components/#navbar).
+
+## Add a link to the navbar
+
+To add a link to an external site (such as a Google Discussion Group) to the navbar, simply edit the navbar definition code found in your master/src/_layouts/default.html file.  For example, here is a version of the navbar definition from the ICS 314 site. The last item in the navbar is a link to a Google Group for the course:
+ 
+{% highlight xml %}
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+        <li><a href="{{ site.baseurl }}/modules/">Modules</a></li>
+        <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
+        <li><a href="{{ site.baseurl }}/readings/">Readings</a></li>
+        <li><a href="{{ site.baseurl }}/experiences/">Experiences</a></li>
+        <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
+        <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+{% endhighlight %}
+
+Essentially, you just add a new `<li>` tag containing your link.
+
+## Add supplemental pages
+
+Adding supplemental pages is just like adding a schedule page, with two differences:
+
+  1.  Name the directory "supplemental" or "extras" or something similar instead of "schedule".
+  
+  2.  Use markdown rather than html format.  To do that, use the ".md" file extension rather than ".html", and use markdown format inside the file rather than html.  You will need to provide a YAML header section similar to the one shown in the Schedule index.html page example. 
+   
+## Add exams or other private data
+   
+Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the src/ directory, such as "exams/", and place your files inside that directory. Any files and directories not inside the src/ directory will not be touched by Jekyll or Morea.
+  
+Note that if you do not want public access to these files, you must make your repository private!
 
 
 
