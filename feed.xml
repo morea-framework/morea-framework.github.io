@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>QuickStart process redesigned</title>
+        <description>&lt;p&gt;The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website. &lt;/p&gt;
+
+&lt;p&gt;Unfortunately, GitHub does not allow forks of public repositories (like basic-template) to be made private.  &lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/quickstart.html&quot;&gt;QuickStart page&lt;/a&gt; has now been modified to avoid the use of forking.  Course repositories created using the new procedure can be made private. &lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Jun 2014 04:29:39 -1000</pubDate>
+        <link>/bugfix/2014/06/17/quickstart-redesign.html</link>
+        <guid isPermaLink="true">/bugfix/2014/06/17/quickstart-redesign.html</guid>
+      </item>
+    
+      <item>
+        <title>Morea Version 1.0 release</title>
+        <description>&lt;p&gt;The Morea team is delighted to announce the 1.0 release.  This release constitutes a 
+&amp;quot;minimum viable product&amp;quot; with sufficient functionality and documentation for users to 
+begin building their own course websites using the framework. &lt;/p&gt;
+
+&lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. &lt;/p&gt;
+</description>
+        <pubDate>Thu, 22 May 2014 04:29:39 -1000</pubDate>
+        <link>/releases/2014/05/22/morea-version-one.html</link>
+        <guid isPermaLink="true">/releases/2014/05/22/morea-version-one.html</guid>
+      </item>
+    
+  </channel>
+</rss>
