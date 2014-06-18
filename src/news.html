@@ -1,0 +1,19 @@
+---
+layout: bootstrap
+---
+
+<div class="container">
+  <h1>News</h1>
+</div>
+
+{% for post in site.posts %}
+  <div class="{% cycle 'gray-background', 'white-background' %}">
+    <div class="container">
+    <h3>{{ post.title }} <small>{{ post.date | date: "%b %-d, %Y"  }}</small></h3>
+    {{ post.content }}
+    <hr />
+    </div>
+{% endfor %}
+
+
+<p style="text-align: center">Subscribe to news via <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
