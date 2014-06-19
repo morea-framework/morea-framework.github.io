@@ -1197,11 +1197,11 @@ Run the script morea-merge-upstream-master.sh to obtain the latest versions of t
 
 <p>This graphic shows that a Morea site is organized like an onion with three layers, each &quot;managed&quot; by a different tool.</p>
 
-<p><strong>Morea managed.</strong> In the center is the &quot;Morea layer&quot;, which consists of all the files in the morea/ directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. There is a Morea plugin to Jekyll that looks for the contents of this directory and parses all the files inside to create the Modules, Outcomes, Readings, Experiences, and Assessments pages. </p>
+<p><strong>Morea managed.</strong> In the center is the &quot;Morea layer&quot;, which consists of all the files in the <code>morea/</code> directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. There is a Morea plugin to Jekyll that looks for the contents of this directory and parses all the files inside to create the Modules, Outcomes, Readings, Experiences, and Assessments pages. </p>
 
-<p><strong>Jekyll managed.</strong> However, Morea is also just a <a href="http://jekyllrb.com/">Jekyll</a> static website which builds a site based upon the contents of the src/ directory.  As a result, you can customize your site by making any valid Jekyll enhancements to the src/ directory.</p>
+<p><strong>Jekyll managed.</strong> However, Morea is also just a <a href="http://jekyllrb.com/">Jekyll</a> static website which builds a site based upon the contents of the <code>src/</code> directory.  As a result, you can customize your site by making any valid Jekyll enhancements in this directory.</p>
 
-<p><strong>GitHub managed.</strong> If we go up one more level of abstraction, your Morea site is just a GitHub-managed repository. The outermost level, outside the src/ directory, contains files and directories that are not touched by Jekyll but are still part of your repository.  You can put any files or directories that you do not want to be processed by Jekyll but that you wish to be associated with the course at this outermost level. </p>
+<p><strong>GitHub managed.</strong> If we go up one more level of abstraction, your Morea site is just a GitHub-managed repository. The outermost level, above the <code>src/</code> directory, contains files and directories that are not touched by Jekyll but are still part of your repository.  You can put files or directories here that you do not want to be processed by Jekyll but that you wish to be associated with the course. </p>
 
 <h2>Add a menu item</h2>
 
