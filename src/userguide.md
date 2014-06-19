@@ -1130,7 +1130,7 @@ Note that the Morea plugin forces an exit from the Jekyll compiler when it detec
 
 Also note that a few kinds of changes require exiting and restarting the Jekyll compiler with morea-run-local. These include:
 
-  * Changes to the _config.yml file.
+  * Changes to the `_config.yml` file.
   * Updates to the Morea plugin (which might occur after merging upstream changes). 
 
 Finally, we highly recommend that you install a browser plugin such as [LiveReload](http://livereload.com/), which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.
@@ -1166,7 +1166,7 @@ This graphic shows that a Morea site is organized like an onion with three layer
 
 ## Add a menu item
 
-One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your master/src/_layouts/default.html file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
+One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your `master/src/_layouts/default.html` file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
  
 {% highlight xml %}
     <div class="collapse navbar-collapse">
@@ -1260,7 +1260,7 @@ The first modification is to the invocation of the FullCalendar plugin, where yo
 
 The second modification is to the invocation of the "gotoDate" function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. 
 
-**Step 2. Extend the navbar with a link to this page.** Once you've created the index.html file, you will want to add a link to this page to the navbar.  The navbar code is available in your src/_layouts/default.html file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
+**Step 2. Extend the navbar with a link to this page.** Once you've created the index.html file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
 
@@ -1326,7 +1326,7 @@ This code in context is available [here](https://github.com/philipmjohnson/ics31
    
 ## Add private data
    
-Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the src/ directory, such as "exams/", and place your files inside that directory. Any files and directories not inside the src/ directory will not be touched by Jekyll or Morea.
+Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the src/ directory, such as "private/", and place your files inside that directory. Any files and directories not inside the src/ directory will not be touched by Jekyll or Morea.
 
 For example, here is a "private" directory in the ICS 311 master branch that contains a file called "midterm.doc":
 
