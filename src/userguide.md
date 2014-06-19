@@ -1154,7 +1154,7 @@ However, most course web sites need to also provide other kinds information to s
  
 To effectively go "beyond Morea", you need to have a basic conceptual understanding of the organization of your repository and the locus of control for the three fundamental tools: GitHub, Jekyll, and Morea.   This organization is illustrated by the following graphic, which shows the master branch of the basic-template repository:
   
-<img src="images/beyond-morea.png" width="600px" class="img-responsive"/>
+<img src="images/beyond-morea.png" width="400px" class="img-responsive"/>
  
 This graphic shows that a Morea site is organized like an onion with three layers, each "managed" by a different tool.
 
