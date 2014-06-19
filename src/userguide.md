@@ -1217,7 +1217,7 @@ This page is implemented using a [Google Calendar](http://www.google.com/calenda
 
 Implementing this involves two steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.  
 
-**Step 1. Create the schedule page files.**    In the src/ directory, create a new subdirectory called "schedule" with an "index.html" page inside of it.  
+**Step 1. Create the schedule page files.**    In the `src/` directory, create a new subdirectory called `schedule/` containing an `index.html` page.  
  
  <img src="images/schedule-directory.png" width="300px" class="img-responsive"/>
  
@@ -1260,7 +1260,7 @@ The first modification is to the invocation of the FullCalendar plugin, where yo
 
 The second modification is to the invocation of the "gotoDate" function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. 
 
-**Step 2. Extend the navbar with a link to this page.** Once you've created the index.html file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
+**Step 2. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
 
