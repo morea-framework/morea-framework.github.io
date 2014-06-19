@@ -45,11 +45,11 @@ Morea sites contain a navigation bar at the top of the page with links to pages 
 according to each of the five entities: modules, outcomes, readings, experiences, and assessments.
 For example, here is an example of the Readings page:
 
-<img src="images/ics311-readings.png" width="600px" />
+<img src="images/ics311-readings.png" width="600px" class="img-responsive"/>
 
 And here is an example of the Outcomes page:
 
-<img src="images/ics311-outcomes.png" width="600px" />
+<img src="images/ics311-outcomes.png" width="600px" class="img-responsive"/>
 
 You can see that the two pages highlight a single entity type but provide links to other entities for context.
 
@@ -68,14 +68,14 @@ There can also be other markdown files and other non-markdown files (such as the
 
 When you first clone a Morea site, you will find a potentially bewildering number of files and directories. For example:
 
-<img src="images/morea-source.png" width="200px" />
+<img src="images/morea-source.png" width="200px" class="img-responsive"/>
 
 This organization exists because the Morea framework is basically just a Jekyll site with a custom plugin to process the Morea markdown files.
 
 Fortunately, the only files you will typically need to manage are all located in the src/morea directory. Here is
 an example of the src/morea directory from the basic-template system:
 
-<img src="images/morea-folder.png" width="200px" />
+<img src="images/morea-folder.png" width="200px" class="img-responsive"/>
 
 This folder contains all of the files you will want to manage as part of your course content.
 
@@ -138,7 +138,7 @@ The basic rule is that markdown files are converted to HTML in the published sit
 over without change. So, for example, here is the src/morea directory (on the left) and the site's published morea directory
 (on the right):
 
-<img src="images/mirror-image.png" width="400px" />
+<img src="images/mirror-image.png" width="400px" class="img-responsive"/>
 
 As you can see, the markdown files have become HTML, and the sole non-markdown file (logo.png) has been copied over
 unchanged.  The directory structure below the morea/ directory is unchanged.
@@ -173,7 +173,7 @@ If you know of a related system, please let us know and we'll include it here.
 This section overviews the structure of the module [Foo](https://github.com/morea-framework/basic-template/tree/master/src/morea/foo) in the [basic-template](https://github.com/morea-framework/basic-template) system.  Here is a
 graphic to help illustrate the various components:
 
- <img src="images/module-anatomy.jpg" width="800px"/>
+ <img src="images/module-anatomy.jpg" width="800px" class="img-responsive"/>
 
 The top row illustrates various "source" files, and the bottom row illustrates various "output" HTML pages
 produced from these files.
@@ -187,9 +187,7 @@ The second window on the top row shows the content of module.md.  The content of
 and provides the definition of the Foo module.  The outcomes, readings, experiences, and assessments associated with
 the Foo module are all referenced by unique IDs.
 
-The third and fourth windows on the top row show the content of two files that define a reading and an experience entity.
-These entities have unique IDs that are referenced in the definition of the Foo module, and that is the way that Morea
-connects them together.
+The third and fourth windows on the top row show the content of two files that define a reading and an experience entity.These entities have unique IDs that are referenced in the definition of the Foo module, and that is the way that Morea connects them together.
 
 The bottom row shows a variety of pages produced by Morea.  Because a module was defined in the module.md file, it
 will show up in the modules/ page.  Clicking on the link in the modules page takes you to a page which details the
@@ -987,59 +985,59 @@ Run the script morea-merge-upstream-master.sh to obtain the latest versions of t
 
 ## amelia
 
-<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="600px" /></a>
+<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="600px" class="img-responsive"/></a>
 
 ## cerulean
 
-<a href="images/themes/cerulean.png"><img src="images/themes/cerulean.png" width="600px" /></a>
+<a href="images/themes/cerulean.png"><img src="images/themes/cerulean.png" width="600px" class="img-responsive"/></a>
 
 ## cyborg
 
-<a href="images/themes/cyborg.png"><img src="images/themes/cyborg.png" width="600px" /></a>
+<a href="images/themes/cyborg.png"><img src="images/themes/cyborg.png" width="600px" class="img-responsive"/></a>
 
 ## darkly
 
-<a href="images/themes/darkly.png"><img src="images/themes/darkly.png" width="600px" /></a>
+<a href="images/themes/darkly.png"><img src="images/themes/darkly.png" width="600px" class="img-responsive"/></a>
 
 ## flatly
 
-<a href="images/themes/flatly.png"><img src="images/themes/flatly.png" width="600px" /></a>
+<a href="images/themes/flatly.png"><img src="images/themes/flatly.png" width="600px" class="img-responsive"/></a>
 
 ## journal
 
-<a href="images/themes/journal.png"><img src="images/themes/journal.png" width="600px" /></a>
+<a href="images/themes/journal.png"><img src="images/themes/journal.png" width="600px" class="img-responsive"/></a>
 
 ## lumen
 
-<a href="images/themes/lumen.png"><img src="images/themes/lumen.png" width="600px" /></a>
+<a href="images/themes/lumen.png"><img src="images/themes/lumen.png" width="600px" class="img-responsive"/></a>
 
 ## readable
 
-<a href="images/themes/readable.png"><img src="images/themes/readable.png" width="600px" /></a>
+<a href="images/themes/readable.png"><img src="images/themes/readable.png" width="600px" class="img-responsive"/></a>
 
 ## simplex
 
-<a href="images/themes/simplex.png"><img src="images/themes/simplex.png" width="600px" /></a>
+<a href="images/themes/simplex.png"><img src="images/themes/simplex.png" width="600px" class="img-responsive"/></a>
 
 ## slate
 
-<a href="images/themes/slate.png"><img src="images/themes/slate.png" width="600px" /></a>
+<a href="images/themes/slate.png"><img src="images/themes/slate.png" width="600px" class="img-responsive"/></a>
 
 ## spacelab
 
-<a href="images/themes/spacelab.png"><img src="images/themes/spacelab.png" width="600px" /></a>
+<a href="images/themes/spacelab.png"><img src="images/themes/spacelab.png" width="600px" class="img-responsive"/></a>
 
 ## superhero
 
-<a href="images/themes/superhero.png"><img src="images/themes/superhero.png" width="600px" /></a>
+<a href="images/themes/superhero.png"><img src="images/themes/superhero.png" width="600px" class="img-responsive"/></a>
 
 ## united
 
-<a href="images/themes/united.png"><img src="images/themes/united.png" width="600px" /></a>
+<a href="images/themes/united.png"><img src="images/themes/united.png" width="600px" class="img-responsive"/></a>
 
 ## yeti
 
-<a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="600px" /></a>
+<a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="600px" class="img-responsive"/></a>
 
 # Scripts
 
@@ -1156,32 +1154,74 @@ However, most course web sites need to also provide other kinds information to s
  
 To effectively go "beyond Morea", you need to have a basic conceptual understanding of the organization of your repository and the locus of control for the three fundamental tools: GitHub, Jekyll, and Morea.   This organization is illustrated by the following graphic, which shows the master branch of the basic-template repository:
   
-<img src="images/beyond-morea.png" width="600px" />
+<img src="images/beyond-morea.png" width="600px" class="img-responsive"/>
  
 This graphic shows that a Morea site is organized like an onion with three layers, each "managed" by a different tool.
 
-**Morea managed.** In the center is the "Morea layer", which consists of all the files in the morea/ directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. The Morea plugin to Jekyll operates only on the contents of this directory.
+**Morea managed.** In the center is the "Morea layer", which consists of all the files in the morea/ directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. There is a Morea plugin to Jekyll that looks for the contents of this directory and parses all the files inside to create the Modules, Outcomes, Readings, Experiences, and Assessments pages. 
  
-**Jekyll managed.** However, Morea is nothing more than a [Jekyll](http://jekyllrb.com/) static website with a custom plugin to process the contents of the morea/ directory.  The Morea scripts are set up to invoke Jekyll and pass it the contents of the src/ directory. So, everything within the src/ directory is under the control of Jekyll.  As a result, you can customize the site using any valid Jekyll technique by editing the contents of this area. 
+**Jekyll managed.** However, Morea is also just a [Jekyll](http://jekyllrb.com/) static website which builds a site based upon the contents of the src/ directory.  As a result, you can customize your site by making any valid Jekyll enhancements to the src/ directory.
   
-**GitHub managed.** The outermost level, outside the src/ directory, is under the control of GitHub.  Here you can put any files or directories that you do not want to be processed by Jekyll but that you wish to be associated with the course.   
+**GitHub managed.** If we go up one more level of abstraction, your Morea site is just a GitHub-managed repository. The outermost level, outside the src/ directory, contains files and directories that are not touched by Jekyll but are still part of your repository.  You can put any files or directories that you do not want to be processed by Jekyll but that you wish to be associated with the course at this outermost level. 
+
+## Add a menu item
+
+One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your master/src/_layouts/default.html file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
+ 
+{% highlight xml %}
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
+        <li><a href="{{ site.baseurl }}/modules/">Modules</a></li>
+        <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
+        <li><a href="{{ site.baseurl }}/readings/">Readings</a></li>
+        <li><a href="{{ site.baseurl }}/experiences/">Experiences</a></li>
+        <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+{% endhighlight %}
+
+Essentially, you just add a new `<li>` tag containing your link.
+
+## Add a dropdown menu
+
+An equally easy enhancement is a dropdown menu containing a list of links. Here's an example:
+
+ <img src="images/ics311-dropdown.png" width="600px" class="img-responsive"/>
+ 
+As before, you edit the navbar code in your default.html file, this time with the Twitter Bootstrap dropdown menu code. Here is the section implementing the dropdown menu from the above screenshot:
+
+{% highlight xml %}
+<li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Info<b class="caret"></b></a>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="/morea/010.introduction/reading-course-info.html">Overview</a></li>
+      <li><a href="/morea/010.introduction/reading-policies.html">Policies</a></li>
+      <li><a href="/morea/010.introduction/reading-topic-overview.html">Topics</a></li>
+    </ul>
+</li>
+{% endhighlight %}
+
+See the above code in context [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l38-45).                                     
+
+Learn more about this syntax using the [Twitter Bootstrap dropdown menu documentation](http://getbootstrap.com/components/#dropdowns).
 
 ## Add a Schedule page
 
-A common enhancement is a navbar element containing a link to a page with a calendar of events. For
-example, the [ICS 314 Schedule Page](http://philipmjohnson.github.io/ics314f13/schedule/): 
+A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. For example, here's the [ICS 314 Schedule Page](http://philipmjohnson.github.io/ics314f13/schedule/): 
 
-<img src="images/ics314-schedule-page.png" width="600px" />
+<img src="images/ics314-schedule-page.png" width="600px" class="img-responsive"/>
 
 This page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/).
 
-Implementing this involves the following two steps, which occur at the "Jekyll" level of the system.
+Implementing this involves two steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.  
 
-**Create the schedule page files.**    In the src/ directory, create a new subdirectory called "schedule" with an "index.html" page inside of it.  
+**Step 1. Create the schedule page files.**    In the src/ directory, create a new subdirectory called "schedule" with an "index.html" page inside of it.  
  
- <img src="images/schedule-directory.png" width="300px" />
+ <img src="images/schedule-directory.png" width="300px" class="img-responsive"/>
  
-You can copy the contents of the [ICS314 schedule/index.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/schedule/index.html) to use as a template. Here is the index.html file:
+You can copy the contents of the [ICS314 schedule/index.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/schedule/index.html) to use as a template. Here is a snapshot of the code:
 
 {% highlight xml %}
 ---
@@ -1214,51 +1254,87 @@ title: Schedule
 
 {% endhighlight %}
   
-The first part of this file you will need to modify is in the invocation of the FullCalendar plugin, where you will need to change the "events" parameter value to the XML feed for your own Google Calendar. 
+You will need to modify this code in two places to display your own calendar appropriately.
 
-The second part of the file to modify is the invocation of the "gotoDate" function at the end of the script. This sets the calendar to display August, 2013.  If you comment out this line, the calendar will display the current month. Or you can modify this line to have the calendar start on any month of your choosing. 
+The first modification is to the invocation of the FullCalendar plugin, where you will need to change the "events" parameter value to the XML feed for your own Google Calendar. 
 
-**Extend the navbar with a link to this page.** The second change you need to make is to add a link to this page to the navbar.  The navbar code is available in your src/_layouts/default.html file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
+The second modification is to the invocation of the "gotoDate" function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. 
+
+**Step 2. Extend the navbar with a link to this page.** Once you've created the index.html file, you will want to add a link to this page to the navbar.  The navbar code is available in your src/_layouts/default.html file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
 
+## Add a News page
 
-For more details on the navbar, you can read the [Twitter Bootstrap navbar documentation](http://getbootstrap.com/components/#navbar).
+Another common desire is a page containing news and announcements.  For this feature, we can exploit Jekyll's built-in blogging support.   We will write each news item following the conventions for a [Jekyll blog post](http://jekyllrb.com/docs/posts/), then create a page that displays these posts using the Morea look-and-feel. For example, here is the [ICS 311 News Page](http://philipmjohnson.github.io/ics311s14/news/):
 
-## Add a link to the navbar
-
-To add a link to an external site (such as a Google Discussion Group) to the navbar, simply edit the navbar definition code found in your master/src/_layouts/default.html file.  For example, here is a version of the navbar definition from the ICS 314 site. The last item in the navbar is a link to a Google Group for the course:
+ <img src="images/ics311-news-page.png" width="600px" class="img-responsive"/>
  
+Adding this feature to your own site requires two steps: creating news items, then creating the page to display them.
+ 
+**Step 1. Write some example news items.** To start, you should write a couple of sample Jekyll blog posts representing course news items. This means updating the `_posts` directory with your news items.  For example, here is what the ICS 311 `_posts` directory looks like:
+ 
+ <img src="images/ics311-posts-directory.png" width="300px" class="img-responsive"/>
+ 
+Here is an example of one news item in Jekyll blog posting format:
+
+{% highlight yaml %}
+---
+layout: post
+title:  "Extra credit"
+date:   2014-02-01 14:29:39
+---
+
+Due to fact that the grading workload is already too great for the TA time allocated, we will not have extra credit programming or problem solving assignments. Extra credit will be built in to the three projects and some of the homework assignments. So, don't slack: you won't be given other opportunities to earn credit!
+
+{% endhighlight %}
+ 
+**Step 2. Add a page to display your news items.** Now that you have some sample news items, you should create the page that displays them.  There are many ways to format news items, and you can do it whatever way you want, but the following instructions show how to duplicate the format illustrated above for the ICS 311 site.
+
+First, create a new directory called "news", and add an index.html file within it with the following contents:
+
 {% highlight xml %}
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
-        <li><a href="{{ site.baseurl }}/modules/">Modules</a></li>
-        <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
-        <li><a href="{{ site.baseurl }}/readings/">Readings</a></li>
-        <li><a href="{{ site.baseurl }}/experiences/">Experiences</a></li>
-        <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
-        <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
-      </ul>
+---
+layout: default
+title: News
+---
+{% raw %}
+<div class="container">
+  <h1>News</h1>
+<p>(Note: if you use a news reader, you can subscribe to these announcements using this <a href="{{ "/feed.xml" | prepend: site.baseurl }}">feed</a>)</p>
+</div>
+
+{% for post in site.posts %}
+  <div class="{% cycle 'section-background-1', 'section-background-2' %}">
+    <div class="container">
+    <h4>{{ post.title }} <small>{{ post.date | date: "%b %-d, %Y"  }}</small></h4>
+    {{ post.content }}
     </div>
+{% endfor %}
+{% endraw %}
 {% endhighlight %}
 
-Essentially, you just add a new `<li>` tag containing your link.
+This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/news/index.html).
 
-## Add supplemental pages
+Now update your navbar with a new menu item to take the user to this page:
 
-Adding supplemental pages is just like adding a schedule page, with two differences:
+{% highlight yaml %}
+<li><a href="{{ site.baseurl }}/news/">News</a></li>
+{% endhighlight %}
 
-  1.  Name the directory "supplemental" or "extras" or something similar instead of "schedule".
-  
-  2.  Use markdown rather than html format.  To do that, use the ".md" file extension rather than ".html", and use markdown format inside the file rather than html.  You will need to provide a YAML header section similar to the one shown in the Schedule index.html page example. 
+This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59).
    
-## Add exams or other private data
+## Add private data
    
 Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the src/ directory, such as "exams/", and place your files inside that directory. Any files and directories not inside the src/ directory will not be touched by Jekyll or Morea.
+
+For example, here is a "private" directory in the ICS 311 master branch that contains a file called "midterm.doc":
+
+<img src="images/ics311-private.png" width="300px" class="img-responsive"/>
   
-Note that if you do not want public access to these files, you must make your repository private!
+Since the private directory occurs outside the src/ directory, Jekyll will leave this directory unprocessed and its contents will not appear in the (public) gh-pages branch of your repository. 
+
+Note that if you do not want the public (i.e. your students) to be able to access this directory in the master branch, you must make your repository private!
 
 
 
