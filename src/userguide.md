@@ -1326,13 +1326,13 @@ This code in context is available [here](https://github.com/philipmjohnson/ics31
    
 ## Add private data
    
-Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the src/ directory, such as "private/", and place your files inside that directory. Any files and directories not inside the src/ directory will not be touched by Jekyll or Morea.
+Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the `src/` directory, named something like `private/`, and place your private files inside that directory. All files and directories not inside the `src/` directory will not be touched by Jekyll or Morea.
 
-For example, here is a "private" directory in the ICS 311 master branch that contains a file called "midterm.doc":
+For example, the following screenshot shows a `private/` directory in the ICS 311 master branch containing a file called `midterm.doc`:
 
 <img src="images/ics311-private.png" width="300px" class="img-responsive"/>
   
-Since the private directory occurs outside the src/ directory, Jekyll will leave this directory unprocessed and its contents will not appear in the (public) gh-pages branch of your repository. 
+Since this `private/` directory occurs outside the `src/` directory, Jekyll will leave this directory unprocessed and its contents will not appear in the (public) gh-pages branch of your repository. 
 
 Note that if you do not want the public (i.e. your students) to be able to access this directory in the master branch, you must make your repository private!
 
