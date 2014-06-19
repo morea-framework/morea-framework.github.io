@@ -1164,6 +1164,8 @@ This graphic shows that a Morea site is organized like an onion with three layer
   
 **GitHub managed.** If we go up one more level of abstraction, your Morea site is just a GitHub-managed repository. The outermost level, above the `src/` directory, contains files and directories that are not touched by Jekyll but are still part of your repository.  You can put files or directories here that you do not want to be processed by Jekyll but that you wish to be associated with the course. 
 
+Up to now in this User Guide, we've focused almost exclusively on the contents of the `morea/` directory.  In this section, we'll now start making enhancements outside this directory in order to leverage additional capabilities of Jekyll and GitHub. 
+
 ## Add a menu item
 
 One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your `master/src/_layouts/default.html` file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
@@ -1202,6 +1204,8 @@ As before, you edit the navbar code in your default.html file, this time with th
     </ul>
 </li>
 {% endhighlight %}
+
+You'll need to edit this code by replacing the contents of the '<li>` elements with your own links.
 
 See the above code in context [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l38-45).                                     
 
