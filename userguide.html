@@ -1203,6 +1203,8 @@ Run the script morea-merge-upstream-master.sh to obtain the latest versions of t
 
 <p><strong>GitHub managed.</strong> If we go up one more level of abstraction, your Morea site is just a GitHub-managed repository. The outermost level, above the <code>src/</code> directory, contains files and directories that are not touched by Jekyll but are still part of your repository.  You can put files or directories here that you do not want to be processed by Jekyll but that you wish to be associated with the course. </p>
 
+<p>Up to now in this User Guide, we&#39;ve focused almost exclusively on the contents of the <code>morea/</code> directory.  In this section, we&#39;ll now start making enhancements outside this directory in order to leverage additional capabilities of Jekyll and GitHub. </p>
+
 <h2>Add a menu item</h2>
 
 <p>One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your <code>master/src/_layouts/default.html</code> file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:</p>
@@ -1237,6 +1239,8 @@ Run the script morea-merge-upstream-master.sh to obtain the latest versions of t
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/morea/010.introduction/reading-topic-overview.html&quot;</span><span class="nt">&gt;</span>Topics<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/li&gt;</span></code></pre></div>
+
+<p>You&#39;ll need to edit this code by replacing the contents of the &#39;<li>` elements with your own links.</p>
 
 <p>See the above code in context <a href="https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l38-45">here</a>.                                     </p>
 
