@@ -1205,7 +1205,7 @@ As before, you edit the navbar code in your default.html file, this time with th
 </li>
 {% endhighlight %}
 
-You'll need to edit this code by replacing the contents of the '<li>` elements with your own links.
+You'll need to edit this code by replacing the contents of the `<li>` elements with your own links.
 
 See the above code in context [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l38-45).                                     
 
