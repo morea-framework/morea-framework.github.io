@@ -1156,7 +1156,7 @@ To effectively go "beyond Morea", you need to have a basic conceptual understand
   
 <img src="images/beyond-morea.png" width="400px" class="img-responsive"/>
  
-This graphic shows that a Morea site is organized like an onion with three layers, each "managed" by a different tool.
+This graphic shows that a Morea site is organized like an onion with three layers, each "managed" by a different combination of tools.
 
 **Morea managed.** In the center is the "Morea layer", which consists of all the files in the `morea/` directory.  It is here where you define the modules, outcomes, readings, experiences, and assessments for your course. There is a Morea plugin to Jekyll that looks for the contents of this directory and parses all the files inside to create the Modules, Outcomes, Readings, Experiences, and Assessments pages. 
  
