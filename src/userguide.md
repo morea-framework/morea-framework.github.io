@@ -1291,7 +1291,7 @@ Due to fact that the grading workload is already too great for the TA time alloc
  
 **Step 2. Add a page to display your news items.** Now that you have some sample news items, you should create the page that displays them.  There are many ways to format news items, and you can do it whatever way you want, but the following instructions show how to duplicate the format illustrated above for the ICS 311 site.
 
-First, create a new directory called "news", and add an index.html file within it with the following contents:
+First, create a new directory called `news/`, and add an `index.html` file within it with the following contents:
 
 {% highlight xml %}
 ---
