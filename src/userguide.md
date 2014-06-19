@@ -1326,7 +1326,7 @@ This code in context is available [here](https://github.com/philipmjohnson/ics31
    
 ## Add private data
    
-Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the `src/` directory, named something like `private/`, and place your private files inside that directory. All files and directories not inside the `src/` directory will not be touched by Jekyll or Morea.
+Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the `src/` directory, named something like `private/`, and place your private files inside that directory. All files and directories outside the `src/` directory will not be touched by Jekyll or Morea.
 
 For example, the following screenshot shows a `private/` directory in the ICS 311 master branch containing a file called `midterm.doc`:
 
