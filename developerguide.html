@@ -8,6 +8,7 @@
   <!--  Load site-specific customizations after bootstrap. -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/gh-fork-ribbon.css">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:normal,italic,bold">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -41,19 +42,133 @@
         <li><a href="/developerguide.html">Developer Guide</a></li>
         <li><a href="/news.html">News</a></li>
         <li><a href="/contact.html">Contact</a></li>
-        <li><a href="https://github.com/morea-framework">GitHub</a></li>
       </ul>
     </div>
   </div>
 </div>
 
 
+<!-- Load tocify css and js -->
+<link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css" />
+
+<!-- Load tocify Javascript components -->
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.tocify.js"></script>
+
 <div class="container">
-  <h1>Developer Guide</h1>
+<div class="row">
+  <div class="hidden-xs col-sm-3" >
+    <!-- Our table of contents will be here !-->
+    <div id="nav"></div>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+     <h1>Design Overview</h1>
 
-<p>This page will contain the developer guide.</p>
+<p>The Morea framework derives its functionality from a combination of three technologies:</p>
 
+<ol>
+<li><p><strong>GitHub and git:</strong>  this technology allows sophisticated collaboration (through branching, forking, and pull requests),evolution (by cloning of the prior semester&#39;s repository when starting a new semester), access control (through private repos with public gh-pages branches), website hosting, and cloud-based content storage.</p></li>
+<li><p><strong>Jekyll:</strong> this technology makes it possible to cleanly separate content (i.e. markdown) from presentation (i.e. the website and its associated HTML, CSS, and Javascript). It is possible for Morea users to create entire courses without writing any HTML. </p></li>
+<li><p><strong>Morea plugin and files:</strong> By far the most minor of the three technologies, the Morea plugin allows users to create content (such as an Outcome) with an associated ID and refer to it in multiple places (such as in multiple modules.) In addition, the Morea plugin allows users to create content (such as an Outcome) and have it be presented in multiple pages (such as in its associated modules, associated assessments, and in the Outcomes page). </p></li>
+</ol>
+
+<p>For more information on GitHub, Git, or Jekyll, consult their project sites.  This page provides a brief orientation to the design of the Morea-specific code.</p>
+
+<h1>MoreaGenerator plugin</h1>
+
+<p>The Morea plugin is a Jekyll plugin written in Ruby and located in the basic-template <code>_plugins</code> directory in the file <a href="https://github.com/morea-framework/basic-template/blob/master/src/_plugins/MoreaGenerator.rb">MoreaGenerator.rb</a>.</p>
+
+<p>The plugin code is pretty straightforward, though not well-written.  (Part of the attraction of developing the Morea Framework for me was the chance to try Ruby, so MoreaGenerator is my first and (at the time of writing) only Ruby program I have ever written.) I would gratefully accept pull requests that improve the structure and use of Ruby language idioms. </p>
+
+<p>The plugin works as follows:</p>
+
+<ol>
+<li><p>The <code>generate()</code> method reads in all of the files in the <code>morea/</code> directory.  All files that end in the extension <code>.md</code> are assumed to be &quot;real&quot; Morea files, in that they should have morea IDs and so forth. These files are processed in the <code>processMoreaFile()</code> method.  Other files not ending in <code>.md</code> are just handed off to Jekyll for standard processing through the <code>processNonMoreaFile()</code> method.</p></li>
+<li><p>The <code>processMoreaFile()</code> method creates a new <code>MoreaPage</code> instance corresponding to each file. A <code>MoreaPage</code> is just a regular Jekyll <code>Page</code> with some additional state, such as the related outcomes, referencing assessments, referencing modules, etc. </p></li>
+<li><p>The <code>processMoreaFile()</code> method also figures out the type of the instance (i.e. Module, Outcome, Reading, Experience, or Assessment) and updates site variables that hold all of the defined Morea instances of each type.  In the case of Modules, there is a special instance called <code>ModulePage</code> that is created. </p></li>
+<li><p>There is data validation done in both <code>processMoreaFile()</code> (where each page is checked for required YAML front matter, such as a morea<em>id field) and in the <code>generate()</code> method (after all of the pages are read in, we check to make sure that a reference to a morea</em>id has an associated instance and so forth.  </p></li>
+<li><p>If we have read in all of the files and didn&#39;t detect any data validation errors, then the plugin ends normally after printing out some summary statistics.  If any fatal data validation errors occur, then the plugin prints out a message indicating the problem and calls <code>exit</code> to terminate Jekyll immediately.   Though experience, I&#39;ve found it&#39;s more user friendly to &quot;fail fast&quot; and force you to fix errors right away. </p></li>
+</ol>
+
+<h1>Morea index.md files</h1>
+
+<p>The MoreaGenerator plugin processes the <code>morea/</code> directory but doesn&#39;t control the layout and appearance of the site.   That part is done outside the <code>morea/</code> directory, primarily through a set of index.md files illustrated below:</p>
+
+<p><img src="images/basic-template-src-directory.png" width="200px" class="img-responsive"/></p>
+
+<p>You can see that there is a top-level index.md file (below favicon.ico) which becomes the home page for the site.  Then, there are five directories (modules, outcomes, readings, experiences, assessments) each with their own index.md file.  Each of these index.md files gets processed by Jekyll to produce the corresponding page in the site. </p>
+
+<p>Most of the index.md files have a very similar structure. Here&#39;s the one from the readings directory:</p>
+
+<div class="highlight"><pre><code class="xml">---
+layout: default
+title: Readings
+---
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Readings and other resources <span class="nt">&lt;small&gt;</span>in module order<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+{% for module in site.morea_module_pages %}
+{% if module.morea_coming_soon != true and module.morea_readings.size &gt; 0 %}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;{% cycle &#39;section-background-1&#39;, &#39;section-background-2&#39; %}&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;&lt;small&gt;</span>Module:<span class="nt">&lt;/small&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}{{ module.module_page.url }}&quot;</span><span class="nt">&gt;</span>{{ module.title }}<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    {% for page_id in module.morea_readings %}
+      {% assign reading = site.morea_page_table[page_id] %}
+       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;thumbnail&quot;</span><span class="nt">&gt;</span>
+           <span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ reading.morea_url }}&quot;</span><span class="nt">&gt;</span>{{ reading.title }}<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+             {{ reading.morea_summary | markdownify }}
+             <span class="nt">&lt;p&gt;</span>
+             {% for label in reading.morea_labels %}
+               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>{{ label }}<span class="nt">&lt;/span&gt;</span>
+             {% endfor %}
+             <span class="nt">&lt;/p&gt;</span>
+         <span class="nt">&lt;/div&gt;</span>
+       <span class="nt">&lt;/div&gt;</span>
+        {% if forloop.index == 4 %}
+          <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        {% endif %}
+        {% if forloop.index == 8 %}
+          <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        {% endif %}
+       {% if forloop.index == 12 %}
+          <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        {% endif %}
+        {% if forloop.index == 16 %}
+          <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        {% endif %}
+    {% endfor %}
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+{% endif %}
+{% endfor %}</code></pre></div>
+
+<p>Basically, the MoreaGenerator has updated the <code>site</code> hashmap with key value pairs providing access to the various Morea instances. So, for example, <code>site.morea_module_pages</code> provides a list of all the Morea modules found during generation.  In this page, we cycle through all of the modules and print out the readings associated with each module (that has readings).</p>
+
+<h1>Morea themes</h1>
+
+<p>The last part of the system are the themes.  These are actually managed in a separate repository called <a href="https://github.com/morea-framework/bootswatch">bootswatch</a>, because they are a modified version of the <a href="http://bootswatch.com/">Bootswatch</a> themes for Twitter Bootstrap.</p>
+
+<p>For each theme, I add a few Morea-specific CSS classes to the bootswatch.less file at the bottom (such as CSS classes for the footer and to provide the alternating color backgrounds).  There can also be modifications to the variables.less file. Each directory contains a file called <code>ics311.home.html</code> which is a kind of test file for the theme that contains bits of several Morea pages so you can see how they look. </p>
+
+<p>To generate a theme, follow the instructions at <a href="http://bootswatch.com/help/">Bootswatch Help</a>.  For example, to regenerate the Amelia theme, invoke <code>grunt swatch:amelia</code> from the command line to generate the CSS from the LESS files. After that you can display the new theme by opening the <code>ics311.home.html</code> file in your browser.</p>
+
+<p>When I am ready to &quot;install&quot; the themes, I run a local script that copies them into the <a href="https://github.com/morea-framework/basic-template/tree/master/src/css/themes">css/themes directory of basic-template</a>, and commit the results. </p>
+
+<p>For other users to get access to updated themes, they must run <a href="https://github.com/morea-framework/scripts/blob/master/morea-merge-upstream.sh">morea-merge-upstream</a>.</p>
+
+  </div>
 </div>
+</div>
+
+<script>
+  $("#nav").tocify({theme: "bootstrap3", scrollTo: "40"});
+</script>
 
 <div class="dark-blue-background">
 <footer>
