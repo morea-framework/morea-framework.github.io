@@ -977,67 +977,61 @@ It is possible to modify these themes or define new ones of your own.  This proc
 
 The following sections show a sample page for each of the pre-installed themes in alphabetical order. Click image to see full-size.
 
-<div class="alert alert-warning">
-<p>The themes are under regular small improvements. The following images may not reflect the latest version of the themes.
-Run the script morea-merge-upstream-master.sh to obtain the latest versions of these themes.
-</p>
-</div>
-
 ## amelia
 
-<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="700px" class="img-responsive"/></a>
 
 ## cerulean
 
-<a href="images/themes/cerulean.png"><img src="images/themes/cerulean.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/cerulean.png"><img src="images/themes/cerulean.png" width="700px" class="img-responsive"/></a>
 
 ## cyborg
 
-<a href="images/themes/cyborg.png"><img src="images/themes/cyborg.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/cyborg.png"><img src="images/themes/cyborg.png" width="700px" class="img-responsive"/></a>
 
 ## darkly
 
-<a href="images/themes/darkly.png"><img src="images/themes/darkly.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/darkly.png"><img src="images/themes/darkly.png" width="700px" class="img-responsive"/></a>
 
 ## flatly
 
-<a href="images/themes/flatly.png"><img src="images/themes/flatly.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/flatly.png"><img src="images/themes/flatly.png" width="700px" class="img-responsive"/></a>
 
 ## journal
 
-<a href="images/themes/journal.png"><img src="images/themes/journal.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/journal.png"><img src="images/themes/journal.png" width="700px" class="img-responsive"/></a>
 
 ## lumen
 
-<a href="images/themes/lumen.png"><img src="images/themes/lumen.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/lumen.png"><img src="images/themes/lumen.png" width="700px" class="img-responsive"/></a>
 
 ## readable
 
-<a href="images/themes/readable.png"><img src="images/themes/readable.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/readable.png"><img src="images/themes/readable.png" width="700px" class="img-responsive"/></a>
 
 ## simplex
 
-<a href="images/themes/simplex.png"><img src="images/themes/simplex.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/simplex.png"><img src="images/themes/simplex.png" width="700px" class="img-responsive"/></a>
 
 ## slate
 
-<a href="images/themes/slate.png"><img src="images/themes/slate.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/slate.png"><img src="images/themes/slate.png" width="700px" class="img-responsive"/></a>
 
 ## spacelab
 
-<a href="images/themes/spacelab.png"><img src="images/themes/spacelab.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/spacelab.png"><img src="images/themes/spacelab.png" width="700px" class="img-responsive"/></a>
 
 ## superhero
 
-<a href="images/themes/superhero.png"><img src="images/themes/superhero.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/superhero.png"><img src="images/themes/superhero.png" width="700px" class="img-responsive"/></a>
 
 ## united
 
-<a href="images/themes/united.png"><img src="images/themes/united.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/united.png"><img src="images/themes/united.png" width="700px" class="img-responsive"/></a>
 
 ## yeti
 
-<a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="600px" class="img-responsive"/></a>
+<a href="images/themes/yeti.png"><img src="images/themes/yeti.png" width="700px" class="img-responsive"/></a>
 
 # Scripts
 
