@@ -1189,6 +1189,7 @@ An equally easy enhancement is a dropdown menu containing a list of links. Here'
 As before, you edit the navbar code in your default.html file, this time with the Twitter Bootstrap dropdown menu code. Here is the section implementing the dropdown menu from the above screenshot:
 
 {% highlight xml %}
+{% raw %}
 <li class="dropdown">
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Info<b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu">
@@ -1197,6 +1198,7 @@ As before, you edit the navbar code in your default.html file, this time with th
       <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-topic-overview.html">Topics</a></li>
     </ul>
 </li>
+{% endraw %}
 {% endhighlight %}
 
 You'll need to edit this code by replacing the contents of the `<li>` elements with your own links.
