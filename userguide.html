@@ -1342,7 +1342,16 @@ title: News
 
 <h2>Add private data</h2>
 
-<p>Up to now, all of the enhancements have occurred in the &quot;Jekyll managed&quot; area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the <code>src/</code> directory, named something like <code>private/</code>, and place your private files inside that directory. All files and directories outside the <code>src/</code> directory will not be touched by Jekyll or Morea.</p>
+<p>In many cases, you might want to keep files in your repository that are not made a part of the published website.  There are two ways to do that: either inside or outside the <code>morea/</code> directory.</p>
+
+<h3>The <code>_ignore</code> directory</h3>
+
+<p>The Morea processor ignores any directories inside the <code>morea/</code> directory that are named <code>_ignore</code>.  So, if you 
+create a directory called <code>java/</code> to hold the contents of the Java module, and then put a subdirectory inside <code>java/</code> called <code>_ignore</code>, the contents of that directory will not appear in the published site.  This is a nice way to keep tests associated with a module but not make them available on the site.</p>
+
+<h3>Go outside <code>src/</code></h3>
+
+<p>A second way manage private data is to create a directory outside the <code>src/</code> directory, named something like <code>private/</code>, and place your private files inside that directory. All files and directories outside the <code>src/</code> directory will not be touched by Jekyll or Morea.</p>
 
 <p>For example, the following screenshot shows a <code>private/</code> directory in the ICS 311 master branch containing a file called <code>midterm.doc</code>:</p>
 
@@ -1363,7 +1372,7 @@ title: News
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>20 Jun 2014</span></p>
+      <p>Last update on: <span>21 Jun 2014</span></p>
   </div>
 </footer>
 </div>
