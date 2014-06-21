@@ -1286,7 +1286,7 @@ title: Schedule
 <p>The second modification is to the invocation of the &quot;gotoDate&quot; function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. </p>
 
 <p><strong>Step 2. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
 </code></pre></div>
 <h2>Add a News page</h2>
 
