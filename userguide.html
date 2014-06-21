@@ -1200,12 +1200,12 @@ in your markdown. </p>
 
 <div class="highlight"><pre><code class="xml"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse navbar-collapse&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/index.html&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/modules/&quot;</span><span class="nt">&gt;</span>Modules<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/outcomes/&quot;</span><span class="nt">&gt;</span>Outcomes<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/readings/&quot;</span><span class="nt">&gt;</span>Readings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/experiences/&quot;</span><span class="nt">&gt;</span>Experiences<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/assessments/&quot;</span><span class="nt">&gt;</span>Assessments<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/index.html&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/modules/&quot;</span><span class="nt">&gt;</span>Modules<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/outcomes/&quot;</span><span class="nt">&gt;</span>Outcomes<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/readings/&quot;</span><span class="nt">&gt;</span>Readings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/experiences/&quot;</span><span class="nt">&gt;</span>Experiences<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.baseurl }}/assessments/&quot;</span><span class="nt">&gt;</span>Assessments<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://groups.google.com/forum/#!forum/ics314f13&quot;</span><span class="nt">&gt;</span>Discussion<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -1336,7 +1336,7 @@ title: News
 
 <p>Now update your navbar with a new menu item to take the user to this page:</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">&lt;li&gt;&lt;a href=&quot;/news/&quot;&gt;News&lt;/a&gt;&lt;/li&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/news/&quot;&gt;News&lt;/a&gt;&lt;/li&gt;</span></code></pre></div>
 
 <p>This code in context is available <a href="https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59">here</a>.</p>
 
