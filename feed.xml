@@ -3,8 +3,8 @@
   <channel>
     <title></title>
     <description></description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://morea-framework.github.io/</link>
+    <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Ignore directories</title>
@@ -15,8 +15,8 @@
 &lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Jun 2014 04:29:39 -1000</pubDate>
-        <link>/2014/06/21/ignore-directories.html</link>
-        <guid isPermaLink="true">/2014/06/21/ignore-directories.html</guid>
+        <link>http://morea-framework.github.io/2014/06/21/ignore-directories.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/21/ignore-directories.html</guid>
       </item>
     
       <item>
@@ -28,8 +28,8 @@
 &lt;p&gt;The &lt;a href=&quot;/quickstart.html&quot;&gt;QuickStart page&lt;/a&gt; has now been modified to avoid the use of forking.  Course repositories created using the new procedure can be made private. &lt;/p&gt;
 </description>
         <pubDate>Tue, 17 Jun 2014 04:29:39 -1000</pubDate>
-        <link>/2014/06/17/quickstart-redesign.html</link>
-        <guid isPermaLink="true">/2014/06/17/quickstart-redesign.html</guid>
+        <link>http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</guid>
       </item>
     
       <item>
@@ -41,8 +41,8 @@ begin building their own course websites using the framework. &lt;/p&gt;
 &lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. &lt;/p&gt;
 </description>
         <pubDate>Thu, 22 May 2014 04:29:39 -1000</pubDate>
-        <link>/2014/05/22/morea-version-one.html</link>
-        <guid isPermaLink="true">/2014/05/22/morea-version-one.html</guid>
+        <link>http://morea-framework.github.io/2014/05/22/morea-version-one.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/05/22/morea-version-one.html</guid>
       </item>
     
   </channel>
