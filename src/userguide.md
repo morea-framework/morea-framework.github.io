@@ -1165,6 +1165,7 @@ Up to now in this User Guide, we've focused almost exclusively on the contents o
 One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your `master/src/_layouts/default.html` file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
  
 {% highlight xml %}
+{% raw %}
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
@@ -1176,6 +1177,7 @@ One of the most simple enhancements you can make to a basic Morea site is to add
         <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
       </ul>
     </div>
+{% endraw %}
 {% endhighlight %}
 
 Essentially, you just add a new `<li>` tag containing your link.
@@ -1319,7 +1321,9 @@ This code in context is available [here](https://github.com/philipmjohnson/ics31
 Now update your navbar with a new menu item to take the user to this page:
 
 {% highlight yaml %}
+{% raw %}
 <li><a href="{{ site.baseurl }}/news/">News</a></li>
+{% endraw %}
 {% endhighlight %}
 
 This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59).
