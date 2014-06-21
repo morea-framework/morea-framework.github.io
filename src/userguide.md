@@ -1192,9 +1192,9 @@ As before, you edit the navbar code in your default.html file, this time with th
 <li class="dropdown">
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Info<b class="caret"></b></a>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="/morea/010.introduction/reading-course-info.html">Overview</a></li>
-      <li><a href="/morea/010.introduction/reading-policies.html">Policies</a></li>
-      <li><a href="/morea/010.introduction/reading-topic-overview.html">Topics</a></li>
+      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-course-info.html">Overview</a></li>
+      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-policies.html">Policies</a></li>
+      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-topic-overview.html">Topics</a></li>
     </ul>
 </li>
 {% endhighlight %}
