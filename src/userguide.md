@@ -1264,7 +1264,9 @@ The second modification is to the invocation of the "gotoDate" function at the e
 
 **Step 2. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
+{% raw %}
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
+{% endraw %}
 
 ## Add a News page
 
