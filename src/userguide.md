@@ -1332,7 +1332,16 @@ This code in context is available [here](https://github.com/philipmjohnson/ics31
    
 ## Add private data
    
-Up to now, all of the enhancements have occurred in the "Jekyll managed" area of the repository.   In some cases, you might want to keep files in your repository that are not made a part of the published website.  To do that, simply create a directory outside the `src/` directory, named something like `private/`, and place your private files inside that directory. All files and directories outside the `src/` directory will not be touched by Jekyll or Morea.
+In many cases, you might want to keep files in your repository that are not made a part of the published website.  There are two ways to do that: either inside or outside the `morea/` directory.
+
+### The `_ignore` directory
+
+The Morea processor ignores any directories inside the `morea/` directory that are named `_ignore`.  So, if you 
+create a directory called `java/` to hold the contents of the Java module, and then put a subdirectory inside `java/` called `_ignore`, the contents of that directory will not appear in the published site.  This is a nice way to keep tests associated with a module but not make them available on the site.
+
+### Go outside `src/`
+
+A second way manage private data is to create a directory outside the `src/` directory, named something like `private/`, and place your private files inside that directory. All files and directories outside the `src/` directory will not be touched by Jekyll or Morea.
 
 For example, the following screenshot shows a `private/` directory in the ICS 311 master branch containing a file called `midterm.doc`:
 
@@ -1341,6 +1350,8 @@ For example, the following screenshot shows a `private/` directory in the ICS 31
 Since this `private/` directory occurs outside the `src/` directory, Jekyll will leave this directory unprocessed and its contents will not appear in the (public) gh-pages branch of your repository. 
 
 Note that if you do not want the public (i.e. your students) to be able to access this directory in the master branch, you must make your repository private!
+
+
 
 
 

@@ -2,7 +2,6 @@
 layout: post
 title:  "QuickStart process redesigned"
 date:   2014-06-17 14:29:39
-categories: bugfix
 ---
 
 The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website. 

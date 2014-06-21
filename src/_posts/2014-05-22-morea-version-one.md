@@ -2,7 +2,6 @@
 layout: post
 title:  "Morea Version 1.0 release"
 date:   2014-05-22 14:29:39
-categories: releases
 ---
 
 The Morea team is delighted to announce the 1.0 release.  This release constitutes a 
