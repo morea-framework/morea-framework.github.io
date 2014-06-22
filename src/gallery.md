@@ -48,7 +48,7 @@ title: Gallery
    <p>
    This site illustrates how outcomes and assessments can work together to provide insight into the
    effectiveness of the course structure.  It also shows some design features of the Morea Framework
-   (additions to the nav bar, include templates for customized pages, responsive embedded videos, and the
+   (navbar extensions, include templates for customized pages, responsive embedded videos, and the
    "SuperHero" theme.)
    </p>
    <p style="text-align: center; padding-top: 10px">
@@ -69,12 +69,10 @@ title: Gallery
   </div>
   <div class="col-sm-6">
    <p style="margin-top: 20px">
-   A (currently partial) implementation of an undergraduate algorithms class.
-   The modules, readings, and experiences are all implemented.  The outcomes and assessments are
-   not yet available. </p>
+   A partial implementation of an undergraduate algorithms class.
+   The modules, readings, and experiences are all implemented. </p>
    <p>
-   This site also illustrates the addition of a "Schedule" page using a JQuery
-   plugin to display a Google calendar containing due dates and other course information.
+   This site illustrates the addition of a drop-down menu to the navbar, a News page, and the "Simplex" theme. 
    </p>
    <p style="text-align: center; padding-top: 10px">
      <a href="http://philipmjohnson.github.io/ics311s14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
@@ -83,4 +81,33 @@ title: Gallery
   </div>
 </div>
 </div>
+</div>
+
+
+<div class="container">
+<h2>ICS 632, Fall 2014</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <img src="images/ics632f14-home.png" class="img-responsive">
+  </div>
+  <div class="col-sm-6">
+   <p style="margin-top: 20px">
+   A graduate course on high performance computing.  </p>
+   <p>
+   This site illustrates a customized Home page displaying news items, a drop-down menu in the navbar and a 
+   private GitHub repo. 
+   </p>
+   <p style="text-align: center; padding-top: 10px">
+     <a href="http://henricasanova.github.io/ics632_fall2014/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
+   </p>
+  </div>
+</div>
+
+
+
+
+
+
 </div>

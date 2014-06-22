@@ -7,11 +7,10 @@ layout: bootstrap
 </div>
 
 {% for post in site.posts %}
-  <div class="{% cycle 'gray-background', 'white-background' %}">
+  <div class="{% cycle 'gray-background', 'white-background' %} top-border">
     <div class="container">
     <h3>{{ post.title }} <small>{{ post.date | date: "%b %-d, %Y"  }}</small></h3>
     {{ post.content }}
-    <hr />
     </div>
 {% endfor %}
 
