@@ -1274,7 +1274,7 @@ Another common desire is a page containing news and announcements.  For this fea
 
  <img src="images/ics311-news-page.png" width="600px" class="img-responsive"/>
  
-Adding this feature to your own site requires two steps: creating news items, then creating the page to display them.
+Adding this feature to your own site requires three steps: creating news items, creating the page to display them, and updating your `_config.yml` file.
  
 **Step 1. Write some example news items.** To start, you should write a couple of sample Jekyll blog posts representing course news items. This means updating the `_posts` directory with your news items.  For example, here is what the ICS 311 `_posts` directory looks like:
  
@@ -1329,7 +1329,17 @@ Now update your navbar with a new menu item to take the user to this page:
 {% endhighlight %}
 
 This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59).
-   
+
+**Step 3. Update `_config.yml` file with a url parameter.** The final step is to add a url parameter to your `_config.yml` file so that that `site.url` variable can be referenced correctly in the feed.xml file.  Here's an example line:
+
+{% highlight yaml %}
+{% raw %}
+url: http://henricasanova.github.io/ics632_fall2014
+{% endraw %}
+{% endhighlight %}
+  
+Notice that there's no ending slash. 
+  
 ## Add private data
    
 In many cases, you might want to keep files in your repository that are not made a part of the published website.  There are two ways to do that: either inside or outside the `morea/` directory.
