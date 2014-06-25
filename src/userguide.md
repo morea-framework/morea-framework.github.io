@@ -1339,6 +1339,48 @@ url: http://henricasanova.github.io/ics632_fall2014
 {% endhighlight %}
   
 Notice that there's no ending slash. 
+
+## Non-Morea markdown files
+
+In certain situations, you may wish to have a markdown file within your module's directory that is not listed as an outcome, reading, experience, or assessment.  A common example is a quiz page. Of course, you could create a directory called `quizzes/` outside the `morea/` directory and put the quiz files there, but then they would not be in the same directory as the module.
+
+To support this situation, Morea processes markdown files in different ways depending upon their extension.  If the extension is `.md`, then the file is processed as a Morea file and various YAML parameters are required (such as morea_id).
+
+If the extension is `.markdown`, the file is processed as a regular Jekyll file and converted to HTML.  This allows you to create markdown files in a module directory that are not modules, outcomes, readings, experiences, or assessments. 
+
+Here is an example from the ICS 311 site:
+
+<img src="images/ics311-quiz.png" width="600px" class="img-responsive"/>
+
+The actual page is available [here](http://philipmjohnson.github.io/ics311s14/morea/080.binary-search-trees/quiz-binaries.html).
+
+Here is a portion of the source page to illustrate how it was created:
+
+{% highlight yaml %}
+{% raw %}
+---
+title: "Quiz: Binary search tree"
+published: true
+layout: default
+topdiv: container
+---
+
+# Quiz: Binary Search Trees
+
+Show that if a node in a binary search tree has two children, then its successor Y has no left child and its predecessor has no right child. (_The proofs are symmetric. Hints: Rule out where the successor cannot be to narrow down to where it must be. Draw Pictures!!!_) 
+
+{% endraw %}
+{% endhighlight %}
+
+This code in context is available [here](https://raw.githubusercontent.com/philipmjohnson/ics311s14/master/src/morea/080.binary-search-trees/quiz-binaries.markdown).
+
+When creating these pages, please be aware of the following:
+
+  * To have the page appear with the site header and footer, include the YAML front matter `layout: default`. 
+  * To provide the standard left and right margins, include the YAML front matter `topdiv: container`.
+  * The HTML page is generated in the same directory path as the path where the source file is located. 
+  
+Most importantly, if you are using this mechanism to create quizzes, be sure to make your repository private so that students do not have access to the source file for the quiz. In addition, the file should be named something that is not easily guessed by students (i.e. "security through obscurity").
   
 ## Add private data
    
