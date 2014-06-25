@@ -1352,6 +1352,45 @@ title: News
 
 <p>Notice that there&#39;s no ending slash. </p>
 
+<h2>Non-Morea markdown files</h2>
+
+<p>In certain situations, you may wish to have a markdown file within your module&#39;s directory that is not listed as an outcome, reading, experience, or assessment.  A common example is a quiz page. Of course, you could create a directory called <code>quizzes/</code> outside the <code>morea/</code> directory and put the quiz files there, but then they would not be in the same directory as the module.</p>
+
+<p>To support this situation, Morea processes markdown files in different ways depending upon their extension.  If the extension is <code>.md</code>, then the file is processed as a Morea file and various YAML parameters are required (such as morea_id).</p>
+
+<p>If the extension is <code>.markdown</code>, the file is processed as a regular Jekyll file and converted to HTML.  This allows you to create markdown files in a module directory that are not modules, outcomes, readings, experiences, or assessments. </p>
+
+<p>Here is an example from the ICS 311 site:</p>
+
+<p><img src="images/ics311-quiz.png" width="600px" class="img-responsive"/></p>
+
+<p>The actual page is available <a href="http://philipmjohnson.github.io/ics311s14/morea/080.binary-search-trees/quiz-binaries.html">here</a>.</p>
+
+<p>Here is a portion of the source page to illustrate how it was created:</p>
+
+<div class="highlight"><pre><code class="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Quiz:</span><span class="nv"> </span><span class="s">Binary</span><span class="nv"> </span><span class="s">search</span><span class="nv"> </span><span class="s">tree&quot;</span>
+<span class="l-Scalar-Plain">published</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="l-Scalar-Plain">layout</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">default</span>
+<span class="l-Scalar-Plain">topdiv</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">container</span>
+<span class="nn">---</span>
+
+<span class="c1"># Quiz: Binary Search Trees</span>
+
+<span class="l-Scalar-Plain">Show that if a node in a binary search tree has two children, then its successor Y has no left child and its predecessor has no right child. (_The proofs are symmetric. Hints</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Rule out where the successor cannot be to narrow down to where it must be. Draw Pictures!!!_)</span></code></pre></div>
+
+<p>This code in context is available <a href="https://raw.githubusercontent.com/philipmjohnson/ics311s14/master/src/morea/080.binary-search-trees/quiz-binaries.markdown">here</a>.</p>
+
+<p>When creating these pages, please be aware of the following:</p>
+
+<ul>
+<li>To have the page appear with the site header and footer, include the YAML front matter <code>layout: default</code>. </li>
+<li>To provide the standard left and right margins, include the YAML front matter <code>topdiv: container</code>.</li>
+<li>The HTML page is generated in the same directory path as the path where the source file is located. </li>
+</ul>
+
+<p>Most importantly, if you are using this mechanism to create quizzes, be sure to make your repository private so that students do not have access to the source file for the quiz. In addition, the file should be named something that is not easily guessed by students (i.e. &quot;security through obscurity&quot;).</p>
+
 <h2>Add private data</h2>
 
 <p>In many cases, you might want to keep files in your repository that are not made a part of the published website.  There are two ways to do that: either inside or outside the <code>morea/</code> directory.</p>
@@ -1384,7 +1423,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>22 Jun 2014</span></p>
+      <p>Last update on: <span>25 Jun 2014</span></p>
   </div>
 </footer>
 </div>

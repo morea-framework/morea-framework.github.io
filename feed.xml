@@ -7,6 +7,20 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Non-Morea markdown files</title>
+        <description>&lt;p&gt;The Morea generator now allows you to create markdown files inside the &lt;code&gt;morea/&lt;/code&gt; directory with the extension &lt;code&gt;.markdown&lt;/code&gt;.
+These files are processed into HTML by Jekyll, but will not appear as a module, outcome, reading, experience, or assessment. This is useful for creating (for example) quizzes in markdown format that are kept with other module files. &lt;/p&gt;
+
+&lt;p&gt;For more details, see the &lt;a href=&quot;/userguide.html#Non-Moreamarkdownfiles&quot;&gt;non-morea markdown section of the user guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Jun 2014 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</guid>
+      </item>
+    
+      <item>
         <title>Ignore directories</title>
         <description>&lt;p&gt;The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the &lt;code&gt;morea/&lt;/code&gt; directory named &lt;code&gt;_ignore&lt;/code&gt;.  This allows you to store private data inside the &lt;code&gt;morea/&lt;/code&gt; directory if you (for example) which to associate tests or other files with the module.&lt;/p&gt;
 
