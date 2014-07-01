@@ -61,6 +61,28 @@ title: Gallery
 
 <div class="gray-background">
 <div class="container">
+<h2>ICS 211, Fall 2014</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <img src="images/ics211f14-modules.png" class="img-responsive">
+  </div>
+  <div class="col-sm-6">
+   <p style="margin-top: 20px">
+      Second semester introduction to programming in Java. </p>
+   <p>
+   This site illustrates a Schedule page and well developed learning outcomes. 
+   </p>
+   <p style="text-align: center; padding-top: 10px">
+     <a href="http://cammoore.github.io/ics211f14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
+   </p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container">
 <h2>ICS 311, Spring 2014</h2>
 
 <div class="row">
@@ -81,9 +103,9 @@ title: Gallery
   </div>
 </div>
 </div>
-</div>
 
 
+<div class="gray-background">
 <div class="container">
 <h2>ICS 632, Fall 2014</h2>
 
@@ -103,6 +125,7 @@ title: Gallery
      <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
    </p>
   </div>
+</div>
 </div>
 
 
