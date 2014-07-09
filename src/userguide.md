@@ -962,7 +962,103 @@ produces:
 For documenting executable systems, as opposed to code samples, your best bet is to create a GitHub repo containing the system and provide links to it 
 in your markdown. 
 
+## Include files and charts
 
+Jekyll allows you to create small page fragments that you can include in multiple places on your site using the [include file syntax](http://jekyllrb.com/docs/templates/#includes). Include files can be passed parameters, which enables a simple kind of macro language that you can use to simplify your Morea content.
+  
+The ICS 314 site illustrates the use of include files through its implementation of assessments.  To show how, here is part of its assessments page:
+
+<img src="images/ics314-assessments.png" width="600px" class="img-responsive"/>
+
+The [ICS 314 assessments page](http://philipmjohnson.github.io/ics314f13/assessments/) contains approximately 40 assessments, where each assessment has a chart on the left side and some explanatory text on the right side.  The implementation of this capability involves several steps:
+
+First, the ICS 314 master branch contains [a copy of ChartJS in a js/ directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).  [ChartJS](http://www.chartjs.org/) is an open source Javascript charting library. 
+
+Second, the ICS 314 master branch contains a directory called `_includes/` containing the file [assessment-chartjs.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/_includes/assessment-chartjs.html).  Let's look at this file in more detail:
+
+{% highlight xml %}
+{% raw %}
+<script src="{{ site.baseurl }}/js/Chart.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="{{ page.morea_id }}" ></canvas>
+      </div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    {{ page.morea_chartjs_caption | markdownify }}
+  </div>
+
+  <script>
+
+    var moreaChartData = {
+      labels: {{ page.morea_chartjs_labels }},
+      datasets: [ { data: {{ page.morea_chartjs_data }} } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("{{ page.morea_id}}").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+{% endraw %}
+{% endhighlight %}
+
+This include file begins by loading the Chart.js system.  Then it uses Twitter Bootstrap classes to create a single row containing two equal width columms.  The left side contains a `<canvas>` element where the chart is displayed, and the right side contains a textual explanation for the chart. It references several parameters:
+
+  * `page.morea_id` is a parameter containing the id for the canvas element, and passed to ChartJS to identify where to draw the chart;
+  * `page.morea_chartjs_caption` is a parameter containing the textual explanation to be displayed beside the chart;
+  * `page.morea_chartjs_labels` is a parameter containing an array of strings displayed on the X-axis of the chart;
+  * `page.morea_chartjs_data` is a parameter containing an array of integers indicating the bar height.
+  
+Let's now look at [assessment-environment-configuration.md](https://github.com/philipmjohnson/ics314f13/blob/master/src/morea/010.introduction/assessment-environment-configuration.md), one of the 40 assessments that invokes this include file:
+
+{% highlight yaml %}
+{% raw %}
+---
+title: "Environment configuration"
+published: true
+morea_id: assessment-environment-configuration
+morea_type: assessment
+morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-development-environment
+morea_chartjs_data: "[0, 22, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
+ This assessment verified that students obtained laptops with the appropriate hardware, had the
+ appropriate operating system installed, and had successfully installed the appropriate version of Java. 
+
+ Discussion:
+
+   * Almost all students complied with requirements. Those who didn't had inappropriate hardware.
+---
+
+{%  include assessment-chartjs.html  %}
+{% endraw %}
+{% endhighlight %}
+
+Note the following:
+ 
+  * The include file parameters are defined and given values in the YAML front matter section.
+  * The body of the file contains only the `include` statement. 
+  * Front matter variables must be prefaced by "page." in the include file (so the front matter `morea_id` is referenced in the include file as `{% raw %}{{ page.morea_id }} {% endraw %}`.
+  
+As this example illustrates, include files can greatly simplify your Morea content.  In this case, the include file contains all of the Twitter Bootstrap markup, as well as the ChartJS scripts.   The actual assessment file contains only the content specific to that assessment.  This separation of concerns makes it possible to change the layout or change the Chart in a single file and have all of the assessments instances updated as a result.
+ 
+ 
 # Themes
 
 Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the [Bootswatch](http://bootswatch.com) themes for Bootstrap. 
