@@ -1018,7 +1018,7 @@ in your markdown. </p>
 
 <p>The <a href="http://philipmjohnson.github.io/ics314f13/assessments/">ICS 314 assessments page</a> contains approximately 40 assessments, where each assessment has a chart on the left side and some explanatory text on the right side.  The implementation of this capability involves several steps:</p>
 
-<p>First, the ICS 314 master branch contains <a href="https://github.com/philipmjohnson/ics314f13/tree/master/src/js">a copy of ChartJS in a js/ directory</a>.  <a href="http://www.chartjs.org/">ChartJS</a> is an open source Javascript charting library. </p>
+<p>First, the ICS 314 master branch contains a copy of <a href="http://www.chartjs.org/">ChartJS</a> in a <a href="https://github.com/philipmjohnson/ics314f13/tree/master/src/js">js/ directory</a>.  ChartJS is an open source Javascript charting library. </p>
 
 <p>Second, the ICS 314 master branch contains a directory called <code>_includes/</code> containing the file <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_includes/assessment-chartjs.html">assessment-chartjs.html</a>.  Let&#39;s look at this file in more detail:</p>
 
@@ -1058,7 +1058,7 @@ in your markdown. </p>
 
   <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
-<p>This include file begins by loading the Chart.js system.  Then it uses Twitter Bootstrap classes to create a single row containing two equal width columms.  The left side contains a <code>&lt;canvas&gt;</code> element where the chart is displayed, and the right side contains a textual explanation for the chart. It references several parameters:</p>
+<p>This include file begins by loading the Chart.js system.  Then it uses Twitter Bootstrap classes to create a single row containing two equal width columms.  The left side contains a <code>&lt;canvas&gt;</code> element where the chart is displayed, and the right side contains a textual explanation for the chart. The file references several parameters:</p>
 
 <ul>
 <li><code>page.morea_id</code> is a parameter containing the id for the canvas element, and passed to ChartJS to identify where to draw the chart;</li>
