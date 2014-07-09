@@ -972,7 +972,7 @@ The ICS 314 site illustrates the use of include files through its implementation
 
 The [ICS 314 assessments page](http://philipmjohnson.github.io/ics314f13/assessments/) contains approximately 40 assessments, where each assessment has a chart on the left side and some explanatory text on the right side.  The implementation of this capability involves several steps:
 
-First, the ICS 314 master branch contains [a copy of ChartJS in a js/ directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).  [ChartJS](http://www.chartjs.org/) is an open source Javascript charting library. 
+First, the ICS 314 master branch contains a copy of [ChartJS](http://www.chartjs.org/) in a [js/ directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).  ChartJS is an open source Javascript charting library. 
 
 Second, the ICS 314 master branch contains a directory called `_includes/` containing the file [assessment-chartjs.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/_includes/assessment-chartjs.html).  Let's look at this file in more detail:
 
@@ -1016,7 +1016,7 @@ Second, the ICS 314 master branch contains a directory called `_includes/` conta
 {% endraw %}
 {% endhighlight %}
 
-This include file begins by loading the Chart.js system.  Then it uses Twitter Bootstrap classes to create a single row containing two equal width columms.  The left side contains a `<canvas>` element where the chart is displayed, and the right side contains a textual explanation for the chart. It references several parameters:
+This include file begins by loading the Chart.js system.  Then it uses Twitter Bootstrap classes to create a single row containing two equal width columms.  The left side contains a `<canvas>` element where the chart is displayed, and the right side contains a textual explanation for the chart. The file references several parameters:
 
   * `page.morea_id` is a parameter containing the id for the canvas element, and passed to ChartJS to identify where to draw the chart;
   * `page.morea_chartjs_caption` is a parameter containing the textual explanation to be displayed beside the chart;
