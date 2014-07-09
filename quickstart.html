@@ -168,7 +168,7 @@ you to run Morea scripts without modification.
 
 <p>First, make a top-level directory for your course. Let&#39;s assume that your GitHub repository is called &quot;CS300-Fall2014&quot;, so we&#39;ll name this directory the same way:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir CS300-Fall2014</code></pre></div>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir CS300-Fall2014</code></pre></div>
 
 <p>Next, go into this directory:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd CS300-Fall2014
@@ -183,7 +183,7 @@ you to run Morea scripts without modification.
 </code></pre></div>
 <p>Now run this script to clone your new repo locally into a subdirectory named &quot;master&quot; and create a new orphan branch named &quot;gh-pages&quot;. You pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named &quot;CS300-Fall2014&quot;, the script invocation and its output would be similar to this:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="o">[</span>~/CS300-Fall2014<span class="o">]</span>-&gt; ./morea-vanilla-install.sh johndoe CS300-Fall2014
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/CS300-Fall2014<span class="o">]</span>-&gt; ./morea-vanilla-install.sh johndoe CS300-Fall2014
 Creating master/ directory with repo.
 + git clone git@github.com:johndoe/CS300-Fall2014.git master
 Cloning into <span class="s1">&#39;master&#39;</span>...
@@ -199,7 +199,7 @@ warning: You appear to have cloned an empty repository.
 fatal: pathspec <span class="s1">&#39;&#39;</span> did not match any files
 
 master/ and gh-pages/ directories created.
-Setting the remote to morea-framework/basic-template <span class="o">(</span>this can fail <span class="k">if </span>already <span class="nb">set</span><span class="o">)</span>
+Setting the remote to morea-framework/basic-template <span class="o">(</span>this can fail <span class="k">if</span> already <span class="nb">set</span><span class="o">)</span>
 Here are the current upstream repos:
 origin  git@github.com:johndoe/CS300-Fall2014.git <span class="o">(</span>fetch<span class="o">)</span>
 origin  git@github.com:johndoe/CS300-Fall2014.git <span class="o">(</span>push<span class="o">)</span>
@@ -209,8 +209,8 @@ Fetching upstream basic-template
 + <span class="nb">cd</span> ./master
 + git fetch upstream
 remote: Reusing existing pack: 2098, <span class="k">done</span>.
-remote: Total 2098 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>2098/2098<span class="o">)</span>, 685.58 KiB <span class="p">|</span> 246 KiB/s, <span class="k">done</span>.
+remote: Total <span class="m">2098</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>2098/2098<span class="o">)</span>, 685.58 KiB <span class="p">|</span> <span class="m">246</span> KiB/s, <span class="k">done</span>.
 Resolving deltas: 100% <span class="o">(</span>1059/1059<span class="o">)</span>, <span class="k">done</span>.
 From https://github.com/morea-framework/basic-template
  * <span class="o">[</span>new branch<span class="o">]</span>      gh-pages   -&gt; upstream/gh-pages
@@ -243,7 +243,7 @@ Merging upstream into master
 
 <p>For example, here&#39;s how we might configure the _config.yml file for our CS300-Fall2014 example course:</p>
 
-<div class="highlight"><pre><code class="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
 <span class="l-Scalar-Plain">highlighter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pygments</span>
 <span class="l-Scalar-Plain">safe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
 <span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/CS300-Fall2014</span>
@@ -421,7 +421,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>30 Jun 2014</span></p>
+      <p>Last update on: <span>08 Jul 2014</span></p>
   </div>
 </footer>
 </div>
