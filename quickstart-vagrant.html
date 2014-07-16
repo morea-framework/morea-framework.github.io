@@ -70,25 +70,25 @@
   <div class="col-xs-12 col-sm-9">
      <h1>Vagrant Quick Start</h1>
 
-<p>It can be problematic to set up Windows to use Jekyll; in fact the Jekyll developers do not officially support Windows as a platform.  This page documents an alternative approach for Windows users:  the use of <a href="https://www.virtualbox.org/">VirtualBox</a> and <a href="http://www.vagrantup.com/">Vagrant</a> to quickly set up a Unix environment.  </p>
+<p>It can be problematic to set up Windows to use Jekyll; in fact the Jekyll developers do not officially support Windows as a platform.  This page documents a workaround for Windows users:  the use of <a href="https://www.virtualbox.org/">VirtualBox</a> and <a href="http://www.vagrantup.com/">Vagrant</a> to run a virtual Unix environment within Windows with Python, Ruby, git, and Jekyll pre-installed.</p>
 
 <h1>Installation</h1>
 
 <h3>Install Git and GitHub</h3>
 
-<p>Follow the directions on the Quick Start page to <a href="/quickstart.html#SetupGitandGitHub">set up Git and GitHub</a>. Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub. </p>
+<p>Follow the QuickStart directions to <a href="/quickstart.html#SetupGitandGitHub">set up Git and GitHub</a>. Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub. </p>
 
 <h3>Download and install VirtualBox</h3>
 
 <p>Download and install VirtualBox from the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox downloads page</a>.</p>
 
-<p>Note that you do not need to <strong>run</strong> VirtualBox, just <strong>install it</strong>. VirtualBox will actually be run by Vagrant.</p>
+<p>Note that you do not need to <strong>run</strong> VirtualBox, just <strong>install</strong> it. VirtualBox will be invoked and managed by Vagrant.</p>
 
 <h3>Download and install Vagrant</h3>
 
 <p>Download and install Vagrant from the <a href="http://www.vagrantup.com/downloads.html">Vagrant downloads page</a>.</p>
 
-<p>To verify that Vagrant is installed correctly, type:</p>
+<p>To verify that Vagrant is installed correctly, type <code>vagrant -v</code>. For example:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% vagrant -v
   Vagrant 1.6.3
 </code></pre></div>
@@ -98,30 +98,32 @@
 
 <h3>Add the Morea Framework box to your Vagrant environment</h3>
 
-<p>In a shell window, cd to the directory containing the moreaframework.box file, and type:</p>
+<p>In a shell window, cd to the directory containing the moreaframework.box file, and type the following:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% vagrant box add moreaframework.box --name morea-framework/basic-box
 </code></pre></div>
-<p>This will copy the moreaframework.box file into your ~/.vagrant.d directory and establish a symbolic name for it that can be used in Vagrantfiles.  If you want to save space, you can delete the downloaded version of moreaframework.box once this command executes successfully.</p>
+<p>This will copy the moreaframework.box file into your <code>~/.vagrant.d</code> directory and define a symbolic name for it that can be referred to in Vagrantfiles.  If you want to save space, you can delete the downloaded version of moreaframework.box once this command executes successfully.</p>
 
 <h1>Set up local repository</h1>
 
 <h3>Create an empty repository</h3>
 
-<p>Follow the <a href="/quickstart.html#Createanemptyrepository">QuickStart instructions</a> to create an empty repository in GitHub.</p>
+<p>Follow the QuickStart instructions to <a href="/quickstart.html#Createanemptyrepository">create an empty repository</a> in GitHub.</p>
 
 <h3>Set up local development directory</h3>
 
-<p>Follow the <a href="/quickstart.html#Setuplocaldevelopmentdirectory">QuickStart instructions</a> to set up a local development directory.</p>
+<p>Follow the QuickStart instructions to <a href="/quickstart.html#Setuplocaldevelopmentdirectory">set up a local development directory</a>.</p>
 
 <h3>Download the Morea Framework Vagrantfile</h3>
 
-<p>Download this <a href="https://raw.githubusercontent.com/morea-framework/vagrant/master/Vagrantfile">Vagrantfile</a> to your newly created local development directory.</p>
+<p>Download this <a href="https://raw.githubusercontent.com/morea-framework/vagrant/master/Vagrantfile">Vagrantfile</a> to your newly created local development directory. (Right-click on the displayed page and &quot;Save as...&quot;)</p>
 
 <h1>Run the virtual machine</h1>
 
 <h3>Bring up a virtual machine</h3>
 
-<p>In a shell window, cd to your local development directory and type <code>vagrant up</code>. You should see output similar to the following:</p>
+<p>In a shell window, cd to your local development directory and type <code>vagrant up</code>. This command will process the contents of the Vagrantfile, which instructs Vagrant to use VirtualBox to begin running a virtual Unix environment whose image has been stored in the Morea Framework box. </p>
+
+<p>You should see output similar to the following:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant up
 Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="s1">&#39;virtualbox&#39;</span> provider...
@@ -163,13 +165,11 @@ Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="
 <span class="o">==</span>&gt; default: Saving <span class="nb">local </span>git email to VM...
 <span class="o">==</span>&gt; default: Running settings in .bash_profile</code></pre></div>
 
-<p>This command started up a virtual machine running Ubuntu Linux preconfigured with Morea Framework tools (Ruby, git, Jekyll, Python).  It copied your git user.name and user.email from your local settings, and set up its port 4000 to be available from your host machine. (That&#39;s so that you can use your local browser to see the local version of your site).</p>
-
-<p>Finally, it creates a &quot;mirror&quot; of the current directory in the <code>/vagrant</code> directory in the virtual machine. Let&#39;s check that out next.</p>
+<p>As the output shows, this command started up a virtual machine running Ubuntu Linux preconfigured with Morea Framework tools (Ruby, git, Jekyll, Python).  It copied your git user.name and user.email from your local settings, and set up its port 4000 to be available from your host machine. (That&#39;s so that you can use your local browser to see the local version of your site).</p>
 
 <h3>ssh into the virtual machine</h3>
 
-<p>In your shell, type <code>vagrant ssh</code> to get into your newly instantiated virtual machine.  To convince yourself that the environment is already configured, get the installed versions of git, ruby, python, and jekyll. Here&#39;s an example: </p>
+<p>In your shell, type <code>vagrant ssh</code> to get into your newly instantiated virtual machine.  To convince yourself that the environment is already configured, you can run commands to find out the installed versions of git, ruby, python, and jekyll. Here&#39;s an example: </p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant ssh
 Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-pae i686<span class="o">)</span>
@@ -178,15 +178,18 @@ Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-p
 Welcome to your Vagrant-built virtual machine.
 Last login: Tue Jul <span class="m">15</span> 01:14:56 <span class="m">2014</span> from 10.0.2.2
 Running settings in .bash_profile
+
 vagrant@precise32:~<span class="nv">$ </span>git --version
 git version 1.7.9.5
+
 vagrant@precise32:~<span class="nv">$ </span>python --version
 Python 2.7.3
+
 vagrant@precise32:~<span class="nv">$ </span>ruby --version
 ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
+
 vagrant@precise32:~<span class="nv">$ </span>jekyll --version
-jekyll 2.1.1
-vagrant@precise32:~<span class="err">$</span></code></pre></div>
+jekyll 2.1.1</code></pre></div>
 
 <h3>cd to /vagrant</h3>
 
@@ -198,17 +201,15 @@ Vagrantfile</code></pre></div>
 
 <h3>Run morea-vanilla-install</h3>
 
-<p>From within your virtual environment, follow the <a href="/quickstart.html#Runmorea-vanilla-install">Quickstart section to run morea-vanilla-install</a>. </p>
+<p>From within your virtual environment, follow the QuickStart instructions to <a href="/quickstart.html#Runmorea-vanilla-install">run morea-vanilla-install</a>. If you download the file using Windows, be sure to place it in your local development directory.  If you download the file using your virtual Unix environment, be sure you download it into the <code>/vagrant</code> directory (i.e. the mirror of your local development directory.)</p>
 
-<p>Make sure you are in the <code>/vagrant</code> directory when you do it. </p>
-
-<h1>Back to Quickstart</h1>
+<h1>Continue with Quickstart</h1>
 
 <p>You can now follow the remainder of the QuickStart starting with <a href="http://localhost:4000/quickstart.html#3.Developcoursecontent">Develop course content</a>. </p>
 
 <p>Note that you can edit Morea files using a Windows editor if you prefer since the local directory is mirrored on the virtual machine.</p>
 
-<h1>Miscellaneous Vagrant</h1>
+<h1>Miscellaneous Issues</h1>
 
 <h3>Manage your Vagrant process</h3>
 
@@ -220,7 +221,7 @@ Vagrantfile</code></pre></div>
 
 <p>Unfortunately, if you edit Morea files with a Windows editor, the Jekyll process running in the virtual environment does not &quot;notice&quot; the changed file and thus does not re-process the files.  </p>
 
-<p>The workaround for this is to edit your morea-run-local.sh script to add  <code>--force_polling</code> to the jekyll command:</p>
+<p><strong>Workaround 1: force-polling.</strong> One workaround for this is to edit your morea-run-local.sh script to add  <code>--force_polling</code> to the jekyll command:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
@@ -236,6 +237,14 @@ jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <spa
 
 <p>This tells Jekyll to automatically re-process the files every five seconds (regardless of whether files have changed or not). Not a perfect solution, but acceptable for the short term. </p>
 
+<p><strong>Workaround 2: touch a Morea file within Vagrant to trigger re-processing.</strong>  If you don&#39;t want to re-process all of the files every 5 seconds, a different workaround is to open a second Vagrant shell and <code>touch</code> any Morea file when you want to regenerate the site. This works because the Jekyll process running inside Vagrant does notice file changes occurring inside the process. </p>
+
+<h4>You can still run git commands within your local (Windows) environment</h4>
+
+<p>The use of VirtualBox and Vagrant is intended to overcome issues with the installation of Ruby and Jekyll on Windows. Specifically, it enables you to run the <code>morea-run-local.sh</code> command successfully.</p>
+
+<p>If you prefer, you can use the <code>git-bash</code> environment within Windows to run the scripts that invoke git (i.e. <code>morea-pull</code>, <code>morea-vanilla-install.sh</code>). </p>
+
   </div>
 </div>
 </div>
@@ -247,7 +256,7 @@ jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <spa
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>15 Jul 2014</span></p>
+      <p>Last update on: <span>16 Jul 2014</span></p>
   </div>
 </footer>
 </div>

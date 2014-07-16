@@ -7,6 +7,17 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Virtual Box and Vagrant for Morea</title>
+        <description>&lt;p&gt;Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a &lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; &amp;quot;box&amp;quot; that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed. &lt;/p&gt;
+
+&lt;p&gt;For details on how to run Morea using Vagrant, see the &lt;a href=&quot;/quickstart-vagrant.html&quot;&gt;Vagrant QuickStart page&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Jul 2014 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2014/07/16/vagrant.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/07/16/vagrant.html</guid>
+      </item>
+    
+      <item>
         <title>Non-Morea markdown files</title>
         <description>&lt;p&gt;The Morea generator now allows you to create markdown files inside the &lt;code&gt;morea/&lt;/code&gt; directory with the extension &lt;code&gt;.markdown&lt;/code&gt;.
 These files are processed into HTML by Jekyll, but will not appear as a module, outcome, reading, experience, or assessment. This is useful for creating (for example) quizzes in markdown format that are kept with other module files. &lt;/p&gt;
