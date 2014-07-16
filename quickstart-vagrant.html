@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Vagrant Quick Start | Morea Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/cerulean/bootstrap.min.css">
+
+  <!--  Load site-specific customizations after bootstrap. -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/gh-fork-ribbon.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:normal,italic,bold">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Morea Framework</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/quickstart.html">Quick Start</a></li>
+        <li><a href="/userguide.html">User Guide</a></li>
+        <li><a href="/developerguide.html">Developer Guide</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="github-fork-ribbon-wrapper right">
+  <div class="github-fork-ribbon">
+    <a href="https://github.com/morea-framework">Find me on GitHub</a>
+  </div>
+</div>
+
+<!-- Load tocify css and js -->
+<link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css" />
+
+<!-- Load tocify Javascript components -->
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.tocify.js"></script>
+
+<div class="container">
+<div class="row">
+  <div class="hidden-xs col-sm-3" >
+    <!-- Our table of contents will be here !-->
+    <div id="nav"></div>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+     <h1>Vagrant Quick Start</h1>
+
+<p>It can be problematic to set up Windows to use Jekyll; in fact the Jekyll developers do not officially support Windows as a platform.  This page documents an alternative approach for Windows users:  the use of <a href="https://www.virtualbox.org/">VirtualBox</a> and <a href="http://www.vagrantup.com/">Vagrant</a> to quickly set up a Unix environment.  </p>
+
+<h1>Installation</h1>
+
+<h3>Install Git and GitHub</h3>
+
+<p>Follow the directions on the Quick Start page to <a href="/quickstart.html#SetupGitandGitHub">set up Git and GitHub</a>. Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub. </p>
+
+<h3>Download and install VirtualBox</h3>
+
+<p>Download and install VirtualBox from the <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox downloads page</a>.</p>
+
+<p>Note that you do not need to <strong>run</strong> VirtualBox, just <strong>install it</strong>. VirtualBox will actually be run by Vagrant.</p>
+
+<h3>Download and install Vagrant</h3>
+
+<p>Download and install Vagrant from the <a href="http://www.vagrantup.com/downloads.html">Vagrant downloads page</a>.</p>
+
+<p>To verify that Vagrant is installed correctly, type:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% vagrant -v
+  Vagrant 1.6.3
+</code></pre></div>
+<h3>Download the Morea Framework &quot;box&quot;</h3>
+
+<p>We have created a Vagrant &quot;box&quot; that contains a Unix environment with git, Python, Ruby, and Jekyll pre-installed.  Download this large (500 MB) file from <a href="https://www.dropbox.com/s/996fbdwwahusryr/moreaframework.box">here</a>. </p>
+
+<h3>Add the Morea Framework box to your Vagrant environment</h3>
+
+<p>In a shell window, cd to the directory containing the moreaframework.box file, and type:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% vagrant box add moreaframework.box --name morea-framework/basic-box
+</code></pre></div>
+<p>This will copy the moreaframework.box file into your ~/.vagrant.d directory and establish a symbolic name for it that can be used in Vagrantfiles.  If you want to save space, you can delete the downloaded version of moreaframework.box once this command executes successfully.</p>
+
+<h1>Set up local repository</h1>
+
+<h3>Create an empty repository</h3>
+
+<p>Follow the <a href="/quickstart.html#Createanemptyrepository">QuickStart instructions</a> to create an empty repository in GitHub.</p>
+
+<h3>Set up local development directory</h3>
+
+<p>Follow the <a href="/quickstart.html#Setuplocaldevelopmentdirectory">QuickStart instructions</a> to set up a local development directory.</p>
+
+<h3>Download the Morea Framework Vagrantfile</h3>
+
+<p>Download this <a href="https://raw.githubusercontent.com/morea-framework/vagrant/master/Vagrantfile">Vagrantfile</a> to your newly created local development directory.</p>
+
+<h1>Run the virtual machine</h1>
+
+<h3>Bring up a virtual machine</h3>
+
+<p>In a shell window, cd to your local development directory and type <code>vagrant up</code>. You should see output similar to the following:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant up
+Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="s1">&#39;virtualbox&#39;</span> provider...
+<span class="o">==</span>&gt; default: Importing base box <span class="s1">&#39;morea-framework/basic-box&#39;</span>...
+<span class="o">==</span>&gt; default: Matching MAC address <span class="k">for</span> NAT networking...
+<span class="o">==</span>&gt; default: Setting the name of the VM: <span class="nv">ics314f13_default_1405467414419_16493</span>
+<span class="o">==</span>&gt; default: Clearing any previously <span class="nb">set </span>network interfaces...
+<span class="o">==</span>&gt; default: Preparing network interfaces based on configuration...
+    default: Adapter 1: <span class="nv">nat</span>
+<span class="o">==</span>&gt; default: Forwarding ports...
+    default: <span class="nv">4000</span> <span class="o">=</span>&gt; <span class="m">4000</span> <span class="o">(</span>adapter 1<span class="o">)</span>
+    default: <span class="nv">22</span> <span class="o">=</span>&gt; <span class="m">2222</span> <span class="o">(</span>adapter 1<span class="o">)</span>
+<span class="o">==</span>&gt; default: Booting VM...
+<span class="o">==</span>&gt; default: Waiting <span class="k">for</span> machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private <span class="nv">key</span>
+<span class="o">==</span>&gt; default: Machine booted and ready!
+<span class="o">==</span>&gt; default: Checking <span class="k">for</span> guest additions in VM...
+    default: The guest additions on this VM <span class="k">do</span> not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.2.0
+    default: VirtualBox Version: 4.3
+<span class="o">==</span>&gt; default: Mounting shared folders...
+    default: /vagrant <span class="o">=</span>&gt; /Users/johnson/projecthosting/github/ics314f13
+<span class="o">==</span>&gt; default: Running provisioner: shell...
+    default: Running: inline <span class="nv">script</span>
+<span class="o">==</span>&gt; default: stdin: is not a <span class="nv">tty</span>
+<span class="o">==</span>&gt; default: Saving <span class="nb">local </span>git username to VM...
+<span class="o">==</span>&gt; default: Running settings in .bash_profile
+<span class="o">==</span>&gt; default: Running provisioner: shell...
+    default: Running: inline <span class="nv">script</span>
+<span class="o">==</span>&gt; default: stdin: is not a <span class="nv">tty</span>
+<span class="o">==</span>&gt; default: Saving <span class="nb">local </span>git email to VM...
+<span class="o">==</span>&gt; default: Running settings in .bash_profile</code></pre></div>
+
+<p>This command started up a virtual machine running Ubuntu Linux preconfigured with Morea Framework tools (Ruby, git, Jekyll, Python).  It copied your git user.name and user.email from your local settings, and set up its port 4000 to be available from your host machine. (That&#39;s so that you can use your local browser to see the local version of your site).</p>
+
+<p>Finally, it creates a &quot;mirror&quot; of the current directory in the <code>/vagrant</code> directory in the virtual machine. Let&#39;s check that out next.</p>
+
+<h3>ssh into the virtual machine</h3>
+
+<p>In your shell, type <code>vagrant ssh</code> to get into your newly instantiated virtual machine.  To convince yourself that the environment is already configured, get the installed versions of git, ruby, python, and jekyll. Here&#39;s an example: </p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant ssh
+Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-pae i686<span class="o">)</span>
+
+ * Documentation:  https://help.ubuntu.com/
+Welcome to your Vagrant-built virtual machine.
+Last login: Tue Jul <span class="m">15</span> 01:14:56 <span class="m">2014</span> from 10.0.2.2
+Running settings in .bash_profile
+vagrant@precise32:~<span class="nv">$ </span>git --version
+git version 1.7.9.5
+vagrant@precise32:~<span class="nv">$ </span>python --version
+Python 2.7.3
+vagrant@precise32:~<span class="nv">$ </span>ruby --version
+ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
+vagrant@precise32:~<span class="nv">$ </span>jekyll --version
+jekyll 2.1.1
+vagrant@precise32:~<span class="err">$</span></code></pre></div>
+
+<h3>cd to /vagrant</h3>
+
+<p>Vagrant creates a mirror of your local directory structure starting from the directory where you invoked <code>vagrant up</code>. This mirror is available in the <code>/vagrant</code> directory.  So, cd to that directory and notice that it contains the same contents as your local directory:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">vagrant@precise32:~<span class="nv">$ </span><span class="nb">cd</span> /vagrant
+vagrant@precise32:/vagrant<span class="nv">$ </span>ls 
+Vagrantfile</code></pre></div>
+
+<h3>Run morea-vanilla-install</h3>
+
+<p>From within your virtual environment, follow the <a href="/quickstart.html#Runmorea-vanilla-install">Quickstart section to run morea-vanilla-install</a>. </p>
+
+<p>Make sure you are in the <code>/vagrant</code> directory when you do it. </p>
+
+<h1>Back to Quickstart</h1>
+
+<p>You can now follow the remainder of the QuickStart starting with <a href="http://localhost:4000/quickstart.html#3.Developcoursecontent">Develop course content</a>. </p>
+
+<p>Note that you can edit Morea files using a Windows editor if you prefer since the local directory is mirrored on the virtual machine.</p>
+
+<h1>Miscellaneous Vagrant</h1>
+
+<h3>Manage your Vagrant process</h3>
+
+<p>See the <a href="http://docs.vagrantup.com/v2/cli/index.html">Vagrant command line interface documentation</a> for details.  You will be interested in <code>vagrant halt</code> if you don&#39;t want your virtual machine running all the time. You can always run <code>vagrant up</code> to get it back up again. </p>
+
+<h3>Caveats</h3>
+
+<h4>The virtual host Jekyll does not &quot;see&quot; file updates from the local environment.</h4>
+
+<p>Unfortunately, if you edit Morea files with a Windows editor, the Jekyll process running in the virtual environment does not &quot;notice&quot; the changed file and thus does not re-process the files.  </p>
+
+<p>The workaround for this is to edit your morea-run-local.sh script to add  <code>--force_polling</code> to the jekyll command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;./master&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;master/ directory does not exist.  Exiting...&quot;</span>
+  <span class="nb">exit </span>1
+<span class="k">fi</span>
+
+<span class="nv">DIR</span><span class="o">=</span><span class="s2">&quot;$( cd &quot;</span><span class="k">$(</span> dirname <span class="s2">&quot;$0&quot;</span> <span class="k">)</span><span class="s2">&quot; &amp;&amp; pwd )&quot;</span>
+
+<span class="nb">set</span> -x
+jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <span class="nv">$DIR</span>/master/src/_site --baseurl <span class="s2">&quot;&quot;</span> --watch --force_polling</code></pre></div>
+
+<p>This tells Jekyll to automatically re-process the files every five seconds (regardless of whether files have changed or not). Not a perfect solution, but acceptable for the short term. </p>
+
+  </div>
+</div>
+</div>
+
+<script>
+  $("#nav").tocify({theme: "bootstrap3", scrollTo: "40"});
+</script>
+
+<div class="dark-blue-background">
+<footer>
+  <div class="container page-footer">
+      <p>Last update on: <span>15 Jul 2014</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

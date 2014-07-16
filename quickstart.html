@@ -68,26 +68,17 @@
     <div id="nav"></div>
   </div>
   <div class="col-xs-12 col-sm-9">
-     <h1>Installation</h1>
+     <h1>1. Installation</h1>
 
 <p>To use Morea, you need to have git, python, ruby, and jekyll installed and have an account at GitHub.</p>
 
-<h3>Join GitHub</h3>
+<h2>Set up Git and GitHub</h2>
+
+<h4>A. Join GitHub</h4>
 
 <p>If you haven&#39;t already, <a href="https://help.github.com/articles/signing-up-for-a-new-github-account">sign up for GitHub</a>.If you are associated with an educational institution (i.e. have a .edu email account), you can  <a href="https://education.github.com/">request a free micro account</a> providing you with 5 private repos.</p>
 
-<div class="alert alert-warning">
-<p><strong>Warning!</strong> Morea requires that you have an ssh key on your laptop and that you provide
-the public key to GitHub. If you do not do this, then you will later encounter the error "Permission denied (publickey)". 
-</p>
-
-<p>
-To define a public key and provide it to GitHub, follow the instructions on GitHub's
-<a class="alert-link" href="https://help.github.com/articles/generating-ssh-keys">Generating SSH Keys</a> page.
-</p>
-</div>
-
-<h3>Install git</h3>
+<h4>B. Install git</h4>
 
 <p>Check to see if you have git installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% git --version
@@ -103,7 +94,15 @@ you to run Morea scripts without modification.
 </p>
 </div>
 
-<h3>Install Ruby</h3>
+<h4>C. Verify your ssh key</h4>
+
+<p>Follow the instructions on <a href="https://help.github.com/articles/generating-ssh-keys">this page</a> to set up SSH keys for communication with GitHub.</p>
+
+<p>To verify that your ssh keys are set up and you can communicate with GitHub, type the following into a shell:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% ssh -T git@github.com
+  Hi philipmjohnson! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div>
+<h2>Install Ruby</h2>
 
 <p>Check to see if you have Ruby installed and can invoke it from the command line: </p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% ruby --version
@@ -113,7 +112,7 @@ you to run Morea scripts without modification.
 
 <p>Morea is compatible with either Ruby 1.9.x or 2.x.</p>
 
-<h3>Install Python</h3>
+<h2>Install Python</h2>
 
 <p>Check to see if you have Python 2.x installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% python --version
@@ -125,7 +124,7 @@ you to run Morea scripts without modification.
 <p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
 </div>
 
-<h3>Install Jekyll</h3>
+<h2>Install Jekyll</h2>
 
 <p>Check to see if you have Jekyll 2.x installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
@@ -136,9 +135,12 @@ you to run Morea scripts without modification.
 <div class="alert alert-warning">
 <p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
 </p>
+<p>
+Or, if that didn't work well, you can always try our <a href="quickstart-vagrant.html">QuickStart using Vagrant</a> approach. 
+</p>
 </div>
 
-<h1>Create a course</h1>
+<h1>2. Create a course</h1>
 
 <p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea basic-template as an &quot;upstream&quot; repository, and merging the contents of the upstream repo.  The net effect of all this is to 
  initialize your repo with the contents of the basic-template, so that you can start off with a functional Morea website.</p>
@@ -148,7 +150,7 @@ you to run Morea scripts without modification.
 </p>
 </div>
 
-<h3>Create an empty repository</h3>
+<h2>Create an empty repository</h2>
 
 <p>Login to GitHub and click the &quot;+&quot; icon in the upper right corner to pull down a menu that allows you to select &quot;New repository&quot;:</p>
 
@@ -162,7 +164,7 @@ you to run Morea scripts without modification.
 
 <p>Once you get to this page, we&#39;re done with GitHub. Let&#39;s now set up files on your local computer.</p>
 
-<h3>Set up local development directory</h3>
+<h2>Set up local development directory</h2>
 
 <p>Developing a Morea site requires managing (at a minimum) two branches for each repository: a &quot;master&quot; branch containing the source files for your course, and a special orphan &quot;gh-pages&quot; branch containing the website files produced by running Jekyll over your source files.</p>
 
@@ -173,6 +175,8 @@ you to run Morea scripts without modification.
 <p>Next, go into this directory:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd CS300-Fall2014
 </code></pre></div>
+<h2>Run morea-vanilla-install</h2>
+
 <p>The set of git commands needed to create the master and gh-pages branches in this directory are rather tedious, so we&#39;ve created the <a href="https://github.com/morea-framework/scripts/blob/master/morea-vanilla-install.sh">morea-vanilla-install.sh</a> script to make this setup process easier. </p>
 
 <p>You can download this script from the command line with the following command:</p>
@@ -229,9 +233,9 @@ Merging upstream into master
 </code></pre></div>
 <p>Now we can start working on the content of the course. </p>
 
-<h1>Develop course content</h1>
+<h1>3. Develop course content</h1>
 
-<h3>Configure the _config.yml file</h3>
+<h2>Configure the _config.yml file</h2>
 
 <p>The first step in developing course content is to configure the master/src/_config.yml file. There are three fields to edit:</p>
 
@@ -252,7 +256,7 @@ Merging upstream into master
 
 <p>In general, you only need to touch the _config.yml file once. Anytime you edit the _config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. </p>
 
-<h3>Edit markdown files</h3>
+<h2>Edit markdown files</h2>
 
 <p>The next step is to edit the markdown files to present additional course content. </p>
 
@@ -262,7 +266,7 @@ Merging upstream into master
 
 <p>Use any editor you like, although those that have a Markdown mode are generally preferable.</p>
 
-<h3>Display your site locally</h3>
+<h2>Display your site locally</h2>
 
 <p>Once you&#39;ve edited markdown files, you&#39;ll want to review the formatted version in a browser.  </p>
 
@@ -313,7 +317,7 @@ Merging upstream into master
 
 <p>The script tells Jekyll to regenerate the HTML files whenever the markdown sources change.  If you use a browser plugin like <a href="http://livereload.com/">LiveReload</a> and tell it to monitor the master/src/_site directory, your browser will automatically re-render and re-display the page whenever a change is made to your source files. This makes development quite efficient.</p>
 
-<h1>Publish your website</h1>
+<h1>4. Publish your website</h1>
 
 <p>The final step is to make your Morea course site available to the world using GitHub&#39;s free <a href="http://pages.github.com/">Pages</a> facility. As you might be expecting by now, we have created a script (this time called <a href="https://github.com/morea-framework/scripts/blob/master/morea-publish.sh">morea-publish.sh</a>) to simplify this process. </p>
 
@@ -393,7 +397,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 
 <p><strong>Note:</strong> the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you&#39;ll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.</p>
 
-<h1>Summary</h1>
+<h1>5. Summary</h1>
 
 <p>While the setup process requires some time and effort, the benefit is that once you&#39;re done, the actual development workflow is quite straightforward:</p>
 
@@ -421,7 +425,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>08 Jul 2014</span></p>
+      <p>Last update on: <span>15 Jul 2014</span></p>
   </div>
 </footer>
 </div>
