@@ -1057,7 +1057,45 @@ Note the following:
   * Front matter variables must be prefaced by "page." in the include file (so the front matter `morea_id` is referenced in the include file as `{% raw %}{{ page.morea_id }} {% endraw %}`.
   
 As this example illustrates, include files can greatly simplify your Morea content.  In this case, the include file contains all of the Twitter Bootstrap markup, as well as the ChartJS scripts.   The actual assessment file contains only the content specific to that assessment.  This separation of concerns makes it possible to change the layout or change the Chart in a single file and have all of the assessments instances updated as a result.
- 
+
+## Embedding slides
+
+Rather than include a link to a .ppt or .pdf file, you might find it more user-friendly to embed your slides in a page. The easiest way to do this is by using a cloud-based presentation hosting service, such as [SlideShare](http://www.slideshare.net/).  In the following example, we will use a similar service, [Speaker Deck](https://speakerdeck.com/), which provides a responsive HTML5 embedded player. If you prefer SlideShare, the same general procedure will work.
+
+First, create a Speaker Deck account by going to the [Speaker Deck signup page](https://speakerdeck.com/signup). You can use your GitHub account to simplify signup.
+
+Second, upload your slides.  The upload file must be PDF, so you must export your slides in that format.  Note the [size limit](https://speakerdeck.com/faq#size_limit). Once uploaded, you will have a page like the following for your presentation:
+
+<img src="images/speakerdeck-page.png" width="700px" class="img-responsive"/>
+
+Third, add the embed code to your Morea page. To do this, notice the "Embed" button on the right side of the page displayed above.  Clicking this button will pop up a dialog box with the HTML `<script>` element you must place in your Morea page to embed this  presentation.  For example, here is what a readings page might look like with the `<script>` code
+
+{% highlight yaml %}
+{% raw %}
+---
+title: "Lecture Notes: Sequential Warmup"
+published: true
+morea_id: sequentiallecturenotesreadings
+morea_summary: "Parallelism, sequential performance, sequential code optimization, the memory wall, compiler optimization, not really sequential, conclusion"
+morea_type: reading
+morea_sort_order: 1
+---
+
+## Lecture Notes: Sequential Warmup
+
+<script async class="speakerdeck-embed" data-id="ef27d6f0f33001316dfc66ebab3e7b80" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+{% endraw %}
+{% endhighlight %}
+
+That's it!   Here is what this Readings page looks like:
+
+<img src="images/speakerdeck-morea.png" width="700px" class="img-responsive"/>
+
+The embedded image is responsive, so it works nicely on a mobile device.  Your students can study on the bus:
+
+<img src="images/speakerdeck-mobile.png" width="400px" class="img-responsive"/>
+
  
 # Themes
 
