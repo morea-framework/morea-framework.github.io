@@ -1100,6 +1100,39 @@ in your markdown. </p>
 
 <p>As this example illustrates, include files can greatly simplify your Morea content.  In this case, the include file contains all of the Twitter Bootstrap markup, as well as the ChartJS scripts.   The actual assessment file contains only the content specific to that assessment.  This separation of concerns makes it possible to change the layout or change the Chart in a single file and have all of the assessments instances updated as a result.</p>
 
+<h2>Embedding slides</h2>
+
+<p>Rather than include a link to a .ppt or .pdf file, you might find it more user-friendly to embed your slides in a page. The easiest way to do this is by using a cloud-based presentation hosting service, such as <a href="http://www.slideshare.net/">SlideShare</a>.  In the following example, we will use a similar service, <a href="https://speakerdeck.com/">Speaker Deck</a>, which provides a responsive HTML5 embedded player. If you prefer SlideShare, the same general procedure will work.</p>
+
+<p>First, create a Speaker Deck account by going to the <a href="https://speakerdeck.com/signup">Speaker Deck signup page</a>. You can use your GitHub account to simplify signup.</p>
+
+<p>Second, upload your slides.  The upload file must be PDF, so you must export your slides in that format.  Note the <a href="https://speakerdeck.com/faq#size_limit">size limit</a>. Once uploaded, you will have a page like the following for your presentation:</p>
+
+<p><img src="images/speakerdeck-page.png" width="700px" class="img-responsive"/></p>
+
+<p>Third, add the embed code to your Morea page. To do this, notice the &quot;Embed&quot; button on the right side of the page displayed above.  Clicking this button will pop up a dialog box with the HTML <code>&lt;script&gt;</code> element you must place in your Morea page to embed this  presentation.  For example, here is what a readings page might look like with the <code>&lt;script&gt;</code> code</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Lecture</span><span class="nv"> </span><span class="s">Notes:</span><span class="nv"> </span><span class="s">Sequential</span><span class="nv"> </span><span class="s">Warmup&quot;</span>
+<span class="l-Scalar-Plain">published</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="l-Scalar-Plain">morea_id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">sequentiallecturenotesreadings</span>
+<span class="l-Scalar-Plain">morea_summary</span><span class="p-Indicator">:</span> <span class="s">&quot;Parallelism,</span><span class="nv"> </span><span class="s">sequential</span><span class="nv"> </span><span class="s">performance,</span><span class="nv"> </span><span class="s">sequential</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">optimization,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">memory</span><span class="nv"> </span><span class="s">wall,</span><span class="nv"> </span><span class="s">compiler</span><span class="nv"> </span><span class="s">optimization,</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">really</span><span class="nv"> </span><span class="s">sequential,</span><span class="nv"> </span><span class="s">conclusion&quot;</span>
+<span class="l-Scalar-Plain">morea_type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">reading</span>
+<span class="l-Scalar-Plain">morea_sort_order</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+<span class="nn">---</span>
+
+<span class="c1">## Lecture Notes: Sequential Warmup</span>
+
+<span class="l-Scalar-Plain">&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;ef27d6f0f33001316dfc66ebab3e7b80&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;</span></code></pre></div>
+
+<p>That&#39;s it!   Here is what this Readings page looks like:</p>
+
+<p><img src="images/speakerdeck-morea.png" width="700px" class="img-responsive"/></p>
+
+<p>The embedded image is responsive, so it works nicely on a mobile device.  Your students can study on the bus:</p>
+
+<p><img src="images/speakerdeck-mobile.png" width="400px" class="img-responsive"/></p>
+
 <h1>Themes</h1>
 
 <p>Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the <a href="http://bootswatch.com">Bootswatch</a> themes for Bootstrap. </p>
@@ -1515,7 +1548,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>16 Jul 2014</span></p>
+      <p>Last update on: <span>21 Jul 2014</span></p>
   </div>
 </footer>
 </div>
