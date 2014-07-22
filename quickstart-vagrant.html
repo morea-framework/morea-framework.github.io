@@ -76,7 +76,9 @@
 
 <h3>Install Git and GitHub</h3>
 
-<p>Follow the QuickStart directions to <a href="/quickstart.html#SetupGitandGitHub">set up Git and GitHub</a>. Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub. </p>
+<p>Follow the QuickStart directions to <a href="/quickstart.html#SetupGitandGitHub">set up Git and GitHub</a>. Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub.  </p>
+
+<p>Note that on Windows, the <a href="https://windows.github.com/">GitHub for Windows</a> application will install a command-line git that will be available from PowerShell.  (Use PowerShell, rather than the command line, if available).  </p>
 
 <h3>Download and install VirtualBox</h3>
 
@@ -191,6 +193,8 @@ ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">
 vagrant@precise32:~<span class="nv">$ </span>jekyll --version
 jekyll 2.1.1</code></pre></div>
 
+<p>If you have problems with this command, be sure to use a shell (such as PowerShell) which makes available the <code>ssh</code> command.</p>
+
 <h3>cd to /vagrant</h3>
 
 <p>Vagrant creates a mirror of your local directory structure starting from the directory where you invoked <code>vagrant up</code>. This mirror is available in the <code>/vagrant</code> directory.  So, cd to that directory and notice that it contains the same contents as your local directory:</p>
@@ -256,7 +260,7 @@ jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <spa
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>21 Jul 2014</span></p>
+      <p>Last update on: <span>22 Jul 2014</span></p>
   </div>
 </footer>
 </div>
