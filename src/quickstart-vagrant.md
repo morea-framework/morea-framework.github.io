@@ -11,7 +11,9 @@ It can be problematic to set up Windows to use Jekyll; in fact the Jekyll develo
 
 ### Install Git and GitHub
 
-Follow the QuickStart directions to [set up Git and GitHub](/quickstart.html#SetupGitandGitHub). Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub. 
+Follow the QuickStart directions to [set up Git and GitHub](/quickstart.html#SetupGitandGitHub). Be sure to join GitHub, install git, and set up your SSH keys for communication with GitHub.  
+
+Note that on Windows, the [GitHub for Windows](https://windows.github.com/) application will install a command-line git that will be available from PowerShell.  (Use PowerShell, rather than the command line, if available).  
 
 ### Download and install VirtualBox
 
@@ -132,6 +134,8 @@ vagrant@precise32:~$ jekyll --version
 jekyll 2.1.1
 
 {% endhighlight %}
+
+If you have problems with this command, be sure to use a shell (such as PowerShell) which makes available the `ssh` command.
 
 ### cd to /vagrant
 
