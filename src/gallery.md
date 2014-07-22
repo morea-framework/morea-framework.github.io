@@ -71,7 +71,7 @@ title: Gallery
    <p style="margin-top: 20px">
       Second semester introduction to programming in Java. </p>
    <p>
-   This site illustrates a Schedule page and well developed learning outcomes. 
+   This site illustrates the "Slate" theme, a Schedule page, and well developed learning outcomes. 
    </p>
    <p style="text-align: center; padding-top: 10px">
      <a href="http://cammoore.github.io/ics211f14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
@@ -115,7 +115,7 @@ title: Gallery
   </div>
   <div class="col-sm-6">
    <p style="margin-top: 20px">
-   A graduate course on high performance computing.  </p>
+   ICS 632 is a graduate course on high performance computing.  </p>
    <p>
    This site illustrates a customized Home page displaying news items, a drop-down menu in the navbar and a 
    private GitHub repo. 
@@ -127,8 +127,28 @@ title: Gallery
   </div>
 </div>
 </div>
+</div>
 
+<div class="container">
+<h2>ICS 215, Fall 2014</h2>
 
+<div class="row">
+  <div class="col-sm-6">
+    <img src="images/ics215f14-modules.png" class="img-responsive">
+  </div>
+  <div class="col-sm-6">
+   <p style="margin-top: 20px">
+   ICS 215 is a sophomore level course on scripting.</p>
+   <p>
+   This site illustrates the "Flatly" theme and a Schedule page.  
+   </p>
+   <p style="text-align: center; padding-top: 10px">
+     <a href="http://cammoore.github.io/ics215f14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
+   </p>
+  </div>
+</div>
+</div>
 
 
 
