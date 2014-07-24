@@ -965,6 +965,20 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 </code></pre></div>
 <p>This should typically run without errors. If there are errors, use manual git commands to resolve them.</p>
 
+<h2>Relative links</h2>
+
+<p>You will often wish to reference one Morea page from another.  For example, you might want to link to a Readings page from an Assessment page. </p>
+
+<p>When both files (for example, reading.md and assessment.md) are located in the same directory, then linking to the reading from within the assessment is as simple as:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[Reading](reading.html)
+</code></pre></div>
+<p>Note that even though the &quot;source&quot; reading file has a <code>.md</code> extension, you will reference the <code>.html</code> version in your link.</p>
+
+<p>If the files are located in different directories, then use a relative link:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[Reading](../otherdir/reading.html)
+</code></pre></div>
+<p>Morea mirrors the directory structure you create in the <code>morea/</code> directory in the published site, which is why this works.</p>
+
 <h2>Formatted code options</h2>
 
 <h3>Jekyll highlight tag</h3>
@@ -1548,7 +1562,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>22 Jul 2014</span></p>
+      <p>Last update on: <span>24 Jul 2014</span></p>
   </div>
 </footer>
 </div>
