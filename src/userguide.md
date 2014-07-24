@@ -913,6 +913,26 @@ When you are ready to publish your content to GitHub so it can be seen publicly,
 
 This should typically run without errors. If there are errors, use manual git commands to resolve them.
 
+## Relative links
+
+You will often wish to reference one Morea page from another.  For example, you might want to link to a Readings page from an Assessment page. 
+
+When both files (for example, reading.md and assessment.md) are located in the same directory, then linking to the reading from within the assessment is as simple as:
+
+
+    [Reading](reading.html)
+
+
+Note that even though the "source" reading file has a `.md` extension, you will reference the `.html` version in your link.
+
+If the files are located in different directories, then use a relative link:
+
+
+    [Reading](../otherdir/reading.html)
+    
+Morea mirrors the directory structure you create in the `morea/` directory in the published site, which is why this works.
+
+
 ## Formatted code options
 
 ### Jekyll highlight tag
