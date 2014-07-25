@@ -930,7 +930,7 @@ The following table shows the structure of links to each of the five Morea entit
 
 <tr>
 <td>Outcome</td>
-<td>not currently possible</td>
+<td>/morea/outcomes/#&lt;outcome ID&gt;</td>
 </tr>
 
 <tr>
@@ -945,14 +945,12 @@ The following table shows the structure of links to each of the five Morea entit
 
 <tr>
 <td>Assessment</td>
-<td>not currently possible</td>
+<td>/morea/assessments/#&lt;assessment ID&gt;</td>
 </tr>
 
 </table>
 
-While it is not currently possible to link **to** an outcome or assessment, it is fine to create a link **within** an outcome or assessment to one of the other three entity types. 
-
-In practice, this is less complicated than it appears.   Let's say you have created a module called "foo" in a directory called "01.foo/" that contains files module.md, outcome.md, reading.md, experience.md, and assessment.md.  Here is how you would link to each of these entities:
+In practice, this is less complicated than it appears.   Let's say you have created a module with morea_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea_id outcome-foo), reading.md, experience.md, and assessment.md (with morea_id assessment-foo).  Here is how you would link to each of these entities:
   
 <table class="table table-condensed table-striped table-bordered">
 <tr><th>File</th><th>Link</th></tr>
@@ -963,7 +961,7 @@ In practice, this is less complicated than it appears.   Let's say you have crea
 
 <tr>
 <td>outcome.md</td>
-<td>not currently possible</td>
+<td>/morea/outcomes/#outcome-foo</td>
 </tr>
 
 <tr>
@@ -978,12 +976,12 @@ In practice, this is less complicated than it appears.   Let's say you have crea
 
 <tr>
 <td>assessment.md</td>
-<td>not currently possible</td>
+<td>/morea/assessments/#assessment-foo</td>
 </tr>
 
 </table>
 
-You will typically use Markdown syntax, so the actual link might look like
+You will typically use Markdown syntax, so an actual link might look like
 
     [Readings about Foo](/morea/01.foo/reading.html)
     
