@@ -950,7 +950,7 @@ The following table shows the structure of links to each of the five Morea entit
 
 </table>
 
-In practice, this is less complicated than it appears.   Let's say you have created a module with morea_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea_id outcome-foo), reading.md, experience.md, and assessment.md (with morea_id assessment-foo).  Here is how you would link to each of these entities:
+In practice, this is less complicated than it appears.   Let's say you have created a module with morea\_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea\_id outcome-foo), reading.md, experience.md, and assessment.md (with morea\_id assessment-foo).  Here is how you would link to each of these entities:
   
 <table class="table table-condensed table-striped table-bordered">
 <tr><th>File</th><th>Link</th></tr>
@@ -985,7 +985,7 @@ You will typically use Markdown syntax, so an actual link might look like
 
     [Readings about Foo](/morea/01.foo/reading.html)
     
-There is a shortcut that you can use when linking between reading and experience files that are all located in the same directory. In this case, you can use a relative link:
+There is a shortcut that you can use when linking between reading and experience files that are located in the same directory. In this case, you can use a relative link:
 
     [the readings for this experience](reading.html)
 
