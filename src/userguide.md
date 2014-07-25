@@ -913,24 +913,83 @@ When you are ready to publish your content to GitHub so it can be seen publicly,
 
 This should typically run without errors. If there are errors, use manual git commands to resolve them.
 
-## Relative links
+## Linking within Morea
 
-You will often wish to reference one Morea page from another.  For example, you might want to link to a Readings page from an Assessment page. 
+You may wish to reference one Morea page from another.  For example, you might want to link to one Readings page from another Readings page, or to an Experience from an Assessment.
+ 
+Linking in Morea is complicated by the fact that Modules, Outcomes, Readings, Experiences, and Assessments are implemented in different ways. Modules, Readings, and Experiences are implemented as standalone pages, while Outcomes and Assessments are implemented as page "fragments" that are integrated into multiple other pages.  
 
-When both files (for example, reading.md and assessment.md) are located in the same directory, then linking to the reading from within the assessment is as simple as:
+The following table shows the structure of links to each of the five Morea entity types:
 
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Entity type</th><th>Link syntax</th></tr>
+<tr>
+<td>Module</td>
+<td>/morea/modules/&lt;module ID&gt;</td>
+</tr>
 
-    [Reading](reading.html)
+<tr>
+<td>Outcome</td>
+<td>not currently possible</td>
+</tr>
 
+<tr>
+<td>Reading</td>
+<td>/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
+</tr>
 
-Note that even though the "source" reading file has a `.md` extension, you will reference the `.html` version in your link.
+<tr>
+<td>Experience</td>
+<td>/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
+</tr>
 
-If the files are located in different directories, then use a relative link:
+<tr>
+<td>Assessment</td>
+<td>not currently possible</td>
+</tr>
 
+</table>
 
-    [Reading](../otherdir/reading.html)
+While it is not currently possible to link **to** an outcome or assessment, it is fine to create a link **within** an outcome or assessment to one of the other three entity types. 
+
+In practice, this is less complicated than it appears.   Let's say you have created a module called "foo" in a directory called "01.foo/" that contains files module.md, outcome.md, reading.md, experience.md, and assessment.md.  Here is how you would link to each of these entities:
+  
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>File</th><th>Link</th></tr>
+<tr>
+<td>module.md</td>
+<td>/morea/modules/foo</td>
+</tr>
+
+<tr>
+<td>outcome.md</td>
+<td>not currently possible</td>
+</tr>
+
+<tr>
+<td>reading.md</td>
+<td>/morea/01.foo/reading.html</td>
+</tr>
+
+<tr>
+<td>experience.md</td>
+<td>/morea/01.foo/experience.html</td>
+</tr>
+
+<tr>
+<td>assessment.md</td>
+<td>not currently possible</td>
+</tr>
+
+</table>
+
+You will typically use Markdown syntax, so the actual link might look like
+
+    [Readings about Foo](/morea/01.foo/reading.html)
     
-Morea mirrors the directory structure you create in the `morea/` directory in the published site, which is why this works.
+There is a shortcut that you can use when linking between reading and experience files that are all located in the same directory. In this case, you can use a relative link:
+
+    [the readings for this experience](reading.html)
 
 
 ## Formatted code options
