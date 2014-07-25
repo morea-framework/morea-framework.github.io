@@ -965,20 +965,82 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 </code></pre></div>
 <p>This should typically run without errors. If there are errors, use manual git commands to resolve them.</p>
 
-<h2>Relative links</h2>
+<h2>Linking within Morea</h2>
 
-<p>You will often wish to reference one Morea page from another.  For example, you might want to link to a Readings page from an Assessment page. </p>
+<p>You may wish to reference one Morea page from another.  For example, you might want to link to one Readings page from another Readings page, or to an Experience from an Assessment.</p>
 
-<p>When both files (for example, reading.md and assessment.md) are located in the same directory, then linking to the reading from within the assessment is as simple as:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[Reading](reading.html)
+<p>Linking in Morea is complicated by the fact that Modules, Outcomes, Readings, Experiences, and Assessments are implemented in different ways. Modules, Readings, and Experiences are implemented as standalone pages, while Outcomes and Assessments are implemented as page &quot;fragments&quot; that are integrated into multiple other pages.  </p>
+
+<p>The following table shows the structure of links to each of the five Morea entity types:</p>
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Entity type</th><th>Link syntax</th></tr>
+<tr>
+<td>Module</td>
+<td>/morea/modules/&lt;module ID&gt;</td>
+</tr>
+
+<tr>
+<td>Outcome</td>
+<td>not currently possible</td>
+</tr>
+
+<tr>
+<td>Reading</td>
+<td>/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
+</tr>
+
+<tr>
+<td>Experience</td>
+<td>/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
+</tr>
+
+<tr>
+<td>Assessment</td>
+<td>not currently possible</td>
+</tr>
+
+</table>
+
+<p>While it is not currently possible to link <strong>to</strong> an outcome or assessment, it is fine to create a link <strong>within</strong> an outcome or assessment to one of the other three entity types. </p>
+
+<p>In practice, this is less complicated than it appears.   Let&#39;s say you have created a module called &quot;foo&quot; in a directory called &quot;01.foo/&quot; that contains files module.md, outcome.md, reading.md, experience.md, and assessment.md.  Here is how you would link to each of these entities:</p>
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>File</th><th>Link</th></tr>
+<tr>
+<td>module.md</td>
+<td>/morea/modules/foo</td>
+</tr>
+
+<tr>
+<td>outcome.md</td>
+<td>not currently possible</td>
+</tr>
+
+<tr>
+<td>reading.md</td>
+<td>/morea/01.foo/reading.html</td>
+</tr>
+
+<tr>
+<td>experience.md</td>
+<td>/morea/01.foo/experience.html</td>
+</tr>
+
+<tr>
+<td>assessment.md</td>
+<td>not currently possible</td>
+</tr>
+
+</table>
+
+<p>You will typically use Markdown syntax, so the actual link might look like</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[Readings about Foo](/morea/01.foo/reading.html)
 </code></pre></div>
-<p>Note that even though the &quot;source&quot; reading file has a <code>.md</code> extension, you will reference the <code>.html</code> version in your link.</p>
-
-<p>If the files are located in different directories, then use a relative link:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[Reading](../otherdir/reading.html)
+<p>There is a shortcut that you can use when linking between reading and experience files that are all located in the same directory. In this case, you can use a relative link:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[the readings for this experience](reading.html)
 </code></pre></div>
-<p>Morea mirrors the directory structure you create in the <code>morea/</code> directory in the published site, which is why this works.</p>
-
 <h2>Formatted code options</h2>
 
 <h3>Jekyll highlight tag</h3>
@@ -1562,7 +1624,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>24 Jul 2014</span></p>
+      <p>Last update on: <span>25 Jul 2014</span></p>
   </div>
 </footer>
 </div>
