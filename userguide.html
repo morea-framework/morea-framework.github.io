@@ -1499,7 +1499,7 @@ title: Schedule
 
 <p><img src="images/ics311-news-page.png" width="600px" class="img-responsive"/></p>
 
-<p>Adding this feature to your own site requires three steps: creating news items, creating the page to display them, and updating your <code>_config.yml</code> file.</p>
+<p>Adding this feature to your own site requires the following steps: create one or more news items, create the page to display them, add a link to this page to your navbar, and update your <code>_config.yml</code> file so RSS feeds work correctly.</p>
 
 <p><strong>Step 1. Write some example news items.</strong> To start, you should write a couple of sample Jekyll blog posts representing course news items. This means updating the <code>_posts</code> directory with your news items.  For example, here is what the ICS 311 <code>_posts</code> directory looks like:</p>
 
@@ -1539,13 +1539,13 @@ title: News
 
 <p>This code in context is available <a href="https://github.com/philipmjohnson/ics311s14/blob/master/src/news/index.html">here</a>.</p>
 
-<p>Now update your navbar with a new menu item to take the user to this page:</p>
+<p><strong>Step 3. Update your navbar with a link to your news page.</strong>  This is easy. Add the following fragment to your default.html file:</p>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/news/&quot;&gt;News&lt;/a&gt;&lt;/li&gt;</span></code></pre></div>
 
 <p>This code in context is available <a href="https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59">here</a>.</p>
 
-<p><strong>Step 3. Update <code>_config.yml</code> file with a url parameter.</strong> The final step is to add a url parameter to your <code>_config.yml</code> file so that that <code>site.url</code> variable can be referenced correctly in the feed.xml file.  Here&#39;s an example line:</p>
+<p><strong>Step 4. Update <code>_config.yml</code> file with a url parameter.</strong> The final step is to add a url parameter to your <code>_config.yml</code> file so that that <code>site.url</code> variable can be referenced correctly in the feed.xml file.  Here&#39;s an example line:</p>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://henricasanova.github.io/ics632_fall2014</span></code></pre></div>
 
@@ -1622,7 +1622,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>25 Jul 2014</span></p>
+      <p>Last update on: <span>07 Aug 2014</span></p>
   </div>
 </footer>
 </div>
