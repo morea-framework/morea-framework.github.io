@@ -1485,7 +1485,7 @@ Another common desire is a page containing news and announcements.  For this fea
 
  <img src="images/ics311-news-page.png" width="600px" class="img-responsive"/>
  
-Adding this feature to your own site requires three steps: creating news items, creating the page to display them, and updating your `_config.yml` file.
+Adding this feature to your own site requires the following steps: create one or more news items, create the page to display them, add a link to this page to your navbar, and update your `_config.yml` file so RSS feeds work correctly.
  
 **Step 1. Write some example news items.** To start, you should write a couple of sample Jekyll blog posts representing course news items. This means updating the `_posts` directory with your news items.  For example, here is what the ICS 311 `_posts` directory looks like:
  
@@ -1531,7 +1531,7 @@ title: News
 
 This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/news/index.html).
 
-Now update your navbar with a new menu item to take the user to this page:
+**Step 3. Update your navbar with a link to your news page.**  This is easy. Add the following fragment to your default.html file:
 
 {% highlight yaml %}
 {% raw %}
@@ -1541,7 +1541,7 @@ Now update your navbar with a new menu item to take the user to this page:
 
 This code in context is available [here](https://github.com/philipmjohnson/ics311s14/blob/master/src/_layouts/default.html#l59).
 
-**Step 3. Update `_config.yml` file with a url parameter.** The final step is to add a url parameter to your `_config.yml` file so that that `site.url` variable can be referenced correctly in the feed.xml file.  Here's an example line:
+**Step 4. Update `_config.yml` file with a url parameter.** The final step is to add a url parameter to your `_config.yml` file so that that `site.url` variable can be referenced correctly in the feed.xml file.  Here's an example line:
 
 {% highlight yaml %}
 {% raw %}
