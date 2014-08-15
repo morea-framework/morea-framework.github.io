@@ -7,6 +7,19 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Morea Framework on Stack Overflow</title>
+        <description>&lt;p&gt;The Morea Framework now has its own tag (&lt;a href=&quot;http://stackoverflow.com/questions/tagged/morea-framework&quot;&gt;morea-framework&lt;/a&gt;) on &lt;a href=&quot;http://stackoverflow.com&quot;&gt;StackOverflow&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Please use StackOverflow for technical support questions, and the &lt;a href=&quot;https://github.com/morea-framework/basic-template/issues&quot;&gt;Morea Framework GitHub Issues&lt;/a&gt; to post bug reports and enhancement requests.&lt;/p&gt;
+
+&lt;p&gt;The morea-framework tag is monitored, so you should get a response to your query within a day. &lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Aug 2014 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2014/08/15/stackoverflow.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/08/15/stackoverflow.html</guid>
+      </item>
+    
+      <item>
         <title>Virtual Box and Vagrant for Morea</title>
         <description>&lt;p&gt;Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a &lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; &amp;quot;box&amp;quot; that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed. &lt;/p&gt;
 
