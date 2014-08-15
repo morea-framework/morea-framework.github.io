@@ -4,8 +4,11 @@ layout: documentation
 
 # Contact
 
-For more information about the Morea Framework, please contact:
+For questions about the use of the Morea Framework, please use [StackOverflow](http://stackoverflow.com) and tag your question with [morea-framework](http://stackoverflow.com/questions/tagged/morea-framework). 
 
+For bug reports and enhancement requests, please use [Morea Framework GitHub Issues](https://github.com/morea-framework/basic-template/issues).
+
+For direct interaction with a person, please contact:
 <address>
   Professor Philip Johnson<br>
   Department of Information and Computer Sciences<br>

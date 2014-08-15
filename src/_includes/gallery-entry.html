@@ -1,0 +1,22 @@
+<div class="{{ include.background }}-background">
+  <div class="container">
+    <h2>{{ include.title }}</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="images/{{ include.image }}" class="img-responsive">
+      </div>
+      <div class="col-sm-6">
+        <p style="margin-top: 20px">
+          {{ include.paragraph-1 }}
+        </p>
+        <p>
+          {{ include.paragraph-2 }}
+        </p>
+        <p style="text-align: center; padding-top: 10px">
+          <a href="{{ include.live-site }}" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+          <a href="{{ include.public-repo }}" class="btn btn-primary btn-md" role="button">Github repo <span class="glyphicon glyphicon-chevron-right"></span> </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
