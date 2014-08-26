@@ -3,9 +3,9 @@ layout: userguide
 title: User Guide
 ---
 
-# Basic concepts
+# Pedagogical Pattern
 
-To begin, here are the most important principles underlying the framework.
+Morea implements a simple [pedagogical pattern](http://en.wikipedia.org/wiki/Pedagogical_patterns) along with a combination of technologies (git, GitHub, Jekyll) that facilitiate development, maintenance, and collaboration. Here are some of the key features of the pattern.
 
 **Morea defines five "entity types": module, outcome, reading, experience, and assessment.**
 
