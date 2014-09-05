@@ -925,27 +925,27 @@ The following table shows the structure of links to each of the five Morea entit
 <tr><th>Entity type</th><th>Link syntax</th></tr>
 <tr>
 <td>Module</td>
-<td>/morea/modules/&lt;module ID&gt;</td>
+<td>morea/modules/&lt;module ID&gt;</td>
 </tr>
 
 <tr>
 <td>Outcome</td>
-<td>/morea/outcomes/#&lt;outcome ID&gt;</td>
+<td>morea/outcomes/#&lt;outcome ID&gt;</td>
 </tr>
 
 <tr>
 <td>Reading</td>
-<td>/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
+<td>morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Experience</td>
-<td>/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
+<td>morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Assessment</td>
-<td>/morea/assessments/#&lt;assessment ID&gt;</td>
+<td>morea/assessments/#&lt;assessment ID&gt;</td>
 </tr>
 
 </table>
@@ -956,34 +956,34 @@ In practice, this is less complicated than it appears.   Let's say you have crea
 <tr><th>File</th><th>Link</th></tr>
 <tr>
 <td>module.md</td>
-<td>/morea/modules/foo</td>
+<td>morea/modules/foo</td>
 </tr>
 
 <tr>
 <td>outcome.md</td>
-<td>/morea/outcomes/#outcome-foo</td>
+<td>morea/outcomes/#outcome-foo</td>
 </tr>
 
 <tr>
 <td>reading.md</td>
-<td>/morea/01.foo/reading.html</td>
+<td>morea/01.foo/reading.html</td>
 </tr>
 
 <tr>
 <td>experience.md</td>
-<td>/morea/01.foo/experience.html</td>
+<td>morea/01.foo/experience.html</td>
 </tr>
 
 <tr>
 <td>assessment.md</td>
-<td>/morea/assessments/#assessment-foo</td>
+<td>morea/assessments/#assessment-foo</td>
 </tr>
 
 </table>
 
 You will typically use Markdown syntax, so an actual link might look like
 
-    [Readings about Foo](/morea/01.foo/reading.html)
+    [Readings about Foo](morea/01.foo/reading.html)
     
 There is a shortcut that you can use when linking between reading and experience files that are located in the same directory. In this case, you can use a relative link:
 
