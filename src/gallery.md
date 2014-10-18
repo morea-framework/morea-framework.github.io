@@ -150,7 +150,49 @@ title: Gallery
 </div>
 </div>
 
+<div class="gray-background">
+<div class="container">
+<h2>ITM 352, Spring 2014</h2>
+<div class="row">
+  <div class="col-sm-6">
+    <img src="images/itm352-modules.png" class="img-responsive">
+  </div>
+  <div class="col-sm-6">
+   <p style="margin-top: 20px">
+   A web application programming class taught using PHP in the Shidler School of Business, UH Manoa. </p>
+   <p>
+   Like ICS 314, this class is taught using the "athletic software engineering" pedagogy.
+   </p>
+   <p style="text-align: center; padding-top: 10px">
+     <a href="http://dport96.github.io/ITM352" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
+   </p>
+  </div>
+</div>
+</div>
+</div>
 
+<div class="white-background">
+<div class="container">
+<h2>Bus 621, Spring 2014</h2>
+<div class="row">
+  <div class="col-sm-6">
+    <img src="images/bus621-modules.png" class="img-responsive">
+  </div>
+  <div class="col-sm-6">
+   <p style="margin-top: 20px">
+   A business statistics class in the Shidler School of Business, UH Manoa. </p>
+   <p>
+   
+   </p>
+   <p style="text-align: center; padding-top: 10px">
+     <a href="http://dport96.github.io/BUS621-DLEMBA-F14/" class="btn btn-primary btn-md" role="button">Live site <span class="glyphicon glyphicon-chevron-right"></span> </a>
+     <a href="#" class="btn btn-default btn-md" role="button">Private repo!</a>
+   </p>
+  </div>
+</div>
+</div>
+</div>
 
 
 <div class="gray-background">
