@@ -37,7 +37,7 @@
 
 &lt;p&gt;The morea-framework tag is monitored, so you should get a response to your query within a day. &lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Aug 2014 10:29:39 -0400</pubDate>
+        <pubDate>Fri, 15 Aug 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/08/15/stackoverflow.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/08/15/stackoverflow.html</guid>
       </item>
@@ -48,7 +48,7 @@
 
 &lt;p&gt;For details on how to run Morea using Vagrant, see the &lt;a href=&quot;/quickstart-vagrant.html&quot;&gt;Vagrant QuickStart page&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 16 Jul 2014 10:29:39 -0400</pubDate>
+        <pubDate>Wed, 16 Jul 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/07/16/vagrant.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/07/16/vagrant.html</guid>
       </item>
@@ -62,7 +62,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 25 Jun 2014 10:29:39 -0400</pubDate>
+        <pubDate>Wed, 25 Jun 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</guid>
       </item>
@@ -75,7 +75,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 21 Jun 2014 10:29:39 -0400</pubDate>
+        <pubDate>Sat, 21 Jun 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/06/21/ignore-directories.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/06/21/ignore-directories.html</guid>
       </item>
@@ -88,7 +88,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;The &lt;a href=&quot;/quickstart.html&quot;&gt;QuickStart page&lt;/a&gt; has now been modified to avoid the use of forking.  Course repositories created using the new procedure can be made private. &lt;/p&gt;
 </description>
-        <pubDate>Tue, 17 Jun 2014 10:29:39 -0400</pubDate>
+        <pubDate>Tue, 17 Jun 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</guid>
       </item>
@@ -101,7 +101,7 @@ begin building their own course websites using the framework. &lt;/p&gt;
 
 &lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. &lt;/p&gt;
 </description>
-        <pubDate>Thu, 22 May 2014 10:29:39 -0400</pubDate>
+        <pubDate>Thu, 22 May 2014 21:29:39 +0700</pubDate>
         <link>http://morea-framework.github.io/2014/05/22/morea-version-one.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/05/22/morea-version-one.html</guid>
       </item>
