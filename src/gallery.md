@@ -152,7 +152,7 @@ title: Gallery
 
 <div class="gray-background">
 <div class="container">
-<h2>ITM 352, Spring 2014</h2>
+<h2>ITM 352, Fall 2014</h2>
 <div class="row">
   <div class="col-sm-6">
     <img src="images/itm352-modules.png" class="img-responsive">
@@ -174,7 +174,7 @@ title: Gallery
 
 <div class="white-background">
 <div class="container">
-<h2>Bus 621, Spring 2014</h2>
+<h2>Bus 621, Fall 2014</h2>
 <div class="row">
   <div class="col-sm-6">
     <img src="images/bus621-modules.png" class="img-responsive">
