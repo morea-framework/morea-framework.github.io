@@ -1448,9 +1448,13 @@ in your markdown. </p>
 
 <p>This page is implemented using a <a href="http://www.google.com/calendar">Google Calendar</a> that is displayed in the page using the <a href="http://arshaw.com/fullcalendar/docs/google_calendar/">JQuery FullCalendar plugin</a>.</p>
 
-<p>Implementing this involves two steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.  </p>
+<p>Implementing this involves several steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.</p>
 
-<p><strong>Step 1. Create the schedule page files.</strong>    In the <code>src/</code> directory, create a new subdirectory called <code>schedule/</code> containing an <code>index.html</code> page.  </p>
+<p><strong>Step 1. Create a Google API key.</strong>  See the <a href="http://fullcalendar.io/docs/google_calendar/">FullCalendar Google Calendar API key documentation</a> for the steps.  Note that you want to use &#39;*.github.io/*&#39; in the &quot;Referrers&quot; field.</p>
+
+<p><strong>Step 2. Download FullCalendar and install in your Morea site.</strong>  One way is to create a directory called &#39;js&#39; and put all my JavaScript libraries in there.  For example, see the <a href="https://github.com/philipmjohnson/ics314f13/tree/master/src/js">ICS 314 js directory</a>.</p>
+
+<p><strong>Step 3. Create the schedule page files.</strong>    In the <code>src/</code> directory, create a new subdirectory called <code>schedule/</code> containing an <code>index.html</code> page.</p>
 
 <p><img src="images/schedule-directory.png" width="300px" class="img-responsive"/></p>
 
@@ -1463,9 +1467,10 @@ title: Schedule
 
 <span class="c">&lt;!-- Load FullCalendar for schedule page. --&gt;</span>
 <span class="c">&lt;!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;/js/fullcalendar-2.2.2/fullcalendar.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;/js/fullcalendar-2.2.2/lib/moment.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;/js/fullcalendar-2.2.2/fullcalendar.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;/js/fullcalendar-2.2.2/gcal.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;margin-bottom: 10px&quot;</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Schedule<span class="nt">&lt;/h1&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;calendar&#39;</span><span class="nt">&gt;&lt;/div&gt;</span>
@@ -1476,19 +1481,19 @@ title: Schedule
     // page is now ready, initialize the calendar...
 
     $(&#39;#calendar&#39;).fullCalendar({
-      events: &#39;https://www.google.com/calendar/feeds/m7nms0v3ud99ucgtn8lopo79sk%40group.calendar.google.com/public/basic&#39;
-    })
-
-    $(&#39;#calendar&#39;).fullCalendar(&#39;gotoDate&#39;, 2013, 8, 1)
-
+      googleCalendarApiKey: &#39;YOURAPIKEYHERE&#39;,
+      events: {
+        googleCalendarId: &#39;m7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com&#39;
+      }
+    });
   });
 <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>You will need to modify this code in two places to display your own calendar appropriately.</p>
 
-<p>The first modification is to the invocation of the FullCalendar plugin, where you will need to change the &quot;events&quot; parameter value to the XML feed for your own Google Calendar. </p>
+<p>The first modification is to replace YOURAPIKEYHERE by your Google API key.</p>
 
-<p>The second modification is to the invocation of the &quot;gotoDate&quot; function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. </p>
+<p>The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your Google Calendar.  It typically has the suffix &#39;group.calendar.google.com&#39;.</p>
 
 <p><strong>Step 2. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
@@ -1622,7 +1627,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>18 Oct 2014</span></p>
+      <p>Last update on: <span>21 Nov 2014</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

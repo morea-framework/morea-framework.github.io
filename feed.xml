@@ -37,9 +37,9 @@
 
 &lt;p&gt;The morea-framework tag is monitored, so you should get a response to your query within a day. &lt;/p&gt;
 </description>
-        <pubDate>Fri, 15 Aug 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/08/15/stackoverflow.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/08/15/stackoverflow.html</guid>
+        <pubDate>Sat, 16 Aug 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/08/16/stackoverflow.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/08/16/stackoverflow.html</guid>
       </item>
     
       <item>
@@ -48,9 +48,9 @@
 
 &lt;p&gt;For details on how to run Morea using Vagrant, see the &lt;a href=&quot;/quickstart-vagrant.html&quot;&gt;Vagrant QuickStart page&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 16 Jul 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/07/16/vagrant.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/07/16/vagrant.html</guid>
+        <pubDate>Thu, 17 Jul 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/07/17/vagrant.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/07/17/vagrant.html</guid>
       </item>
     
       <item>
@@ -62,9 +62,9 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 25 Jun 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</guid>
+        <pubDate>Thu, 26 Jun 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/06/26/nonmorea-markdown.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/26/nonmorea-markdown.html</guid>
       </item>
     
       <item>
@@ -75,9 +75,9 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 21 Jun 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/06/21/ignore-directories.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/21/ignore-directories.html</guid>
+        <pubDate>Sun, 22 Jun 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/06/22/ignore-directories.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/22/ignore-directories.html</guid>
       </item>
     
       <item>
@@ -88,9 +88,9 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
 &lt;p&gt;The &lt;a href=&quot;/quickstart.html&quot;&gt;QuickStart page&lt;/a&gt; has now been modified to avoid the use of forking.  Course repositories created using the new procedure can be made private. &lt;/p&gt;
 </description>
-        <pubDate>Tue, 17 Jun 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</guid>
+        <pubDate>Wed, 18 Jun 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/06/18/quickstart-redesign.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/18/quickstart-redesign.html</guid>
       </item>
     
       <item>
@@ -101,9 +101,9 @@ begin building their own course websites using the framework. &lt;/p&gt;
 
 &lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. &lt;/p&gt;
 </description>
-        <pubDate>Thu, 22 May 2014 21:29:39 +0700</pubDate>
-        <link>http://morea-framework.github.io/2014/05/22/morea-version-one.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/05/22/morea-version-one.html</guid>
+        <pubDate>Fri, 23 May 2014 02:29:39 +1200</pubDate>
+        <link>http://morea-framework.github.io/2014/05/23/morea-version-one.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2014/05/23/morea-version-one.html</guid>
       </item>
     
   </channel>
