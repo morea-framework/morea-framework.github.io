@@ -1428,9 +1428,13 @@ A common desire for a course website is a navbar element containing a link to a 
 
 This page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/).
 
-Implementing this involves two steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.  
+Implementing this involves several steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.
 
-**Step 1. Create the schedule page files.**    In the `src/` directory, create a new subdirectory called `schedule/` containing an `index.html` page.  
+**Step 1. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps.  Note that you want to use '\*.github.io/\*' in the "Referrers" field.
+
+**Step 2. Download FullCalendar and install in your Morea site.**  One way is to create a directory called 'js' and put all my JavaScript libraries in there.  For example, see the [ICS 314 js directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).
+
+**Step 3. Create the schedule page files.**    In the `src/` directory, create a new subdirectory called `schedule/` containing an `index.html` page.
  
  <img src="images/schedule-directory.png" width="300px" class="img-responsive"/>
  
@@ -1444,9 +1448,10 @@ title: Schedule
 
 <!-- Load FullCalendar for schedule page. -->
 <!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ -->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/js/fullcalendar-2.2.2/fullcalendar.css">
+<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/lib/moment.min.js"></script>
+<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/fullcalendar.min.js"></script>
+<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/gcal.js"></script>
 <div style="margin-bottom: 10px" class="container">
   <h1>Schedule</h1>
   <div id='calendar'></div>
@@ -1457,11 +1462,11 @@ title: Schedule
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-      events: 'https://www.google.com/calendar/feeds/m7nms0v3ud99ucgtn8lopo79sk%40group.calendar.google.com/public/basic'
-    })
-
-    $('#calendar').fullCalendar('gotoDate', 2013, 8, 1)
-
+      googleCalendarApiKey: 'YOURAPIKEYHERE',
+      events: {
+        googleCalendarId: 'm7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com'
+      }
+    });
   });
 </script>
 
@@ -1469,9 +1474,9 @@ title: Schedule
   
 You will need to modify this code in two places to display your own calendar appropriately.
 
-The first modification is to the invocation of the FullCalendar plugin, where you will need to change the "events" parameter value to the XML feed for your own Google Calendar. 
+The first modification is to replace YOURAPIKEYHERE by your Google API key.
 
-The second modification is to the invocation of the "gotoDate" function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. 
+The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
 
 **Step 2. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
