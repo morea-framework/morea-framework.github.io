@@ -1428,7 +1428,7 @@ A common desire for a course website is a navbar element containing a link to a 
 
 This page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/).
 
-Implementing this involves several steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.
+Implementing this involves several steps.
 
 **Step 1. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps.  Note that you want to use '\*.github.io/\*' in the "Referrers" field.
 
@@ -1441,6 +1441,7 @@ Implementing this involves several steps. First, you have to create a new html p
 You can copy the contents of the [ICS314 schedule/index.html](https://github.com/philipmjohnson/ics314f13/blob/master/src/schedule/index.html) to use as a template. Here is a snapshot of the code:
 
 {% highlight xml %}
+{% raw %}
 ---
 layout: default
 title: Schedule
@@ -1470,6 +1471,7 @@ title: Schedule
   });
 </script>
 
+{% endraw %}
 {% endhighlight %}
   
 You will need to modify this code in two places to display your own calendar appropriately.
@@ -1478,7 +1480,7 @@ The first modification is to replace YOURAPIKEYHERE by your Google API key.
 
 The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
 
-**Step 2. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
+**Step 4. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
 {% raw %}
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
