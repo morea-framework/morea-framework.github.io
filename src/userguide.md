@@ -269,6 +269,13 @@ Morea ID.</td>
 </tr>
 
 <tr>
+<td>morea_coming_soon</td>
+<td>optional</td>
+<td>If true, the module name will appear in the Modules page with a "Coming soon" button that does not link anywhere. Any outcomes, readings, experiences, and assessments defined for the module will not appear in the associated top-level pages. However, the module page can still be retrieved by entering its URL manually.  This parameter is useful during early course deployment where you want to indicate to students the set of topics in the course and their sequence but have not yet finished the internal structure of certain modules.  Default: false
+</td>
+</tr>
+
+<tr>
 <td>morea_outcomes</td>
 <td>optional</td>
 <td>If present, a list of Morea IDs indicating the Outcomes associated with this module.</td>
