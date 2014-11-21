@@ -43,8 +43,8 @@
       <file leaf-file-name="userguide.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/userguide.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20304568" vertical-offset="23430" max-vertical-offset="27825">
-              <caret line="1433" column="75" selection-start-line="1433" selection-start-column="75" selection-end-line="1433" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.38071066" vertical-offset="23430" max-vertical-offset="27825">
+              <caret line="1435" column="158" selection-start-line="1435" selection-start-column="158" selection-end-line="1435" selection-end-column="158" />
               <folding />
             </state>
           </provider>
@@ -623,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/userguide.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20304568" vertical-offset="23430" max-vertical-offset="27825">
-          <caret line="1433" column="75" selection-start-line="1433" selection-start-column="75" selection-end-line="1433" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.38071066" vertical-offset="23430" max-vertical-offset="27825">
+          <caret line="1435" column="158" selection-start-line="1435" selection-start-column="158" selection-end-line="1435" selection-end-column="158" />
           <folding />
         </state>
       </provider>
