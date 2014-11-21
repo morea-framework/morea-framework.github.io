@@ -1446,11 +1446,9 @@ in your markdown. </p>
 
 <p><img src="images/ics314-schedule-page.png" width="600px" class="img-responsive"/></p>
 
-<p>This page is implemented using a <a href="http://www.google.com/calendar">Google Calendar</a> that is displayed in the page using the <a href="http://arshaw.com/fullcalendar/docs/google_calendar/">JQuery FullCalendar plugin</a>.</p>
+<p>There are lots of different ways to embed a calendar of events.  In this case, the page is implemented using a <a href="http://www.google.com/calendar">Google Calendar</a> that is displayed in the page using the <a href="http://arshaw.com/fullcalendar/docs/google_calendar/">JQuery FullCalendar plugin</a>. Implementing this approach involves several steps.</p>
 
-<p>Implementing this involves several steps.</p>
-
-<p><strong>Step 1. Create a Google API key.</strong>  See the <a href="http://fullcalendar.io/docs/google_calendar/">FullCalendar Google Calendar API key documentation</a> for the steps.  Note that you want to use &#39;*.github.io/*&#39; in the &quot;Referrers&quot; field.</p>
+<p><strong>Step 1. Create a Google API key.</strong>  See the <a href="http://fullcalendar.io/docs/google_calendar/">FullCalendar Google Calendar API key documentation</a> for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is &#39;philipmjohnson&#39;, then the referrers field should be: &#39;philipmjohnson.github.io/*&#39;.  That means that you can use the same API key for all your Morea sites, and also that others can&#39;t use your API key.</p>
 
 <p><strong>Step 2. Download FullCalendar and install in your Morea site.</strong>  One way is to create a directory called &#39;js&#39; and put all my JavaScript libraries in there.  For example, see the <a href="https://github.com/philipmjohnson/ics314f13/tree/master/src/js">ICS 314 js directory</a>.</p>
 
@@ -1498,6 +1496,8 @@ title: Schedule
 <p><strong>Step 4. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
 </code></pre></div>
+<p>Important Note: the calendar events will not be displayed when you run the site locally. They will only display once you publish your site on GitHub and display the page there. </p>
+
 <h2>Add a News page</h2>
 
 <p>Another common desire is a page containing news and announcements.  For this feature, we can exploit Jekyll&#39;s built-in blogging support.   We will write each news item following the conventions for a <a href="http://jekyllrb.com/docs/posts/">Jekyll blog post</a>, then create a page that displays these posts using the Morea look-and-feel. For example, here is the <a href="http://philipmjohnson.github.io/ics311s14/news/">ICS 311 News Page</a>:</p>
