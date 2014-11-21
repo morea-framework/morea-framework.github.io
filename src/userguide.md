@@ -1431,7 +1431,7 @@ Learn more about this syntax using the [Twitter Bootstrap dropdown menu document
 
 A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. There are at least three approaches:
 
-  1. Use just Google Calendar.  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google's, Apple's, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn't look great.
+  1. Use just [Google Calendar application](http://www.google.com/calendar).  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google's, Apple's, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn't look great.
 
   2. Use just a third-party Javascript Library such as [Full Calendar](http://fullcalendar.io/).  These libraries produce nicely formatted calendars, but you have to manually add events using their local data structures.
 
