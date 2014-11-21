@@ -1452,8 +1452,8 @@ in your markdown. </p>
 <p>A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. There are at least three approaches:</p>
 
 <ol>
-<li><p>Use just <a href="http://www.google.com/calendar">Google Calendar application</a>.  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google&#39;s, Apple&#39;s, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn&#39;t look great.</p></li>
-<li><p>Use just a third-party Javascript Library such as <a href="http://fullcalendar.io/">Full Calendar</a>.  These libraries produce nicely formatted calendars, but you have to manually add events using their local data structures.</p></li>
+<li><p>Use just <a href="http://www.google.com/calendar">Google Calendar</a>.  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google&#39;s, Apple&#39;s, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn&#39;t look great.</p></li>
+<li><p>Use just a third-party Javascript Library such as <a href="http://fullcalendar.io/">Full Calendar</a>.  These libraries produce nicely formatted calendars, but used alone you have to manually add events using their local data structures.</p></li>
 <li><p>Combine Google Calendar with Full Calendar.  The best of both worlds!  This is the approach documented in this section.</p></li>
 </ol>
 
@@ -1463,7 +1463,7 @@ in your markdown. </p>
 
 <p>Here are the steps:</p>
 
-<p><strong>Step 1.  Create your Google Calendar.</strong>  Using the <a href="http://www.google.com/calendar">Google Calendar application</a>, create a new calendar to hold the events associated with your course.  Create a test event for today so that something shows up when you display the calendar initially.</p>
+<p><strong>Step 1.  Create your Google Calendar.</strong>  Using the <a href="http://www.google.com/calendar">Google Calendar application</a>, create a new calendar to hold the events associated with your course.  Create a test event for today so that something shows up when you display the calendar for testing.</p>
 
 <p><strong>Step 2. Create a Google API key.</strong>  See the <a href="http://fullcalendar.io/docs/google_calendar/">FullCalendar Google Calendar API key documentation</a> for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is &#39;philipmjohnson&#39;, then the referrers field should be: &#39;philipmjohnson.github.io/*&#39;.  That means that you can use the same API key for all your Morea sites, and also that others can&#39;t use your API key.</p>
 
