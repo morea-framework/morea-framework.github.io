@@ -1429,15 +1429,23 @@ Learn more about this syntax using the [Twitter Bootstrap dropdown menu document
 
 ## Add a Schedule page
 
-A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. For example, here's the [ICS 314 Schedule Page](http://philipmjohnson.github.io/ics314f13/schedule/): 
+A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. There are at least three approaches:
+
+  1. Use just Google Calendar.  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google's, Apple's, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn't look great.
+
+  2. Use just a third-party Javascript Library such as [Full Calendar](http://fullcalendar.io/).  These libraries produce nicely formatted calendars, but you have to manually add events using their local data structures.
+
+  3. Combine Google Calendar with Full Calendar.  The best of both worlds!  This is the approach documented in this section.
+
+For example, here's the [ICS 314 Schedule Page](http://philipmjohnson.github.io/ics314f13/schedule/):
 
 <img src="images/ics314-schedule-page.png" width="600px" class="img-responsive"/>
 
-There are lots of different ways to embed a calendar of events.  In this case, the page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/). Implementing this approach involves several steps.
+Here are the steps:
 
-**Step 1. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is 'philipmjohnson', then the referrers field should be: 'philipmjohnson.github.io/\*'.  That means that you can use the same API key for all your Morea sites, and also that others can't use your API key.
+**Step 1.  Create your Google Calendar.**  Using the [Google Calendar application](http://www.google.com/calendar), create a new calendar to hold the events associated with your course.  Create a test event for today so that something shows up when you display the calendar initially.
 
-**Step 2. Download FullCalendar and install in your Morea site.**  One way is to create a directory called 'js' and put all my JavaScript libraries in there.  For example, see the [ICS 314 js directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).
+**Step 2. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is 'philipmjohnson', then the referrers field should be: 'philipmjohnson.github.io/\*'.  That means that you can use the same API key for all your Morea sites, and also that others can't use your API key.
 
 **Step 3. Create the schedule page files.**    In the `src/` directory, create a new subdirectory called `schedule/` containing an `index.html` page.
  
@@ -1454,10 +1462,10 @@ title: Schedule
 
 <!-- Load FullCalendar for schedule page. -->
 <!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ -->
-<link rel="stylesheet" href="{{ site.baseurl }}/js/fullcalendar-2.2.2/fullcalendar.css">
-<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/lib/moment.min.js"></script>
-<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/fullcalendar.min.js"></script>
-<script src="{{ site.baseurl }}/js/fullcalendar-2.2.2/gcal.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/gcal.js"></script>
 <div style="margin-bottom: 10px" class="container">
   <h1>Schedule</h1>
   <div id='calendar'></div>
@@ -1468,22 +1476,26 @@ title: Schedule
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-      googleCalendarApiKey: 'YOURAPIKEYHERE',
+      googleCalendarApiKey: 'AIzaSyBTwmlnN3BzIterDVli-CyHBxqV8gjWj3U',
       events: {
         googleCalendarId: 'm7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com'
       }
     });
+
+    $('#calendar').fullCalendar('gotoDate', '2013-08-01');
   });
 </script>
 
 {% endraw %}
 {% endhighlight %}
   
-You will need to modify this code in two places to display your own calendar appropriately.
+You will need to modify this code in a few places to display your own calendar appropriately.
 
-The first modification is to replace YOURAPIKEYHERE by your Google API key.
+The first modification is to replace my googleCalendarApiKey by your Google API key. (Mine won't work for your sites.)
 
-The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
+The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course's Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
+
+You will also probably want to delete the 'gotoDate' command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.
 
 **Step 4. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
@@ -1491,7 +1503,7 @@ The second modification is to modify the googleCalendarId to the calendar ID for
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
 {% endraw %}
 
-Important Note: the calendar events will not be displayed when you run the site locally. They will only display once you publish your site on GitHub and display the page there. 
+**Step 5. Test your calendar.**  Now commit your changes to GitHub, and retrieve your site's Schedule page from the GitHub site.  You should see your calendar and the test event.  Note that calendar events will not be displayed when you run the site locally. They will only display once you publish your site on GitHub and display the page there.
 
 ## Add a News page
 
