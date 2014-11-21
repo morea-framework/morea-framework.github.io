@@ -1426,11 +1426,9 @@ A common desire for a course website is a navbar element containing a link to a 
 
 <img src="images/ics314-schedule-page.png" width="600px" class="img-responsive"/>
 
-This page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/).
+There are lots of different ways to embed a calendar of events.  In this case, the page is implemented using a [Google Calendar](http://www.google.com/calendar) that is displayed in the page using the [JQuery FullCalendar plugin](http://arshaw.com/fullcalendar/docs/google_calendar/). Implementing this approach involves several steps.
 
-Implementing this involves several steps.
-
-**Step 1. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps.  Note that you want to use '\*.github.io/\*' in the "Referrers" field.
+**Step 1. Create a Google API key.**  See the [FullCalendar Google Calendar API key documentation](http://fullcalendar.io/docs/google_calendar/) for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is 'philipmjohnson', then the referrers field should be: 'philipmjohnson.github.io/\*'.  That means that you can use the same API key for all your Morea sites, and also that others can't use your API key.
 
 **Step 2. Download FullCalendar and install in your Morea site.**  One way is to create a directory called 'js' and put all my JavaScript libraries in there.  For example, see the [ICS 314 js directory](https://github.com/philipmjohnson/ics314f13/tree/master/src/js).
 
@@ -1485,6 +1483,8 @@ The second modification is to modify the googleCalendarId to the calendar ID for
 {% raw %}
     <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
 {% endraw %}
+
+Important Note: the calendar events will not be displayed when you run the site locally. They will only display once you publish your site on GitHub and display the page there. 
 
 ## Add a News page
 
