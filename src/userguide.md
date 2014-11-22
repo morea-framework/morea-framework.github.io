@@ -1468,6 +1468,9 @@ title: Schedule
 <script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/gcal.js"></script>
 <div style="margin-bottom: 10px" class="container">
   <h1>Schedule</h1>
+
+   <p>The schedule for this course is managed using the public Google Calendar displayed on this page. You can subscribe to this calendar using its <a href="https://www.google.com/calendar/ical/ovc7gbat5jfpb6kg0a14ur12qg%40group.calendar.google.com/public/basic.ics">iCal address</a>.</p>
+
   <div id='calendar'></div>
 </div>
 <script>
@@ -1489,11 +1492,13 @@ title: Schedule
 {% endraw %}
 {% endhighlight %}
   
-You will need to modify this code in a few places to display your own calendar appropriately.
+You will need to modify this code in a few places to display your own calendar appropriately:
 
-The first modification is to replace my googleCalendarApiKey by your Google API key. (Mine won't work for your sites.)
+First, replace the iCal address with your calendar's iCal address.  Providing this link enables students to view this calendar from within their own calendar applications. You can find the iCal address on the settings page for your course's Google Calendar. The address link typically ends with "basic.ics".
 
-The second modification is to modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course's Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
+Second, replace my googleCalendarApiKey by your Google API key. (Mine won't work for your sites.)
+
+Third, modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course's Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
 
 You will also probably want to delete the 'gotoDate' command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.
 
