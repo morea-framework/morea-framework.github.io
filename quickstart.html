@@ -42,7 +42,7 @@
         <li><a href="/developerguide.html">Developer Guide</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
         <li><a href="/news.html">News</a></li>
-        <li><a href="/help.html">Help</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -124,13 +124,27 @@ you to run Morea scripts without modification.
 <p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
 </div>
 
-<h2>Install Jekyll</h2>
+<h2>Install Jekyll 2.1.0</h2>
 
-<p>Check to see if you have Jekyll 2.x installed and can invoke it from the command line:</p>
+<p>Check to see if you have Jekyll 2.1.0 installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
-  jekyll 2.0.3
+  jekyll 2.1.0
 </code></pre></div>
-<p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
+<p>Note that Morea is not currently compatible with versions of Jekyll beyond 2.1.0.</p>
+
+<p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.  You will need to install the 2.1.0 version of Jekyll explicitly as follows:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ gem install jekyll -v 2.1.0
+</code></pre></div>
+<div class="alert alert-warning">
+<p><strong>Jekyll Version Warning!</strong> Morea does not currently work on versions of Jekyll above 2.1.0.  In later versions, you will see errors of the form:
+<code>
+Error reading file ....  undefined method: `in_source_dir' for nil:NilClass
+</code>
+</p>
+<p>
+If you see these errors, you should downgrade to Jekyll 2.1.0. We are working on a fix.
+</p>
+</div>
 
 <div class="alert alert-warning">
 <p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
@@ -425,12 +439,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>03 Dec 2014</span></p>
-      <p>The Morea Framework is sponsored by:<br>
-         Collaborative Software Development Laboratory<br>
-         Department of Information and Computer Sciences<br>
-         University of Hawaii<br>
-      </p>
+      <p>Last update on: <span>15 Dec 2014</span></p>
   </div>
 </footer>
 </div>
