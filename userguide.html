@@ -42,7 +42,7 @@
         <li><a href="/developerguide.html">Developer Guide</a></li>
         <li><a href="/gallery.html">Gallery</a></li>
         <li><a href="/news.html">News</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/help.html">Help</a></li>
       </ul>
     </div>
   </div>
@@ -68,9 +68,9 @@
     <div id="nav"></div>
   </div>
   <div class="col-xs-12 col-sm-9">
-     <h1>Basic concepts</h1>
+     <h1>Pedagogical Pattern</h1>
 
-<p>To begin, here are the most important principles underlying the framework.</p>
+<p>Morea implements a simple <a href="http://en.wikipedia.org/wiki/Pedagogical_patterns">pedagogical pattern</a> along with a combination of technologies (git, GitHub, Jekyll) that facilitiate development, maintenance, and collaboration. Here are some of the key features of the pattern.</p>
 
 <p><strong>Morea defines five &quot;entity types&quot;: module, outcome, reading, experience, and assessment.</strong></p>
 
@@ -324,6 +324,13 @@ Morea ID.</td>
 <td>published</td>
 <td>optional</td>
 <td>If true, the module will appear in the output. If false, the module will not appear. Default: true
+</td>
+</tr>
+
+<tr>
+<td>morea_coming_soon</td>
+<td>optional</td>
+<td>If true, the module name will appear in the Modules page with a "Coming soon" button that does not link anywhere. Any outcomes, readings, experiences, and assessments defined for the module will not appear in the associated top-level pages. However, the module page can still be retrieved by entering its URL manually.  This parameter is useful during early course deployment where you want to indicate to students the set of topics in the course and their sequence but have not yet finished the internal structure of certain modules.  Default: false
 </td>
 </tr>
 
@@ -977,27 +984,27 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 <tr><th>Entity type</th><th>Link syntax</th></tr>
 <tr>
 <td>Module</td>
-<td>/morea/modules/&lt;module ID&gt;</td>
+<td>morea/modules/&lt;module ID&gt;</td>
 </tr>
 
 <tr>
 <td>Outcome</td>
-<td>/morea/outcomes/#&lt;outcome ID&gt;</td>
+<td>morea/outcomes/#&lt;outcome ID&gt;</td>
 </tr>
 
 <tr>
 <td>Reading</td>
-<td>/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
+<td>morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Experience</td>
-<td>/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
+<td>morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Assessment</td>
-<td>/morea/assessments/#&lt;assessment ID&gt;</td>
+<td>morea/assessments/#&lt;assessment ID&gt;</td>
 </tr>
 
 </table>
@@ -1008,33 +1015,33 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 <tr><th>File</th><th>Link</th></tr>
 <tr>
 <td>module.md</td>
-<td>/morea/modules/foo</td>
+<td>morea/modules/foo</td>
 </tr>
 
 <tr>
 <td>outcome.md</td>
-<td>/morea/outcomes/#outcome-foo</td>
+<td>morea/outcomes/#outcome-foo</td>
 </tr>
 
 <tr>
 <td>reading.md</td>
-<td>/morea/01.foo/reading.html</td>
+<td>morea/01.foo/reading.html</td>
 </tr>
 
 <tr>
 <td>experience.md</td>
-<td>/morea/01.foo/experience.html</td>
+<td>morea/01.foo/experience.html</td>
 </tr>
 
 <tr>
 <td>assessment.md</td>
-<td>/morea/assessments/#assessment-foo</td>
+<td>morea/assessments/#assessment-foo</td>
 </tr>
 
 </table>
 
 <p>You will typically use Markdown syntax, so an actual link might look like</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">[Readings about Foo](/morea/01.foo/reading.html)
+<div class="highlight"><pre><code class="language-text" data-lang="text">[Readings about Foo](morea/01.foo/reading.html)
 </code></pre></div>
 <p>There is a shortcut that you can use when linking between reading and experience files that are located in the same directory. In this case, you can use a relative link:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[the readings for this experience](reading.html)
@@ -1442,15 +1449,25 @@ in your markdown. </p>
 
 <h2>Add a Schedule page</h2>
 
-<p>A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. For example, here&#39;s the <a href="http://philipmjohnson.github.io/ics314f13/schedule/">ICS 314 Schedule Page</a>: </p>
+<p>A common desire for a course website is a navbar element containing a link to a page containing a calendar of events. There are at least three approaches:</p>
+
+<ol>
+<li><p>Use just <a href="http://www.google.com/calendar">Google Calendar</a>.  Google Calendar is free and highly functional.  By defining a Google Calendar to hold your course events and schedule, students can easily import your calendar into their own Calendar app (Google&#39;s, Apple&#39;s, or a third party) and receive notifications when events occur.  The downside with Google Calendar is that to display it in your course site, the only Google-supplied option is an embedded calendar, which doesn&#39;t look great.</p></li>
+<li><p>Use just a third-party Javascript Library such as <a href="http://fullcalendar.io/">Full Calendar</a>.  These libraries produce nicely formatted calendars, but used alone you have to manually add events using their local data structures.</p></li>
+<li><p>Combine Google Calendar with Full Calendar.  The best of both worlds!  This is the approach documented in this section.</p></li>
+</ol>
+
+<p>For example, here&#39;s the <a href="http://philipmjohnson.github.io/ics314f13/schedule/">ICS 314 Schedule Page</a>:</p>
 
 <p><img src="images/ics314-schedule-page.png" width="600px" class="img-responsive"/></p>
 
-<p>This page is implemented using a <a href="http://www.google.com/calendar">Google Calendar</a> that is displayed in the page using the <a href="http://arshaw.com/fullcalendar/docs/google_calendar/">JQuery FullCalendar plugin</a>.</p>
+<p>Here are the steps:</p>
 
-<p>Implementing this involves two steps. First, you have to create a new html page that will provide the code to display the calendar. Second, you have to update the navbar code with a link to this page.  </p>
+<p><strong>Step 1.  Create your Google Calendar.</strong>  Using the <a href="http://www.google.com/calendar">Google Calendar application</a>, create a new calendar to hold the events associated with your course.  Create a test event for today so that something shows up when you display the calendar for testing.</p>
 
-<p><strong>Step 1. Create the schedule page files.</strong>    In the <code>src/</code> directory, create a new subdirectory called <code>schedule/</code> containing an <code>index.html</code> page.  </p>
+<p><strong>Step 2. Create a Google API key.</strong>  See the <a href="http://fullcalendar.io/docs/google_calendar/">FullCalendar Google Calendar API key documentation</a> for the steps you need to take to do this.  For the referrers field, a good approach is to restrict the websites to your github.io sites.  For example, if your github username is &#39;philipmjohnson&#39;, then the referrers field should be: &#39;philipmjohnson.github.io/*&#39;.  That means that you can use the same API key for all your Morea sites, and also that others can&#39;t use your API key.</p>
+
+<p><strong>Step 3. Create the schedule page files.</strong>    In the <code>src/</code> directory, create a new subdirectory called <code>schedule/</code> containing an <code>index.html</code> page.</p>
 
 <p><img src="images/schedule-directory.png" width="300px" class="img-responsive"/></p>
 
@@ -1463,11 +1480,15 @@ title: Schedule
 
 <span class="c">&lt;!-- Load FullCalendar for schedule page. --&gt;</span>
 <span class="c">&lt;!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.css&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/gcal.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;margin-bottom: 10px&quot;</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;h1&gt;</span>Schedule<span class="nt">&lt;/h1&gt;</span>
+
+   <span class="nt">&lt;p&gt;</span>The schedule for this course is managed using the public Google Calendar displayed on this page. You can subscribe to this calendar using its <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;https://www.google.com/calendar/ical/ovc7gbat5jfpb6kg0a14ur12qg%40group.calendar.google.com/public/basic.ics&quot;</span><span class="nt">&gt;</span>iCal address<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+
   <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&#39;calendar&#39;</span><span class="nt">&gt;&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;script&gt;</span>
@@ -1476,23 +1497,31 @@ title: Schedule
     // page is now ready, initialize the calendar...
 
     $(&#39;#calendar&#39;).fullCalendar({
-      events: &#39;https://www.google.com/calendar/feeds/m7nms0v3ud99ucgtn8lopo79sk%40group.calendar.google.com/public/basic&#39;
-    })
+      googleCalendarApiKey: &#39;AIzaSyBTwmlnN3BzIterDVli-CyHBxqV8gjWj3U&#39;,
+      events: {
+        googleCalendarId: &#39;m7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com&#39;
+      }
+    });
 
-    $(&#39;#calendar&#39;).fullCalendar(&#39;gotoDate&#39;, 2013, 8, 1)
-
+    $(&#39;#calendar&#39;).fullCalendar(&#39;gotoDate&#39;, &#39;2013-08-01&#39;);
   });
 <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
-<p>You will need to modify this code in two places to display your own calendar appropriately.</p>
+<p>You will need to modify this code in a few places to display your own calendar appropriately:</p>
 
-<p>The first modification is to the invocation of the FullCalendar plugin, where you will need to change the &quot;events&quot; parameter value to the XML feed for your own Google Calendar. </p>
+<p>First, replace the iCal address with your calendar&#39;s iCal address.  Providing this link enables students to view this calendar from within their own calendar applications. You can find the iCal address on the settings page for your course&#39;s Google Calendar. The address link typically ends with &quot;basic.ics&quot;.</p>
 
-<p>The second modification is to the invocation of the &quot;gotoDate&quot; function at the end of the script. Currently, it sets the calendar to display August, 2013 upon initial page retrieval.  If you comment out this line, the calendar will display the current month and year by default. Or you can modify this line to have the calendar start on a month of your choosing. </p>
+<p>Second, replace my googleCalendarApiKey by your Google API key. (Mine won&#39;t work for your sites.)</p>
 
-<p><strong>Step 2. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
+<p>Third, modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course&#39;s Google Calendar.  It typically has the suffix &#39;group.calendar.google.com&#39;.</p>
+
+<p>You will also probably want to delete the &#39;gotoDate&#39; command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.</p>
+
+<p><strong>Step 4. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
 </code></pre></div>
+<p><strong>Step 5. Test your calendar.</strong>  Now commit your changes to GitHub, and retrieve your site&#39;s Schedule page from the GitHub site.  You should see your calendar and the test event.  Note that calendar events will not be displayed when you run the site locally. They will only display once you publish your site on GitHub and display the page there.</p>
+
 <h2>Add a News page</h2>
 
 <p>Another common desire is a page containing news and announcements.  For this feature, we can exploit Jekyll&#39;s built-in blogging support.   We will write each news item following the conventions for a <a href="http://jekyllrb.com/docs/posts/">Jekyll blog post</a>, then create a page that displays these posts using the Morea look-and-feel. For example, here is the <a href="http://philipmjohnson.github.io/ics311s14/news/">ICS 311 News Page</a>:</p>
@@ -1623,6 +1652,11 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <footer>
   <div class="container page-footer">
       <p>Last update on: <span>15 Dec 2014</span></p>
+      <p>The Morea Framework is sponsored by:<br>
+         Collaborative Software Development Laboratory<br>
+         Department of Information and Computer Sciences<br>
+         University of Hawaii<br>
+      </p>
   </div>
 </footer>
 </div>
