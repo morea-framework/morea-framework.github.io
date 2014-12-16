@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/src.iml" filepath="$PROJECT_DIR$/src.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/morea-framework.github.io.iml" filepath="$PROJECT_DIR$/.idea/morea-framework.github.io.iml" />
+>>>>>>> ffd997993b25b4c0d8f0471abc5616346cba91f5
     </modules>
   </component>
 </project>
