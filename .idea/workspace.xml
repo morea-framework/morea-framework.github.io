@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a810a341-f1b4-4cec-8942-5ec2bbef2920" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/quickstart.md" afterPath="$PROJECT_DIR$/src/quickstart.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/userguide.md" afterPath="$PROJECT_DIR$/src/userguide.md" />
     </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userguide.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userguide.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/userguide.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="22500" max-vertical-offset="25005">
-              <caret line="1500" column="159" selection-start-line="1500" selection-start-column="159" selection-end-line="1500" selection-end-column="159" />
+            <state vertical-scroll-proportion="0.4015748" vertical-offset="20610" max-vertical-offset="27870">
+              <caret line="1304" column="260" selection-start-line="1304" selection-start-column="260" selection-end-line="1304" selection-end-column="260" />
               <folding />
             </state>
           </provider>
@@ -129,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quickstart.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quickstart.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/quickstart.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24409449" vertical-offset="865" max-vertical-offset="6495">
+            <state vertical-scroll-proportion="-2.1666667" vertical-offset="865" max-vertical-offset="6495">
               <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
               <folding />
             </state>
@@ -156,13 +156,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/gallery.md" />
-        <option value="$PROJECT_DIR$/src/userguide.md" />
         <option value="$PROJECT_DIR$/src/_layouts/default.html" />
         <option value="$PROJECT_DIR$/src/_layouts/bootstrap.html" />
         <option value="$PROJECT_DIR$/src/help.md" />
         <option value="$PROJECT_DIR$/src/css/style.css" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/quickstart.md" />
+        <option value="$PROJECT_DIR$/src/userguide.md" />
       </list>
     </option>
   </component>
@@ -933,17 +933,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="22500" max-vertical-offset="25005">
-          <caret line="1500" column="159" selection-start-line="1500" selection-start-column="159" selection-end-line="1500" selection-end-column="159" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="750">
@@ -1019,8 +1008,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/quickstart.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24409449" vertical-offset="865" max-vertical-offset="6495">
+        <state vertical-scroll-proportion="-2.1666667" vertical-offset="865" max-vertical-offset="6495">
           <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userguide.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4015748" vertical-offset="20610" max-vertical-offset="27870">
+          <caret line="1304" column="260" selection-start-line="1304" selection-start-column="260" selection-end-line="1304" selection-end-column="260" />
           <folding />
         </state>
       </provider>

@@ -1302,7 +1302,7 @@ This script requires no arguments.  For example:
 
     % ./morea-merge-upstream.sh
 
-In some cases merge conflicts can result from this merge.  Don't worry, they are generally very easy to resolve. Contact the Morea framework development team if you need assistance with this process.
+In some cases merge conflicts can result from this merge.  Don't worry, they are generally very easy to resolve. The [GitHub documentation on merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/) probably provides everything you need to know. If you're still confused, contact the Morea developers for help.
 
 
 ## morea-publish
