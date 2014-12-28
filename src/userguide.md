@@ -924,77 +924,86 @@ This should typically run without errors. If there are errors, use manual git co
 
 You may wish to reference one Morea page from another.  For example, you might want to link to one Readings page from another Readings page, or to an Experience from an Assessment.
  
-Linking in Morea is complicated by the fact that Modules, Outcomes, Readings, Experiences, and Assessments are implemented in different ways. Modules, Readings, and Experiences are implemented as standalone pages, while Outcomes and Assessments are implemented as page "fragments" that are integrated into multiple other pages.  
+Linking in Morea is complicated by the fact that Modules, Outcomes, Readings, Experiences, and Assessments are implemented in different ways. Modules, Readings, and Experiences are implemented as standalone pages, while Outcomes and Assessments are implemented as page "fragments" that are integrated into other pages.  
 
-The following table shows the structure of links to each of the five Morea entity types:
+A second complication is the fact that the URL required to show the page locally is slightly different from the URL required to show the page when published: a parameter called "site.baseurl" is needed to be included in the URL.
 
+A third complication is that some files (readings, experiences) are located within a morea/ subdirectory, while others (modules, outcomes, and assessments) are not.
+
+The following table documents the structure of absolute links to each of the five Morea entity types:
+
+{% raw %}
 <table class="table table-condensed table-striped table-bordered">
 <tr><th>Entity type</th><th>Link syntax</th></tr>
 <tr>
 <td>Module</td>
-<td>morea/modules/&lt;module ID&gt;</td>
+<td>{{ site.baseurl }}/modules/&lt;module ID&gt;</td>
 </tr>
 
 <tr>
 <td>Outcome</td>
-<td>morea/outcomes/#&lt;outcome ID&gt;</td>
+<td>{{ site.baseurl }}/outcomes/#&lt;outcome ID&gt;</td>
 </tr>
 
 <tr>
 <td>Reading</td>
-<td>morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
+<td>{{ site.baseurl}}/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Experience</td>
-<td>morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
+<td>{{ site.baseurl }}/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html</td>
 </tr>
 
 <tr>
 <td>Assessment</td>
-<td>morea/assessments/#&lt;assessment ID&gt;</td>
+<td>{{ site.baseurl }}/assessments/#&lt;assessment ID&gt;</td>
 </tr>
 
 </table>
 
-In practice, this is less complicated than it appears.   Let's say you have created a module with morea\_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea\_id outcome-foo), reading.md, experience.md, and assessment.md (with morea\_id assessment-foo).  Here is how you would link to each of these entities:
+
+For example, let's say you have created a module with morea\_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea\_id outcome-foo), reading.md, experience.md, and assessment.md (with morea\_id assessment-foo).  Here is how you would create absolute links to each of these entities:
   
+
 <table class="table table-condensed table-striped table-bordered">
 <tr><th>File</th><th>Link</th></tr>
 <tr>
 <td>module.md</td>
-<td>morea/modules/foo</td>
+<td>{{ site.baseurl }}/modules/foo</td>
 </tr>
 
 <tr>
 <td>outcome.md</td>
-<td>morea/outcomes/#outcome-foo</td>
+<td>{{ site.baseurl }}/outcomes/#outcome-foo</td>
 </tr>
 
 <tr>
 <td>reading.md</td>
-<td>morea/01.foo/reading.html</td>
+<td>{{ site.baseurl }}/morea/01.foo/reading.html</td>
 </tr>
 
 <tr>
 <td>experience.md</td>
-<td>morea/01.foo/experience.html</td>
+<td>{{ site.baseurl }}/morea/01.foo/experience.html</td>
 </tr>
 
 <tr>
 <td>assessment.md</td>
-<td>morea/assessments/#assessment-foo</td>
+<td>{{ site.baseurl}}/assessments/#assessment-foo</td>
 </tr>
 
 </table>
 
 You will typically use Markdown syntax, so an actual link might look like
 
-    [Readings about Foo](morea/01.foo/reading.html)
+    [Readings about Foo]({{ site.baseurl }}/morea/01.foo/reading.html)
+
     
 There is a shortcut that you can use when linking between reading and experience files that are located in the same directory. In this case, you can use a relative link:
 
     [the readings for this experience](reading.html)
+{% endraw %}
 
 
 ## Formatted code options
