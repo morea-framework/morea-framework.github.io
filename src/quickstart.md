@@ -64,29 +64,14 @@ If not, follow these instructions to [install Python](https://www.python.org/dow
 <p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
 </div>
 
-## Install Jekyll 2.1.0
+## Install Jekyll
 
-Check to see if you have Jekyll 2.1.0 installed and can invoke it from the command line:
+Check to see if you have Jekyll installed and can invoke it from the command line:
 
     $ jekyll --version
-      jekyll 2.1.0
+      jekyll 2.5.2
 
-Note that Morea is not currently compatible with versions of Jekyll beyond 2.1.0.
-
-If not, follow these instructions to [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.  You will need to install the 2.1.0 version of Jekyll explicitly as follows:
-
-    $ gem install jekyll -v 2.1.0
-
-<div class="alert alert-warning">
-<p><strong>Jekyll Version Warning!</strong> Morea does not currently work on versions of Jekyll above 2.1.0.  In later versions, you will see errors of the form:
-<code>
-Error reading file ....  undefined method: `in_source_dir' for nil:NilClass
-</code>
-</p>
-<p>
-If you see these errors, you should downgrade to Jekyll 2.1.0. We are working on a fix.
-</p>
-</div>
+If not, follow these instructions to [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
 
 <div class="alert alert-warning">
 <p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
