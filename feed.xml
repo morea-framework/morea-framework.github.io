@@ -30,6 +30,35 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Release 1.1.0: New themes for the new year</title>
+        <description>&lt;p&gt;The Morea team is happy to inform you of several updates to the user interface:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The themes have been updated to use the latest release of &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt; (3.3.1).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Morea themes are based on &lt;a href=&quot;http://bootswatch.com/&quot;&gt;Bootswatch&lt;/a&gt;.  We have incorporated two new Bootswatch themes into Morea: paper and sandstone.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In response to user request, we have created four new themes based upon cerulean: cerulean_green, cerulean_brown, cerulean_purple, and cerulean_red.  If you like cerulean, but are tired of blue, try one of these!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;To save space in the NavBar for additional menu items, we have removed the &amp;quot;Home&amp;quot; link and made the site title in the NavBar into a link.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Also in response to user request, we have made the icons in the module page into links to their corresponding module. Apparently everyone wants to click on them, so we might as well let them.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. You can do this using the &lt;a href=&quot;http://morea-framework.github.io/userguide.html#morea-merge-upstream&quot;&gt;morea-merge-upstream script&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that you may well get merge conflicts, but these should be easy to address.&lt;/p&gt;
+
+&lt;p&gt;If the merge conflict involves changes to the &amp;quot;Qux&amp;quot; module that you&amp;#39;ve deleted in your site, do the following to re-delete the directory:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;% cd master/src/morea
+% git rm -r qux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If the merge conflict involves changes to your master/src/css/style.css file, or master/src/_layouts/default.html file, then simply view those files in your editor, edit to resolve the conflict and remove the conflict indicator lines, and save your changes.&lt;/p&gt;
+
+&lt;p&gt;Happy course design in 2015 and don&amp;#39;t hesitate to let us know if you encounter problems with these enhancements.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Jan 2015 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2015/01/06/new-themes.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2015/01/06/new-themes.html</guid>
+      </item>
+    
+      <item>
         <title>Morea Framework on Stack Overflow</title>
         <description>&lt;p&gt;The Morea Framework now has its own tag (&lt;a href=&quot;http://stackoverflow.com/questions/tagged/morea-framework&quot;&gt;morea-framework&lt;/a&gt;) on &lt;a href=&quot;http://stackoverflow.com&quot;&gt;StackOverflow&lt;/a&gt;. &lt;/p&gt;
 

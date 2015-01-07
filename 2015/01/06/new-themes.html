@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Ignore directories | Morea Framework</title>
+  <title> Release 1.1.0: New themes for the new year | Morea Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/cerulean/bootstrap.min.css">
 
@@ -55,13 +55,29 @@
 </div>
 
 <div class="container">
-  <h2>Ignore directories <small>21 Jun 2014</small></h2>
+  <h2>Release 1.1.0: New themes for the new year <small>06 Jan 2015</small></h2>
   <div class="post">
-    <p>The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the <code>morea/</code> directory named <code>_ignore</code>.  This allows you to store private data inside the <code>morea/</code> directory if you (for example) which to associate tests or other files with the module.</p>
+    <p>The Morea team is happy to inform you of several updates to the user interface:</p>
 
-<p>For more details, see the <a href="/userguide.html#Addprivatedata">private data section of the user guide</a>.</p>
+<ul>
+<li><p>The themes have been updated to use the latest release of <a href="http://getbootstrap.com/">Bootstrap</a> (3.3.1).</p></li>
+<li><p>Morea themes are based on <a href="http://bootswatch.com/">Bootswatch</a>.  We have incorporated two new Bootswatch themes into Morea: paper and sandstone.</p></li>
+<li><p>In response to user request, we have created four new themes based upon cerulean: cerulean_green, cerulean_brown, cerulean_purple, and cerulean_red.  If you like cerulean, but are tired of blue, try one of these!</p></li>
+<li><p>To save space in the NavBar for additional menu items, we have removed the &quot;Home&quot; link and made the site title in the NavBar into a link.</p></li>
+<li><p>Also in response to user request, we have made the icons in the module page into links to their corresponding module. Apparently everyone wants to click on them, so we might as well let them.</p></li>
+</ul>
 
-<p>To obtain this update, run the <code>morea-merge-upstream.sh</code> script.</p>
+<p>To use these features, set the basic-template as an upstream repository and merge into your master branch. You can do this using the <a href="http://morea-framework.github.io/userguide.html#morea-merge-upstream">morea-merge-upstream script</a>.</p>
+
+<p>Note that you may well get merge conflicts, but these should be easy to address.</p>
+
+<p>If the merge conflict involves changes to the &quot;Qux&quot; module that you&#39;ve deleted in your site, do the following to re-delete the directory:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% cd master/src/morea
+% git rm -r qux
+</code></pre></div>
+<p>If the merge conflict involves changes to your master/src/css/style.css file, or master/src/_layouts/default.html file, then simply view those files in your editor, edit to resolve the conflict and remove the conflict indicator lines, and save your changes.</p>
+
+<p>Happy course design in 2015 and don&#39;t hesitate to let us know if you encounter problems with these enhancements.</p>
 
   </div>
 </div>

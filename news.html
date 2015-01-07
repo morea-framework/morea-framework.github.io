@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>  | Morea Framework</title>
+  <title> News | Morea Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.0/cerulean/bootstrap.min.css">
 
@@ -61,6 +61,33 @@
 
   <div class="gray-background top-border">
     <div class="container">
+    <h3>Release 1.1.0: New themes for the new year <small>Jan 6, 2015</small></h3>
+    <p>The Morea team is happy to inform you of several updates to the user interface:</p>
+
+<ul>
+<li><p>The themes have been updated to use the latest release of <a href="http://getbootstrap.com/">Bootstrap</a> (3.3.1).</p></li>
+<li><p>Morea themes are based on <a href="http://bootswatch.com/">Bootswatch</a>.  We have incorporated two new Bootswatch themes into Morea: paper and sandstone.</p></li>
+<li><p>In response to user request, we have created four new themes based upon cerulean: cerulean_green, cerulean_brown, cerulean_purple, and cerulean_red.  If you like cerulean, but are tired of blue, try one of these!</p></li>
+<li><p>To save space in the NavBar for additional menu items, we have removed the &quot;Home&quot; link and made the site title in the NavBar into a link.</p></li>
+<li><p>Also in response to user request, we have made the icons in the module page into links to their corresponding module. Apparently everyone wants to click on them, so we might as well let them.</p></li>
+</ul>
+
+<p>To use these features, set the basic-template as an upstream repository and merge into your master branch. You can do this using the <a href="http://morea-framework.github.io/userguide.html#morea-merge-upstream">morea-merge-upstream script</a>.</p>
+
+<p>Note that you may well get merge conflicts, but these should be easy to address.</p>
+
+<p>If the merge conflict involves changes to the &quot;Qux&quot; module that you&#39;ve deleted in your site, do the following to re-delete the directory:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% cd master/src/morea
+% git rm -r qux
+</code></pre></div>
+<p>If the merge conflict involves changes to your master/src/css/style.css file, or master/src/_layouts/default.html file, then simply view those files in your editor, edit to resolve the conflict and remove the conflict indicator lines, and save your changes.</p>
+
+<p>Happy course design in 2015 and don&#39;t hesitate to let us know if you encounter problems with these enhancements.</p>
+
+    </div>
+
+  <div class="white-background top-border">
+    <div class="container">
     <h3>Morea Framework on Stack Overflow <small>Aug 15, 2014</small></h3>
     <p>The Morea Framework now has its own tag (<a href="http://stackoverflow.com/questions/tagged/morea-framework">morea-framework</a>) on <a href="http://stackoverflow.com">StackOverflow</a>. </p>
 
@@ -70,7 +97,7 @@
 
     </div>
 
-  <div class="white-background top-border">
+  <div class="gray-background top-border">
     <div class="container">
     <h3>Virtual Box and Vagrant for Morea <small>Jul 16, 2014</small></h3>
     <p>Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a <a href="http://www.vagrantup.com/">Vagrant</a> &quot;box&quot; that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed. </p>
@@ -79,7 +106,7 @@
 
     </div>
 
-  <div class="gray-background top-border">
+  <div class="white-background top-border">
     <div class="container">
     <h3>Non-Morea markdown files <small>Jun 25, 2014</small></h3>
     <p>The Morea generator now allows you to create markdown files inside the <code>morea/</code> directory with the extension <code>.markdown</code>.
@@ -91,7 +118,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
     </div>
 
-  <div class="white-background top-border">
+  <div class="gray-background top-border">
     <div class="container">
     <h3>Ignore directories <small>Jun 21, 2014</small></h3>
     <p>The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the <code>morea/</code> directory named <code>_ignore</code>.  This allows you to store private data inside the <code>morea/</code> directory if you (for example) which to associate tests or other files with the module.</p>
@@ -102,7 +129,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
     </div>
 
-  <div class="gray-background top-border">
+  <div class="white-background top-border">
     <div class="container">
     <h3>QuickStart process redesigned <small>Jun 17, 2014</small></h3>
     <p>The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website. </p>
@@ -113,7 +140,7 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
 
     </div>
 
-  <div class="white-background top-border">
+  <div class="gray-background top-border">
     <div class="container">
     <h3>Morea Version 1.0 release <small>May 22, 2014</small></h3>
     <p>The Morea team is delighted to announce the 1.0 release.  This release constitutes a 
@@ -131,7 +158,7 @@ begin building their own course websites using the framework. </p>
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>28 Dec 2014</span></p>
+      <p>Last update on: <span>06 Jan 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>
