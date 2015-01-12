@@ -1489,6 +1489,7 @@ title: Schedule
 
     $('#calendar').fullCalendar({
       googleCalendarApiKey: 'AIzaSyBTwmlnN3BzIterDVli-CyHBxqV8gjWj3U',
+      eventColor: '#3399f3',
       events: {
         googleCalendarId: 'm7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com'
       }
@@ -1509,7 +1510,9 @@ Second, replace my googleCalendarApiKey by your Google API key. (Mine won't work
 
 Third, modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course's Google Calendar.  It typically has the suffix 'group.calendar.google.com'.
 
-You will also probably want to delete the 'gotoDate' command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.
+Fourth, you may want to change the "eventColor" parameter value to be more compatible with your theme.
+
+Finally, you will probably want to delete the line containing the 'gotoDate' command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.
 
 **Step 4. Extend the navbar with a link to this page.** Once you've created the `index.html` file, you will want to add a link to this page to the navbar.  The navbar code is available in your `master/src/_layouts/default.html` file. For example, here is the [ICS 314 schedule navbar code](https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52).  Essentially, all you need to do is add a single line:
 
