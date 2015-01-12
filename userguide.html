@@ -1502,6 +1502,7 @@ title: Schedule
 
     $(&#39;#calendar&#39;).fullCalendar({
       googleCalendarApiKey: &#39;AIzaSyBTwmlnN3BzIterDVli-CyHBxqV8gjWj3U&#39;,
+      eventColor: &#39;#3399f3&#39;,
       events: {
         googleCalendarId: &#39;m7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com&#39;
       }
@@ -1519,7 +1520,9 @@ title: Schedule
 
 <p>Third, modify the googleCalendarId to the calendar ID for your calendar.  This is found on the settings page for your course&#39;s Google Calendar.  It typically has the suffix &#39;group.calendar.google.com&#39;.</p>
 
-<p>You will also probably want to delete the &#39;gotoDate&#39; command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.</p>
+<p>Fourth, you may want to change the &quot;eventColor&quot; parameter value to be more compatible with your theme.</p>
+
+<p>Finally, you will probably want to delete the line containing the &#39;gotoDate&#39; command so that your calendar defaults to displaying the current month.   But this code also shows how you can make the calendar default to displaying a month of your choosing.</p>
 
 <p><strong>Step 4. Extend the navbar with a link to this page.</strong> Once you&#39;ve created the <code>index.html</code> file, you will want to add a link to this page to the navbar.  The navbar code is available in your <code>master/src/_layouts/default.html</code> file. For example, here is the <a href="https://github.com/philipmjohnson/ics314f13/blob/master/src/_layouts/default.html#l52">ICS 314 schedule navbar code</a>.  Essentially, all you need to do is add a single line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">&lt;li&gt;&lt;a href=&quot;{{ site.baseurl }}/schedule/&quot;&gt;Schedule&lt;/a&gt;&lt;/li&gt;
@@ -1655,7 +1658,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>06 Jan 2015</span></p>
+      <p>Last update on: <span>11 Jan 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>
