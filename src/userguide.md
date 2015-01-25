@@ -496,8 +496,7 @@ even if published is true.
 <tr>
 <td>morea_url</td>
 <td>optional</td>
-<td>If present, specifies the URL of an external reading. If absent, then the body text of this file
-is the reading.
+<td>If present, specifies the URL of a reading. To refer to internal pages, the string must start with '/morea/' and continue with the path to the page. To refer to external pages, the string should start with 'http'.  If this parameter is absent, then the body text of this file is the reading.
 </td>
 </tr>
 
