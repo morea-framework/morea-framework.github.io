@@ -1188,6 +1188,20 @@ The embedded image is responsive, so it works nicely on a mobile device.  Your s
 
 <img src="images/speakerdeck-mobile.png" width="400px" class="img-responsive"/>
 
+## Google analytics
+
+If you are interesting in tracking usage of your pages, Cam Moore has implemented an include file to support [Google Analytics](http://www.google.com/analytics/).  
+
+To use, first read the [Google Analytics Get Started](https://support.google.com/analytics/answer/1008015?hl=en&ref_topic=3544906) and set up an account and property ID.  
+
+Then, you can simply use Cam's [google-analytics.html](https://github.com/morea-framework/basic-template/blob/master/src/_includes/google-analytics.html) includes file. Put the following code on any pages you want to track:
+
+{% highlight html %}
+{% raw %}
+{% include google-analytics.html id="<your property id>" %}
+
+{% endraw %}
+{% endhighlight %}
  
 # Themes
 
