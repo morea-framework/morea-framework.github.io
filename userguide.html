@@ -1217,6 +1217,16 @@ in your markdown. </p>
 
 <p><img src="images/speakerdeck-mobile.png" width="400px" class="img-responsive"/></p>
 
+<h2>Google analytics</h2>
+
+<p>If you are interesting in tracking usage of your pages, Cam Moore has implemented an include file to support <a href="http://www.google.com/analytics/">Google Analytics</a>.  </p>
+
+<p>To use, first read the <a href="https://support.google.com/analytics/answer/1008015?hl=en&amp;ref_topic=3544906">Google Analytics Get Started</a> and set up an account and property ID.  </p>
+
+<p>Then, you can simply use Cam&#39;s <a href="https://github.com/morea-framework/basic-template/blob/master/src/_includes/google-analytics.html">google-analytics.html</a> includes file. Put the following code on any pages you want to track:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html">{% include google-analytics.html id=&quot;<span class="nt">&lt;your</span> <span class="na">property</span> <span class="na">id</span><span class="nt">&gt;</span>&quot; %}</code></pre></div>
+
 <h1>Themes</h1>
 
 <p>Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the <a href="http://bootswatch.com">Bootswatch</a> themes for Bootstrap. </p>
@@ -1657,7 +1667,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>24 Jan 2015</span></p>
+      <p>Last update on: <span>01 Apr 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

@@ -30,6 +30,15 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Morea: Now with Google Analytics!</title>
+        <description>&lt;p&gt;Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the &lt;a href=&quot;userguide.html#Googleanalytics&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 01 Apr 2015 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2015/04/01/google-analytics.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2015/04/01/google-analytics.html</guid>
+      </item>
+    
+      <item>
         <title>Release 1.1.0: New themes for the new year</title>
         <description>&lt;p&gt;The Morea team is happy to inform you of several updates to the user interface:&lt;/p&gt;
 
