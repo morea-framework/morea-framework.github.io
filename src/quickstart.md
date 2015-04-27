@@ -356,7 +356,7 @@ Now your site should be publicly available.  For example, if your account is "jo
 While the setup process requires some time and effort, the benefit is that once you're done, the actual development workflow is quite straightforward:
 
 * Invoke the morea-run-local.sh script.
-* Edit the contents of the morea/ directory.
+* Edit the contents within the master/src/morea/ subdirectory.
 * Review your changes privately at [http://localhost:4000](http://localhost:4000).
 * When ready, invoke the morea-publish.sh script to publish your changes to the world.
 
