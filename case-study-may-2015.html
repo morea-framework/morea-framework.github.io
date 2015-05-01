@@ -54,22 +54,33 @@
   </div>
 </div>
 
-<div class="container">
-  <h1>User Evaluation of the Morea Framework</h1>
+<!-- Load tocify css and js -->
+<link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css" />
 
-<h2>Summary</h2>
+<!-- Load tocify Javascript components -->
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.tocify.js"></script>
+
+<div class="container">
+<div class="row">
+  <div class="hidden-xs col-sm-3" >
+    <!-- Our table of contents will be here !-->
+    <div id="nav"></div>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+     <h1>Summary</h1>
 
 <p>In May, 2015, the instructors for five courses whose websites were built using the Morea Framework asked their students to fill out an online survey asking their opinion of the course website. Out of the 175 students who received the request, 119 responded, for a participation rate of 68%. One course was 200 level, two were 300 level, one was 400 level, and one was a 600 (graduate) level. Four of the courses were in the Department of Information and Computer Sciences, and one was in the Department of Information and Technology Management. All were at the University of Hawaii.</p>
 
 <p>The goal of the survey was to determine if end-users find that the Morea Framework provides a useful alternative to learning management systems such as Laulima.  And if so, what changes or enhancements would end-users find desirable. </p>
 
-<p>Survey results indicate that user satisfaction with the Morea Framework course websites is quite high: 70% of respondents prefer it to Laulima in particular and 63% find it easier to use than other course websites in general.</p>
+<p>Survey results indicate that user satisfaction with the Morea Framework course websites is quite high: 70% of respondents prefer it to Laulima in particular and 63% find it easier to use than other course websites in general. From a user perspective, key features include its organization, layout and navigation, its superiority to Laulima, the schedule facility, and a mobile friendly layout.  Most common user improvement requests include improvements to navigation, addition of missing Laulima features, tracking of user state, and schedule improvements. </p>
 
 <p>In conclusion, the evidence from this survey suggests that the Morea Framework does provide a useful  approach to course website design and that further development and use is warranted.</p>
 
 <p>The following sections present the survey data in more detail. </p>
 
-<h2>Question 1: Evaluation of Morea page structure</h2>
+<h1>Q1: Page evaluation</h1>
 
 <p>While instructors are free to customize the top-level page structure of a Morea website, all of the instructors in this survey chose to retain the &quot;standard&quot; five pages (though all did augment them with additional pages). The first question asked users to evaluate the usefulness of the five standard Morea pages:</p>
 
@@ -83,9 +94,9 @@
 
 <p>The free text responses below will provide further insight into the usefulness of the Morea standard pages and how they can be improved.</p>
 
-<h2>Question 2: Morea vs. Laulima</h2>
+<h1>Q2: Morea vs. Laulima</h1>
 
-<p><a href="https://laulima.hawaii.edu/portal">Laulima</a> is the learning management system provided to all faculty at the University of Hawaii, and so most students in this survey have prior experience using it.  Laulima is less &quot;opinionated&quot; than Morea in that it does not require instructors to organize their course materials into modules that are themselves composed of outcomes, readings, experiences, and assessments.  Laulima also provides functionality not available in Morea, such as automated assignment submission and a gradebook.  This question asked users to compare Morea to Laulima:</p>
+<p><a href="https://laulima.hawaii.edu/portal">Laulima</a> is the learning management system provided to all faculty at the University of Hawaii, and so most students in this survey have prior experience using it.  Laulima is less &quot;opinionated&quot; than Morea in that it doesn&#39;t require instructors to organize their course materials into modules that are themselves organized into outcomes, readings, experiences, and assessments.  Laulima also provides functionality not available in Morea, such as automated assignment submission and a gradebook.  This question asked users to compare Morea to Laulima:</p>
 
 <p><img style="border:2px solid gray" src="images/case-study/question2-morea-vs-laulima.png" class="img-responsive"></p>
 
@@ -97,7 +108,7 @@
 
 <p>The free text responses below will provide further insight into this response, and suggests that the strong preference for Morea results at least in part from its &quot;opinionated&quot; nature: users like the organization imposed on course materials by Morea. </p>
 
-<h2>Question 3: Morea vs. other course web sites</h2>
+<h1>Q3: Morea vs. others</h1>
 
 <p>The next question requested user assessment of how easy Morea is to use relative to any other course website they have have encountered:</p>
 
@@ -109,7 +120,7 @@
 
 <p>The preference for Morea dropped a little from Question 2, but still indicates a majority of 64% find Morea to be the easiest to use website of all they have experienced.   Later comments indicate that some students find Coursera or Khan Academy to be easier to use. </p>
 
-<h2>Question 4: What is one feature you like about Morea sites?</h2>
+<h1>Q4: Key features</h1>
 
 <p>To get a sense for the capabilities of Morea that are of special significance to users, we asked users to describe in text one thing they liked:</p>
 
@@ -119,55 +130,140 @@
 
 <p><img style="border:2px solid gray" src="images/case-study/question4-one-like-summary.png" class="img-responsive"></p>
 
-<p>To better understand this data, I read through the responses and created a &quot;coding&quot; based upon common themes expressed by multiple users.  Although the question requested just one item, many users responded with comments about multiple features they liked. Here is a summary of the most common types of responses:</p>
+<p>To better understand this data, I read through the responses and created a &quot;coding&quot; based upon common themes expressed by multiple users.  Although the question requested just one item, many users responded with comments about multiple features they liked. </p>
 
-<h4>The organization of Morea is good.</h4>
+<p>Since the question asked for just one aspect of Morea, I am terming the most common responses &quot;key features&quot; as they indicate things that multiple users found to be most positive about the site.  </p>
 
-<p>Over 50 of the users indicated that they liked the organization of Morea sites. By this, I think they mean the requirement that instructors structure the material into modules with an explicit, uniform substructure.  Comments included:</p>
+<h2>Organization</h2>
+
+<p>Over 50 of the users indicated that they liked the organization of Morea sites: the structuring of material into modules with an explicit, uniform substructure.  Comments included:</p>
 
 <ul>
-<li><p>The modules are all displayed very clearly and in a way that&#39;s easy to read. Everything is on each corresponding Module.</p></li>
-<li><p>Navigating through coursework as well as the layout of text was beautiful! It felt almost as if my workload was a quest I was immersed in.  </p></li>
-<li><p>It condenses all necessary course material into terse and easily accessible pages.</p></li>
-<li><p>Once I figured out the navigation, I found that it was organized, making it easier to find things. e.g. If I need to look at homework, I could look under Experiences. If I need to look at slides or class notes, I could look under Readings.</p></li>
-<li><p>It&#39;s more organized into different sections and easier to focus on the topic we are learning.</p></li>
-<li><p>Information is easy to access and logically arranged. There&#39;s a clear connection between assignments and supporting material. </p></li>
-<li><p>It is very easy to find what you want. It also takes some extra stress away from covering a module. Instead of having to find the reading materials, find the screen casts, then find the homework, they are all on the same page in an organized fashion. This makes it easier to start a module because you can just start at the beginning and watch the screencasts, rather than making excuses like &quot;I&#39;ll start later because I&#39;m not sure where to start.&quot;</p></li>
+<li><p><em>The modules are all displayed very clearly and in a way that&#39;s easy to read. Everything is on each corresponding Module.</em></p></li>
+<li><p><em>Navigating through coursework as well as the layout of text was beautiful! It felt almost as if my workload was a quest I was immersed in.</em>  </p></li>
+<li><p><em>It condenses all necessary course material into terse and easily accessible pages.</em></p></li>
+<li><p><em>Once I figured out the navigation, I found that it was organized, making it easier to find things. e.g. If I need to look at homework, I could look under Experiences. If I need to look at slides or class notes, I could look under Readings.</em></p></li>
+<li><p><em>It&#39;s more organized into different sections and easier to focus on the topic we are learning.</em></p></li>
+<li><p><em>Information is easy to access and logically arranged. There&#39;s a clear connection between assignments and supporting material.</em> </p></li>
+<li><p><em>It is very easy to find what you want. It also takes some extra stress away from covering a module. Instead of having to find the reading materials, find the screen casts, then find the homework, they are all on the same page in an organized fashion. This makes it easier to start a module because you can just start at the beginning and watch the screencasts, rather than making excuses like &quot;I&#39;ll start later because I&#39;m not sure where to start.&quot;</em></p></li>
 </ul>
 
-<h4>The layout and navigation are good.</h4>
+<p>More evidence for the utility of Morea organization is provided by Question 1, in which most users found all of the pages to be useful. </p>
+
+<h2>Layout &amp; navigation</h2>
 
 <p>Around 45 users indicated that they liked the layout and/or navigation capabilities of Morea. Here are some of the responses reflecting this preference:</p>
 
 <ul>
-<li><p>Searching homework assignments/screen casts was easy and clear. The clear section heading made things nice and clean. </p></li>
-<li><p>It condenses all necessary course material into terse and easily accessible pages.</p></li>
-<li><p>Visually appeal/clear directions make it easy to navigate. </p></li>
-<li><p>The layout is great.  It&#39;s much easier to navigate and more intuitive as well. </p></li>
-<li><p>Everything was snappier, easier to navigate, and looked better. </p></li>
-<li><p>The Morea site has a clean interface and is easy to navigate through. </p></li>
-<li><p>I really liked how simple yet usable the Morea website is. </p></li>
-<li><p>The layout of Morea makes a lot more sense, it&#39;s also less straining on the eyes over longer periods of time.</p></li>
+<li><p><em>Searching homework assignments/screen casts was easy and clear. The clear section heading made things nice and clean.</em> </p></li>
+<li><p><em>It condenses all necessary course material into terse and easily accessible pages.</em></p></li>
+<li><p><em>Visually appeal/clear directions make it easy to navigate.</em> </p></li>
+<li><p><em>The layout is great.  It&#39;s much easier to navigate and more intuitive as well.</em> </p></li>
+<li><p><em>Everything was snappier, easier to navigate, and looked better.</em> </p></li>
+<li><p><em>The Morea site has a clean interface and is easy to navigate through.</em> </p></li>
+<li><p><em>I really liked how simple yet usable the Morea website is.</em> </p></li>
+<li><p><em>The layout of Morea makes a lot more sense, it&#39;s also less straining on the eyes over longer periods of time.</em></p></li>
 </ul>
 
-<h4>It is better than Laulima.</h4>
+<h2>Better than Laulima</h2>
 
 <p>About 18 users commented favorably about Morea in comparison to Laulima. For example:</p>
 
 <ul>
-<li><p>The interface is very attractive and you can search for things easier than laulima.</p></li>
-<li><p>Laulima has a lot more glitches and bugs compared to Morea. </p></li>
-<li><p>It didn&#39;t seem like there were features tucked away in buttons within buttons, like laulima.  </p></li>
-<li><p>It overall feels much more responsive compared to Laulima. </p></li>
-<li><p>It&#39;s more reliable than Laulima and overall less frustrating in most aspects.</p></li>
+<li><p><em>The interface is very attractive and you can search for things easier than Laulima.</em></p></li>
+<li><p><em>Laulima has a lot more glitches and bugs compared to Morea.</em> </p></li>
+<li><p><em>It didn&#39;t seem like there were features tucked away in buttons within buttons, like Laulima.</em>  </p></li>
+<li><p><em>It overall feels much more responsive compared to Laulima.</em> </p></li>
+<li><p><em>It&#39;s more reliable than Laulima and overall less frustrating in most aspects.</em></p></li>
 </ul>
 
+<h2>Schedule</h2>
+
+<p>Morea provides built-in support for a calendar that shows when modules are being covered and due dates for assignments.  While calendar support is fairly basic, 9 users found it useful enough to be noted.  A couple of responses:</p>
+
+<ul>
+<li><p><em>The calendar interface is well done.</em></p></li>
+<li><p><em>I also liked the schedule feature, it was very useful to see what was going on and prepare ahead of time.</em></p></li>
+</ul>
+
+<h2>Mobile friendly</h2>
+
+<p>Morea sites have a &quot;responsive&quot; design, which means the page layout adapts to the screen size of mobile and tablet devices. 7 users commented on this feature; here are a few responses:</p>
+
+<ul>
+<li><p><em>One thing I really liked about Morea is their mobile site. It is a lot cleaner and easier to use than Laulima mobile.</em></p></li>
+<li><p><em>It was easy to navigate on all different platforms and devices.</em></p></li>
+<li><p><em>It may seem trivial, but having each module represented by icons makes it every easy to identify, especially in mobile view (which I use often).</em></p></li>
+</ul>
+
+<h1>Q5: Key improvements</h1>
+
+<p>The final question asked users what they would like to see changed or improved in Morea sites:</p>
+
+<p><img style="border:2px solid gray" src="images/case-study/question5-one-improvement.png" class="img-responsive"></p>
+
+<p>Here is an excerpt of the results:</p>
+
+<p><img style="border:2px solid gray" src="images/case-study/question5-one-improvement-summary.png" class="img-responsive"></p>
+
+<p>As before, I read through the responses and coded the results.  Here are the common themes. </p>
+
+<h2>Improve navigation</h2>
+
+<p>27 users indicated that they thought Morea navigation could be further improved.  Many of the comments reflect confusion (or dissatisfaction) with the Morea terminology (&quot;Experience&quot;, &quot;Assessment&quot;, etc.). One possible way to address some of the issues raised would be a short 1-2 minute intro video provided by the framework that explains the site organization. Here are a selection of the responses:</p>
+
+<ul>
+<li><p><em>When clicking on youtube links/assignments, it would be helpful if it opened up in a new tab.</em> </p></li>
+<li><p><em>Navigation took a while to figure out. I also had trouble figuring out which slides fall under which modules.</em></p></li>
+<li><p><em>Maybe Experiences should be changed to Assignments or something different.</em> </p></li>
+<li><p><em>The schedule could link to a page like the homework assignments or modules.</em> </p></li>
+<li><p><em>I don&#39;t really find the outcomes portion useful.</em> </p></li>
+<li><p><em>I did have a hard time clicking on some of the links. The words made it look like I was able to press it but when I did it didn&#39;t work.</em> </p></li>
+<li><p><em>Rename the different pages. &quot;Experiences&quot; is just assignments and tests. This a computer science course, not a drum circle. The tab looks like it&#39;s linked to a page where people are just going to endlessly ramble about that time they took peyote in a sweat lodge.</em></p></li>
+</ul>
+
+<h2>Add Laulima functions</h2>
+
+<p>13 users indicated they would improve Morea by porting some or all of the functionality now provided by Laulima.  Some of the responses:</p>
+
+<ul>
+<li><p><em>Homework submission so that you don&#39;t have to switch between two sites to turn in assignments (i.e. Laulima and Morea).</em></p></li>
+<li><p><em>If it is meant to be a replacement for Laulima rather than a supplement, it should add gradebook, online quiz, and online submission functionalities.</em> </p></li>
+<li><p><em>If I can submit my homework on Morea, this would completely remove the need to use Laulima.</em></p></li>
+</ul>
+
+<h2>Track user state</h2>
+
+<p>7 users requested &quot;personalization&quot;, or the ability of the site to maintain state information about their progress through the course.  Some of the comments:</p>
+
+<ul>
+<li><p><em>Notifications to students regarding submission returned and received.</em></p></li>
+<li><p><em>Reminders to do some of the readings/screencasts.</em></p></li>
+<li><p><em>I also think it would be useful to be able to mark experiences as complete and display a &quot;completed&quot; flag/stamp in the box of each completed experience.</em></p></li>
+</ul>
+
+<h2>Improve schedule</h2>
+
+<p>7 users requested better integration of the schedule and due dates into the site. For example:</p>
+
+<ul>
+<li><p><em>It would be nice to be able to pull up the module and see due dates.</em></p></li>
+<li><p><em>Linked access to assignments from the calendar page.</em></p></li>
+<li><p><em>The links within the calender on the schedule page could be improved.  For  example, clicking on E55 on the calender simply brings me to a page saying &quot;E55 due&quot;.  Perhaps more information can be provided, or just link to the experience page.  I&#39;m just nitpicking at this point, though.</em></p></li>
+</ul>
+
+  </div>
 </div>
+</div>
+
+<script>
+  $("#nav").tocify({theme: "bootstrap3", scrollTo: "40"});
+</script>
 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>30 Apr 2015</span></p>
+      <p>Last update on: <span>01 May 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>
