@@ -112,19 +112,7 @@ you to run Morea scripts without modification.
 
 <p>Morea is compatible with either Ruby 1.9.x or 2.x.</p>
 
-<h2>Install Python</h2>
-
-<p>Check to see if you have Python 2.x installed and can invoke it from the command line:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">% python --version
-  Python 2.7.2
-</code></pre></div>
-<p>If not, follow these instructions to <a href="https://www.python.org/download/">install Python</a>.</p>
-
-<div class="alert alert-warning">
-<p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
-</div>
-
-<h2>Install Jekyll</h2>
+<h2>Install Jekyll 2.5.2</h2>
 
 <p>Check to see if you have Jekyll installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
@@ -132,21 +120,19 @@ you to run Morea scripts without modification.
 </code></pre></div>
 <p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
 
+<p>Note that since Morea uses the Rouge syntax highlighter, <strong>you do not need to install Python.</strong></p>
+
 <div class="alert alert-warning">
-<p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
-</p>
-<p>
-Or, if that didn't work well, you can always try our <a href="quickstart-vagrant.html">QuickStart using Vagrant</a> approach. 
+<p><strong>Windows OS Warning!</strong> We recommend <a href="http://jekyll-windows.juthilo.com/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process. 
 </p>
 </div>
 
 <h1>2. Create a course</h1>
 
-<p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea basic-template as an &quot;upstream&quot; repository, and merging the contents of the upstream repo.  The net effect of all this is to 
- initialize your repo with the contents of the basic-template, so that you can start off with a functional Morea website.</p>
+<p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea core repo as an &quot;upstream&quot; repository, and merging the contents of the upstream repo.  The net effect of all this is to initialize your repo with the contents of core, so that you can start off with a functional Morea website.</p>
 
 <div class="alert alert-warning">
-<p><strong>Why not just fork the basic-template repo?</strong> If you are familiar with git, you might be wondering why we do not advise you to fork the basic-template repository.  The reason is that the basic-template repo is a public repository, and you cannot make your repository private if you forked it from a public one.  Our approach enables you to start with a working Morea site based on a public repository and allow you to make your repository private later.
+<p><strong>Why not just fork the core repo?</strong> If you are familiar with git, you might be wondering why we do not advise you to fork the core repository.  The reason is that the core repo is a public repository, and you cannot make your repository private if you forked it from a public one.  Our approach enables you to start with a working Morea site based on a public repository and allow you to make your repository private later.
 </p>
 </div>
 
@@ -227,7 +213,7 @@ Merging upstream into master
 + <span class="nb">cd</span> ./master
 + git merge upstream/master</code></pre></div>
 
-<p>Now you have a &quot;master&quot; directory containing a clone of the basic-template files, and a &quot;gh-pages&quot; directory which is empty:</p>
+<p>Now you have a &quot;master&quot; directory containing a clone of the core repo, and a &quot;gh-pages&quot; directory which is empty:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"> [~/CS300-Fall2014/] $ ls 
               gh-pages      master          morea-vanilla-install.sh
 </code></pre></div>
@@ -240,25 +226,38 @@ Merging upstream into master
 <p>The first step in developing course content is to configure the master/src/_config.yml file. There are three fields to edit:</p>
 
 <ul>
-<li><strong>name</strong>:  change this from &quot;Basic Template&quot; to the name of your course.</li>
-<li><strong>baseurl</strong>: change this from /basic-template to your repo name.</li>
+<li><strong>name</strong>:  change this from &quot;core&quot; to the name of your course.</li>
+<li><strong>baseurl</strong>: change this from /core to your repo name.</li>
 <li><strong>morea_theme</strong>:  if you wish, you can change this to any of the supported <a href="userguide.html#Themes">Morea themes</a>.</li>
 </ul>
 
 <p>For example, here&#39;s how we might configure the _config.yml file for our CS300-Fall2014 example course:</p>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
-<span class="l-Scalar-Plain">highlighter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">pygments</span>
-<span class="l-Scalar-Plain">safe</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+<span class="l-Scalar-Plain">markdown</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">kramdown</span>
+<span class="l-Scalar-Plain">kramdown</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">input</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">GFM</span>
+  <span class="l-Scalar-Plain">syntax_highlighter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rouge</span>
+<span class="l-Scalar-Plain">mathjax</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
 <span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/CS300-Fall2014</span>
 <span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
-<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">superhero</span></code></pre></div>
+<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">spacelab</span>
+<span class="l-Scalar-Plain">morea_navbar_items</span><span class="p-Indicator">:</span>
+  <span class="c1">#- Prerequisites</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Outcomes</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Assessments</span>
+  <span class="c1">#-Schedule</span></code></pre></div>
 
 <p>In general, you only need to touch the _config.yml file once. Anytime you edit the _config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. </p>
 
-<h2>Edit markdown files</h2>
+<h2>Play around with sample content</h2>
 
-<p>The next step is to edit the markdown files to present additional course content. </p>
+<p>The core repo does not contain a morea/ directory, so it does not have any content.  Let&#39;s fix that by downloading some <a href="https://github.com/morea-framework/sample-morea-directory/archive/master.zip">sample content</a>. This zip file contains a morea/ directory with example Morea modules, readings, and so forth.  </p>
+
+<p>After downloading that file, copy its morea/ directory into the src/ directory of your new repo. </p>
 
 <p>For details on the structure and content of Morea markdown files, see the <a href="/userguide.html">User Guide</a>.</p>
 
@@ -425,7 +424,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>08 Jun 2015</span></p>
+      <p>Last update on: <span>16 Jun 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

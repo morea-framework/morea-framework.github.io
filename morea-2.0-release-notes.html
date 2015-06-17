@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Morea 2.0 Release Notes | Morea Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.0/cerulean/bootstrap.min.css">
+
+  <!--  Load site-specific customizations after bootstrap. -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/gh-fork-ribbon.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:normal,italic,bold">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Morea Framework</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/quickstart.html">Quick Start</a></li>
+        <li><a href="/userguide.html">User Guide</a></li>
+        <li><a href="/developerguide.html">Developer Guide</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/news.html">News</a></li>
+        <li><a href="/help.html">Help</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="github-fork-ribbon-wrapper right">
+  <div class="github-fork-ribbon">
+    <a href="https://github.com/morea-framework">Find me on GitHub</a>
+  </div>
+</div>
+
+<!-- Load tocify css and js -->
+<link type="text/css" rel="stylesheet" href="/css/jquery.tocify.css" />
+
+<!-- Load tocify Javascript components -->
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.tocify.js"></script>
+
+<div class="container">
+<div class="row">
+  <div class="hidden-xs col-sm-3" >
+    <!-- Our table of contents will be here !-->
+    <div id="nav"></div>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+     <h1>Overview</h1>
+
+<p>In May, 2015, we performed a <a href="case-study-may-2015.html">usability case study</a> to learn about user experience with the Morea Framework and how it could be improved.  Among other things, this case study identified several areas for improvement:</p>
+
+<ul>
+<li>Provide better calendar integration.</li>
+<li>Better document the Morea structure</li>
+<li>Improve user interface (reduce pane size, make clickable areas more obvious)</li>
+</ul>
+
+<p>In addition, we spoke to instructors currently using Morea to solicit their ideas and suggestions, and came up with the following:</p>
+
+<ul>
+<li>Eliminate dependency on the basic template Morea files.</li>
+<li>Support overview areas at top of each page.</li>
+<li>Provide separate content for &quot;summarizing&quot; vs. &quot;introducing&quot; a module.</li>
+<li>Simplify menubar configuration</li>
+<li>Support module meta-data for representing multiple sites. </li>
+<li>Simplify google analytics integration.</li>
+<li>Support LaTeX equations in Markdown.</li>
+</ul>
+
+<p>From this, we generated a set of <a href="https://github.com/morea-framework/core/issues?utf8=%E2%9C%93&amp;q=milestone%3AMorea2+">Morea Version 2 Issues</a> to track progress to this release. </p>
+
+<p>This page documents for current users of Morea Version 1 the changes and enhancements in Morea 2 and how to make the transition. </p>
+
+<h1>Changes</h1>
+
+<h3>UI/Navigation</h3>
+
+<p>In Morea 1, some users complained that they didn&#39;t know what was a link. To address this, in Morea 2 the entire &quot;tile&quot; used to represent Modules, Readings, and Experiences is clickable.  </p>
+
+<p>Other users complained that Modules took up too much screen real estate.  In Morea 2, because the entire tile is clickable, there is no reason to have a &quot;Learn More&quot; or &quot;Coming Soon&quot; button, so these have been eliminated.</p>
+
+<p>The following image illustrates the new module page design:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/tiled-modules.png" class="img-responsive"></p>
+
+<p>The mouse was hovering over the first module at the time the screenshot was taken to illustrate how clickable tiles are highlighted.</p>
+
+<h3>Prerequisite modules</h3>
+
+<p>In Morea 2.0, it is possible to define prerequisite modules that link to other Morea sites.  This makes it easy for an instructor to indicate the material from prior courses that students should know in order to successfully complete the current module.  </p>
+
+<p>The following image illustrates the top part of a Module definition page specifying three prerequisite modules from three prior courses:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/prerequisite-modules.png" class="img-responsive"></p>
+
+<p>As with all other &quot;tiles&quot; in Morea sites, these can be clicked to go to the corresponding module from the external site.</p>
+
+<h3>Schedule Events</h3>
+
+<p>A significant number of case study respondents wished that the Morea Schedule page would link directly to the Reading, Experience, or Module indicated in the schedule.</p>
+
+<p>In Morea 2.0, you can now indicate in the Module markdown file the start and end times for the module.  You can also indicate the due date in a Reading and Experience markdown file. These values will be incorporated into an automatically generated Schedule page, where clicking on the associated Module, Reading, or Experience entry will retrieve the associated page. Here is an example Schedule page illustrating two clickable events: a Module (&quot;Learn to Baz&quot;) covering several days and the due date and time for an Experience (&quot;Experience the Baz&quot;):</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/schedule.png" class="img-responsive"></p>
+
+<h3>MathJax support</h3>
+
+<p><a href="http://www.mathjax.org">MathJax</a> is a popular package for rendering LaTeX-style equations in HTML.  Morea 2.0 provides built-in support for MathJax, so that you can write LaTeX equations in your Markdown files and have it render appropriately. </p>
+
+<p>Here is a screen image illustrating this support:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/mathjax.png" class="img-responsive"></p>
+
+<h3>NavBar configuration</h3>
+
+<p>In Morea 1, it was necessary to edit the default.html template file by hand in order to add or remove menu items.</p>
+
+<p>In Morea 2, the six standard menu items can be enabled or disabled through the top-level _config.yml file.  Here is an example:</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Review ICS 311</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ReviewICS311</span>
+<span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cerulean</span>
+<span class="l-Scalar-Plain">morea_navbar_items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Prerequisites</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Outcomes</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
+  <span class="c1"># - Schedule</span>
+</code></pre></div>
+<p>In this example, the site has enabled five of the standard nav bar items (Prerequisites, Modules, Outcomes, Readings, and Experiences), but has commented out the Schedule nav bar item and thus it will not be displayed.</p>
+
+<h3>Module summary &amp; intro</h3>
+
+<p>In Morea 1, the text shown to summarize the module on the Modules page, and the text shown to introduce the module at the top of the page associated with that module are identical.  For example:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/module-summary-intro-1.png" class="img-responsive"></p>
+
+<p>As you can see, the same text starting with &quot;Assertions and propositions&quot; appears in both the Propositional Logic module tile and the module&#39;s page.</p>
+
+<p>In Morea 2, it is possible to specify different text for summaries and introductions.  This is useful, for example, when you want the introduction to provide a road map for the contents of the module that would be too lengthy for the summary.  Here&#39;s an example:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/module-summary-intro-2.png" class="img-responsive"></p>
+
+<h3>Module metadata</h3>
+
+<p>Morea 2 produces a top-level file called module-info.js that contains module metadata: an ordered list of the modules in the site, their published location (URL), and the names and locations of any prerequisite modules.</p>
+
+<p>The purpose of module metadata is to support higher-level services, such as a visualization of how courses in a curriculum relate to each other. For example, the <a href="http://courses.ics.hawaii.edu">Courses.ICS</a> site reads in the module metadata from each of its constituent review sites and uses this data to build a visualization of modules and their relationships. Here&#39;s a snapshot of the visualization:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/module-metadata.png" class="img-responsive"></p>
+
+<h3>Page overview</h3>
+
+<p>Morea 2 allows the instructor to define &quot;overview files&quot; whose content is inserted at the top of the six standard pages (Prerequisites, Modules, Outcomes, Readings, Experiences, Assessments).  </p>
+
+<p>One use case occurs when the instructor wants to provide course-level outcomes in the site. One reasonable place for this information is at the top of the &quot;Outcomes&quot; page, followed by the module-level outcomes.  Here is an example:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/overview-files.png" class="img-responsive"></p>
+
+<p>In other cases, the overview file can simply provide documentation on the contents of the page.</p>
+
+<h3>Google analytics</h3>
+
+<p>Morea 2 makes it easy to enable Google Analytics by simply including the tracking ID in the _config.yml file as follows:</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Review ICS 311</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ReviewICS311</span>
+<span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cerulean</span>
+<span class="l-Scalar-Plain">morea_navbar_items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Prerequisites</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Outcomes</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
+  <span class="c1"># - Schedule</span>
+<span class="l-Scalar-Plain">morea_google_analytics_tracking_id</span><span class="p-Indicator">:</span> <span class="s">&quot;&lt;your</span><span class="nv"> </span><span class="s">tracking</span><span class="nv"> </span><span class="s">ID&gt;&quot;</span>
+</code></pre></div>
+<p>You&#39;ll need to sign up for Google Analytics and replace <your tracking ID> by your actual tracking ID. Once enabled, site traffic will be automatically tracked and a variety of potentially interesting reports become available. For example, here is a report indicated the flow of visitors through the pages of one Morea site:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/google-analytics.png" class="img-responsive"></p>
+
+<h3>No Python required</h3>
+
+<p>In Morea 2, the dependency on Python has been removed through the use of the kramdown markdown processor and the Ruby-based rouge syntax highlighter.  This simplifies installation. </p>
+
+<h1>Migration Guide</h1>
+
+<p>If you are a current Morea user and want to upgrade to 2.0, here is one way to do it.</p>
+
+<h3>Update Jekyll</h3>
+
+<p>First, make sure that your gem command is up to date:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% sudo gem update --system
+Latest version currently installed. Aborting.
+%
+</code></pre></div>
+<p>Next, install Jekyll version 2.5.2</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% sudo gem install jekyll -v &#39;2.5.2&#39;
+Fetching: jekyll-2.5.2.gem (100%)
+Successfully installed jekyll-2.5.2
+Parsing documentation for jekyll-2.5.2
+Installing ri documentation for jekyll-2.5.2
+Done installing documentation for jekyll after 1 seconds
+1 gem installed
+%
+</code></pre></div>
+<p>Next, install the kramdown markdown processor and the rouge syntax highlighter:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% sudo gem install kramdown rouge
+Successfully installed kramdown-1.7.0
+Parsing documentation for kramdown-1.7.0
+Done installing documentation for kramdown after 1 seconds
+Successfully installed rouge-1.9.0
+Parsing documentation for rouge-1.9.0
+Done installing documentation for rouge after 2 seconds
+2 gems installed
+%
+</code></pre></div>
+<h3>Create new repository</h3>
+
+<p>I don&#39;t recommend you try to &quot;overwrite&quot; a Morea 1 repo with Morea 2.  If you want to update a Morea 1 repo, then I recommend that you do something like the following.  Let&#39;s say you have a GitHub repo named &quot;Foo&quot; in a local directory called &quot;foo&quot;. </p>
+
+<p>First, rename your local repo:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% mv foo foo-old
+</code></pre></div>
+<p>Second, delete your Foo repository on GitHub.  (Don&#39;t worry, it&#39;s still in your foo-old local directory.)</p>
+
+<p>Third, immediately recreate your Foo repository on GitHub.  Now it&#39;s completely empty. </p>
+
+<p>Fourth, create a new local directory called &quot;foo&quot;:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% mkdir foo
+</code></pre></div>
+<p>Fifth, change directories into foo, and download the morea-vanilla-install.sh script:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% cd foo
+% curl https://raw.githubusercontent.com/morea-framework/scripts/master/morea-vanilla-install.sh --output morea-vanilla-install.sh
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                   Dload  Upload   Total   Spent    Left  Speed
+  100  1238  100  1238    0     0   3423      0 --:--:-- --:--:-- --:--:--  4421
+</code></pre></div>
+<p>Sixth, invoke morea-vanilla-install with your GitHub username and the &quot;Foo&quot; repository name:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">% ./morea-vanilla-install.sh philipmjohnson Foo
+</code></pre></div>
+<p>This will initialize this directory with the master/ and gh-pages/ subdirectories.   In Morea 2, the upstream repository is &quot;core&quot; (not basic-template) and it does not contain a morea/ subdirectory with Foo, Bar, and Baz modules.  This reduces the odds of conflict when merging the upstream master. </p>
+
+<h3>Incorporate morea/</h3>
+
+<p>At this point, you should only have to do two things to complete a basic migration:</p>
+
+<ol>
+<li>Copy your morea/ directory from foo-old/master/src to foo/master/src/.</li>
+<li>Update foo/master/src/_config.yml.  You do not want to use your old _config.yml, as several settings have changed. At a minimum, you&#39;ll fix the &#39;name&#39; and &#39;baseurl&#39; settings. </li>
+</ol>
+
+<h3>Complete migration</h3>
+
+<p>Now download the remaining <a href="https://github.com/morea-framework/scripts">Morea 2 scripts</a>, run morea-run-local.sh to see if everything looks OK, and morea-publish.sh to push your new version back to GitHub.</p>
+
+<p>If you have made local modifications to the Morea 1 scripts (for example, to use with BitBucket), you&#39;ll still want to download the new scripts, then compare with your old ones and port any changes as needed.</p>
+
+<h3>Problems? Surprises?</h3>
+
+<p>If you experience problems or surprises during the migration, please let me (johnson@hawaii.edu) know.  </p>
+
+  </div>
+</div>
+</div>
+
+<script>
+  $("#nav").tocify({theme: "bootstrap3", scrollTo: "40"});
+</script>
+
+<div class="dark-blue-background">
+<footer>
+  <div class="container page-footer">
+      <p>Last update on: <span>16 Jun 2015</span></p>
+      <p>The Morea Framework is sponsored by:<br>
+         Collaborative Software Development Laboratory<br>
+         Department of Information and Computer Sciences<br>
+         University of Hawaii<br>
+      </p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
