@@ -86,48 +86,6 @@ For example, you can place all of your files at the top level of this directory.
 Alternatively, and more typically, you can create subdirectories within the src/morea directory, one
 per module, as shown in the previous screenshot.
 
-In addition, Morea does not care how you name files.  In fact, it is
-possible to use the same file name in multiple modules (i.e. foo/module.md, bar/module.md, baz/module.md, and
-qux/module.md in the screenshot above)
-
-**It is the "front matter" in each Morea entity file that uniquely identifies it.**
-
-Morea does not care about directory structure nor file name, because it uses the _front matter_ in the
-markdown file to uniquely identify each Morea entity and determine how they relate to each other.
-"Front matter" is a [Jekyll](http://jekyllrb.com/) term for key-value pairs
-represented via YAML notation and separated from the rest of the file contents by three dashes. For example,
-here is the front matter for a hypothetical module entity:
-
-    ---
-    title: "Learn to Foo"
-    morea_id: foo
-    morea_outcomes:
-      - foo-outcome1
-      - foo-outcome2
-    morea_readings:
-      - foo-reading
-    morea_experiences:
-      - foo-experience
-    morea_assessments:
-      - foo-assessment
-    morea_type: module
-    morea_icon_url: /morea/images/foo.png
-    morea_labels:
-      - required
-      - intro
-    morea_sort_order: 2
-    ---
-
-So, even though each module (foo, bar, baz, qux) in the basic template system contains a file with the name module.md,
-the front matter in that file will be different in order to represent the unique structure of the four modules.
-
-Note that while you _can_ use the same file name, you _don't have to_.   You could name the file containing the front
-matter for the Foo module "module-foo.md".  You could even name it "outcome.md" (although that would be really
-confusing.) The point is:  Morea does not utilize file name information.
-
-
-We will explain the front matter in more detail later in this User Guide.
-
 **Morea makes a "mirror image" of the src/morea directory in the published HTML site.**
 
 Because we want you to provide course content in the src/morea directory, and because course content can include
@@ -276,6 +234,12 @@ Morea ID.</td>
 </tr>
 
 <tr>
+<td>morea_prerequisites</td>
+<td>optional</td>
+<td>If present, a list of Morea IDs indicating the Prerequisites associated with this module.</td>
+</tr>
+
+<tr>
 <td>morea_outcomes</td>
 <td>optional</td>
 <td>If present, a list of Morea IDs indicating the Outcomes associated with this module.</td>
@@ -307,6 +271,12 @@ effect, the icon image should be square. Defaults to <a href="https://github.com
 </tr>
 
 <tr>
+<td>morea_summary</td>
+<td>optional</td>
+<td>If present, a short string that will appear in the tile representing the module in the Modules page. If absent, then the module body text (see below) will be used in the tile.
+</tr>
+
+<tr>
 <td>morea_labels</td>
 <td>optional</td>
 <td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
@@ -322,15 +292,13 @@ Defaults to zero.
 </td>
 </tr>
 
-
-
 </table>
 
 **Module body text**
 
-In a module definition, the text following the Front Matter is typically one to two sentences that
-summarizes the module content. This text appears with the module's <a href="http://getbootstrap.com/components/#thumbnails">thumbnail</a> in the module summary page and at the top
-of the module's page.
+If morea_summary does not appear in the module's Front Matter, then the module body text will appear both in the tile and at the top of the page describing the module in full. 
+ 
+Alternatively, you can provide a short string as the morea_summary, and significantly more text as the module body text.  In this case, the summary string will appear in the tile and the module body text will appear at the top of the page describing the module.
 
 ### Outcome
 
@@ -535,7 +503,7 @@ Experiences appear as the body text of the file.
     published: true
     morea_id: experience-asymptotic-concepts
     morea_type: experience
-    morea_summary: "Practice analysis of functions with respect to their limiting behavior"
+    morea_summary: "Practice analysis of functions"
     morea_sort_order: 1
     morea_labels:
      - In class
@@ -1190,18 +1158,32 @@ The embedded image is responsive, so it works nicely on a mobile device.  Your s
 
 ## Google analytics
 
-If you are interesting in tracking usage of your pages, Cam Moore has implemented an include file to support [Google Analytics](http://www.google.com/analytics/).  
+If you are interesting in tracking usage of your pages, Morea supports [Google Analytics](http://www.google.com/analytics/).  
 
-To use, first read the [Google Analytics Get Started](https://support.google.com/analytics/answer/1008015?hl=en&ref_topic=3544906) and set up an account and property ID.  
+To use, first read the [Google Analytics Get Started](https://support.google.com/analytics/answer/1008015?hl=en&ref_topic=3544906) and set up an account and tracking ID.  
 
-Then, you can simply use Cam's [google-analytics.html](https://github.com/morea-framework/basic-template/blob/master/src/_includes/google-analytics.html) includes file. Put the following code on any pages you want to track:
+Then, edit your \_config.yml file to provide the tracking ID. For example:
 
-{% highlight html %}
-{% raw %}
-{% include google-analytics.html id="<your property id>" %}
-
-{% endraw %}
-{% endhighlight %}
+```
+name: Review ICS 241
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+mathjax: true
+baseurl: /ReviewICS241
+exclude: [morea]
+morea_theme: cerulean
+morea_navbar_items:
+  - Prerequisites
+  - Modules
+  - Outcomes
+  - Readings
+  - Experiences
+morea_google_analytics_tracking_id: "UA-64069138-1"
+morea_course: ics241
+morea_domain: http://courses.ics.hawaii.edu/
+```
  
 # Themes
 
@@ -1216,10 +1198,6 @@ The default value (i.e. the value that comes with the basic-template) is "cerule
 It is possible to modify these themes or define new ones of your own.  This process will be documented in the developer guide later.
 
 The following sections show a sample page for each of the pre-installed themes in alphabetical order. Click image to see full-size.
-
-## amelia
-
-<a href="images/themes/amelia.png"><img src="images/themes/amelia.png" width="700px" class="img-responsive"/></a>
 
 ## cerulean
 
@@ -1307,10 +1285,10 @@ The script performs the following actions:
   * Creates master/ and gh-pages directories.
   * Clones the master branch of your repo into the master/ directory.
   * Creates a new, orphan gh-pages branch of your repo and checks out that branch into the gh-pages/ directory.
-  * Sets 'upstream' to the basic-template repo.
+  * Sets 'upstream' to the core repo.
   * Merges the upstream branch into your new master branch in the master/ directory.
 
-When completed, your master/ branch should contain a copy of the basic-template.  If you encounter merge conflicts during the execution of this script, you will need to fix the files in the master/ directory, and recommit them.  Some helpful documentation is [resolving a merge conflict from the command line](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line). 
+When completed, your master/ branch should contain a copy of the core repo.  If you encounter merge conflicts during the execution of this script, you will need to fix the files in the master/ directory, and recommit them.  Some helpful documentation is [resolving a merge conflict from the command line](https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line). 
 
 It is a good idea after running morea-vanilla-install to run morea-run-local.sh to see that the new site can be created successfully, then morea-publish.sh to commit your initialized site to your GitHub repo.
 
@@ -1318,7 +1296,7 @@ It is a good idea after running morea-vanilla-install to run morea-run-local.sh 
 
 The Morea Framework is still under active development, and the changes and improvements are generally reflected in updates to the basic-template system.   
 
-The [morea-merge-upstream.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-merge-upstream.sh) script incorporates updates to the basic-template system into your local site.  The script defines the basic-template repo as an "upstream" repo, then fetches and merges changes in the master branch of basic-template into your local repo. 
+The [morea-merge-upstream.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-merge-upstream.sh) script incorporates updates to the core system into your local site.  The script defines the core repo as an "upstream" repo, then fetches and merges changes in the master branch of core into your local repo. 
 
 This script requires no arguments.  For example:
 
@@ -1373,7 +1351,7 @@ If in doubt, simply exit and re-invoke morea-run-local.
 
 ## morea-install 
 
-The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh) script downloads a GitHub repository containing a previously initialized Morea site (such as basic-template).  It assumes that the GitHub repo contains both a master and gh-pages branch.
+The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-install.sh) script downloads a GitHub repository containing a previously initialized Morea site.  It assumes that the GitHub repo contains both a master and gh-pages branch.
 
 This script requires two arguments: a github user and the Morea site repo to download. For example:
 

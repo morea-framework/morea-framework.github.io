@@ -51,20 +51,7 @@ If not, follow these instructions to [install Ruby](https://www.ruby-lang.org/en
 Morea is compatible with either Ruby 1.9.x or 2.x.
 
 
-## Install Python
-
-Check to see if you have Python 2.x installed and can invoke it from the command line:
-
-    % python --version
-      Python 2.7.2
-
-If not, follow these instructions to [install Python](https://www.python.org/download/).
-
-<div class="alert alert-warning">
-<p><strong>Warning!</strong> Jekyll (and thus Morea) is incompatible with Python 3.x.</p>
-</div>
-
-## Install Jekyll
+## Install Jekyll 2.5.2
 
 Check to see if you have Jekyll installed and can invoke it from the command line:
 
@@ -73,21 +60,19 @@ Check to see if you have Jekyll installed and can invoke it from the command lin
 
 If not, follow these instructions to [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
 
+Note that since Morea uses the Rouge syntax highlighter, **you do not need to install Python.**
+
 <div class="alert alert-warning">
-<p><strong>Windows OS Warning!</strong> We recommend the GitHub repo called <a href="https://github.com/juthilo/run-jekyll-on-windows/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process.
-</p>
-<p>
-Or, if that didn't work well, you can always try our <a href="quickstart-vagrant.html">QuickStart using Vagrant</a> approach. 
+<p><strong>Windows OS Warning!</strong> We recommend <a href="http://jekyll-windows.juthilo.com/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process. 
 </p>
 </div>
 
 # 2. Create a course
 
-Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea basic-template as an "upstream" repository, and merging the contents of the upstream repo.  The net effect of all this is to 
- initialize your repo with the contents of the basic-template, so that you can start off with a functional Morea website.
+Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea core repo as an "upstream" repository, and merging the contents of the upstream repo.  The net effect of all this is to initialize your repo with the contents of core, so that you can start off with a functional Morea website.
  
 <div class="alert alert-warning">
-<p><strong>Why not just fork the basic-template repo?</strong> If you are familiar with git, you might be wondering why we do not advise you to fork the basic-template repository.  The reason is that the basic-template repo is a public repository, and you cannot make your repository private if you forked it from a public one.  Our approach enables you to start with a working Morea site based on a public repository and allow you to make your repository private later.
+<p><strong>Why not just fork the core repo?</strong> If you are familiar with git, you might be wondering why we do not advise you to fork the core repository.  The reason is that the core repo is a public repository, and you cannot make your repository private if you forked it from a public one.  Our approach enables you to start with a working Morea site based on a public repository and allow you to make your repository private later.
 </p>
 </div>
 
@@ -175,7 +160,7 @@ Merging upstream into master
 + git merge upstream/master
 {% endhighlight %}
 
-Now you have a "master" directory containing a clone of the basic-template files, and a "gh-pages" directory which is empty:
+Now you have a "master" directory containing a clone of the core repo, and a "gh-pages" directory which is empty:
 
      [~/CS300-Fall2014/] $ ls 
                   gh-pages		master			morea-vanilla-install.sh
@@ -188,33 +173,45 @@ Now we can start working on the content of the course.
 
 The first step in developing course content is to configure the master/src/\_config.yml file. There are three fields to edit:
 
-  * **name**:  change this from "Basic Template" to the name of your course.
-  * **baseurl**: change this from /basic-template to your repo name.
+  * **name**:  change this from "core" to the name of your course.
+  * **baseurl**: change this from /core to your repo name.
   * **morea_theme**:  if you wish, you can change this to any of the supported [Morea themes](userguide.html#Themes).
 
 For example, here's how we might configure the \_config.yml file for our CS300-Fall2014 example course:
 
 {% highlight yaml %}
 name: CS300 Fall 2014
-highlighter: pygments
-safe: false
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+mathjax: true
 baseurl: /CS300-Fall2014
 exclude: [morea]
-morea_theme: superhero
+morea_theme: spacelab
+morea_navbar_items:
+  #- Prerequisites
+  - Modules
+  - Outcomes
+  - Readings
+  - Experiences
+  - Assessments
+  #-Schedule
 {% endhighlight %}
 
 In general, you only need to touch the \_config.yml file once. Anytime you edit the \_config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. 
 
-## Edit markdown files
+## Play around with sample content
 
-The next step is to edit the markdown files to present additional course content. 
+The core repo does not contain a morea/ directory, so it does not have any content.  Let's fix that by downloading some [sample content](https://github.com/morea-framework/sample-morea-directory/archive/master.zip). This zip file contains a morea/ directory with example Morea modules, readings, and so forth.  
+
+After downloading that file, copy its morea/ directory into the src/ directory of your new repo. 
 
 For details on the structure and content of Morea markdown files, see the [User Guide](/userguide.html).
 
 For now, just make some simple changes.  The easiest and fastest change to make is to modify the src/morea/home.md file to provide very preliminary information about your course.  Your changes will show up on the home page of the site. You can also edit footer.md in that same location. 
 
 Use any editor you like, although those that have a Markdown mode are generally preferable.
-
 
 ## Display your site locally
 
