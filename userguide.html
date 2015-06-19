@@ -74,41 +74,19 @@
 
 <p><strong>Morea defines five &quot;entity types&quot;: module, outcome, reading, experience, and assessment.</strong></p>
 
-<p>A <em>module</em> is a container that holds a set of outcomes, readings, experiences, and assessments related
-to course content. Modules have a sort order, which allows you to organize modules into a sequence. Most
-courses consist of 6 to 30+ modules.  A module can contain zero to many instances of outcomes, readings,
-experiences, and assessments. It is possible to define a module without zero outcomes, zero readings, zero experiences,
-and zero assessments, though we&#39;re not sure of the utility of such a module.</p>
+<p>A <em>module</em> is a container that holds a set of outcomes, readings, experiences, and assessments related to course content. Modules have a sort order, which allows you to organize modules into a sequence. Most courses consist of 6 to 30+ modules.  A module can contain zero to many instances of outcomes, readings, experiences, and assessments. It is possible to define a module without zero outcomes, zero readings, zero experiences, and zero assessments, though we&#39;re not sure of the utility of such a module.</p>
 
-<p>An <em>outcome</em> represents some kind of knowledge or capability that the student should acquire as a result of
-the readings and experiences in the associated module.  A module can have multiple outcomes.  Conversely, the same
-outcome can be associated with multiple modules. We find that a useful way to organize and express learning outcomes
- is through <a href="http://www.utar.edu.my/fegt/file/Revised_Blooms_Info.pdf">Bloom&#39;s revised taxonomy</a>, which classifies
- outcomes into six categories: remembering, understanding, applying, analyzing, evaluating, and creating. The latter outcomes
- (analyzing, evaluating, and creating) are supposed to represent &quot;high-order&quot; cognitive skills.</p>
+<p>An <em>outcome</em> represents some kind of knowledge or capability that the student should acquire as a result of the readings and experiences in the associated module.  A module can have multiple outcomes.  Conversely, the same outcome can be associated with multiple modules. We find that a useful way to organize and express learning outcomes is through <a href="http://www.utar.edu.my/fegt/file/Revised_Blooms_Info.pdf">Bloom&#39;s revised taxonomy</a>, which classifies outcomes into six categories: remembering, understanding, applying, analyzing, evaluating, and creating. The latter outcomes (analyzing, evaluating, and creating) are supposed to represent &quot;high-order&quot; cognitive skills.</p>
 
-<p>A <em>reading</em> is an artifact that the student studies: it represents &quot;passive&quot; learning. Readings are typically
-chapters in a book, online web pages, and so forth.</p>
+<p>A <em>reading</em> is an artifact that the student studies: it represents &quot;passive&quot; learning. Readings are typically chapters in a book, online web pages, and so forth.</p>
 
-<p>In contrast to a reading, an <em>experience</em> represents a more &quot;active&quot; form of learning in which the student solves
-problems or performs other activities in order to acquire understanding and capability. Morea distinguishes between
-readings and experiences because modules that contain only readings without experiences will tend to have outcomes associated
-with lower levels of Bloom&#39;s taxonomy, while modules containing a mixture of readings and experiences are more
-likely to support outcomes at higher levels of Bloom&#39;s taxonomy.</p>
+<p>In contrast to a reading, an <em>experience</em> represents a more &quot;active&quot; form of learning in which the student solves problems or performs other activities in order to acquire understanding and capability. Morea distinguishes between readings and experiences because modules that contain only readings without experiences will tend to have outcomes associated with lower levels of Bloom&#39;s taxonomy, while modules containing a mixture of readings and experiences are more likely to support outcomes at higher levels of Bloom&#39;s taxonomy.</p>
 
-<p>An <em>assessment</em> is an activity that evaluates the success of the student in achieving the educational goals
-of the module.  In the best case, the educational goals of the module are adequately expressed by learning outcomes,
-in which case each assessment should relate to one or more outcomes.  The graphic
-<a href="images/Stobaugh_BloomsTaxonomy.png">Applying Bloom&#39;s Taxonomy in your Classroom</a> provides various examples of how
-outcomes and assessments can be linked together.  While Morea can help make linkages between outcomes and
-assessments clear, it is common to assess skills not encapsulated by outcomes, or desire outcomes that are not
-assessed.</p>
+<p>An <em>assessment</em> is an activity that evaluates the success of the student in achieving the educational goals of the module.  In the best case, the educational goals of the module are adequately expressed by learning outcomes, in which case each assessment should relate to one or more outcomes.  The graphic <a href="images/Stobaugh_BloomsTaxonomy.png">Applying Bloom&#39;s Taxonomy in your Classroom</a> provides various examples of how outcomes and assessments can be linked together.  While Morea can help make linkages between outcomes and assessments clear, it is common to assess skills not encapsulated by outcomes, or desire outcomes that are not assessed.</p>
 
 <p><strong>Morea generates five &quot;views&quot; of the content, each organized according to an entity.</strong></p>
 
-<p>Morea sites contain a navigation bar at the top of the page with links to pages that organize the content
-according to each of the five entities: modules, outcomes, readings, experiences, and assessments.
-For example, here is an example of the Readings page:</p>
+<p>Morea sites contain a navigation bar at the top of the page with links to pages that organize the content according to each of the five entities: modules, outcomes, readings, experiences, and assessments. For example, here is an example of the Readings page:</p>
 
 <p><img src="images/ics311-readings.png" width="600px" class="img-responsive"/></p>
 
@@ -118,16 +96,11 @@ For example, here is an example of the Readings page:</p>
 
 <p>You can see that the two pages highlight a single entity type but provide links to other entities for context.</p>
 
-<p>We believe that presenting the content organized according to different entity types makes it easier for
-students and educators to understand the conceptual structure of the course.   For educators, it also
-provides a useful way to see if the course is structurally coherent. For example, when the learning
-objectives are examined together, do they create a coherent set?   For another example, are there assessments for each module,
-and if not, is that appropriate?</p>
+<p>We believe that presenting the content organized according to different entity types makes it easier for students and educators to understand the conceptual structure of the course.   For educators, it also provides a useful way to see if the course is structurally coherent. For example, when the learning objectives are examined together, do they create a coherent set?   For another example, are there assessments for each module, and if not, is that appropriate?</p>
 
 <p><strong>Every Morea entity has its own markdown file.</strong></p>
 
-<p>Every instance of a Morea entity (module, outcome, reading, experience, assessment) is represented by a single markdown file.
-There can also be other markdown files and other non-markdown files (such as the logo image file associated with each module).</p>
+<p>Every instance of a Morea entity (module, outcome, reading, experience, assessment) is represented by a single markdown file. There can also be other markdown files and other non-markdown files (such as the logo image file associated with each module).</p>
 
 <p><strong>All of your course content is located in the src/morea/ directory.</strong></p>
 
@@ -137,8 +110,7 @@ There can also be other markdown files and other non-markdown files (such as the
 
 <p>This organization exists because the Morea framework is basically just a Jekyll site with a custom plugin to process the Morea markdown files.</p>
 
-<p>Fortunately, the only files you will typically need to manage are all located in the src/morea directory. Here is
-an example of the src/morea directory from the basic-template system:</p>
+<p>Fortunately, the only files you will typically need to manage are all located in the src/morea directory. Here is an example of the src/morea directory from the basic-template system:</p>
 
 <p><img src="images/morea-folder.png" width="200px" class="img-responsive"/></p>
 
@@ -146,25 +118,17 @@ an example of the src/morea directory from the basic-template system:</p>
 
 <p><strong>You can organize the src/morea/ directory any way you like.</strong></p>
 
-<p>The Morea framework does not care how you organize the files within the src/morea directory.
-For example, you can place all of your files at the top level of this directory.
-Alternatively, and more typically, you can create subdirectories within the src/morea directory, one
-per module, as shown in the previous screenshot.</p>
+<p>The Morea framework does not care how you organize the files within the src/morea directory. For example, you can place all of your files at the top level of this directory. Alternatively, and more typically, you can create subdirectories within the src/morea directory, one per module, as shown in the previous screenshot.</p>
 
 <p><strong>Morea makes a &quot;mirror image&quot; of the src/morea directory in the published HTML site.</strong></p>
 
-<p>Because we want you to provide course content in the src/morea directory, and because course content can include
-(for example) image files, Morea creates a kind of &quot;mirror image&quot; of the src/morea directory in the published site
-so that your content can include links within itself as well as to external sites.</p>
+<p>Because we want you to provide course content in the src/morea directory, and because course content can include (for example) image files, Morea creates a kind of &quot;mirror image&quot; of the src/morea directory in the published site so that your content can include links within itself as well as to external sites.</p>
 
-<p>The basic rule is that markdown files are converted to HTML in the published site, and all other files get copied
-over without change. So, for example, here is the src/morea directory (on the left) and the site&#39;s published morea directory
-(on the right):</p>
+<p>The basic rule is that markdown files are converted to HTML in the published site, and all other files get copied over without change. So, for example, here is the src/morea directory (on the left) and the site&#39;s published morea directory (on the right):</p>
 
 <p><img src="images/mirror-image.png" width="400px" class="img-responsive"/></p>
 
-<p>As you can see, the markdown files have become HTML, and the sole non-markdown file (logo.png) has been copied over
-unchanged.  The directory structure below the morea/ directory is unchanged.</p>
+<p>As you can see, the markdown files have become HTML, and the sole non-markdown file (logo.png) has been copied over unchanged.  The directory structure below the morea/ directory is unchanged.</p>
 
 <h1>Related systems</h1>
 
@@ -250,6 +214,8 @@ morea_labels:
  - required
  - intro
 morea_sort_order: 1
+morea_start_date: &quot;2015-06-15&quot;
+morea_end_date: &quot;2015-06-22&quot;
 ---
 
 Provides everything you need to know to learn to Foo.
@@ -352,6 +318,21 @@ effect, the icon image should be square. Defaults to <a href="https://github.com
 Defaults to zero.
 </td>
 </tr>
+
+<tr>
+<td>morea_start_date</td>
+<td>optional</td>
+<td>If present, a string that indicates the date (and potentially the time) where this module should be placed on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. You can specify a start date without an end date.
+</td>
+</tr>
+
+<tr>
+<td>morea_end_date</td>
+<td>optional</td>
+<td>If present, a string that indicates (along with the start date) the duration associated with this module on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. If you specify an end date, you should specify the start date as well.
+</td>
+</tr>
+
 
 </table>
 
@@ -457,6 +438,7 @@ published: true
 morea_id: reading-notes-3
 morea_summary: &quot;Introduction to asymptotic analysis&quot;
 morea_type: reading
+morea_start_date: &quot;2015-06-15T18:30&quot;
 morea_sort_order: 9
 morea_labels:
   - Notes
@@ -480,6 +462,7 @@ morea_summary: &quot;Asymptotic notation, standard notation, and common function
 morea_type: reading
 morea_sort_order: 8
 morea_url: http://mitpress.mit.edu/books/introduction-algorithms
+morea_start_date: &quot;2015-06-15T18:30&quot;
 morea_labels:
  - Textbook
  - 22 pages
@@ -542,6 +525,21 @@ in this reading's description.
 when listed as part of the module.  Defaults to zero.
 </td>
 </tr>
+
+
+<tr>
+<td>morea_start_date</td>
+<td>optional</td>
+<td>If present, a string that indicates the date (and potentially the time) where this reading should be placed on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. You can specify a start date without an end date, and this typically indicates the "Due date" for this reading.
+</td>
+</tr>
+
+<tr>
+<td>morea_end_date</td>
+<td>optional</td>
+<td>If present, a string that indicates (along with the start date) the duration associated with this reading on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. If you specify an end date, you should specify the start date as well.
+</td>
+</tr>
 </table>
 
 <p><strong>Reading body text</strong></p>
@@ -561,6 +559,7 @@ published: true
 morea_id: experience-asymptotic-concepts
 morea_type: experience
 morea_summary: &quot;Practice analysis of functions&quot;
+morea_start_date: &quot;2015-06-15T18:30&quot;
 morea_sort_order: 1
 morea_labels:
  - In class
@@ -629,6 +628,21 @@ in this experience's description.
 <td>optional</td>
 <td>If present, an integer used to sort the set of published experiences for presentation from low to high
 when listed as part of the module.  Defaults to zero.
+</td>
+</tr>
+
+
+<tr>
+<td>morea_start_date</td>
+<td>optional</td>
+<td>If present, a string that indicates the date (and potentially the time) where this experience should be placed on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. You can specify a start date without an end date, and this typically indicates the "Due date" for this experience.
+</td>
+</tr>
+
+<tr>
+<td>morea_end_date</td>
+<td>optional</td>
+<td>If present, a string that indicates (along with the start date) the duration associated with this experience on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. If you specify an end date, you should specify the start date as well.
 </td>
 </tr>
 </table>
@@ -761,6 +775,92 @@ when listed as part of the module.  Defaults to zero.
 <p><strong>Assessment body text</strong></p>
 
 <p>The body text should describe the assessment in markdown format.</p>
+
+<h3>Prerequisite</h3>
+
+<p>As of Morea 2.0, it is possible to define <em>Prerequisite</em> modules, or modules from another Morea site whose material should be mastered prior to starting this module.</p>
+
+<p>The following image illustrates the top part of a Module definition page specifying three prerequisite modules from three prior courses:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/prerequisite-modules.png" class="img-responsive"></p>
+
+<p>As with all other &quot;tiles&quot; in Morea sites, these can be clicked to go to the corresponding module from the external site.</p>
+
+<p>There are two steps to using Prerequisite modules. First, you must define them, and second, you must reference them in another module as a Prerequisite.</p>
+
+<p><strong>Sample prerequisite markdown file contents</strong></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Algorithms&quot;</span>
+<span class="l-Scalar-Plain">published</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="l-Scalar-Plain">morea_id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">141-algorithms</span>
+<span class="l-Scalar-Plain">morea_url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://courses.ics.hawaii.edu/ReviewICS141/modules/algorithms/</span>
+<span class="l-Scalar-Plain">morea_icon_url</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">http://courses.ics.hawaii.edu/ReviewICS141/morea/algorithms/algorithms.png</span>
+<span class="l-Scalar-Plain">morea_type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">prerequisite</span>
+<span class="l-Scalar-Plain">morea_labels</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">ICS 141</span>
+<span class="nn">---</span>
+<span class="l-Scalar-Plain">Algorithms, computational complexity, asymptotic notations, pseudocode, greedy algorithms, easy vs. hard problems.</span></code></pre></div>
+
+<p><strong>Prerequisite Front Matter keywords and values</strong></p>
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>prerequisite</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>required</td>
+<td>A string indicating the title of this prerequisite. The title appears whereever this entity is referenced.
+</td>
+</tr>
+
+<tr>
+<td>morea_url</td>
+<td>required</td>
+<td>The URL to the location where this module page can be retrieved.
+</td>
+</tr>
+
+<tr>
+<td>morea_icon_url</td>
+<td>required</td>
+<td>The URL to the location where the icon associated with this module page can be retrieved.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, this prequisite will be defined. If false, it will not exist. Default: true.
+</td>
+</tr>
+
+<tr>
+<td>morea_labels</td>
+<td>optional</td>
+<td>If present, a list of strings that appear as <a href="http://getbootstrap.com/components/#badges">badges</a>
+in this assessment's description.
+</td>
+</tr>
+
+</table>
+
+<p><strong>Prequisite body text</strong></p>
+
+<p>The body text should describe the prerequisite in markdown format. It will appear in the tile, so should be relatively concise.</p>
 
 <h1>Content development</h1>
 
@@ -941,6 +1041,92 @@ To git@github.com:morea-framework/morea-framework.github.io.git
 </code></pre></div>
 <p>This should typically run without errors. If there are errors, use manual git commands to resolve them.</p>
 
+<h2>Equation support</h2>
+
+<p><a href="http://www.mathjax.org">MathJax</a> is a popular package for rendering LaTeX-style equations in HTML.  Morea provides built-in support for MathJax, so that you can write LaTeX equations in your Markdown files and have it render appropriately.</p>
+
+<p>Here is a screen image illustrating this support:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/mathjax.png" class="img-responsive"></p>
+
+<h2>Overview files</h2>
+
+<p>Morea allows the instructor to define &quot;overview files&quot; whose content is inserted at the top of the six standard pages (Prerequisites, Modules, Outcomes, Readings, Experiences, Assessments).</p>
+
+<p>One use case occurs when the instructor wants to provide course-level outcomes in the site. One reasonable place for this information is at the top of the &quot;Outcomes&quot; page, followed by the module-level outcomes.  Here is an example:</p>
+
+<p><img style="border:1px solid gray" src="images/morea-2.0/overview-files.png" class="img-responsive"></p>
+
+<p>In other cases, the overview file can simply provide documentation on the contents of the page.</p>
+
+<p><strong>Sample overview markdown file contents</strong></p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;Ignored&quot;</span>
+<span class="l-Scalar-Plain">morea_id</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">morea_overview_modules</span>
+<span class="l-Scalar-Plain">morea_type</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">overview_modules</span>
+<span class="l-Scalar-Plain">published</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+<span class="nn">---</span>
+
+<span class="l-Scalar-Plain">This page presents the &quot;modules&quot;, or the topics that are covered in this course.</span>
+
+<span class="l-Scalar-Plain">Click on the tile associated with a module to go to a page containing that module&#39;s contents.</span></code></pre></div>
+
+<p><strong>Overview Front Matter keywords and values</strong></p>
+
+<table class="table table-condensed table-striped table-bordered">
+<tr><th>Keyword</th><th>Required?</th><th>Value</th></tr>
+<tr>
+<td>morea_type</td>
+<td>required</td>
+<td>One of: overview_modules, overview_outcomes, overview_readings, overview_experiences, overview_assessments, overview_schedule</td>
+</tr>
+
+<tr>
+<td>morea_id</td>
+<td>required</td>
+<td>A symbol (letters, numbers, hyphens, underscores) identifying this Morea entity. Morea IDs must
+be unique.  The Morea compiler will terminate with an error if it encounters two markdown files containing the same
+Morea ID.</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td>optional</td>
+<td>Ignored.
+</td>
+</tr>
+
+<tr>
+<td>published</td>
+<td>optional</td>
+<td>If true, this overview will appear at the top of its associated page.
+</td>
+</tr>
+
+</table>
+
+<p><strong>Overview body text</strong></p>
+
+<p>The body of the overview file will be placed at the beginning of its associated page.</p>
+
+<h2>NavBar configuration</h2>
+
+<p>The six standard menu items can be enabled or disabled through the top-level _config.yml file.  Here is an example:</p>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Review ICS 311</span>
+<span class="l-Scalar-Plain">baseurl</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/ReviewICS311</span>
+<span class="l-Scalar-Plain">exclude</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span><span class="nv">morea</span><span class="p-Indicator">]</span>
+<span class="l-Scalar-Plain">morea_theme</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">cerulean</span>
+<span class="l-Scalar-Plain">morea_navbar_items</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Prerequisites</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Outcomes</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
+  <span class="c1"># - Schedule</span>
+</code></pre></div>
+<p>In this example, the site has enabled five of the standard nav bar items (Prerequisites, Modules, Outcomes, Readings, and Experiences), but has commented out the Schedule nav bar item and thus it will not be displayed.</p>
+
 <h2>Linking within Morea</h2>
 
 <p>You may wish to reference one Morea page from another.  For example, you might want to link to one Readings page from another Readings page, or to an Experience from an Assessment.</p>
@@ -1060,7 +1246,28 @@ public static void main(String args[]) {
 <h3>Code repo</h3>
 
 <p>For documenting executable systems, as opposed to code samples, your best bet is to create a GitHub repo containing the system and provide links to it 
-in your markdown. </p>
+in your markdown.</p>
+
+<h2>Schedule page</h2>
+
+<p>The Module, Reading, and Experience entity types support the <code>morea_start_date</code> and <code>morea_end_date</code> parameters in their Front Matter.   This information is read when the files are processed, and used to generate a page containing a calendar that displays these dates and durations.  For example:</p>
+
+<p><img src="images/morea-2.0/schedule.png" width="600px" class="img-responsive"/></p>
+
+<p>Clicking on one of these events in a live calendar will take you to the corresponding Module, Reading, or Experience definition page.</p>
+
+<p>In order to display a link to this Schedule page in the NavBar, you must edit your _config.yml file and uncomment the Schedule entry in morea_navbar_items:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">morea_navbar_items</span><span class="p-Indicator">:</span>
+  <span class="c1">#- Prerequisites</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Modules</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Outcomes</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
+  <span class="c1">#- Assessments</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Schedule</span></code></pre></div>
+
+<p>Note that whenever you modify _config.yml, you must re-run morea_run_local.sh to see the change.</p>
 
 <h2>Include files and charts</h2>
 
@@ -1649,7 +1856,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>16 Jun 2015</span></p>
+      <p>Last update on: <span>18 Jun 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

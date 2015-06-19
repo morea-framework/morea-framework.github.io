@@ -112,21 +112,26 @@ you to run Morea scripts without modification.
 
 <p>Morea is compatible with either Ruby 1.9.x or 2.x.</p>
 
-<h2>Install Jekyll 2.5.2</h2>
+<h2>Install Jekyll</h2>
 
 <p>Check to see if you have Jekyll installed and can invoke it from the command line:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ jekyll --version
-  jekyll 2.5.2
+  jekyll 2.5.3
 </code></pre></div>
 <p>If not, follow these instructions to <a href="http://jekyllrb.com/docs/installation/">install Jekyll</a>. Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.</p>
 
-<p>Note that since Morea uses the Rouge syntax highlighter, <strong>you do not need to install Python.</strong></p>
+<p>Note that since Morea uses the Rouge syntax highlighter, you do not need to install Python.</p>
 
-<div class="alert alert-warning">
-<p><strong>Windows OS Warning!</strong> We recommend <a href="http://jekyll-windows.juthilo.com/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process. 
-</p>
-</div>
+<p>You also do not need to install NodeJS, since we do not use CoffeeScript.</p>
 
+<p>Problems may occur if you do not have an up to date version of the &#39;gem&#39; program. To update your version, invoke:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ gem update --system
+</code></pre></div>
+<h2>Install Rouge</h2>
+
+<p>Install the Rouge syntax highlighter, invoke:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ gem install rouge
+</code></pre></div>
 <h1>2. Create a course</h1>
 
 <p>Now that you have the tools installed, the next step is to create a GitHub repository containing the files needed to generate a Morea course website.  You do this by creating an empty repository on GitHub, cloning it to your local computer, setting the Morea core repo as an &quot;upstream&quot; repository, and merging the contents of the upstream repo.  The net effect of all this is to initialize your repo with the contents of core, so that you can start off with a functional Morea website.</p>
@@ -392,9 +397,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
           To git@github.com:morea-framework/basic-template.git
              683ff6d..6fe3b5e  master -&gt; master
 </code></pre></div>
-<p>Now your site should be publicly available.  For example, if your account is &quot;johndoe&quot; and your repo is &quot;CS300-Fall2014&quot;, then you should be able to retrieve your site at <a href="http://johndoe.github.io/CS300-Fall2014">http://johndoe.github.io/CS300-Fall2014</a>. </p>
-
-<p><strong>Note:</strong> the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you&#39;ll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.</p>
+<p>Now your site should be publicly available.  For example, if your account is &quot;johndoe&quot; and your repo is &quot;CS300-Fall2014&quot;, then you should be able to retrieve your site at <a href="http://johndoe.github.io/CS300-Fall2014">http://johndoe.github.io/CS300-Fall2014</a>.</p>
 
 <h1>5. Summary</h1>
 
@@ -424,7 +427,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>16 Jun 2015</span></p>
+      <p>Last update on: <span>18 Jun 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

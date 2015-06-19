@@ -30,6 +30,28 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Morea Version 2.0 release</title>
+        <description>&lt;p&gt;The Morea team is delighted to announce the 2.0 release.   Enhancements include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved user interface&lt;/li&gt;
+&lt;li&gt;Improved calendar integration&lt;/li&gt;
+&lt;li&gt;Module meta-data&lt;/li&gt;
+&lt;li&gt;Google analytics&lt;/li&gt;
+&lt;li&gt;LaTeX equations&lt;/li&gt;
+&lt;li&gt;Eliminate dependency on Python&lt;/li&gt;
+&lt;li&gt;Page overviews&lt;/li&gt;
+&lt;li&gt;... and much more!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please see the &lt;a href=&quot;/morea-2.0-release-notes.html&quot;&gt;release notes&lt;/a&gt; for details and a migration guide for current users.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Jun 2015 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2015/06/18/morea-version-two.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2015/06/18/morea-version-two.html</guid>
+      </item>
+    
+      <item>
         <title>Morea: Now with Google Analytics!</title>
         <description>&lt;p&gt;Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the &lt;a href=&quot;userguide.html#Googleanalytics&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
 </description>
