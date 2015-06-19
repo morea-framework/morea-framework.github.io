@@ -1003,6 +1003,8 @@ This should typically run without errors. If there are errors, use manual git co
 
 Morea allows the instructor to define "overview files" whose content is inserted at the top of the six standard pages (Prerequisites, Modules, Outcomes, Readings, Experiences, Assessments).
 
+Example overview files are available [here](https://github.com/morea-framework/sample-morea-directory/tree/master/morea).
+
 One use case occurs when the instructor wants to provide course-level outcomes in the site. One reasonable place for this information is at the top of the "Outcomes" page, followed by the module-level outcomes.  Here is an example:
 
 {% include morea-2.0-image.html src="overview-files.png" %}
