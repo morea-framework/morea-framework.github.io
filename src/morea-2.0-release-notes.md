@@ -22,9 +22,7 @@ In addition, we spoke to instructors currently using Morea to solicit their idea
   * Simplify google analytics integration.
   * Support LaTeX equations in Markdown.
 
-From this, we generated a set of [Morea Version 2 Issues](https://github.com/morea-framework/core/issues?utf8=%E2%9C%93&q=milestone%3AMorea2+) to track progress to this release. 
-
-This page documents for current users of Morea Version 1 the changes and enhancements in Morea 2 and how to make the transition. 
+This page documents the changes and enhancements in Morea 2 and how to make the transition.
 
 # Changes
 

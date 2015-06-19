@@ -51,21 +51,28 @@ If not, follow these instructions to [install Ruby](https://www.ruby-lang.org/en
 Morea is compatible with either Ruby 1.9.x or 2.x.
 
 
-## Install Jekyll 2.5.2
+## Install Jekyll
 
 Check to see if you have Jekyll installed and can invoke it from the command line:
 
     $ jekyll --version
-      jekyll 2.5.2
+      jekyll 2.5.3
 
 If not, follow these instructions to [install Jekyll](http://jekyllrb.com/docs/installation/). Jekyll is the system used by Morea to convert the source files into the actual website. Note that Jekyll is easy to install on Linux and Mac, less so on Windows.
 
-Note that since Morea uses the Rouge syntax highlighter, **you do not need to install Python.**
+Note that since Morea uses the Rouge syntax highlighter, you do not need to install Python.
 
-<div class="alert alert-warning">
-<p><strong>Windows OS Warning!</strong> We recommend <a href="http://jekyll-windows.juthilo.com/">Run Jekyll on Windows</a> as documentation on the Windows OS installation process. 
-</p>
-</div>
+You also do not need to install NodeJS, since we do not use CoffeeScript.
+
+Problems may occur if you do not have an up to date version of the 'gem' program. To update your version, invoke:
+
+    $ gem update --system
+
+## Install Rouge
+
+Install the Rouge syntax highlighter, invoke:
+
+    $ gem install rouge
 
 # 2. Create a course
 
@@ -344,9 +351,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
               To git@github.com:morea-framework/basic-template.git
                  683ff6d..6fe3b5e  master -> master
 
-Now your site should be publicly available.  For example, if your account is "johndoe" and your repo is "CS300-Fall2014", then you should be able to retrieve your site at [http://johndoe.github.io/CS300-Fall2014](http://johndoe.github.io/CS300-Fall2014). 
-
-**Note:** the morea-publish.sh script assumes you are working alone. If you are working with others and need to pull their commits from the repository, you'll need to invoke additional git commands as part of your work flow.  Otherwise you could get errors when trying to push your changes.
+Now your site should be publicly available.  For example, if your account is "johndoe" and your repo is "CS300-Fall2014", then you should be able to retrieve your site at [http://johndoe.github.io/CS300-Fall2014](http://johndoe.github.io/CS300-Fall2014).
 
 # 5. Summary
 
