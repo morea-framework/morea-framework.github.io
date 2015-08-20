@@ -1575,6 +1575,15 @@ The [morea-install.sh](https://raw.githubusercontent.com/morea-framework/scripts
 This script requires two arguments: a github user and the Morea site repo to download. For example:
 
     % ./morea-install.sh philipmjohnson ics314f13
+
+## morea-module-status
+
+The [morea-module-status.py](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-module-status.py) script provides a way to globally inspect and change the "visibility" of modules. Running the script brings up an [ncurses](https://en.wikipedia.org/wiki/Ncurses) user interface for automagically updating the "published", "morea\_coming\_soon", and "morea\_highlighted" parameters in a module definition file:
+
+<img src="images/morea-module-publishing.png" width="600px" class="img-responsive"/>
+
+The morea-module-status UI is an homage to the days when programmers had the Right Stuff and the focus was on getting the job done with 6K RAM, not on fancy-pants bells and whistles like "reactive" or "responsive" UIs.
+
     
 # Beyond Morea
     
