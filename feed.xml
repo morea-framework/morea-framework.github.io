@@ -30,6 +30,19 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Morea Lintui</title>
+        <description>&lt;p&gt;The Morea team is delighted to announce the release of &lt;a href=&quot;http://morea-framework.github.io/morea-lintui/&quot;&gt;morea-lintui&lt;/a&gt;, which combines &amp;quot;lint&amp;quot; content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/morea-framework/morea-lintui/master/morealintui/docs/screenshot1.jpg&quot; width=&quot;600px&quot; class=&quot;img-responsive&quot;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Please check it out and let us know what you think!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Sep 2015 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2015/09/22/morea-lintui.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2015/09/22/morea-lintui.html</guid>
+      </item>
+    
+      <item>
         <title>Morea Version 2.0 release</title>
         <description>&lt;p&gt;The Morea team is delighted to announce the 2.0 release.   Enhancements include:&lt;/p&gt;
 
