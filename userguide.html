@@ -1564,23 +1564,24 @@ morea_domain: http://courses.ics.hawaii.edu/
 
 <p>When doing development, it is convenient to be able to review your work in a browser without publishing the changes to GitHub.</p>
 
-<p>The <a href="https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh">morea-run-local.sh</a> script runs the Jekyll compiler in --watch mode, regenerating the HTML version of the site whenever your source files change and displaying the results at <code>http://localhost:4000</code>.</p>
+<p>The <a href="https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh">morea-run-local.sh</a> script runs the Jekyll compiler and displays the results at <code>http://localhost:4000</code>.</p>
 
 <p>This script requires no arguments.  For example:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">% ./morea-run-local.sh
 </code></pre></div>
-<p>Note that the Morea plugin forces an exit from the Jekyll compiler when it detects errors in the setup of your Morea site. So, for example, when creating a new module, you typically make a copy of a previously developed module directory in your morea/ directory.  As soon as this happens, the Jekyll compiler will re-run, the plugin will detect a duplicate Morea id, and the compiler will exit.  This is normal and desirable behavior: simply fix the problem, then re-invoke morea-run-local.sh to continue development.</p>
+<p>We recommend that you install a browser plugin such as <a href="http://livereload.com/">LiveReload</a>, which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.</p>
 
-<p>Also note that a few kinds of changes require exiting and restarting the Jekyll compiler with morea-run-local. These include:</p>
+<p>Note that when you make changes to your source file, you must stop the morea-run-local.sh script with control-c and restart it in order to see the changes rendered into HTML.  (For those familiar with Jekyll: the --watch command will not work in Morea because the directory in which most work is done (/morea), is ignored by the Jekyll run-time for the purposes of auto-recompilation.  See the next script, morea-watch, for a workaround.)</p>
 
-<ul>
-<li>Changes to the <code>_config.yml</code> file.</li>
-<li>Updates to the Morea plugin (which might occur after merging upstream changes). </li>
-</ul>
+<h2>morea-watch</h2>
 
-<p>Finally, we highly recommend that you install a browser plugin such as <a href="http://livereload.com/">LiveReload</a>, which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.</p>
+<p>One of the downsides of morea-run-local is that when you make changes to your source files, you must manually stop and restart the morea-run-local script.</p>
 
-<p>If in doubt, simply exit and re-invoke morea-run-local.</p>
+<p>To address this usability problem, the <a href="https://raw.githubusercontent.com/morea-framework/scripts/master/morea-watch.rb">morea-watch.rb</a> script is a wrapper around morea-run-local which monitors the state of your morea/ directory and when it detects changes, will kill the Jekyll server process and restart it automatically.</p>
+
+<p>To use it, just invoke morea-watch.rb instead of morea-run-local.sh.</p>
+
+<p>Note: morea-watch.rb does not currently work on Windows.</p>
 
 <h2>morea-install</h2>
 
@@ -1866,7 +1867,7 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>22 Sep 2015</span></p>
+      <p>Last update on: <span>10 Oct 2015</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

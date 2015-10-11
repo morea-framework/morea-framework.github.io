@@ -30,6 +30,17 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>morea-watch.rb</title>
+        <description>&lt;p&gt;The Morea team is delighted to announce the release of &lt;a href=&quot;userguide.html#morea-watch&quot;&gt;morea-watch.rb&lt;/a&gt;, a ruby script you can use instead of morea-run-local.sh and which will automatically stop and restart morea-run-local.sh whenever files in the morea directory change.&lt;/p&gt;
+
+&lt;p&gt;Morea-watch.rb was developed by Dan Port. Please check it out and let us know what you think!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 10 Oct 2015 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2015/10/10/morea-watch.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2015/10/10/morea-watch.html</guid>
+      </item>
+    
+      <item>
         <title>Morea Lintui</title>
         <description>&lt;p&gt;The Morea team is delighted to announce the release of &lt;a href=&quot;http://morea-framework.github.io/morea-lintui/&quot;&gt;morea-lintui&lt;/a&gt;, which combines &amp;quot;lint&amp;quot; content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.&lt;/p&gt;
 
@@ -164,19 +175,6 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
         <pubDate>Tue, 17 Jun 2014 04:29:39 -1000</pubDate>
         <link>http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/06/17/quickstart-redesign.html</guid>
-      </item>
-    
-      <item>
-        <title>Morea Version 1.0 release</title>
-        <description>&lt;p&gt;The Morea team is delighted to announce the 1.0 release.  This release constitutes a 
-&amp;quot;minimum viable product&amp;quot; with sufficient functionality and documentation for users to 
-begin building their own course websites using the framework. &lt;/p&gt;
-
-&lt;p&gt;To use these features, set the basic-template as an upstream repository and merge into your master branch. &lt;/p&gt;
-</description>
-        <pubDate>Thu, 22 May 2014 04:29:39 -1000</pubDate>
-        <link>http://morea-framework.github.io/2014/05/22/morea-version-one.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/05/22/morea-version-one.html</guid>
       </item>
     
   </channel>
