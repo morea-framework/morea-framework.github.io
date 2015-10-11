@@ -1551,22 +1551,25 @@ If merge errors occur, you will need to resolve them. Contact the Morea framewor
 
 When doing development, it is convenient to be able to review your work in a browser without publishing the changes to GitHub.
 
-The [morea-run-local.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh) script runs the Jekyll compiler in --watch mode, regenerating the HTML version of the site whenever your source files change and displaying the results at `http://localhost:4000`.
+The [morea-run-local.sh](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-run-local.sh) script runs the Jekyll compiler and displays the results at `http://localhost:4000`.
 
 This script requires no arguments.  For example:
 
     % ./morea-run-local.sh
 
-Note that the Morea plugin forces an exit from the Jekyll compiler when it detects errors in the setup of your Morea site. So, for example, when creating a new module, you typically make a copy of a previously developed module directory in your morea/ directory.  As soon as this happens, the Jekyll compiler will re-run, the plugin will detect a duplicate Morea id, and the compiler will exit.  This is normal and desirable behavior: simply fix the problem, then re-invoke morea-run-local.sh to continue development.
+We recommend that you install a browser plugin such as [LiveReload](http://livereload.com/), which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.
 
-Also note that a few kinds of changes require exiting and restarting the Jekyll compiler with morea-run-local. These include:
+Note that when you make changes to your source file, you must stop the morea-run-local.sh script with control-c and restart it in order to see the changes rendered into HTML.  (For those familiar with Jekyll: the --watch command will not work in Morea because the directory in which most work is done (/morea), is ignored by the Jekyll run-time for the purposes of auto-recompilation.  See the next script, morea-watch, for a workaround.)
 
-  * Changes to the `_config.yml` file.
-  * Updates to the Morea plugin (which might occur after merging upstream changes). 
+## morea-watch
 
-Finally, we highly recommend that you install a browser plugin such as [LiveReload](http://livereload.com/), which will automatically refresh your browser page when changes are detected to underlying directory files.   Using LiveReload in combination with morea-run-local results in your browser instantly reflecting the changes to your source files as soon as you save them.  This makes Morea site development significantly more fluid and enjoyable.
+One of the downsides of morea-run-local is that when you make changes to your source files, you must manually stop and restart the morea-run-local script.
 
-If in doubt, simply exit and re-invoke morea-run-local.
+To address this usability problem, the [morea-watch.rb](https://raw.githubusercontent.com/morea-framework/scripts/master/morea-watch.rb) script is a wrapper around morea-run-local which monitors the state of your morea/ directory and when it detects changes, will kill the Jekyll server process and restart it automatically.
+
+To use it, just invoke morea-watch.rb instead of morea-run-local.sh.
+
+Note: morea-watch.rb does not currently work on Windows.
 
 ## morea-install 
 
