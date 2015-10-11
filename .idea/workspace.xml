@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/userguide.md" afterPath="$PROJECT_DIR$/src/userguide.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" afterPath="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" />
     </list>
     <ignored path="morea-framework.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userguide.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userguide.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userguide.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7808219">
-              <caret line="1571" column="56" selection-start-line="1571" selection-start-column="56" selection-end-line="1571" selection-end-column="56" />
+            <state vertical-scroll-proportion="81.206894">
+              <caret line="1561" column="27" selection-start-line="1561" selection-start-column="27" selection-end-line="1561" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -66,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015-09-22-morea-lintui.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2015-09-22-morea-lintui.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.172414">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.26712328">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -128,9 +126,9 @@
         <option value="$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md" />
         <option value="$PROJECT_DIR$/src/quickstart.md" />
         <option value="$PROJECT_DIR$/src/morea-2.0-release-notes.md" />
-        <option value="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" />
         <option value="$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md" />
         <option value="$PROJECT_DIR$/src/userguide.md" />
+        <option value="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" />
       </list>
     </option>
   </component>
@@ -568,17 +566,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.172414">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="markdown-preview-editor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1034484">
@@ -592,8 +579,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/userguide.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7808219">
-          <caret line="1571" column="56" selection-start-line="1571" selection-start-column="56" selection-end-line="1571" selection-end-column="56" />
+        <state vertical-scroll-proportion="81.206894">
+          <caret line="1561" column="27" selection-start-line="1561" selection-start-column="27" selection-end-line="1561" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="markdown-preview-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26712328">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding />
         </state>
       </provider>

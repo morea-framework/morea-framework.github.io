@@ -8,4 +8,4 @@ The Morea team is delighted to announce the release of [morea-lintui](http://mor
 
 <img src="https://raw.githubusercontent.com/morea-framework/morea-lintui/master/morealintui/docs/screenshot1.jpg" width="600px" class="img-responsive"/>
 
-Please check it out and let us know what you think!
+Morea-lintui was developed by Henri Casanova.  Please check it out and let us know what you think!
