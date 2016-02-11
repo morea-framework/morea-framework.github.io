@@ -2,4 +2,6 @@ name: Your New Jekyll Site
 markdown: redcarpet
 highlighter: pygments
 url: http://morea-framework.github.io
+gems:
+  - jekyll-gist
 baseurl:
