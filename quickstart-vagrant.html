@@ -127,7 +127,7 @@
 
 <p>You should see output similar to the following:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant up
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant up
 Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="s1">&#39;virtualbox&#39;</span> provider...
 <span class="o">==</span>&gt; default: Importing base box <span class="s1">&#39;morea-framework/basic-box&#39;</span>...
 <span class="o">==</span>&gt; default: Matching MAC address <span class="k">for</span> NAT networking...
@@ -165,7 +165,7 @@ Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="
     default: Running: inline <span class="nv">script</span>
 <span class="o">==</span>&gt; default: stdin: is not a <span class="nv">tty</span>
 <span class="o">==</span>&gt; default: Saving <span class="nb">local </span>git email to VM...
-<span class="o">==</span>&gt; default: Running settings in .bash_profile</code></pre></div>
+<span class="o">==</span>&gt; default: Running settings in .bash_profile</code></pre></figure>
 
 <p>As the output shows, this command started up a virtual machine running Ubuntu Linux preconfigured with Morea Framework tools (Ruby, git, Jekyll, Python).  It copied your git user.name and user.email from your local settings, and set up its port 4000 to be available from your host machine. (That&#39;s so that you can use your local browser to see the local version of your site).</p>
 
@@ -173,7 +173,7 @@ Bringing machine <span class="s1">&#39;default&#39;</span> up with <span class="
 
 <p>In your shell, type <code>vagrant ssh</code> to get into your newly instantiated virtual machine.  To convince yourself that the environment is already configured, you can run commands to find out the installed versions of git, ruby, python, and jekyll. Here&#39;s an example: </p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant ssh
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/projecthosting/github/ics314f13<span class="o">]</span>-&gt; vagrant ssh
 Welcome to Ubuntu 12.04 LTS <span class="o">(</span>GNU/Linux 3.2.0-23-generic-pae i686<span class="o">)</span>
 
  * Documentation:  https://help.ubuntu.com/
@@ -191,7 +191,7 @@ vagrant@precise32:~<span class="nv">$ </span>ruby --version
 ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>i686-linux<span class="o">]</span>
 
 vagrant@precise32:~<span class="nv">$ </span>jekyll --version
-jekyll 2.1.1</code></pre></div>
+jekyll 2.1.1</code></pre></figure>
 
 <p>If you have problems with this command, be sure to use a shell (such as PowerShell) which makes available the <code>ssh</code> command.</p>
 
@@ -199,9 +199,9 @@ jekyll 2.1.1</code></pre></div>
 
 <p>Vagrant creates a mirror of your local directory structure starting from the directory where you invoked <code>vagrant up</code>. This mirror is available in the <code>/vagrant</code> directory.  So, cd to that directory and notice that it contains the same contents as your local directory:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">vagrant@precise32:~<span class="nv">$ </span><span class="nb">cd</span> /vagrant
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vagrant@precise32:~<span class="nv">$ </span><span class="nb">cd</span> /vagrant
 vagrant@precise32:/vagrant<span class="nv">$ </span>ls 
-Vagrantfile</code></pre></div>
+Vagrantfile</code></pre></figure>
 
 <h3>Run morea-vanilla-install</h3>
 
@@ -227,7 +227,7 @@ Vagrantfile</code></pre></div>
 
 <p><strong>Workaround 1: force-polling.</strong> One workaround for this is to edit your morea-run-local.sh script to add  <code>--force_polling</code> to the jekyll command:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
 <span class="k">if</span> <span class="o">[</span> ! -d <span class="s2">&quot;./master&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
   <span class="nb">echo</span> <span class="s2">&quot;master/ directory does not exist.  Exiting...&quot;</span>
@@ -237,7 +237,7 @@ Vagrantfile</code></pre></div>
 <span class="nv">DIR</span><span class="o">=</span><span class="s2">&quot;$( cd &quot;</span><span class="k">$(</span> dirname <span class="s2">&quot;$0&quot;</span> <span class="k">)</span><span class="s2">&quot; &amp;&amp; pwd )&quot;</span>
 
 <span class="nb">set</span> -x
-jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <span class="nv">$DIR</span>/master/src/_site --baseurl <span class="s2">&quot;&quot;</span> --watch --force_polling</code></pre></div>
+jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <span class="nv">$DIR</span>/master/src/_site --baseurl <span class="s2">&quot;&quot;</span> --watch --force_polling</code></pre></figure>
 
 <p>This tells Jekyll to automatically re-process the files every five seconds (regardless of whether files have changed or not). Not a perfect solution, but acceptable for the short term. </p>
 
@@ -260,7 +260,7 @@ jekyll serve --source <span class="nv">$DIR</span>/master/src --destination <spa
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>19 Nov 2015</span></p>
+      <p>Last update on: <span>10 Feb 2016</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>

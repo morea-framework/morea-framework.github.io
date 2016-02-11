@@ -161,7 +161,7 @@ you to run Morea scripts without modification.
 
 <p>First, make a top-level directory for your course. Let&#39;s assume that your GitHub repository is called &quot;CS300-Fall2014&quot;, so we&#39;ll name this directory the same way:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir CS300-Fall2014</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~<span class="o">]</span> <span class="nv">$ </span>mkdir CS300-Fall2014</code></pre></figure>
 
 <p>Next, go into this directory:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">[~] $ cd CS300-Fall2014
@@ -178,7 +178,7 @@ you to run Morea scripts without modification.
 </code></pre></div>
 <p>Now run this script to clone your new repo locally into a subdirectory named &quot;master&quot; and create a new orphan branch named &quot;gh-pages&quot;. You pass the script two arguments: your github account and the name of your repo.  If your account is named &quot;johndoe&quot; and your repo is named &quot;CS300-Fall2014&quot;, the script invocation and its output would be similar to this:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/CS300-Fall2014<span class="o">]</span>-&gt; ./morea-vanilla-install.sh johndoe CS300-Fall2014
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>~/CS300-Fall2014<span class="o">]</span>-&gt; ./morea-vanilla-install.sh johndoe CS300-Fall2014
 Creating master/ directory with repo.
 + git clone git@github.com:johndoe/CS300-Fall2014.git master
 Cloning into <span class="s1">&#39;master&#39;</span>...
@@ -216,7 +216,7 @@ From https://github.com/morea-framework/basic-template
  * <span class="o">[</span>new tag<span class="o">]</span>         release-jekyll-1.4.3 -&gt; release-jekyll-1.4.3
 Merging upstream into master
 + <span class="nb">cd</span> ./master
-+ git merge upstream/master</code></pre></div>
++ git merge upstream/master</code></pre></figure>
 
 <p>Now you have a &quot;master&quot; directory containing a clone of the core repo, and a &quot;gh-pages&quot; directory which is empty:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"> [~/CS300-Fall2014/] $ ls 
@@ -238,7 +238,7 @@ Merging upstream into master
 
 <p>For example, here&#39;s how we might configure the _config.yml file for our CS300-Fall2014 example course:</p>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">CS300 Fall 2014</span>
 <span class="l-Scalar-Plain">markdown</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">kramdown</span>
 <span class="l-Scalar-Plain">kramdown</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">input</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">GFM</span>
@@ -254,7 +254,7 @@ Merging upstream into master
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Readings</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Experiences</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Assessments</span>
-  <span class="c1">#-Schedule</span></code></pre></div>
+  <span class="c1">#-Schedule</span></code></pre></figure>
 
 <p>In general, you only need to touch the _config.yml file once. Anytime you edit the _config.yml file, you need to restart Jekyll (i.e. re-run morea-run-local.sh as discussed below) to see the changes. </p>
 
@@ -427,7 +427,7 @@ directories to their respective branches on GitHub.  You must supply the commit 
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>19 Nov 2015</span></p>
+      <p>Last update on: <span>10 Feb 2016</span></p>
       <p>The Morea Framework is sponsored by:<br>
          Collaborative Software Development Laboratory<br>
          Department of Information and Computer Sciences<br>
