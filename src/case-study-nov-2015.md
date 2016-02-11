@@ -1,8 +1,8 @@
 ---
-#layout: documentation
 layout: userguide
 title: Case Study (November, 2015)
 ---
+
 
 # Summary
 
@@ -75,7 +75,7 @@ The preference for Morea dropped a little from Question 2, but still indicates a
  
  Since the question asked for just one aspect of Morea, I am terming the most common responses "key features" as they indicate things that multiple users found to be most positive about the site.  
  
-## Organization
+### Organization
  
  Over 40 of the users indicated that a key feature of Morea is the organization it imposes on course websites. Comments included:
  
@@ -89,7 +89,7 @@ The preference for Morea dropped a little from Question 2, but still indicates a
    
 More evidence for the utility of Morea organization is provided by Question 1, in which most users found all of the pages to be useful. 
    
-## Layout & navigation
+### Layout & navigation
 
 Around 36 users indicated that they liked the layout and/or navigation capabilities of Morea. Here are some of the responses reflecting this preference:
 
@@ -102,7 +102,7 @@ Around 36 users indicated that they liked the layout and/or navigation capabilit
   * *Website feels a lot more "modern" and doesn't have that clunky feel to it like Laulima does.* 
   
   
-## Schedule
+### Schedule
 
 Prior to this semester, we implemented better support for a Schedule page which would show when modules are presented and assignments (readings and/or experiences) are due. Users can click on a module, reading, or experience to be taken to its associated page. Here's an example schedule page:
 
@@ -127,7 +127,7 @@ Here is an excerpt of the 75 comments:
 
 {% include case-study-image-fall.html src="question-5-results.png" %}
 
-## Improve content
+### Improve content
 
 This semester, the most requested key improvement was to improve content. In other words, 24 user improvement requests were associated not with framework deficiencies but with the instructor's presentation of material. For example:
  
@@ -140,7 +140,7 @@ This semester, the most requested key improvement was to improve content. In oth
    * *Keeping the schedule up to date. Deadlines and quizzes to be visible on the schedule would be helpful.*
 
   
-## Add Laulima functions
+### Add Laulima functions
 
 13 users indicated they would improve Morea by porting some or all of the functionality now provided by Laulima.  Some of the responses:
 
