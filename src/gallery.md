@@ -59,7 +59,7 @@ title: Gallery
 </div>
 
 
-<div class="white-background">
+<div class="gray-background">
 <div class="container">
 <h2>ICS 211, Leeward Community College, Fall 2014</h2>
 <div class="row">
@@ -82,7 +82,7 @@ title: Gallery
 </div>
 </div>
 
-<div class="gray-background">
+<div class="white-background">
 <div class="container">
 <h2>ICS 215, Fall 2014</h2>
 <div class="row">
@@ -104,7 +104,7 @@ title: Gallery
 </div>
 </div>
 
-<div class="white-background">
+<div class="gray-background">
 <div class="container">
 <h2>ICS 311, Spring 2014</h2>
 <div class="row">
@@ -127,7 +127,7 @@ title: Gallery
 </div>
 </div>
 
-<div class="gray-background">
+<div class="white-background">
 <div class="container">
 <h2>ITM 352, Fall 2014</h2>
 <div class="row">
