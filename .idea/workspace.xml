@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gallery.md" afterPath="$PROJECT_DIR$/src/gallery.md" />
-    </list>
+    <list default="true" id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="" />
     <ignored path="morea-framework.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -119,8 +117,8 @@
       <file leaf-file-name="gallery.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gallery.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24733269">
-              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.4073715">
+              <caret line="140" column="74" selection-start-line="140" selection-start-column="74" selection-end-line="140" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -817,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gallery.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24733269">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.4073715">
+          <caret line="140" column="74" selection-start-line="140" selection-start-column="74" selection-end-line="140" selection-end-column="74" />
           <folding />
         </state>
       </provider>
