@@ -212,7 +212,7 @@ In general, you only need to touch the \_config.yml file once. Anytime you edit 
 
 The core repo does not contain a morea/ directory, so it does not have any content.  Let's fix that by downloading some [sample content](https://github.com/morea-framework/sample-morea-directory/archive/master.zip). This zip file contains a morea/ directory with example Morea modules, readings, and so forth.  
 
-After downloading that file, copy its morea/ directory into the src/ directory of your new repo. 
+After downloading that file, copy its morea/ directory into the src/ directory of your new repo. (Do not copy over the top-level README.md and LICENSE files, that will cause errors when you run morea-run-local.sh.)
 
 For details on the structure and content of Morea markdown files, see the [User Guide](/userguide.html).
 
