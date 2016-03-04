@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/courses.ics.hawaii.edu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/cs294-modules.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/grammarviz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/ics215-modules.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/ics314-modules.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/se-class16b.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/itm352-modules.png" afterPath="$PROJECT_DIR$/src/images/itm352-modules.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gallery.md" afterPath="$PROJECT_DIR$/src/gallery.md" />
     </list>
     <ignored path="morea-framework.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +35,7 @@
       <file leaf-file-name="userguide.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userguide.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="143.68965">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1754" column="34" selection-start-line="1754" selection-start-column="34" selection-end-line="1754" selection-end-column="34" />
               <folding />
             </state>
@@ -57,16 +50,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -98,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gallery.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gallery.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65068495">
+            <state vertical-scroll-proportion="-8.586206">
               <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
               <folding />
             </state>
@@ -114,10 +97,23 @@
       <file leaf-file-name="feed.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/feed.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.625">
               <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2016-03-04-gallery-refresh.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16438356">
+              <caret line="6" column="254" selection-start-line="6" selection-start-column="254" selection-end-line="6" selection-end-column="254" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -178,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/feed.xml" />
         <option value="$PROJECT_DIR$/src/quickstart.md" />
         <option value="$PROJECT_DIR$/src/gallery.md" />
+        <option value="$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md" />
       </list>
     </option>
   </component>
@@ -217,6 +214,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,8 +287,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,15 +297,15 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/_posts" />
       <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/_includes" />
       <recent name="$PROJECT_DIR$/src/images/case-study-fall-2015" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/_posts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -372,7 +369,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29337803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29840738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -410,16 +407,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quickstart.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -800,14 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/quickstart.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -821,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/userguide.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="143.68965">
+        <state vertical-scroll-proportion="0.0">
           <caret line="1754" column="34" selection-start-line="1754" selection-start-column="34" selection-end-line="1754" selection-end-column="34" />
           <folding />
         </state>
@@ -832,8 +811,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gallery.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65068495">
+        <state vertical-scroll-proportion="-8.586206">
           <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/feed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16438356">
+          <caret line="6" column="254" selection-start-line="6" selection-start-column="254" selection-end-line="6" selection-end-column="254" />
           <folding />
         </state>
       </provider>
