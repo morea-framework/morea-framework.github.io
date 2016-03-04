@@ -7,6 +7,15 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Gallery refresh</title>
+        <description>&lt;p&gt;We&amp;#39;ve neglected the &lt;a href=&quot;/gallery.html&quot;&gt;Gallery page&lt;/a&gt; for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you&amp;#39;d like your site included. &lt;/p&gt;
+</description>
+        <pubDate>Fri, 04 Mar 2016 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2016/03/04/gallery-refresh.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2016/03/04/gallery-refresh.html</guid>
+      </item>
+    
+      <item>
         <title>Breadcrumbs!</title>
         <description>&lt;p&gt;The Morea team is delighted to announce the addition of &lt;a href=&quot;http://getbootstrap.com/components/#breadcrumbs&quot;&gt;breadcrumbs&lt;/a&gt; as a standard feature of Morea sites. &lt;/p&gt;
 
@@ -153,19 +162,6 @@ These files are processed into HTML by Jekyll, but will not appear as a module, 
         <pubDate>Wed, 25 Jun 2014 04:29:39 -1000</pubDate>
         <link>http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</guid>
-      </item>
-    
-      <item>
-        <title>Ignore directories</title>
-        <description>&lt;p&gt;The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the &lt;code&gt;morea/&lt;/code&gt; directory named &lt;code&gt;_ignore&lt;/code&gt;.  This allows you to store private data inside the &lt;code&gt;morea/&lt;/code&gt; directory if you (for example) which to associate tests or other files with the module.&lt;/p&gt;
-
-&lt;p&gt;For more details, see the &lt;a href=&quot;/userguide.html#Addprivatedata&quot;&gt;private data section of the user guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 21 Jun 2014 04:29:39 -1000</pubDate>
-        <link>http://morea-framework.github.io/2014/06/21/ignore-directories.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/21/ignore-directories.html</guid>
       </item>
     
   </channel>
