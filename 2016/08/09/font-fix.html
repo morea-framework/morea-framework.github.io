@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Morea: Now with Google Analytics! | Morea Framework</title>
+  <title> Fix font loading over https | Morea Framework</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.0/cerulean/bootstrap.min.css">
 
@@ -55,9 +55,19 @@
 </div>
 
 <div class="container">
-  <h2>Morea: Now with Google Analytics! <small>01 Apr 2015</small></h2>
+  <h2>Fix font loading over https <small>09 Aug 2016</small></h2>
   <div class="post">
-    <p>Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the <a href="userguide.html#Googleanalytics">documentation</a>.</p>
+    <p>Unfortunately, several of the Morea &quot;cerulean&quot; style themes (i.e. cerulean_green, cerulean_red, etc.) were loading the Open Sans font using the http: protocol. Now that GitHub uses https: by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)</p>
+
+<p>We just published a fix to these themes in the core repo so that Open Sans will be loaded correctly regardless of the protocol (http: or https:) used.</p>
+
+<p>To get the fix, cd into your Morea top-level directory, then invoke the <a href="http://morea-framework.github.io/userguide.html#morea-merge-upstream">morea-merge-upstream.sh</a> script to incorporate the corrected code into your local copy of these themes.</p>
+
+<p>Then republish your site and all should be well.</p>
+
+<p>Other themes (SuperHero, SpaceLab, etc.) did not have this bug and so you should not have noticed this problem if you were using them.</p>
+
+<p>Our apologies for the inconvenience!</p>
 
   </div>
 </div>

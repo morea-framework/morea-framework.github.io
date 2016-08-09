@@ -1243,36 +1243,7 @@ public static void main(String args[]) {
 
 <p>produces:</p>
 
-<p><noscript><pre>import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import play.test.FakeApplication;
-import static play.test.Helpers.fakeApplication;
-import static play.test.Helpers.inMemoryDatabase;
-import static play.test.Helpers.start;
-import static play.test.Helpers.stop;</p>
-
-<p>public class ModelTest {
-  private FakeApplication application;</p>
-
-<p>@Before
-  public void startApp() {
-    application = fakeApplication(inMemoryDatabase());
-    start(application);
-  }</p>
-
-<p>@After
-  public void stopApp() {
-    stop(application);
-  }</p>
-
-<p>@Test
-  public void testModel() {
-    // put test code here
-  }
-}</pre></noscript><script src="https://gist.github.com/philipmjohnson/5288814.js"> </script></p>
+<p>true<script src="https://gist.github.com/philipmjohnson/5288814.js"> </script></p>
 
 <h3>Code repo</h3>
 
@@ -1896,11 +1867,11 @@ create a directory called <code>java/</code> to hold the contents of the Java mo
 <div class="dark-blue-background">
 <footer>
   <div class="container page-footer">
-      <p>Last update on: <span>04 Mar 2016</span></p>
+      <p>Last update on: <span>09 Aug 2016</span></p>
       <p>The Morea Framework is sponsored by:<br>
-         Collaborative Software Development Laboratory<br>
-         Department of Information and Computer Sciences<br>
-         University of Hawaii<br>
+        <a href="http://csdl.ics.hawaii.edu" style="color: white">Collaborative Software Development Laboratory</a><br>
+        <a href="http://www.ics.hawaii.edu" style="color: white">Department of Information and Computer Sciences</a><br>
+        <a href="http://www.hawaii.edu" style="color: white">University of Hawaii</a><br>
       </p>
   </div>
 </footer>

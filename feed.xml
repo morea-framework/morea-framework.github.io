@@ -7,6 +7,25 @@
     <atom:link href="http://morea-framework.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Fix font loading over https</title>
+        <description>&lt;p&gt;Unfortunately, several of the Morea &amp;quot;cerulean&amp;quot; style themes (i.e. cerulean_green, cerulean_red, etc.) were loading the Open Sans font using the http: protocol. Now that GitHub uses https: by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)&lt;/p&gt;
+
+&lt;p&gt;We just published a fix to these themes in the core repo so that Open Sans will be loaded correctly regardless of the protocol (http: or https:) used.&lt;/p&gt;
+
+&lt;p&gt;To get the fix, cd into your Morea top-level directory, then invoke the &lt;a href=&quot;http://morea-framework.github.io/userguide.html#morea-merge-upstream&quot;&gt;morea-merge-upstream.sh&lt;/a&gt; script to incorporate the corrected code into your local copy of these themes.&lt;/p&gt;
+
+&lt;p&gt;Then republish your site and all should be well.&lt;/p&gt;
+
+&lt;p&gt;Other themes (SuperHero, SpaceLab, etc.) did not have this bug and so you should not have noticed this problem if you were using them.&lt;/p&gt;
+
+&lt;p&gt;Our apologies for the inconvenience!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 09 Aug 2016 04:29:39 -1000</pubDate>
+        <link>http://morea-framework.github.io/2016/08/09/font-fix.html</link>
+        <guid isPermaLink="true">http://morea-framework.github.io/2016/08/09/font-fix.html</guid>
+      </item>
+    
+      <item>
         <title>Gallery refresh</title>
         <description>&lt;p&gt;We&amp;#39;ve neglected the &lt;a href=&quot;/gallery.html&quot;&gt;Gallery page&lt;/a&gt; for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you&amp;#39;d like your site included. &lt;/p&gt;
 </description>
@@ -148,20 +167,6 @@
         <pubDate>Wed, 16 Jul 2014 04:29:39 -1000</pubDate>
         <link>http://morea-framework.github.io/2014/07/16/vagrant.html</link>
         <guid isPermaLink="true">http://morea-framework.github.io/2014/07/16/vagrant.html</guid>
-      </item>
-    
-      <item>
-        <title>Non-Morea markdown files</title>
-        <description>&lt;p&gt;The Morea generator now allows you to create markdown files inside the &lt;code&gt;morea/&lt;/code&gt; directory with the extension &lt;code&gt;.markdown&lt;/code&gt;.
-These files are processed into HTML by Jekyll, but will not appear as a module, outcome, reading, experience, or assessment. This is useful for creating (for example) quizzes in markdown format that are kept with other module files. &lt;/p&gt;
-
-&lt;p&gt;For more details, see the &lt;a href=&quot;/userguide.html#Non-Moreamarkdownfiles&quot;&gt;non-morea markdown section of the user guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To obtain this update, run the &lt;code&gt;morea-merge-upstream.sh&lt;/code&gt; script.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 25 Jun 2014 04:29:39 -1000</pubDate>
-        <link>http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</link>
-        <guid isPermaLink="true">http://morea-framework.github.io/2014/06/25/nonmorea-markdown.html</guid>
       </item>
     
   </channel>
