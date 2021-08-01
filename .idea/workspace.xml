@@ -5,166 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4005aa49-49ff-4c31-bef6-23d957db7041" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/help.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/instructors/link-errors.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-cerulean-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-cerulean-purple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-cerulean-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-cerulean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-darkly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/themes/theme-spacelab.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/morea-framework.github.io.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/case-study-image-fall.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/case-study-image.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/gallery-entry.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/morea-2.0-image.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_includes/youtube.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/bootstrap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/documentation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/userguide.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-05-22-morea-version-one.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-17-quickstart-redesign.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-21-ignore-directories.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-25-nonmorea-markdown.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-07-16-vagrant.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2014-08-15-stackoverflow.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-01-06-new-themes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-04-01-google-analytics.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2015-10-23-breadcrumbs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-study-may-2015.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/case-study-nov-2015.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/gh-fork-ribbon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/jquery.tocify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/syntax.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/developerguide.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/feed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gallery.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/google562ef8a438f31601.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/help.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/CS300-Fall2014-create.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/CS300-Fall2014-create2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Stobaugh_BloomsTaxonomy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/basic-template-modules-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/basic-template-src-directory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/basic-template.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/beyond-morea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/beyond-morea.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/bus621-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-1-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-2-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-3-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-4-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-5-results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question1-summary.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question1-summary/Slide1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/schedule-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-pages-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-pages.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary/Slide1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question2-morea-vs-laulima-summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question2-morea-vs-laulima.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question3-morea-vs-other-summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question3-morea-vs-other.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question4-one-like-summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question4-one-like.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question5-one-improvement-summary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/case-study/question5-one-improvement.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/courses.ics.hawaii.edu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/cs294-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/grammarviz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics211f14-lcc-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics211f14-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics215-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics215f14-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-dropdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-navbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-news-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-outcomes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-post-example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-posts-directory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-private.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-quiz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311-readings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics311s14-modules-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics314-assessments.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics314-home-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics314-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics314-schedule-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics314f13-modules-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics613s15-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ics632f14-home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/itm352-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/jekyll.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/mirror-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/module-anatomy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/module-anatomy.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/google-analytics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/mathjax.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-metadata.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/overview-files.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/prerequisite-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/schedule.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/tiled-modules.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-folder-old.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-folder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-module-publishing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/morea-source.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/navbar-code.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/octocat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/octocat2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/schedule-directory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/schedule-index.html.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/se-class16b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-mobile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-morea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/amelia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/cerulean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/cyborg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/darkly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/flatly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/journal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/lumen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/readable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/simplex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/slate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/spacelab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/superhero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/united.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/themes/yeti.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/jquery-1.8.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/jquery-ui-1.10.4.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/jquery.tocify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/morea-2.0-release-notes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quickstart-vagrant.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quickstart.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userguide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/2021-08-01-morea-version-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/blog/2021-08-01-morea-version-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/instructors/advanced-customization.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/instructors/advanced-customization.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/instructors/entity-types.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/instructors/entity-types.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/instructors/overview.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/instructors/overview.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/instructors/themes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/instructors/themes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview/motivation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview/motivation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomepageFeatures.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomepageFeatures.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +38,9 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1w6SUvIkyyonGnZ24iLdukBUski" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -186,15 +49,36 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/img/themes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/img/themes" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/docs/instructors" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

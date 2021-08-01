@@ -17,3 +17,26 @@ It is possible to modify these themes or define new ones of your own.  This proc
 Here are some of the available themes.  Check out the css/themes directory for the full list.
 
 ## cerulean
+
+![](/img/themes/theme-cerulean.png)
+
+## cerulean-green
+
+![](/img/themes/theme-cerulean-green.png)
+
+## cerulean-purple
+
+![](/img/themes/theme-cerulean-purple.png)
+
+## cerulean-red
+
+![](/img/themes/theme-cerulean-red.png)
+
+## darkly
+
+![](/img/themes/theme-darkly.png)
+
+
+## spacelab
+
+![](/img/themes/theme-spacelab.png)

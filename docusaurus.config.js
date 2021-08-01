@@ -39,6 +39,12 @@ module.exports = {
           label: 'Developer Guide',
           position: 'right',
         },
+        {
+          to: 'docs/help',
+          activeBasePath: 'docs',
+          label: 'Help',
+          position: 'right',
+        },
         {to: 'blog', label: 'News', position: 'right'},
         {
           href: 'https://github.com/morea-framework',

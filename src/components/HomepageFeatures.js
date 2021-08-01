@@ -17,7 +17,7 @@ const FeatureList = [
     src: 'img/home/remix-modules.png',
     description: (
       <>
-        Morea makes it easier to remix and mashup curriculum across your own and other Morea courses, creating new opportunities for inter-, cross-, and trans-disciplinary instruction.
+        Morea makes it easy to combine curriculum across your own and other Morea courses, creating new opportunities for inter-, cross-, and trans-disciplinary instruction.
       </>
     ),
   },
@@ -40,11 +40,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Simplify development with GitHub',
+    title: 'Simplified development',
     src: 'img/home/octocat.png',
     description: (
         <>
-          Morea is based on GitHub, which provides significant infrastructure for iterative development, deployment, and long-term evolution of curriculum.
+          Morea is based on GitHub, which provides helpful infrastructure for iterative development, deployment, and long-term evolution of curriculum.
         </>
     ),
   },

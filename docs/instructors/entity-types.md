@@ -66,6 +66,8 @@ Alternatively, you can provide a short string as the morea_summary, and signific
 Each outcome represents knowledge or capability that the educator hopes the students will acquire as a
 result of the module or modules in which this outcome appears.
 
+Here's an example Outcome markdown file:
+
 ```
     ---
     title: "Remember concepts of asymptotic growth."
@@ -79,6 +81,8 @@ result of the module or modules in which this outcome appears.
 
     Learn the concepts of asymptotic growth and recognize them in context.
 ```
+
+Here's the documentation for those fields:
 
 | Keyword | Required? | Value |
 | ------- | --------  | ----- |
@@ -127,6 +131,8 @@ in the Front Matter.   Here are examples of each:
 
 ```
 
+And here's an example of a reading file where the reading is an external URL:
+
 ```
     ---
     title: "CLRS 3 - Growth of functions"
@@ -142,6 +148,9 @@ in the Front Matter.   Here are examples of each:
      - 22 pages
     ----
 ```
+
+Here's the documentation for those fields:
+
 
 | Keyword | Required? | Value |
 | ------- | --------  | ----- |
@@ -162,6 +171,8 @@ morea\_url keyword is absent, then the body text should be the intended reading.
 Each experience represents an active learning opportunity associated with the module.
 Experiences appear as the body text of the file.
 
+Here's an example Experience markdown file:
+
 ```
     ---
     title: "Asymptotic concepts"
@@ -179,6 +190,8 @@ Experiences appear as the body text of the file.
 
     ---
 ```
+
+Here's the documentation for those fields:
 
 | Keyword | Required? | Value |
 | ------- | --------  | ----- |
@@ -214,7 +227,7 @@ Publishing assessment results has a number of benefits:
 
 To present assessment results as charts, you can include Javascript directly in the markdown file, as illustrated in the following example:
 
-**Sample assessment markdown file contents**
+Here's an example Assessment markdown file:
 
 ```
     ---
@@ -258,6 +271,8 @@ To present assessment results as charts, you can include Javascript directly in 
 
 ```
 
+Here's the documentation for those fields:
+
 | Keyword | Required? | Value |
 | ------- | --------  | ----- |
 | morea_type | required| assessment |
@@ -269,7 +284,6 @@ To present assessment results as charts, you can include Javascript directly in 
 | morea_start_date | optional | If present, a string that indicates the date (and potentially the time) where this assessment should be placed on the calendar on the Schedule page. Example: "2015-06-25" indicates June 25, 2015, and "2015-06-15T18:30" indicates 6:30pm on June 15, 2015. You can specify a start date without an end date, and this typically indicates the "Due date" for this assessment. |
 | morea_outcomes_assessed | optional | If present, a list of outcome morea_ids which are checked by this assessment. |
 
-**Assessment body text**
 
 The body text should describe the assessment in markdown format.
 
@@ -283,7 +297,7 @@ As with all other "tiles" in Morea sites, these can be clicked to go to the corr
 
 There are two steps to using Prerequisite modules. First, you must define them, and second, you must reference them in another module as a Prerequisite.
 
-**Sample prerequisite markdown file contents**
+Here's an example Prerequisite markdown file:
 
 ```
 ---
@@ -299,6 +313,8 @@ morea_labels:
 Algorithms, computational complexity, asymptotic notations, pseudocode, greedy algorithms, easy vs. hard problems.
 
 ```
+
+Here's the documentation for those fields:
 
 | Keyword | Required? | Value |
 | ------- | --------  | ----- |

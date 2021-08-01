@@ -23,44 +23,23 @@ Up to now in this User Guide, we've focused almost exclusively on the contents o
 
 ## Add a menu item
 
-One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your `master/src/_layouts/default.html` file.  For example, here is an enhanced version of the navbar code within the default.html file with a link to a Google Group:
+One of the most simple enhancements you can make to a basic Morea site is to add a new link to the navbar. To accomplish this, simply edit the navbar definition code found in your `_layouts/default.html` file.  For example, here is a simplified version of the navbar code within the core.html file:
 
 ```
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
-        <li><a href="{{ site.baseurl }}/modules/">Modules</a></li>
-        <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
-        <li><a href="{{ site.baseurl }}/readings/">Readings</a></li>
-        <li><a href="{{ site.baseurl }}/experiences/">Experiences</a></li>
-        <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/prerequisites/">Prerequisites</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/modules/">Modules</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/readings/">Readings</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/experiences/">Experiences</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/assessments/">Assessments</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/schedule/">Schedule</a></li>
       </ul>
     </div>
+  </div>
 ```
 
 Essentially, you just add a new `<li>` tag containing your link.
 
-## Add a dropdown menu
-
-An equally easy enhancement is a dropdown menu containing a list of links. Here's an example:
-
-
-![](/img/ics311-dropdown.png)
-
-As before, you edit the navbar code in your default.html file, this time with the Bootstrap dropdown menu code. Here is the section implementing the dropdown menu from the above screenshot:
-
-```
-<li class="dropdown">
-  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Info<b class="caret"></b></a>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-course-info.html">Overview</a></li>
-      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-policies.html">Policies</a></li>
-      <li><a href="{{ site.baseurl }}/morea/010.introduction/reading-topic-overview.html">Topics</a></li>
-    </ul>
-</li>
-```
-
-You'll need to edit this code by replacing the contents of the `<li>` elements with your own links.
-
-Learn more about this syntax using the [Twitter Bootstrap dropdown menu documentation](http://getbootstrap.com/components/#dropdowns).
+An equally easy enhancement is a dropdown menu containing a list of links. Learn more about this syntax using the [Bootstrap dropdown menu documentation](https://getbootstrap.com/docs/5.0/components/dropdowns/).
