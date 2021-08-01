@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://morea-framework.github.io/blog</id>
+    <title>Morea Framework Blog</title>
+    <updated>2021-08-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://morea-framework.github.io/blog"/>
+    <subtitle>Morea Framework Blog</subtitle>
+    <icon>https://morea-framework.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Morea Version 3.0 release]]></title>
+        <id>Morea Version 3.0 release</id>
+        <link href="https://morea-framework.github.io/blog/2021/08/01/morea-version-3"/>
+        <updated>2021-08-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce a new major release of the system.  This release should be almost completely backward compatible with existing Morea data files, though there are extensive changes (and simplifications!) to the way sites are developed and managed.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Fix font loading over https]]></title>
+        <id>Fix font loading over https</id>
+        <link href="https://morea-framework.github.io/blog/2016/08/09/font-fix"/>
+        <updated>2016-08-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Unfortunately, several of the Morea "cerulean" style themes (i.e. cerulean\green, cerulean\red, etc.) were loading the Open Sans font using the http by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gallery refresh]]></title>
+        <id>Gallery refresh</id>
+        <link href="https://morea-framework.github.io/blog/2016/03/04/gallery-refresh"/>
+        <updated>2016-03-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We've neglected the Gallery page for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you'd like your site included.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Breadcrumbs!]]></title>
+        <id>Breadcrumbs!</id>
+        <link href="https://morea-framework.github.io/blog/2015/10/23/breadcrumbs"/>
+        <updated>2015-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce the addition of breadcrumbs as a standard feature of Morea sites.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[morea-watch.rb]]></title>
+        <id>morea-watch.rb</id>
+        <link href="https://morea-framework.github.io/blog/2015/10/10/morea-watch"/>
+        <updated>2015-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce the release of morea-watch.rb, a ruby script you can use instead of morea-run-local.sh and which will automatically stop and restart morea-run-local.sh whenever files in the morea directory change.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Morea Lintui]]></title>
+        <id>Morea Lintui</id>
+        <link href="https://morea-framework.github.io/blog/2015/09/22/morea-lintui"/>
+        <updated>2015-09-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce the release of morea-lintui, which combines "lint" content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Morea Version 2.0 release]]></title>
+        <id>Morea Version 2.0 release</id>
+        <link href="https://morea-framework.github.io/blog/2015/06/18/morea-version-two"/>
+        <updated>2015-06-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce the 2.0 release.   Enhancements include:]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Morea: Now with Google Analytics!]]></title>
+        <id>Morea: Now with Google Analytics!</id>
+        <link href="https://morea-framework.github.io/blog/2015/04/01/google-analytics"/>
+        <updated>2015-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the documentation.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release 1.1.0: New themes for the new year]]></title>
+        <id>Release 1.1.0: New themes for the new year</id>
+        <link href="https://morea-framework.github.io/blog/2015/01/06/new-themes"/>
+        <updated>2015-01-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is happy to inform you of several updates to the user interface:]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Morea Framework on Stack Overflow]]></title>
+        <id>Morea Framework on Stack Overflow</id>
+        <link href="https://morea-framework.github.io/blog/2014/08/15/stackoverflow"/>
+        <updated>2014-08-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea Framework now has its own tag (morea-framework) on StackOverflow.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Virtual Box and Vagrant for Morea]]></title>
+        <id>Virtual Box and Vagrant for Morea</id>
+        <link href="https://morea-framework.github.io/blog/2014/07/16/vagrant"/>
+        <updated>2014-07-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a Vagrant "box" that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Non-Morea markdown files]]></title>
+        <id>Non-Morea markdown files</id>
+        <link href="https://morea-framework.github.io/blog/2014/06/25/nonmorea-markdown"/>
+        <updated>2014-06-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea generator now allows you to create markdown files inside the morea/ directory with the extension .markdown.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ignore directories]]></title>
+        <id>Ignore directories</id>
+        <link href="https://morea-framework.github.io/blog/2014/06/21/ignore-directories"/>
+        <updated>2014-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the morea/ directory named _ignore.  This allows you to store private data inside the morea/ directory if you (for example) which to associate tests or other files with the module.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[QuickStart process redesigned]]></title>
+        <id>QuickStart process redesigned</id>
+        <link href="https://morea-framework.github.io/blog/2014/06/17/quickstart-redesign"/>
+        <updated>2014-06-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Morea Version 1.0 release]]></title>
+        <id>Morea Version 1.0 release</id>
+        <link href="https://morea-framework.github.io/blog/2014/05/22/morea-version-one"/>
+        <updated>2014-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce the 1.0 release.  This release constitutes a]]></summary>
+    </entry>
+</feed>

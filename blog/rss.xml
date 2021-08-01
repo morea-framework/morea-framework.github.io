@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Morea Framework Blog</title>
+        <link>https://morea-framework.github.io/blog</link>
+        <description>Morea Framework Blog</description>
+        <lastBuildDate>Sun, 01 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Morea Version 3.0 release]]></title>
+            <link>https://morea-framework.github.io/blog/2021/08/01/morea-version-3</link>
+            <guid>Morea Version 3.0 release</guid>
+            <pubDate>Sun, 01 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce a new major release of the system.  This release should be almost completely backward compatible with existing Morea data files, though there are extensive changes (and simplifications!) to the way sites are developed and managed.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Fix font loading over https]]></title>
+            <link>https://morea-framework.github.io/blog/2016/08/09/font-fix</link>
+            <guid>Fix font loading over https</guid>
+            <pubDate>Tue, 09 Aug 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[Unfortunately, several of the Morea "cerulean" style themes (i.e. cerulean\green, cerulean\red, etc.) were loading the Open Sans font using the http by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Gallery refresh]]></title>
+            <link>https://morea-framework.github.io/blog/2016/03/04/gallery-refresh</link>
+            <guid>Gallery refresh</guid>
+            <pubDate>Fri, 04 Mar 2016 00:00:00 GMT</pubDate>
+            <description><![CDATA[We've neglected the Gallery page for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you'd like your site included.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Breadcrumbs!]]></title>
+            <link>https://morea-framework.github.io/blog/2015/10/23/breadcrumbs</link>
+            <guid>Breadcrumbs!</guid>
+            <pubDate>Fri, 23 Oct 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce the addition of breadcrumbs as a standard feature of Morea sites.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[morea-watch.rb]]></title>
+            <link>https://morea-framework.github.io/blog/2015/10/10/morea-watch</link>
+            <guid>morea-watch.rb</guid>
+            <pubDate>Sat, 10 Oct 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce the release of morea-watch.rb, a ruby script you can use instead of morea-run-local.sh and which will automatically stop and restart morea-run-local.sh whenever files in the morea directory change.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Morea Lintui]]></title>
+            <link>https://morea-framework.github.io/blog/2015/09/22/morea-lintui</link>
+            <guid>Morea Lintui</guid>
+            <pubDate>Tue, 22 Sep 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce the release of morea-lintui, which combines "lint" content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Morea Version 2.0 release]]></title>
+            <link>https://morea-framework.github.io/blog/2015/06/18/morea-version-two</link>
+            <guid>Morea Version 2.0 release</guid>
+            <pubDate>Thu, 18 Jun 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce the 2.0 release.   Enhancements include:]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Morea: Now with Google Analytics!]]></title>
+            <link>https://morea-framework.github.io/blog/2015/04/01/google-analytics</link>
+            <guid>Morea: Now with Google Analytics!</guid>
+            <pubDate>Wed, 01 Apr 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the documentation.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Release 1.1.0: New themes for the new year]]></title>
+            <link>https://morea-framework.github.io/blog/2015/01/06/new-themes</link>
+            <guid>Release 1.1.0: New themes for the new year</guid>
+            <pubDate>Tue, 06 Jan 2015 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is happy to inform you of several updates to the user interface:]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Morea Framework on Stack Overflow]]></title>
+            <link>https://morea-framework.github.io/blog/2014/08/15/stackoverflow</link>
+            <guid>Morea Framework on Stack Overflow</guid>
+            <pubDate>Fri, 15 Aug 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea Framework now has its own tag (morea-framework) on StackOverflow.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Virtual Box and Vagrant for Morea]]></title>
+            <link>https://morea-framework.github.io/blog/2014/07/16/vagrant</link>
+            <guid>Virtual Box and Vagrant for Morea</guid>
+            <pubDate>Wed, 16 Jul 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a Vagrant "box" that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Non-Morea markdown files]]></title>
+            <link>https://morea-framework.github.io/blog/2014/06/25/nonmorea-markdown</link>
+            <guid>Non-Morea markdown files</guid>
+            <pubDate>Wed, 25 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea generator now allows you to create markdown files inside the morea/ directory with the extension .markdown.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ignore directories]]></title>
+            <link>https://morea-framework.github.io/blog/2014/06/21/ignore-directories</link>
+            <guid>Ignore directories</guid>
+            <pubDate>Sat, 21 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the morea/ directory named _ignore.  This allows you to store private data inside the morea/ directory if you (for example) which to associate tests or other files with the module.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[QuickStart process redesigned]]></title>
+            <link>https://morea-framework.github.io/blog/2014/06/17/quickstart-redesign</link>
+            <guid>QuickStart process redesigned</guid>
+            <pubDate>Tue, 17 Jun 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Morea Version 1.0 release]]></title>
+            <link>https://morea-framework.github.io/blog/2014/05/22/morea-version-one</link>
+            <guid>Morea Version 1.0 release</guid>
+            <pubDate>Thu, 22 May 2014 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Morea team is delighted to announce the 1.0 release.  This release constitutes a]]></description>
+        </item>
+    </channel>
+</rss>
