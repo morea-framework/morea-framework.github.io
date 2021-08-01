@@ -1,809 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/_layouts/bootstrap.html" afterPath="$PROJECT_DIR$/src/_layouts/bootstrap.html" />
+    <list default="true" id="4005aa49-49ff-4c31-bef6-23d957db7041" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/morea-framework.github.io.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/case-study-image-fall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/case-study-image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/gallery-entry.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/morea-2.0-image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_includes/youtube.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_layouts/bootstrap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_layouts/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_layouts/documentation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_layouts/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_layouts/userguide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-05-22-morea-version-one.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-17-quickstart-redesign.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-21-ignore-directories.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-06-25-nonmorea-markdown.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-07-16-vagrant.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2014-08-15-stackoverflow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-01-06-new-themes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-04-01-google-analytics.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2015-10-23-breadcrumbs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case-study-may-2015.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case-study-nov-2015.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/gh-fork-ribbon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/jquery.tocify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/syntax.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/developerguide.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/feed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gallery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/google562ef8a438f31601.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/help.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/CS300-Fall2014-create.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/CS300-Fall2014-create2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Stobaugh_BloomsTaxonomy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/basic-template-modules-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/basic-template-src-directory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/basic-template.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/beyond-morea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/beyond-morea.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/bus621-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-1-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-2-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-3-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-4-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-5-results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question1-summary.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/question1-summary/Slide1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study-fall-2015/schedule-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-pages-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-pages.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question1-summary/Slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question2-morea-vs-laulima-summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question2-morea-vs-laulima.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question3-morea-vs-other-summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question3-morea-vs-other.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question4-one-like-summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question4-one-like.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question5-one-improvement-summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/case-study/question5-one-improvement.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/courses.ics.hawaii.edu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/cs294-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/grammarviz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics211f14-lcc-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics211f14-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics215-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics215f14-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-dropdown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-navbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-news-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-outcomes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-post-example.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-posts-directory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-private.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-quiz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311-readings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics311s14-modules-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics314-assessments.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics314-home-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics314-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics314-schedule-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics314f13-modules-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics613s15-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/ics632f14-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/itm352-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/jekyll.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/mirror-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/module-anatomy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/module-anatomy.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/google-analytics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/mathjax.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-metadata.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/module-summary-intro.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/overview-files.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/prerequisite-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/schedule.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-2.0/tiled-modules.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-folder-old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-folder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-module-publishing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/morea-source.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/navbar-code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/octocat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/octocat2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/schedule-directory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/schedule-index.html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/se-class16b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-mobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-morea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/speakerdeck-page.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/amelia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/cerulean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/cyborg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/darkly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/flatly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/journal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/lumen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/readable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/simplex.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/slate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/spacelab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/superhero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/united.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/themes/yeti.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery-1.8.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery-ui-1.10.4.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/jquery.tocify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/morea-2.0-release-notes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quickstart-vagrant.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quickstart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userguide.md" beforeDir="false" />
     </list>
-    <ignored path="morea-framework.github.io.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="FLATTEN" value="false" />
-    <option name="GROUP_BY_TYPE" value="true" />
-    <option name="SORT_CHILDREN" value="false" />
-    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="morea-framework.github.io" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gallery.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gallery.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2745">
-              <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feed.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/feed.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-03-04-gallery-refresh.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="254" selection-start-line="6" selection-start-column="254" selection-end-line="6" selection-end-column="254" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2016-08-09-font-fix.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="408" selection-start-line="6" selection-start-column="408" selection-end-line="6" selection-end-column="408" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_layouts/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_layouts/bootstrap.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gh-fork-ribbon.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/gh-fork-ribbon.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quickstart.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="6" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md" />
-        <option value="$PROJECT_DIR$/src/morea-2.0-release-notes.md" />
-        <option value="$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md" />
-        <option value="$PROJECT_DIR$/src/userguide.md" />
-        <option value="$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md" />
-        <option value="$PROJECT_DIR$/src/_posts/2015-10-23-breadcrumbs.md" />
-        <option value="$PROJECT_DIR$/src/_includes/case-study-image-fall.html" />
-        <option value="$PROJECT_DIR$/src/case-study-nov-2015.md" />
-        <option value="$PROJECT_DIR$/src/_config.yml" />
-        <option value="$PROJECT_DIR$/src/feed.xml" />
-        <option value="$PROJECT_DIR$/src/quickstart.md" />
-        <option value="$PROJECT_DIR$/src/gallery.md" />
-        <option value="$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md" />
-        <option value="$PROJECT_DIR$/src/_layouts/bootstrap.html" />
-        <option value="$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="877" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="morea-framework.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_includes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1w6SUvIkyyonGnZ24iLdukBUski" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/_posts" />
-      <recent name="$PROJECT_DIR$/src/images" />
-      <recent name="$PROJECT_DIR$/src/_includes" />
-      <recent name="$PROJECT_DIR$/src/images/case-study-fall-2015" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-    </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c96082f1-6a45-43dc-abad-fdc87a2e2078" name="Default" comment="" />
-      <created>1434664138750</created>
-      <option name="number" value="Default" />
-      <updated>1434664138750</updated>
-      <workItem from="1434664140098" duration="4725000" />
-      <workItem from="1434673369255" duration="107000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4832000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="40" y="23" width="1400" height="877" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/morea-module-publishing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="353" column="254" selection-start-line="353" selection-start-column="254" selection-end-line="353" selection-end-column="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1561" column="27" selection-start-line="1561" selection-start-column="27" selection-end-line="1561" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/morea-module-publishing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="353" column="254" selection-start-line="353" selection-start-column="254" selection-end-line="353" selection-end-column="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1582" column="84" selection-start-line="1582" selection-start-column="0" selection-end-line="1582" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/morea-module-publishing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="353" column="254" selection-start-line="353" selection-start-column="254" selection-end-line="353" selection-end-column="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/morea-module-publishing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="353" column="254" selection-start-line="353" selection-start-column="254" selection-end-line="353" selection-end-column="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="353" column="254" selection-start-line="353" selection-start-column="254" selection-end-line="353" selection-end-column="254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1054" column="72" selection-start-line="1054" selection-start-column="72" selection-end-line="1054" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-06-18-morea-version-two.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="114" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/morea-2.0-release-notes.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/morea-module-publishing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-10-10-morea-watch.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-09-22-morea-lintui.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2015-10-23-breadcrumbs.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/case-study-may-2015.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/case-study/question1-pages.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_includes/case-study-image-fall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="67" selection-start-line="0" selection-start-column="67" selection-end-line="0" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_includes/case-study-image.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/case-study-nov-2015.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userguide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26310">
-          <caret line="1754" column="34" selection-start-line="1754" selection-start-column="34" selection-end-line="1754" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gallery.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_layouts/default.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/gh-fork-ribbon.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/quickstart.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="6" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_layouts/bootstrap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#p#1;n#div#0;n#footer#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2016-03-04-gallery-refresh.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="254" selection-start-line="6" selection-start-column="254" selection-end-line="6" selection-end-column="254" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_posts/2016-08-09-font-fix.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="408" selection-start-line="6" selection-start-column="408" selection-end-line="6" selection-end-column="408" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
