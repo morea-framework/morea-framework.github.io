@@ -85,4 +85,4 @@ Unfortunately, apart from the site name in the menubar ("CS 299 Fall 2021"), non
 
 Before proceeding, you might want to spend a few minutes clicking around your newly site.  This site illustrates many (though not all) of the features of a Morea site.
 
-The next sections provide the background conceptual information as well as the practical details necessary for you to edit this template into a course website appropriate to your needs.
+The next two sections guide you through the tools you need to install to develop a Morea site on your computer as well as some simple examples of modifications to your sample site.  
