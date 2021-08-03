@@ -12,7 +12,7 @@
         <id>Morea Version 3.0 release</id>
         <link href="https://morea-framework.github.io/blog/2021/08/01/morea-version-3"/>
         <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The Morea team is delighted to announce a new major release of the system.  This release should be almost completely backward compatible with existing Morea data files, though there are extensive changes (and simplifications!) to the way sites are developed and managed.]]></summary>
+        <summary type="html"><![CDATA[The Morea team is delighted to announce a new major release of the system.  This release should be mostly backward compatible with existing Morea instructor content, though there are extensive changes (and simplifications!) to the way sites are developed and managed.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Fix font loading over https]]></title>
