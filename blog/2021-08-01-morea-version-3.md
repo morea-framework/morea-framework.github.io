@@ -41,10 +41,6 @@ Morea 3 updates Bootstrap from Version 3 to Version 5. As a result:
 
 * Pages that embed Bootstrap CSS and HTML must be updated to Bootstrap Version 5.
 
-Morea 3 has subtle changes to the way fields are processed:
-
-* The morea_sort_order field, if present, must have a value.
-
 
 ## Getting started
 
