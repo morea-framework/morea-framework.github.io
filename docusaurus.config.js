@@ -47,6 +47,11 @@ module.exports = {
         },
         {to: 'blog', label: 'News', position: 'right'},
         {
+          href: 'https://morea-framework.github.io/morea',
+          label: 'Demo',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/morea-framework',
           label: 'GitHub',
           position: 'right',

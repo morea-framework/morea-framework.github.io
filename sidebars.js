@@ -42,6 +42,7 @@ module.exports = {
             'instructors/pedagogical-pattern',
             'instructors/entity-types',
             'instructors/link-errors',
+            'instructors/config-yml',
             'instructors/equation-support',
             'instructors/overview-files',
             'instructors/navbar-configuration',
@@ -67,6 +68,15 @@ module.exports = {
           'developers/morea-index-markdown',
           'developers/manage-this-site',
           'developers/markdown-features'
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Evaluation',
+      collapsed: true,
+      items: [
+        'evaluation/case-study-may-2015',
+        'evaluation/case-study-nov-2015',
       ],
     },
   ],
