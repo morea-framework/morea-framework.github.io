@@ -65,6 +65,7 @@ module.exports = {
       items: [
           'developers/overview',
           'developers/morea-generator',
+          'developers/theme-customization',
           'developers/morea-index-markdown',
           'developers/manage-this-site',
           'developers/markdown-features'
