@@ -33,7 +33,3 @@ but equal" versions of a system.
 [Laulima](https://laulima.hawaii.edu/lum/fp/login.php) is a custom LMS for the University of Hawaii based on [Sakai](http://www.sakaiproject.org/).  Laulima does not implement the MOREA Pedagogical Pattern and so there is no ability to manipulate Modules, Readings, and so forth as "first class entities".  This makes it difficult to (for example) support "Prerequisite Modules". In addition, Laulima implements a "pay wall", making content difficult to access or discover. Finally, the use of WYSIWYG editors makes it more difficult to reuse or export course content.  That said, Laulima does provide useful support for grading and assignment management.  In practice, users of Morea at the University of Hawaii typically use both tools: Morea for course content, and Laulima for assignment and course grading.
 
 If you know of a related system, please let us know and we'll include it here.
-
-| table | foo |
-| ----- | ---  |
-| foo   | bar |

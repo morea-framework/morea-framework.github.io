@@ -181,7 +181,7 @@ Finally, once you're ready to publish your changes, go into GitHub Desktop:
   2. Push your changes to your local repository to the GitHub version of your repository.
   3. Check to see that your changes are public (usually takes about one minute).
 
-Now that you understand the mechanics of Morea site development, let's take a step back and provide some background concepts.
+Now that you understand the mechanics of Morea site development, let's take a step back and provide some background concepts, starting with a comparison to similar systems.
 
 
 
