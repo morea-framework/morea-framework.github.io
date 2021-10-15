@@ -181,6 +181,10 @@ Finally, once you're ready to publish your changes, go into GitHub Desktop:
   2. Push your changes to your local repository to the GitHub version of your repository.
   3. Check to see that your changes are public (usually takes about one minute).
 
+## Continuing on
+
+There are other changes you will need to make to ready your site for publication: configuring the [Schedule Page](schedule-page.md), the [Nav Bar](navbar-configuration.md), and so forth. The Reference Guide contains pages on these and other important topics. It is useful to at least skim all of the pages in the Reference Guide so you are aware of the different features of Morea when developing your site.
+
 Now that you understand the mechanics of Morea site development, let's take a step back and provide some background concepts, starting with a comparison to similar systems.
 
 
