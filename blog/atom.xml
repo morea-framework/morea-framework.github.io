@@ -13,6 +13,7 @@
         <link href="https://morea-framework.github.io/blog/2021/08/01/morea-version-3"/>
         <updated>2021-08-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce a new major release of the system.  This release should be mostly backward compatible with existing Morea instructor content, though there are extensive changes (and simplifications!) to the way sites are developed and managed.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce a new major release of the system.  This release should be mostly backward compatible with existing Morea instructor content, though there are extensive changes (and simplifications!) to the way sites are developed and managed.</p><h2>Summary of changes</h2><p>Here is a summary of the changes from Version 2:</p><ol><li><p>Morea 3 uses the latest releases of Jekyll (Version 4.2.0), Bootstrap (5), Bootswatch (5), FullCalendar (5.8), and ChartJS (3.5).</p></li><li><p>Create a new Morea 3 site using the GitHub &quot;template&quot; mechanism.  Templates have advantages over the previous approach of cloning: you can create a private repository even though the template is a public repository, and you can create multiple repositories in a single organization from the same template.</p></li><li><p>Morea 3 sites are automatically built and deployed via GitHub Actions whenever there is a commit to the main branch. Unlike Morea 2, Morea 3 does not use custom scripts (such as <code>morea-run-local.sh</code>, <code>morea-publish.sh</code>, etc.).</p></li><li><p>Morea 3 does not require local management of multiple branches.  Unlike Morea 2, there are no &quot;src&quot; and &quot;gh-pages&quot; subdirectories.</p></li><li><p>To build and run a Morea 3 site locally, you no longer use a custom script (<code>morea-run-local.sh</code>). Instead, you use the standard Jekyll command <code>bundle exec jekyll serve</code>.</p></li><li><p>To publish a Morea 3 site, you no longer use a special script (<code>morea-publish.sh</code>). Instead, you just commit your changes and push your repository to GitHub. Morea 3 uses GitHub Actions to automatically build and publish the site whenever there is a commit to the main branch in GitHub.</p></li><li><p>Morea 3 is (finally!) cross-platform: there should be no significant differences between development on MacOS, Linux, and Windows platforms.</p></li></ol><p>Astute Morea users will also observe that <a href="https://morea-framework.github.io">https://morea-framework.github.io</a> has been reimplemented using Docusaurus.  This will make documentation easier to maintain.</p><h2>Migrating your V2 content to V3</h2><p>Instructors who have existing Morea V2 sites for a course taught in a prior semester and who wish to build a new Morea site for a future semester will need to migrate their content.  Here are the issues that have been discovered with this migration:</p><p>In Morea 3, Assessments are no longer &quot;page fragments&quot; (like Outcomes), but rather their own page. This leads to several breaking changes:</p><ul><li>The morea_summary field is now required for Assessment pages.</li><li>The URL for interior linking to an Assessment page has changed. Please see <a href="/docs/instructors/linking-in-morea">this page</a>.</li></ul><p>Morea 3 updates JSChart from Version 1 to Version 3. As a result:</p><ul><li>Pages that embed JSChart graphs must be updated to the JSChart 3 API. For example, see the <a href="https://morea-framework.github.io/morea/morea/example-javascript/assessment-javascript-1.html">example Morea assessment page</a>.</li></ul><p>Morea 3 updates Bootstrap from Version 3 to Version 5. As a result:</p><ul><li>Pages that embed Bootstrap CSS and HTML must be updated to Bootstrap Version 5.</li></ul><h2>Getting started</h2><p>If you are a current user of Morea, please read the Getting Started section of the Instructor Guide and try building a new site using your old Morea files.  If you run into problems, please create an issue or send an email so we can address it.</p><p>A list of known issues and desired enhancements for Morea 3 is available at <a href="https://github.com/morea-framework/morea/issues">https://github.com/morea-framework/morea/issues</a>.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Fix font loading over https]]></title>
@@ -20,6 +21,7 @@
         <link href="https://morea-framework.github.io/blog/2016/08/09/font-fix"/>
         <updated>2016-08-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Unfortunately, several of the Morea "cerulean" style themes (i.e. cerulean\green, cerulean\red, etc.) were loading the Open Sans font using the http by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)]]></summary>
+        <content type="html"><![CDATA[<p>Unfortunately, several of the Morea &quot;cerulean&quot; style themes (i.e. cerulean<!-- -->_<!-- -->green, cerulean<!-- -->_<!-- -->red, etc.) were loading the Open Sans font using the http: protocol. Now that GitHub uses https: by default, sites built using those themes were not displaying the Open Sans font correctly when retrieved from a github.io domain.  (Instead, the Open Sans font fails to load and the site falls back to the use of the  Times Roman font.)</p><p>We just published a fix to these themes in the core repo so that Open Sans will be loaded correctly regardless of the protocol (http: or https:) used.</p><p>To get the fix, cd into your Morea top-level directory, then invoke the morea-merge-upstream.sh script to incorporate the corrected code into your local copy of these themes.</p><p>Then republish your site and all should be well.</p><p>Other themes (SuperHero, SpaceLab, etc.) did not have this bug and so you should not have noticed this problem if you were using them.</p><p>Our apologies for the inconvenience!</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Gallery refresh]]></title>
@@ -27,6 +29,7 @@
         <link href="https://morea-framework.github.io/blog/2016/03/04/gallery-refresh"/>
         <updated>2016-03-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We've neglected the Gallery page for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you'd like your site included.]]></summary>
+        <content type="html"><![CDATA[<p>We&#x27;ve neglected the Gallery page for quite a while, so we spent a few minutes today updating it with links to additional sites using Morea---some in quite interesting ways!   Take a look and let us know if you&#x27;d like your site included.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Breadcrumbs!]]></title>
@@ -34,6 +37,7 @@
         <link href="https://morea-framework.github.io/blog/2015/10/23/breadcrumbs"/>
         <updated>2015-10-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce the addition of breadcrumbs as a standard feature of Morea sites.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce the addition of <a href="http://getbootstrap.com/components/#breadcrumbs">breadcrumbs</a> as a standard feature of Morea sites. </p><p>Breadcrumbs are located just below the navbar and provide an indication of where you are in the site. For example, <a href="http://philipmjohnson.github.io/ics314f15/morea/introduction/reading-athletic-software-engineering.html">this page</a> shows you are at the page &quot;WODs: An athletic approach to software engineering&quot;, inside the &quot;Introduction&quot; module, which is inside the &quot;Modules&quot; page, which is below the &quot;Home&quot; page. </p><h4>Upgrade instructions</h4><p>To update your current Morea site to support breadcrumbs with minimal hassle, please do the following:</p><ol><li><p>Inspect your current master/src/<!-- -->_<!-- -->layouts/default.html.  Do you add any navbar items (or anything else) to that file? If so, copy the added lines to a text buffer someplace and remember where they were located in your default.html file.  If you didn&#x27;t add anything, great.</p></li><li><p>Invoke <code>morea-merge-upstream.sh</code>.  You will get a merge conflict in default.html. Don&#x27;t panic.</p></li><li><p>Edit your <code>master/src/_layouts/default.html</code> file.   Make it identical to this <a href="https://raw.githubusercontent.com/morea-framework/core/master/src/_layouts/default.html">default.html</a> file.</p></li><li><p>If you had added navbar links or something to your original default.html file,  then edit the <code>master/src/_layouts/core.html</code> file to put them back in.  This will look almost exactly like your old default.html file. Add back in whatever customizations you saved to your text buffer in Step 1.</p></li><li><p>There is a slight chance your <code>master/_config.html</code> file also has a merge conflict. If so, just edit it back to your original version. (the changes are just the addition of comments.)</p></li></ol><p>That&#x27;s it. Now invoke <code>morea-run-local.sh</code> and see if everything looks OK. If not, fix it. If you can&#x27;t fix it, send me an email.</p><p>Now invoke <code>morea-publish.sh</code> to publish your cool new breadcrumbs to the world!</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[morea-watch.rb]]></title>
@@ -41,6 +45,7 @@
         <link href="https://morea-framework.github.io/blog/2015/10/10/morea-watch"/>
         <updated>2015-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce the release of morea-watch.rb, a ruby script you can use instead of morea-run-local.sh and which will automatically stop and restart morea-run-local.sh whenever files in the morea directory change.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce the release of morea-watch.rb, a ruby script you can use instead of morea-run-local.sh and which will automatically stop and restart morea-run-local.sh whenever files in the morea directory change.</p><p>Morea-watch.rb was developed by Dan Port. Please check it out and let us know what you think!</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Morea Lintui]]></title>
@@ -48,6 +53,7 @@
         <link href="https://morea-framework.github.io/blog/2015/09/22/morea-lintui"/>
         <updated>2015-09-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce the release of morea-lintui, which combines "lint" content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce the release of <a href="http://morea-framework.github.io/morea-lintui/">morea-lintui</a>, which combines &quot;lint&quot; content validation with a refreshingly retro terminal user interface (tui) for manipulating the structure of Morea sites.</p><img src="https://raw.githubusercontent.com/morea-framework/morea-lintui/master/morealintui/docs/screenshot1.jpg" width="600px" class="img-responsive"/><p>Morea-lintui was developed by Henri Casanova.  Please check it out and let us know what you think!</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Morea Version 2.0 release]]></title>
@@ -55,6 +61,7 @@
         <link href="https://morea-framework.github.io/blog/2015/06/18/morea-version-two"/>
         <updated>2015-06-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce the 2.0 release.   Enhancements include:]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce the 2.0 release.   Enhancements include:</p><ul><li>Improved user interface</li><li>Improved calendar integration</li><li>Module meta-data</li><li>Google analytics</li><li>LaTeX equations</li><li>Eliminate dependency on Python</li><li>Page overviews</li><li>... and much more!</li></ul><p>Please see the release notes for details and a migration guide for current users.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Morea: Now with Google Analytics!]]></title>
@@ -62,6 +69,7 @@
         <link href="https://morea-framework.github.io/blog/2015/04/01/google-analytics"/>
         <updated>2015-04-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the documentation.]]></summary>
+        <content type="html"><![CDATA[<p>Cam Moore has contributed an include file that makes it easy for you to track the use of pages in Morea sites with Google Analytics.  To learn more, see the documentation.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Release 1.1.0: New themes for the new year]]></title>
@@ -69,6 +77,9 @@
         <link href="https://morea-framework.github.io/blog/2015/01/06/new-themes"/>
         <updated>2015-01-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is happy to inform you of several updates to the user interface:]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is happy to inform you of several updates to the user interface:</p><ul><li><p>The themes have been updated to use the latest release of <a href="http://getbootstrap.com/">Bootstrap</a> (3.3.1).</p></li><li><p>Morea themes are based on <a href="http://bootswatch.com/">Bootswatch</a>.  We have incorporated two new Bootswatch themes into Morea: paper and sandstone.</p></li><li><p>In response to user request, we have created four new themes based upon cerulean: cerulean<!-- -->_<!-- -->green, cerulean<!-- -->_<!-- -->brown, cerulean<!-- -->_<!-- -->purple, and cerulean<!-- -->_<!-- -->red.  If you like cerulean, but are tired of blue, try one of these!</p></li><li><p>To save space in the NavBar for additional menu items, we have removed the &quot;Home&quot; link and made the site title in the NavBar into a link.</p></li><li><p>Also in response to user request, we have made the icons in the module page into links to their corresponding module. Apparently everyone wants to click on them, so we might as well let them.</p></li></ul><p>To use these features, set the basic-template as an upstream repository and merge into your master branch. You can do this using the morea-merge-upstream script.</p><p>Note that you may well get merge conflicts, but these should be easy to address.</p><p>If the merge conflict involves changes to the &quot;Qux&quot; module that you&#x27;ve deleted in your site, do the following to re-delete the directory:</p><pre><code>% cd master/src/morea
+% git rm -r qux
+</code></pre><p>If the merge conflict involves changes to your master/src/css/style.css file, or master/src/_layouts/default.html file, then simply view those files in your editor, edit to resolve the conflict and remove the conflict indicator lines, and save your changes.</p><p>Happy course design in 2015 and don&#x27;t hesitate to let us know if you encounter problems with these enhancements.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Morea Framework on Stack Overflow]]></title>
@@ -76,6 +87,7 @@
         <link href="https://morea-framework.github.io/blog/2014/08/15/stackoverflow"/>
         <updated>2014-08-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea Framework now has its own tag (morea-framework) on StackOverflow.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea Framework now has its own tag (<a href="http://stackoverflow.com/questions/tagged/morea-framework">morea-framework</a>) on <a href="http://stackoverflow.com">StackOverflow</a>. </p><p>Please use StackOverflow for technical support questions, and the Morea Framework GitHub Issues.</p><p>The morea-framework tag is monitored, so you should get a response to your query within a day.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Virtual Box and Vagrant for Morea]]></title>
@@ -83,6 +95,7 @@
         <link href="https://morea-framework.github.io/blog/2014/07/16/vagrant"/>
         <updated>2014-07-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a Vagrant "box" that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed.]]></summary>
+        <content type="html"><![CDATA[<p>Users have reported problems installing Ruby and Jekyll under Windows 8.   We have created a <a href="http://www.vagrantup.com/">Vagrant</a> &quot;box&quot; that simplifies the process of running a virtual Unix environment on Windows with Python, Ruby, git, and Jekyll pre-installed.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Non-Morea markdown files]]></title>
@@ -90,6 +103,8 @@
         <link href="https://morea-framework.github.io/blog/2014/06/25/nonmorea-markdown"/>
         <updated>2014-06-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea generator now allows you to create markdown files inside the morea/ directory with the extension .markdown.]]></summary>
+        <content type="html"><![CDATA[<p>The Morea generator now allows you to create markdown files inside the <code>morea/</code> directory with the extension <code>.markdown</code>.
+These files are processed into HTML by Jekyll, but will not appear as a module, outcome, reading, experience, or assessment. This is useful for creating (for example) quizzes in markdown format that are kept with other module files. </p><p>For more details, see the non-morea markdown section of the user guide.</p><p>To obtain this update, run the <code>morea-merge-upstream.sh</code> script.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Ignore directories]]></title>
@@ -97,6 +112,7 @@
         <link href="https://morea-framework.github.io/blog/2014/06/21/ignore-directories"/>
         <updated>2014-06-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the morea/ directory named _ignore.  This allows you to store private data inside the morea/ directory if you (for example) which to associate tests or other files with the module.]]></summary>
+        <content type="html"><![CDATA[<p>The latest version of basic-template contains an update to the MoreaGenerator.rb file which now ignores any directories inside the <code>morea/</code> directory named <code>_ignore</code>.  This allows you to store private data inside the <code>morea/</code> directory if you (for example) which to associate tests or other files with the module.</p><p>For more details, see the private data section of the user guide.</p><p>To obtain this update, run the <code>morea-merge-upstream.sh</code> script.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[QuickStart process redesigned]]></title>
@@ -104,6 +120,7 @@
         <link href="https://morea-framework.github.io/blog/2014/06/17/quickstart-redesign"/>
         <updated>2014-06-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website.]]></summary>
+        <content type="html"><![CDATA[<p>The original QuickStart procedure directed you to fork the basic-template repository in order to initialize your own course website. </p><p>Unfortunately, GitHub does not allow forks of public repositories (like basic-template) to be made private.  </p><p>The QuickStart page has now been modified to avoid the use of forking.  Course repositories created using the new procedure can be made private.</p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Morea Version 1.0 release]]></title>
@@ -111,5 +128,8 @@
         <link href="https://morea-framework.github.io/blog/2014/05/22/morea-version-one"/>
         <updated>2014-05-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The Morea team is delighted to announce the 1.0 release.  This release constitutes a]]></summary>
+        <content type="html"><![CDATA[<p>The Morea team is delighted to announce the 1.0 release.  This release constitutes a
+&quot;minimum viable product&quot; with sufficient functionality and documentation for users to
+begin building their own course websites using the framework. </p><p>To use these features, set the basic-template as an upstream repository and merge into your master branch.</p>]]></content>
     </entry>
 </feed>
