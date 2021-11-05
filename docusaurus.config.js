@@ -9,6 +9,7 @@ module.exports = {
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
+  deploymentBranch: 'master',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'morea-framework', // Usually your GitHub org/user name.
