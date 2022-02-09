@@ -6,41 +6,34 @@ You may wish to reference one Morea page from another.  For example, you might w
 
 Linking in Morea is complicated by the fact that Modules, Outcomes, Readings, Experiences, and Assessments are implemented in different ways. Modules, Readings, Experiences, and Assessments are implemented as standalone pages, while Outcomes are implemented as page "fragments" that are integrated into other pages.
 
-A second complication is the fact that the URL required to show the page locally is slightly different from the URL required to show the page when published: a parameter called "site.baseurl" is needed to be included in the URL.
+A second complication is that some files (readings, experiences) are located within a morea/ subdirectory, while others (modules, outcomes, and assessments) are not.
 
-A third complication is that some files (readings, experiences) are located within a morea/ subdirectory, while others (modules, outcomes, and assessments) are not.
+A third complication is that it is easiest to always use *relative* links in Morea when linking inside the site. In other words, internal links should never start with a `/`. (If you start your link with a `/`, then it work correctly when run locally but not work correctly when published.)
 
-The following table documents the structure of absolute links to each of the five Morea entity types:
+So. The following table documents the structure of links to each of the five Morea entity types if you are at the top level of the Morea site (for example, the home.md file):
 
-| Entity type | Link syntax |
-| ------------| ------------ |
-| Module | `{{ site.baseurl }}/modules/&lt;module ID&gt;` |
-| Outcome | `{{ site.baseurl }}/outcomes/#&lt;outcome ID&gt;` |
-| Reading | `{{ site.baseurl}}/morea/&lt;path-to-reading-file&gt;/&lt;reading file name&gt;.html` |
-| Experience | `{{ site.baseurl }}/morea/&lt;path-to-experience-file&gt;/&lt;experience file name&gt;.html` |
-| Assessment | `{{ site.baseurl }}/assessments/&lt;assessment ID&gt;` |
+| Entity type | Link syntax                                                   |
+| ------------|---------------------------------------------------------------|
+| Module | `modules/<module ID>`                                         |
+| Outcome | `outcomes/<outcome ID>`                                       |
+| Reading | `morea/<path-to-reading-file>/<reading file name>.html`       |
+| Experience | `morea/<path-to-experience-file>/<experience file name>.html` |
+| Assessment | `assessments/<assessment ID>`                                 |
 
-For example, let's say you have created a module with morea\_id "foo" in a directory called "01.foo/" that contains files module.md, outcome.md (with morea\_id outcome-foo), reading.md, experience.md, and assessment.md (with morea\_id assessment-foo).  Here is how you would create absolute links to each of these entities:
-
-| Entity type | Link |
-| ------------| ------------ |
-| Module | `{{ site.baseurl }}/modules/foo` |
-| Outcome | `{{ site.baseurl }}/outcomes/#outcome-foo` |
-| Reading | `{{ site.baseurl }}/morea/01.foo/reading.html` |
-| Experience | `{{ site.baseurl }}/morea/01.foo/experience.html` |
-| Assessment | `{{ site.baseurl}}/assessments/assessment.html` |
-
-
-You will typically use Markdown syntax, so an actual link might look like
+If you are creating a link anywhere else (say, inside a Reading file), then you should use standard relative link syntax. For example, if you want to link to another reading in the same module, then it would look like this:
 
 ```
-[Readings about Foo]({{ site.baseurl }}/morea/01.foo/reading.html)
+[Another Reading](another-reading.html)
 ```
 
-There is a shortcut that you can use when linking between reading and experience files that are located in the same directory. In this case, you can use a relative link:
+If you want to link to another reading in another module, it might look like this:
 
 ```
-[the readings for this experience](reading.html)
+[Another Reading in another module](../another-module/another-reading.html)
 ```
 
+Of course, you can always use absolute links to link to a page at another site:
 
+```
+[Another Page at another site](https://foo.com/another-reading.html)
+```
