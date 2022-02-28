@@ -8,9 +8,9 @@ This quick start takes you through the steps necessary to set up and publish a n
 
 If you haven't already, [sign up for GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account). There are two common types of GitHub accounts:
 
-  * Free Accounts.  You can use a GitHub "Free" account to create Morea sites, but with one important restriction: you cannot make your repository private *and* publish the site as a GitHub Page.  If your Morea source code is in a public GitHub repo, then you cannot store private information (such as tests) in your repo.  If you are OK with anyone (including students) seeing every file stored in your Morea repo, then a Free Account is fine. 
+  * Free Accounts.  You can use a GitHub "Free" account to create Morea sites, but with one important restriction: you cannot make your repository private *and* publish the site with GitHub Pages.  If your Morea source code is in a public GitHub repo, then you should not store private information (such as tests) in your repo.  If you are OK with anyone (including students) seeing every file stored in your Morea repo, then a Free Account is fine. 
 
-  * Education Accounts.  If you are approved for a GitHub "Educator" account, then you can upgrade the organisation containing your Morea site repo to "Team" status for free. Organizations under the "Team" plan can have private GitHub repos that are also published as a GitHub Page. This is quite nice, as it means you can store tests and other confidential information in your repo using Morea's [private files](private-files.md) mechanism.  If you are associated with an educational institution, you can  [apply for an educator or researcher discount](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/use-github-in-your-classroom-and-research/apply-for-an-educator-or-researcher-discount). Once you have been approved for the GitHub Educator Plan, you can go to the [Upgrade Organization](https://education.github.com/toolbox/offers/github-org-upgrades) page to upgrade the organization containing your Morea site repo to the Team plan.
+  * Education Accounts.  If you are approved for a GitHub "Educator" account, then you can upgrade the organisation containing your Morea site repo to "Team" status for free. Organizations under the "Team" plan can have private GitHub repos that are published with GitHub Pages. This is quite useful, because it means you can store tests and other confidential information in your repo using Morea's [private files](private-files.md) mechanism.  If you are associated with an educational institution, you can  [apply for an educator or researcher discount](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/use-github-in-your-classroom-and-research/apply-for-an-educator-or-researcher-discount). Once you have been approved for the GitHub Educator Plan, you can go to the [Upgrade Organization](https://education.github.com/toolbox/offers/github-org-upgrades) page to upgrade the organization containing your Morea site repo to the Team plan for free.
 
 ## Create your course repository
 
@@ -21,7 +21,7 @@ Login to GitHub and go to [https://github.com/morea-framework/morea](https://git
 Next, click "Use this template" and fill out the page:
 
  * Provide a repository name (typically the course number and semester).
- * Make the repo private.
+ * Make the repo private (if the organization associated with this repo is on the Team plan). Otherwise, you must keep the repo public so that you can publish your site using GitHub Pages.
  * Include all branches.
 
 It should look like this:
