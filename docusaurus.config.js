@@ -63,7 +63,10 @@ module.exports = {
       style: 'dark',
       links: [
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Morea Framework`,
+      copyright: `The Morea Framework is developed by:<br/>
+                  <a href='http://csdl.ics.hawaii.edu'>Collaborative Software Development Laboratory</a><br/>
+                  <a href='http://www.ics.hawaii.edu'>Department of Information and Computer Sciences</a><br/>
+                  <a href='http://www.hawaii.edu'>University of Hawaii</a>`,
     },
     prism: {
       theme: lightCodeTheme,
