@@ -1,5 +1,6 @@
 ---
 title: Include files
+hide_table_of_contents: true
 ---
 
 Jekyll allows you to create small page fragments that you can include in multiple places on your site using the [include file syntax](https://jekyllrb.com/docs/includes/). Include files can be passed parameters, which enables a simple kind of macro language that you can use to simplify your Morea content.

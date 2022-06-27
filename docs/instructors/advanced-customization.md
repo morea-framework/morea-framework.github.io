@@ -1,5 +1,6 @@
 ---
 title: Advanced customization
+hide_table_of_contents: true
 ---
 
 As the name implies, "Morea" provides you with mechanisms to define modules, outcomes, readings, experiences, and  assessments.

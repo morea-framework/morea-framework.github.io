@@ -51,9 +51,12 @@ module.exports = {
             'instructors/formatting-code',
             'instructors/schedule-page',
             'instructors/include-files',
+            'instructors/icons',
+            'instructors/admonitions',
             'instructors/google-analytics',
             'instructors/themes',
             'instructors/advanced-customization',
+            'instructors/updating',
           ]
         },
       ],

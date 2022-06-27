@@ -1,5 +1,6 @@
 ---
 title: Overview
+hide_table_of_contents: true
 ---
 
 Welcome to the Instructor Guide for the Morea Framework.

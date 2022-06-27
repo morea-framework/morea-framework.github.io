@@ -1,5 +1,6 @@
 ---
 title: Themes
+hide_table_of_contents: true
 ---
 
 Because variety is the spice of life, Morea provides a set of pre-built themes that you can use to modify the look (colors and fonts) for your site.  These themes are based upon the [Bootswatch](http://bootswatch.com) themes for Bootstrap.

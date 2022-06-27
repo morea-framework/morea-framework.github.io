@@ -1,5 +1,6 @@
 ---
 title: Google Analytics
+hide_table_of_contents: true
 ---
 
 If you are interesting in tracking usage of your pages, Morea supports [Google Analytics](http://www.google.com/analytics/).

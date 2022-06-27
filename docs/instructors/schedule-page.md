@@ -1,5 +1,6 @@
 ---
 title: Schedule page
+hide_table_of_contents: true
 ---
 
 ## Overview

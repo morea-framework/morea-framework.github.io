@@ -1,5 +1,6 @@
 ---
 title: Private files
+hide_table_of_contents: true
 ---
 
 In many cases, you might want to keep files in your repository that are not made a part of the published website.

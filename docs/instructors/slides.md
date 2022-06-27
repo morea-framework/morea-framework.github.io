@@ -1,5 +1,6 @@
 ---
 title: Embedding slideshows
+hide_table_of_contents: true
 ---
 
 Rather than include a link to a .ppt or .pdf file, you might find it more user-friendly to embed your slides in a page. The easiest way to do this is by using a cloud-based presentation hosting service, such as [SlideShare](http://www.slideshare.net/). In the following example, we will use a similar service, [Speaker Deck](https://speakerdeck.com/), which provides a responsive HTML5 embedded player. If you prefer SlideShare, the same general procedure will work.
@@ -20,4 +21,4 @@ morea_sort_order: 1
 
 <script async class="speakerdeck-embed" data-id="ef27d6f0f33001316dfc66ebab3e7b80" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
-``
+```

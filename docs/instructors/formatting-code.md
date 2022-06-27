@@ -1,5 +1,6 @@
 ---
 title: Formatting code
+hide_table_of_contents: true
 ---
 
 You have several options when it comes to presenting code in your repository.

@@ -1,5 +1,6 @@
 ---
 title: Overview files
+hide_table_of_contents: true
 ---
 
 Morea allows the instructor to define "overview files" whose content is inserted at the top of the six standard pages (Prerequisites, Modules, Outcomes, Readings, Experiences, Assessments).

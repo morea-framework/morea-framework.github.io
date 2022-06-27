@@ -1,5 +1,6 @@
 ---
 title: Check for broken links
+hide_table_of_contents: true
 ---
 
 You can easily check your site for broken links prior to publication.
