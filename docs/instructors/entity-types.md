@@ -289,15 +289,13 @@ The body text should describe the assessment in markdown format.
 
 ## Prerequisite
 
-It is possible to define *Prerequisite* modules, or modules from another Morea site whose material should be mastered prior to starting this module.
+It is possible to define *Prerequisite* modules, or modules from another Morea site (or within the current site) whose material should be mastered prior to starting this module.
 
-The following image illustrates the top part of a Module definition page specifying three prerequisite modules from three prior courses:
-
-As with all other "tiles" in Morea sites, these can be clicked to go to the corresponding module from the external site.
+As with all other "tiles" in Morea sites, these can be clicked to go to the corresponding module.
 
 There are two steps to using Prerequisite modules. First, you must define them, and second, you must reference them in another module as a Prerequisite.
 
-Here's an example Prerequisite markdown file:
+Here's an example Prerequisite markdown file to reference a module in a different Morea site.
 
 ```
 ---
@@ -311,6 +309,22 @@ morea_labels:
   - ICS 141
 ---
 Algorithms, computational complexity, asymptotic notations, pseudocode, greedy algorithms, easy vs. hard problems.
+
+```
+
+If you want, you can create Prerequisites to point to modules in the current site. Here's an example:
+
+```
+---
+title: "Python and Jupyter"
+published: true
+morea_id: prerequisite-python-jupyter
+morea_url: /modules/python-jupyter
+morea_icon_url: /morea/python-jupyter/python-logo.jpg
+morea_type: prerequisite
+morea_labels:
+---
+This module provides recommended readings and introductory tutorials on Python and Jupyter. 
 
 ```
 
