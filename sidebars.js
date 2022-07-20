@@ -63,6 +63,12 @@ module.exports = {
     },
     {
       type: 'category',
+      label: 'CI-TRACS',
+      collapsed: false,
+      items: ['ci-tracs/overview'],
+    },
+    {
+      type: 'category',
       label: 'Developer Guide',
       collapsed: true,
       items: [
