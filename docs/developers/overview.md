@@ -1,5 +1,6 @@
 ---
 title: Overview
+hide_table_of_contents: true
 ---
 
 The Morea framework derives its functionality from a combination of three technologies:

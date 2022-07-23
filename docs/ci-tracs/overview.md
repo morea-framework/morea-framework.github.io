@@ -1,5 +1,6 @@
 ---
 title: Overview
+hide_table_of_contents: true
 ---
 
 This section of the site provides documentation concerning the use of Morea for the [University of Hawaii CyberInsfrastructure TRaining to Advance Climate Science (CI-TRACS)](https://ci-tracs.github.io) program. 
@@ -15,5 +16,3 @@ Previously, CI-TRACS workshops were developed using Software Carpentry. Some of 
 * Unlike Software Carpentry, Morea is not designed specifically for workshops. This makes it easier to expand CI-TRACS to support other kinds of educational activities.
 
 * Morea makes it easy to provide useful non-workshop material as a separate module. For example, the  "Introduction" module provides background material on the CI-TRACS program and information on how to get involved.
-
-* For workshop instructors, a very useful feature of Morea is [private files](https://morea-framework.github.io/docs/instructors/private-files), which enables them to keep exams, "to do" lists, notes for future instructors, and other information that is not appropriate for sharing with workshop participants.
