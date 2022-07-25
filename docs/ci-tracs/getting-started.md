@@ -2,17 +2,17 @@
 title: Getting started
 ---
 
-## Overview of the development process
+## Our development process
 
 There are many potential ways to support collaborative workshop curriculum development for CI-TRACS. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
 
-1. Create a fork of the CI-TRACS Morea site repository in your own GitHub account.
-2. Clone that repository to your local computer.
-3. Make a branch to hold your changes to the site.
-4. Build and run your local copy of the CI-TRACS Morea site.
-5. Edit files to create your new workshop (or update files for an existing workshop).
-6. Once you are satisfied with your changes, push your changes to GitHub.
-7. Create a pull request so that the CI-TRACS site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
+1. Install the required tools and libraries for CI-TRACS curriculum development using Morea.
+2. Create a fork of the CI-TRACS Morea site repository in your personal GitHub account, and clone that repository to your computer.
+3Build and run your local copy of the CI-TRACS Morea site.
+3. Create a branch to hold your changes to the site.
+4. Edit files to update the site with your changes, and preview the results locally. 
+5. Once you are satisfied with your changes, commit them and push your branch to GitHub.
+6. Finally, create a pull request so that the CI-TRACS site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
 
 Once the pull request is merged, you're done, at least until the next time you need to create another workshop (or update the materials associated with your original workshop).  At that point, the process is a bit simpler:
 
@@ -94,7 +94,7 @@ After clicking this button, GitHub Desktop should look like this, indicating the
 
 ![](/img/ci-tracs/ci-tracs.github.io-local.png)
 
-## Run the local ci-tracs site
+## Run the local site
 
 Now that you have the system files in a local directory, open a shell window, change directories to the location of the files, and invoke `bundle install` to download all required libraries:
 
@@ -132,6 +132,26 @@ Notice the "Server address" line that provides the URL `http://127.0.0.1:4000/` 
 
 ![](/img/ci-tracs/ci-tracs-landing-page-local.png)
 
+## Create a branch
+
+Now that we have successfully installed a local copy of the site, the next step is to make a branch in which to hold our update.  Click the "Branch" menu item:
+
+![](/img/ci-tracs/ci-tracs.github.io-new-branch.png)
+
+Then select "New Branch", which yields the following:
+
+![](/img/ci-tracs/ci-tracs.github.io-new-branch-2.png)
+
+I'll call the branch "update-hpc-preparation" and click "Create Branch" to get the following:
+
+![](/img/ci-tracs/ci-tracs.github.io-new-branch-3.png)
+
+Click the "Publish branch" button to push this new branch to GitHub. Afterwards GitHub Desktop will look like this:
+
+![](/img/ci-tracs/ci-tracs.github.io-new-branch-4.png)
+
+We're now ready to create a pull request, but first we actually have to update the repository!
+
 ## Update the site
 
 Now let's walk through a simple modification of the site. Suppose we want to update the "Preparation" reading for the HPC workshop to include an additional video on learning the command line. First, open an editor and bring up the source file for that page. I use IntelliJ IDEA as my editor:
@@ -145,3 +165,29 @@ Here's that same file after adding a sentence on line 19 documenting an addition
 To see the updated page, control-c to stop the Jekyll process and re-invoke `bundle exec jekyll serve`. Then navigate to the page:
 
 ![](/img/ci-tracs/reading-hpc-preparation-3.png)
+
+## Create the pull request
+
+Let's say that this is the only enhancement you want to make at this time, and now you want to ask the administrators to incorporate this change into the official CI-TRACS site.  The first step is to commit your change to your local repository. If you go to GitHub Desktop, you'll see an indicating of all the files that have been modified. In this case, it's just a single file to which we've added a single line:
+
+![](/img/ci-tracs/reading-hpc-preparation-commit.png)
+
+Add a commit message, then press the "Commit to update-hpc-preparation" button to commit your changes to your local repository. Afterwards GitHub Desktop will look like this:
+
+![](/img/ci-tracs/reading-hpc-preparation-commit-2.png)
+
+Now press "Push origin" to push your update to GitHub. Now GitHub Desktop looks like this:
+
+![](/img/ci-tracs/reading-hpc-preparation-commit-2.png)
+
+As if by magic, GitHub Desktop has anticipated that we might want to make a pull request and it provides us with a button. Click the "Create Pull Request" button. That will send control to your browser and display the following page:
+
+![](/img/ci-tracs/ci-tracs.github.io-pull-request.png)
+
+Notice that this page is associated with the CI-TRACS version of the ci-tracs.github.io repository, not your own personal version. You are "opening a pull request" on the official version of the repository, and requesting that the administrators merge the changes in your branch into the official repo.
+
+Add any additional information you'd like to add, then press "Create pull request". The result will look somewhat similar to this:
+
+![](/img/ci-tracs/ci-tracs.github.io-pull-request-2.png)
+
+In this case, since I am an administrator, I will get a button to merge the pull request, but non-administrators will see something different.

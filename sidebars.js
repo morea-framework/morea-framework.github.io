@@ -65,7 +65,11 @@ module.exports = {
       type: 'category',
       label: 'CI-TRACS',
       collapsed: false,
-      items: ['ci-tracs/overview', 'ci-tracs/getting-started'],
+      items: [
+        'ci-tracs/overview',
+        'ci-tracs/getting-started',
+        'ci-tracs/ci-tracs-tips',
+      ],
     },
     {
       type: 'category',
