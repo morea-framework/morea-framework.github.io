@@ -50,10 +50,16 @@ Errors found. Exiting
 
 Because we made a copy of the hpc directory called hpc-part-2, the Morea system discovers that there exist files in the `morea` subdirectory tree that have the same `morea_id`.  This is illegal in Morea: all Morea Outcomes, Readings, Experiences, and Assessments must have a unique ID. 
 
-So, the next thing you have to do is make sure that there are no files with duplicate IDs in the hpc-part-2 directory. A simple way to do that is to delete all the Outcomes, Readings, Experiences, and Assessments from that directory, rename the module_id in the module_hpc.md file from `hpc` to `hpc-part-2`, and change the title string in the module_hpc.md file to "High Performance Computing, Part 2".  Once we do that, the system runs locally and the hpc-part-2 module displays as follows:
+So, the next thing you have to do is make sure that there are no files with duplicate IDs in the hpc-part-2 directory. A quick way to do that is to:
+
+1. Delete all the Outcome, Reading, Experience, and Assessment files from the new hpc-part-2 directory, 
+2. Rename the module_id in the hpc-part-2/module_hpc.md file from `hpc` to `hpc-part-2`, 
+3. Change the title string in the module_hpc.md file to "High Performance Computing, Part 2".  
+
+Once we do that, the system runs locally and the hpc-part-2 module displays as follows:
 
 ![](/img/ci-tracs/hpc-part-2-module-page.png)
 
-The problem now is the contents of this workshop, as defined in module_hpc.md, is exactly the same as the content in the original HPC module! That's because this module file specifies the module_IDs associated with files in the hpc directory.
+The problem now is the contents of this workshop, as defined in hpc-part-2/module_hpc.md, is exactly the same as the content in the original HPC module! That's because this module file specifies the module_IDs associated with files in the hpc directory.
 
 So, now that you have something running, you can start creating new Outcome, Reading, Experience, and Assessment files in your new directory, giving them unique IDs, and then updating the module definition file to refer to them. Before you know it, your new module will be ready for integration into the official site!
