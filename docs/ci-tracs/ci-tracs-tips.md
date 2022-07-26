@@ -10,9 +10,9 @@ The goal of this page is to provide guidance on how to actually create workshop 
 
 It's important that you have a basic understanding of how Morea works.  We recommend that you skim through the "Reference" section of the Instructor Guide (see the sidebar at left for links). Skimming through the Reference section will give you a sense for where to go for help if you need it later during development of your workshop.
 
-## Tip 2: Base your workshop on a similar one
+## Tip 2: Bootstrap a new workshop
 
-If you find that there is an existing workshop that has a similar structure to the one you are creating, then it's reasonable to start by making a copy of it and then editing it until the content reflects your workshop curriculum.
+If you find that there is an existing workshop that has a similar structure to the one you are creating, then it's reasonable to bootstrap your new one by making a copy of the existing one and then editing it until the content reflects your workshop curriculum.
 
 Here's the general approach:
 
@@ -63,3 +63,51 @@ Once we do that, the system runs locally and the hpc-part-2 module displays as f
 The problem now is the contents of this workshop, as defined in hpc-part-2/module_hpc.md, is exactly the same as the content in the original HPC module! That's because this module file specifies the module_IDs associated with files in the hpc directory.
 
 So, now that you have something running, you can start creating new Outcome, Reading, Experience, and Assessment files in your new directory, giving them unique IDs, and then updating the module definition file to refer to them. Before you know it, your new module will be ready for integration into the official site!
+
+## Tip 3: Make your module images square
+
+In your module definition file, you will see a `module_icon_url` property in the front matter. For example:
+
+```yaml
+morea_icon_url: /morea/introduction/introduction.jpg
+```
+
+To ensure that those images look good, please make sure to crop them into squares (I.e. a 1:1 aspect ratio) and ensure that they are at least 200 pixels wide. 
+
+## Tip 4: Consider reusing Outcomes and/or Readings
+
+When developing your workshop, it is worth taking a look at the already existing Outcomes and Readings. You can see the full list by navigating to the [CI-TRACS Outcomes page](https://ci-tracs.github.io/outcomes/) and the [CI-TRACS Readings page](https://ci-tracs.github.io/readings/) in the navbar. For example:
+
+![](/img/ci-tracs/ci-tracs-readings-page.png)
+
+While you almost never want to reuse Experiences or Assessments, since they will be very specific to your workshop, you might often want to reuse Readings (i.e. background information) or Outcomes (since a high-level Outcome could apply to multiple workshops). 
+
+## Tip 5: Use CI-TRACS conventions for admonitions
+
+Morea provides [admonitions](../instructors/admonitions) (a.k.a. callouts). The [HPC workshop tutorial section on Deep Learning CPU vs GPU](https://ci-tracs.github.io/morea/hpc/experience-hpc-deep-learning.html) provides a nice example of the various forms of admonitions and how they can be used in a workshop tutorial. Let's look at a few examples:
+
+**Success for overview**
+
+To begin, the section starts with the table of contents (enabled by setting `morea_enable_toc: true` in the front matter), followed by the "success" admonition to provide overview information:
+
+![](/img/ci-tracs/admonition-overview.png)
+
+**Info for sidebars**
+
+Later on, the tutorial uses the "info" admonition to provide a "sidebar" of information:
+
+![](/img/ci-tracs/admonition-info.png)
+
+**Secondary for activities**
+
+To distinguish a "hands on activity" from reading material, the tutorial uses the "secondary" admonition:
+
+![](/img/ci-tracs/admonition-secondary.png)
+
+Note the use of the HTML "details" element to provide a toggle-able "Solution" in the above admonition!
+
+**Warning for warnings**
+
+Finally, to provide a "warning", the tutorial uses the "warning" admonition:
+
+![](/img/ci-tracs/admonition-warning.png)
