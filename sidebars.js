@@ -53,6 +53,7 @@ module.exports = {
             'instructors/include-files',
             'instructors/icons',
             'instructors/admonitions',
+            'instructors/dependabot-alerts',
             'instructors/google-analytics',
             'instructors/themes',
             'instructors/advanced-customization',
