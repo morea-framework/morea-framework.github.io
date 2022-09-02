@@ -7,12 +7,13 @@ title: Getting started
 There are many potential ways to support collaborative workshop curriculum development for Change-HI. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
 
 1. Install the required tools and libraries for Morea.
-2. Create a fork of the Change-HI Morea site repository in your personal GitHub account, and clone that repository to your computer.
-3. Build and run your local copy of the Change-HI Morea site.
-4. Create a branch to hold your changes to the site.
-5. Edit files to update the site with your changes, and review the results locally. 
-6. Once you are satisfied with your changes, commit them and push your branch to GitHub.
-7. Create a pull request so that the Change-HI site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
+2. Request a stub module if necessary
+3. Create a fork of the Change-HI Morea site repository in your personal GitHub account, and clone that repository to your computer.
+4. Build and run your local copy of the Change-HI Morea site.
+5. Create a branch to hold your changes to the site.
+6. Edit files to update the site with your changes, and review the results locally. 
+7. Once you are satisfied with your changes, commit them and push your branch to GitHub.
+8. Create a pull request so that the Change-HI site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
 
 Once the pull request is merged, you're done, at least until the next time you need to create another workshop (or update the materials associated with your original workshop).  At that point, the process is a bit simpler:
 
@@ -101,7 +102,7 @@ After clicking this button, GitHub Desktop should look like this, indicating the
 Now that you have the system files in a local directory, open a shell window, change directories to the location of the files, and invoke `bundle install` to download all required libraries:
 
 ```shell
-$ cd github/philipmjohnson/Change-HI.github.io/
+$ cd github/philipmjohnson/change-hi.github.io/
 $ bundle install
 Using public_suffix 4.0.6
 Using addressable 2.8.0
@@ -118,39 +119,39 @@ Once the libraries are there, you run the system with `bundle exec jekyll serve`
 
 ```shell
 $ bundle exec jekyll serve
-Configuration file: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_config.yml
-Configuration file: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_config.yml
-            Source: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io
-       Destination: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_site
+Configuration file: /Users/philipjohnson/github/philipmjohnson/change-hi.github.io/_config.yml
+Configuration file: /Users/philipjohnson/github/philipmjohnson/change-hi.github.io/_config.yml
+            Source: /Users/philipjohnson/github/philipmjohnson/change-hi.github.io
+       Destination: /Users/philipjohnson/github/philipmjohnson/change-hi.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
                     done in 0.249 seconds.
- Auto-regeneration: enabled for '/Users/philipjohnson/github/philipmjohnson/Change-HI.github.io'
+ Auto-regeneration: enabled for '/Users/philipjohnson/github/philipmjohnson/change-hi.github.io'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 ```
 
 Notice the "Server address" line that provides the URL `http://127.0.0.1:4000/` for displaying the site in your browser. If all goes according to plan, retrieving this URL will display the landing page of the Change-HI site in your browser:
 
-![](/img/ci-tracs/ci-tracs-landing-page-local.png)
+![](/img/change-hi/change-hi-landing-page-local.png)
 
 ## Create a branch
 
 Now that we have successfully installed a local copy of the site, the next step is to make a branch in which to hold our update.  Click the "Branch" menu item:
 
-![](/img/ci-tracs/ci-tracs.github.io-new-branch.png)
+![](/img/change-hi/change-hi.github.io-new-branch.png)
 
 Then select "New Branch", which yields the following:
 
-![](/img/ci-tracs/ci-tracs.github.io-new-branch-2.png)
+![](/img/change-hi/change-hi.github.io-new-branch-2.png)
 
 I'll call the branch "update-hpc-preparation" and click "Create Branch" to get the following:
 
-![](/img/ci-tracs/ci-tracs.github.io-new-branch-3.png)
+![](/img/change-hi/change-hi.github.io-new-branch-3.png)
 
 Click the "Publish branch" button to push this new branch to GitHub. Afterwards GitHub Desktop will look like this:
 
-![](/img/ci-tracs/ci-tracs.github.io-new-branch-4.png)
+![](/img/change-hi/change-hi.github.io-new-branch-4.png)
 
 We're now ready to create a pull request, but first we actually have to update the repository!
 
@@ -158,38 +159,38 @@ We're now ready to create a pull request, but first we actually have to update t
 
 Now let's walk through a simple modification of the site. Suppose we want to update the "Preparation" reading for the HPC workshop to include an additional video on learning the command line. First, open an editor and bring up the source file for that page. I use IntelliJ IDEA as my editor:
 
-![](/img/ci-tracs/reading-hpc-preparation.png)
+![](/img/change-hi/reading-hpc-preparation.png)
 
 Here's that same file after adding a sentence on line 19 documenting an additional YouTube video for learning the shell:
 
-![](/img/ci-tracs/reading-hpc-preparation-2.png)
+![](/img/change-hi/reading-hpc-preparation-2.png)
 
 To see the updated page, control-c to stop the Jekyll process and re-invoke `bundle exec jekyll serve`. Then navigate to the page:
 
-![](/img/ci-tracs/reading-hpc-preparation-3.png)
+![](/img/change-hi/reading-hpc-preparation-3.png)
 
 ## Create the pull request
 
 Let's say that this is the only enhancement you want to make at this time, and now you want to ask the administrators to incorporate this change into the official Change-HI site.  The first step is to commit your change to your local repository. If you go to GitHub Desktop, you'll see an indicating of all the files that have been modified. In this case, it's just a single file to which we've added a single line:
 
-![](/img/ci-tracs/reading-hpc-preparation-commit.png)
+![](/img/change-hi/reading-hpc-preparation-commit.png)
 
 Add a commit message, then press the "Commit to update-hpc-preparation" button to commit your changes to your local repository. Afterwards GitHub Desktop will look like this:
 
-![](/img/ci-tracs/reading-hpc-preparation-commit-2.png)
+![](/img/change-hi/reading-hpc-preparation-commit-2.png)
 
 Now press "Push origin" to push your update to GitHub. Now GitHub Desktop looks like this:
 
-![](/img/ci-tracs/reading-hpc-preparation-commit-2.png)
+![](/img/change-hi/reading-hpc-preparation-commit-3.png)
 
 As if by magic, GitHub Desktop has anticipated that we might want to make a pull request and it provides us with a button. Click the "Create Pull Request" button. That will send control to your browser and display the following page:
 
-![](/img/ci-tracs/ci-tracs.github.io-pull-request.png)
+![](/img/change-hi/change-hi.github.io-pull-request.png)
 
-Notice that this page is associated with the Change-HI version of the Change-HI.github.io repository, not your own personal version. You are "opening a pull request" on the official version of the repository, and requesting that the administrators merge the changes in your branch into the official repo.
+Notice that this page is associated with the change-hi github organization, not your personal github account. You are "opening a pull request" on the official version of the repository, and requesting that the Change-HI administrators merge the changes in your branch into the official repo.
 
-Add any additional information you'd like to add, then press "Create pull request". The result will look somewhat similar to this:
+You can add additional information if you like as a message to the Change-HI administrators. Then press "Create pull request". The result will look somewhat similar to this:
 
-![](/img/ci-tracs/ci-tracs.github.io-pull-request-2.png)
+![](/img/change-hi/change-hi.github.io-pull-request-2.png)
 
-In this case, since I am an administrator, I will get a button to merge the pull request, but non-administrators will see something different.
+In this screen image, since I am actually an administrator, I will get a button to merge the pull request, but regular users will see a slightly different page. 
