@@ -64,12 +64,12 @@ module.exports = {
     },
     {
       type: 'category',
-      label: 'CI-TRACS',
+      label: 'Change-HI',
       collapsed: false,
       items: [
-        'ci-tracs/overview',
-        'ci-tracs/getting-started',
-        'ci-tracs/ci-tracs-tips',
+        'change-hi/overview',
+        'change-hi/getting-started',
+        'change-hi/change-hi-tips',
       ],
     },
     {

@@ -4,19 +4,19 @@ title: Getting started
 
 ## Our development process
 
-There are many potential ways to support collaborative workshop curriculum development for CI-TRACS. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
+There are many potential ways to support collaborative workshop curriculum development for Change-HI. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
 
-1. Install the required tools and libraries for CI-TRACS curriculum development using Morea.
-2. Create a fork of the CI-TRACS Morea site repository in your personal GitHub account, and clone that repository to your computer.
-3Build and run your local copy of the CI-TRACS Morea site.
-3. Create a branch to hold your changes to the site.
-4. Edit files to update the site with your changes, and preview the results locally. 
-5. Once you are satisfied with your changes, commit them and push your branch to GitHub.
-6. Finally, create a pull request so that the CI-TRACS site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
+1. Install the required tools and libraries for Morea.
+2. Create a fork of the Change-HI Morea site repository in your personal GitHub account, and clone that repository to your computer.
+3. Build and run your local copy of the Change-HI Morea site.
+4. Create a branch to hold your changes to the site.
+5. Edit files to update the site with your changes, and review the results locally. 
+6. Once you are satisfied with your changes, commit them and push your branch to GitHub.
+7. Create a pull request so that the Change-HI site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
 
 Once the pull request is merged, you're done, at least until the next time you need to create another workshop (or update the materials associated with your original workshop).  At that point, the process is a bit simpler:
 
-1. Update your fork so that it contains the most recent version of the CI-TRACS Morea site repository.
+1. Update your fork so that it contains the most recent version of the Change-HI Morea site repository.
 2. Make a new branch to hold your next set of updates. 
 3. Update the site to your satisfaction.
 4. Push your changes.
@@ -26,7 +26,7 @@ So, that's the basic process. Let's now provide examples for each of these steps
 
 ## Install tools
 
-There are a few things you will need to install for workshop curriculum development using Morea.
+There are a few things you will need to install for Morea.
 
 ### Join GitHub
 
@@ -50,21 +50,25 @@ The final installation step is to [install Jekyll](https://jekyllrb.com/docs/ins
 
 To verify that you've installed Jekyll correctly, please go through the [Jekyll Quickstart](https://jekyllrb.com/docs/) instructions to be sure that you can create a simple Jekyll site and run it on your computer.
 
-## Fork the CI-TRACS site
+## Request a stub module if necessary
 
-Once you have installed a git client, an editor, and Jekyll, the next step is to fork a copy of the CI-TRACS Morea site, download it, and get it to run locally on your computer.  
+The Change-HI site ([https://change-hi.github.io/modules](https://change-hi.github.io/modules)) contains a set of "stub" modules for upcoming workshops during AY 2022-23.  In most cases, a stub module will already exist, but if not, please ask Philip Johnson to create one for you.  That will simplify content creation when you are just getting started with Morea.  
+
+## Fork the Change-HI site
+
+Once you have installed a git client, an editor, and Jekyll, the next step is to fork a copy of the Change-HI Morea site, download it, and get it to run locally on your computer.  
 
 ### Go to site
 
-First, go to [https://github.com/ci-tracs/ci-tracs.github.io](https://github.com/ci-tracs/ci-tracs.github.io):
+First, go to [https://github.com/change-hi/change-hi.github.io](https://github.com/change-hi/change-hi.github.io):
 
-![](/img/ci-tracs/ci-tracs.github.io.png)
+![](/img/change-hi/change-hi.github.io.png)
 
 ### Fork the repo
 
 Click the "Fork" button in the top right of the page to bring up the fork window:
 
-![](/img/ci-tracs/ci-tracs.github.io-fork.png)
+![](/img/change-hi/change-hi.github.io-fork.png)
 
 You can see that this window selects my personal account, which is typically where you'll want the fork of the repository to go. Click "Create fork" which results in a new copy of the repo in your own personal account. For example:
 
@@ -99,7 +103,7 @@ After clicking this button, GitHub Desktop should look like this, indicating the
 Now that you have the system files in a local directory, open a shell window, change directories to the location of the files, and invoke `bundle install` to download all required libraries:
 
 ```shell
-$ cd github/philipmjohnson/ci-tracs.github.io/
+$ cd github/philipmjohnson/Change-HI.github.io/
 $ bundle install
 Using public_suffix 4.0.6
 Using addressable 2.8.0
@@ -116,19 +120,19 @@ Once the libraries are there, you run the system with `bundle exec jekyll serve`
 
 ```shell
 $ bundle exec jekyll serve
-Configuration file: /Users/philipjohnson/github/philipmjohnson/ci-tracs.github.io/_config.yml
-Configuration file: /Users/philipjohnson/github/philipmjohnson/ci-tracs.github.io/_config.yml
-            Source: /Users/philipjohnson/github/philipmjohnson/ci-tracs.github.io
-       Destination: /Users/philipjohnson/github/philipmjohnson/ci-tracs.github.io/_site
+Configuration file: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_config.yml
+Configuration file: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_config.yml
+            Source: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io
+       Destination: /Users/philipjohnson/github/philipmjohnson/Change-HI.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating... 
                     done in 0.249 seconds.
- Auto-regeneration: enabled for '/Users/philipjohnson/github/philipmjohnson/ci-tracs.github.io'
+ Auto-regeneration: enabled for '/Users/philipjohnson/github/philipmjohnson/Change-HI.github.io'
     Server address: http://127.0.0.1:4000/
   Server running... press ctrl-c to stop.
 ```
 
-Notice the "Server address" line that provides the URL `http://127.0.0.1:4000/` for displaying the site in your browser. If all goes according to plan, retrieving this URL will display the landing page of the CI-TRACS site in your browser:
+Notice the "Server address" line that provides the URL `http://127.0.0.1:4000/` for displaying the site in your browser. If all goes according to plan, retrieving this URL will display the landing page of the Change-HI site in your browser:
 
 ![](/img/ci-tracs/ci-tracs-landing-page-local.png)
 
@@ -168,7 +172,7 @@ To see the updated page, control-c to stop the Jekyll process and re-invoke `bun
 
 ## Create the pull request
 
-Let's say that this is the only enhancement you want to make at this time, and now you want to ask the administrators to incorporate this change into the official CI-TRACS site.  The first step is to commit your change to your local repository. If you go to GitHub Desktop, you'll see an indicating of all the files that have been modified. In this case, it's just a single file to which we've added a single line:
+Let's say that this is the only enhancement you want to make at this time, and now you want to ask the administrators to incorporate this change into the official Change-HI site.  The first step is to commit your change to your local repository. If you go to GitHub Desktop, you'll see an indicating of all the files that have been modified. In this case, it's just a single file to which we've added a single line:
 
 ![](/img/ci-tracs/reading-hpc-preparation-commit.png)
 
@@ -184,7 +188,7 @@ As if by magic, GitHub Desktop has anticipated that we might want to make a pull
 
 ![](/img/ci-tracs/ci-tracs.github.io-pull-request.png)
 
-Notice that this page is associated with the CI-TRACS version of the ci-tracs.github.io repository, not your own personal version. You are "opening a pull request" on the official version of the repository, and requesting that the administrators merge the changes in your branch into the official repo.
+Notice that this page is associated with the Change-HI version of the Change-HI.github.io repository, not your own personal version. You are "opening a pull request" on the official version of the repository, and requesting that the administrators merge the changes in your branch into the official repo.
 
 Add any additional information you'd like to add, then press "Create pull request". The result will look somewhat similar to this:
 
