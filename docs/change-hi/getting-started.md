@@ -72,31 +72,29 @@ Click the "Fork" button in the top right of the page to bring up the fork window
 
 You can see that this window selects my personal account, which is typically where you'll want the fork of the repository to go. Click "Create fork" which results in a new copy of the repo in your own personal account. For example:
 
-![](/img/ci-tracs/ci-tracs.github.io-forked.png)
-
-(You can ignore the "Your main branch isn't protected" warning.)
+![](/img/change-hi/change-hi.github.io-forked.png)
 
 ### Download your forked site
 
 Now click on the green "Code" button:
 
-![](/img/ci-tracs/ci-tracs.github.io-clone.png)
+![](/img/change-hi/change-hi.github.io-clone.png)
 
 You will typically want to select "Open with GitHub Desktop". (If you are experienced with git and are using another client, then do that instead).
 
 Clicking "Open with GitHub Desktop" should automatically open your GitHub Desktop application on your computer and open a dialogue box where you can specify where you want the copy of the repository placed in your file system.  In my case, I use `/Users/philipmjohnson/github/philipmjohnson` to store all the repos associated with my personal account. So that's where I'll put it:
 
-![](/img/ci-tracs/ci-tracs.github.io-clone-2.png)
+![](/img/change-hi/change-hi.github.io-clone-2.png)
 
 After clicking the "Clone" button, GitHub Desktop will download all of the files and then display the following dialogue box:
 
-![](/img/ci-tracs/ci-tracs.github.io-parent.png)
+![](/img/change-hi/change-hi.github.io-parent.png)
 
 Since you want to use this repo to contribute to the parent project, you can just click the "Continue" button. 
 
 After clicking this button, GitHub Desktop should look like this, indicating the repo has been successfully cloned to your computer:
 
-![](/img/ci-tracs/ci-tracs.github.io-local.png)
+![](/img/change-hi/change-hi.github.io-local.png)
 
 ## Run the local site
 
