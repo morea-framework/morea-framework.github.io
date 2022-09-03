@@ -69,7 +69,8 @@ module.exports = {
       items: [
         'change-hi/overview',
         'change-hi/getting-started',
-        'change-hi/change-hi-tips',
+        'change-hi/workshop-design',
+        'change-hi/tips',
       ],
     },
     {

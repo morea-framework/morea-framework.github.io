@@ -1,16 +1,19 @@
 ---
-title: Development tips
+title: Misc Tips
+hide_table_of_contents: true
 ---
 
-The previous section documents the "mechanics" of Change-HI workshop development: how to get the files, make a simple update, and create a pull request so that administrators can merge your changes into the official site. 
+Here's some tips for using Morea. 
 
-The goal of this page is to provide guidance on how to actually create workshop curriculum. 
-
-## Tip 1: Skim the Morea reference guide
+## Skim the Morea reference guide
 
 It's important that you have a basic understanding of how Morea works.  We recommend that you skim through the "Reference" section of the Instructor Guide (see the sidebar at left for links). Skimming through the Reference section will give you a sense for where to go for help if you need it later during development of your workshop.
 
-## Tip 2: Copy existing Reading, Outcome, Experience, and Assessment files
+## Understand the "anatomy" of a workshop module
+
+It can be helpful to take an existing module and examine all of the files in its associated directory and the resulting user interface. There is a one-to-one correspondance between files and UI elements. 
+
+## Copy existing Reading, Outcome, Experience, and Assessment files
 
 Rather than try to write a new Reading, Outcome, Experience, or Assessment from scratch, it's far easier to make a copy of a pre-existing file and then edit it. 
 
@@ -18,8 +21,9 @@ So, look for similar files in other modules, and copy them over.
 
 Note: You will always need to change the morea_id field!  Otherwise Morea will terminate with an error that a duplicate ID has been found.
 
+## Make your module images square
 
-## Tip 3: Make your module images square
+In many cases, the module you are implementing already has a module image. But if not, you want to make it square. 
 
 In your module definition file, you will see a `module_icon_url` property in the front matter. For example:
 
@@ -29,7 +33,7 @@ morea_icon_url: /morea/introduction/introduction.jpg
 
 To ensure that those images look good, please make sure to crop them into squares (I.e. a 1:1 aspect ratio) and ensure that they are at least 200 pixels wide. 
 
-## Tip 4: Consider reusing Outcomes and/or Readings
+## Consider reusing Outcomes and/or Readings
 
 When developing your workshop, it is worth taking a look at the already existing Outcomes and Readings. You can see the full list by navigating to the [Change-HI Outcomes page](https://change-hi.github.io/outcomes/) and the [Change-HI Readings page](https://change-hi.github.io/readings/) in the navbar. For example:
 
@@ -37,7 +41,7 @@ When developing your workshop, it is worth taking a look at the already existing
 
 While you almost never want to reuse Experiences or Assessments, since they will be very specific to your workshop, you might often want to reuse Readings (i.e. background information) or Outcomes (since a high-level Outcome could apply to multiple workshops). 
 
-## Tip 5: Use Change-HI conventions for admonitions
+## Use Change-HI conventions for admonitions
 
 Morea provides [admonitions](../instructors/admonitions) (a.k.a. callouts). The [HPC workshop tutorial section on Deep Learning CPU vs GPU](https://change-hi.github.io/morea/hpc/experience-hpc-deep-learning.html) provides a nice example of the various forms of admonitions and how they can be used in a workshop tutorial. Let's look at a few examples:
 
