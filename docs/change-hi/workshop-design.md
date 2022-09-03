@@ -22,7 +22,7 @@ Workshops thus have a much higher bar for success than seminars.
 Unlike designing a seminar, in which you rarely consider the activities of the attendees before or after the workshop, you should consider three phases when designing a workshop: 
 
 * *Pre-workshop*.  What would you like participants to do prior to attending the workshop? 
-* *In-workshop*.  What would like participants to do during the workshop? 
+* *In-workshop*.  What would you like participants to do during the workshop? 
 * *Post-workshop*.  Assuming at least some participants will want to actually use the skill you introduced in the workshop, how should they continue to develop the skill?
 
 ### The pre-workshop phase
@@ -79,3 +79,5 @@ Once you have that sketch in hand, you can implement it as actual Morea construc
 You might think you should begin with Outcomes, but I recommend you leave these until last.  The reason is that if you start with Outcomes, you will often be too ambitious in what you think you can accomplish. 
 
 So, instead, leave the specification of learning outcomes until you have finished the workshop design. Then think about what you hope attendees will be able to do as a result of the material you actually have.
+
+Take a look at the existing set of Outcomes. Are there outcomes from other workshops that you also hope attendees will acquire in yours? If so, just include that outcome ID in your module definition file (don't make a copy of the outcome file). Having the same learning outcome for multiple workshops helps tie them together, and increases the odds that attendees will actually learn the skill!
