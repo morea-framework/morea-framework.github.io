@@ -13,17 +13,17 @@ We've all been to seminars: you sit down in a room (or login to Zoom), a speaker
 
 A workshop is different. In a workshop, the goal is more than just experiencing something "interesting" or "having a new idea": the goal is to leave the workshop being able to do something you couldn't do before. Workshops are about *skill acquisition*. 
 
-This means that workshops are intrinsically *participatory* in a way that seminars are not. It also means that, in the best case, at least some of the participants will leave the workshop and begin *using* the skill that was introduced in the workshop. 
+This means that workshops are intrinsically *participatory* in a way that seminars are not. It also means that, at a minimum, at least a few of the participants will leave the workshop and begin *using* the skill that was introduced in the workshop. 
 
 Workshops thus have a much higher bar for success than seminars.  
 
 ## Pre, In, and Post Workshop phases
 
-Unlike designing a seminar, in which you rarely consider the activities of the attendees before or after the workshop, you should consider three phases when designing a workshop: 
+Unlike designing a seminar, in which you rarely consider the activities of the attendees before or after the seminar, you should consider three distinct phases when designing a workshop: 
 
 * *Pre-workshop*.  What would you like participants to do prior to attending the workshop? 
 * *In-workshop*.  What would you like participants to do during the workshop? 
-* *Post-workshop*.  Assuming at least some participants will want to actually use the skill you introduced in the workshop, how should they continue to develop the skill?
+* *Post-workshop*.  Assuming at least some of the participants will want to use the skill you introduced in the workshop, how should they continue to develop the skill?
 
 ### The pre-workshop phase
 
@@ -33,11 +33,11 @@ In rare cases, the answer might be "nothing", but in most cases, there will be a
 
 In some cases, you might want attendees to install some software or download some materials in advance of the workshop. This can be crucial when the installation or download might take 15-30 minutes and you only have two hours for the entire workshop. In this case, you can create a Morea Reading with the labels "Pre-Workshop" and "Required" which refers the attendee to the relevant installation instructions.  Attendees who have problems with the installation could arrive at the workshop early in order to receive help completing the installation, or else they simply partner with another attendee during the workshop who has successfully installed the software.
 
-In yet other cases, you might want attendees to have acquired a skill prior to the workshop. For example, your workshop might involve teaching some intermediate-level skill with Jupyter notebooks, and so you require that attendees have basic knowledge of Python and Jupyter.  In this case, you could specify a Morea Prerequisite Module: a separate Module that attendees should refer to prior to the workshop to make sure they have the necessary knowledge for your workshop.
+In yet other cases, you might want attendees to have acquired a skill prior to the workshop. For example, your workshop might involve teaching some intermediate-level skill with Jupyter notebooks, and so you require that attendees have basic knowledge of Python and Jupyter.  In this case, you could specify a Morea Prerequisite Module: a separate Module with its own Readings and Experiences that attendees should work through prior to the workshop to make sure they have the necessary knowledge for your workshop.
 
 ### The in-workshop phase
 
-The actual workshop can have many different organizations. Sometimes, it makes sense to interleave short lectures with activities. In this case, you might want to create one or more Morea Readings with the label "In-workshop" that points to the slides associated with your lectures, as well as one or more Morea Experiences with instructions on how to carry out the activities. 
+A workshop can be organized in many different ways.  Sometimes, it makes sense to interleave short lectures with activities. In this case, you might want to create one or more Morea Readings with the label "In-workshop" that points to the slides associated with your lectures, as well as one or more Morea Experiences with instructions on how to carry out the activities. 
 
 Some workshops might not have any "lecture" at all. Instead, the instructor guides the attendees interactively through the use of a tool or problem solving scenario. In this case, you might want to provide a sequence of Morea Experiences with the label "In-workshop" that document what you the attendees to do for each logical section of the material.
 
