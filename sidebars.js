@@ -51,6 +51,7 @@ module.exports = {
             'instructors/formatting-code',
             'instructors/schedule-page',
             'instructors/include-files',
+            'instructors/embed-video',
             'instructors/icons',
             'instructors/admonitions',
             'instructors/dependabot-alerts',
