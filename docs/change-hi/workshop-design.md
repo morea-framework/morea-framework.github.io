@@ -18,7 +18,7 @@ Workshops thus have a much higher bar for success than seminars, and thus requir
 
 ## Pre, In, and Post Workshop phases
 
-Unlike designing a seminar, in which you rarely consider the activities of the attendees before or after the seminar, you should consider three distinct phases when designing a workshop: 
+Unlike designing a seminar, in which you rarely consider the activities of the participants before or after the seminar, you should consider three distinct phases when designing a workshop: 
 
 * *Pre-workshop*.  What would you like participants to do prior to attending the workshop? 
 * *In-workshop*.  What would you like participants to do during the workshop? 
@@ -26,19 +26,19 @@ Unlike designing a seminar, in which you rarely consider the activities of the a
 
 ### The pre-workshop phase
 
-Let's assume you can contact the attendees prior to the workshop.  What would you like them to do prior to the workshop in order to make maximal use of the time you are together? 
+Let's assume you can contact the participants prior to the workshop.  What would you like them to do prior to the workshop in order to make maximal use of the time you are together? 
 
-In rare cases, the answer might be "nothing", but in most cases, there will be at least some light introductory reading that can orient the attendees to the workshop material. To indicate this, you can create a [Morea Reading](/docs/instructors/entity-types#reading) and add the label "Pre-Workshop" in order to indicate that attendees should take a look in advance. You can also add the label "Optional" to indicate that attendees should read it if they can, but to not worry if they don't have time.
+In rare cases, the answer might be "nothing", but in most cases, there will be at least some light introductory reading that can orient the participants to the workshop material. To indicate this, you can create a [Morea Reading](/docs/instructors/entity-types#reading) and add the label "Pre-Workshop" in order to indicate that participants should take a look in advance. You can also add the label "Optional" to indicate that participants should read it if they can, but to not worry if they don't have time.
 
-In some cases, you might want attendees to install some software or download some materials in advance of the workshop. This can be crucial when the installation or download might take 15-30 minutes and you only have two hours for the entire workshop. In this case, you can create a Morea Reading with the labels "Pre-Workshop" and "Required" which refers the attendee to the relevant installation instructions.  Attendees who have problems with the installation could arrive at the workshop early in order to receive help completing the installation, or else they simply partner with another attendee during the workshop who has successfully installed the software.
+In some cases, you might want participants to install some software or download some materials in advance of the workshop. This can be crucial when the installation or download might take 15-30 minutes and you only have two hours for the entire workshop. In this case, you can create a Morea Reading with the labels "Pre-Workshop" and "Required" which refers the participant to the relevant installation instructions.  Participants who have problems with the installation could arrive at the workshop early in order to receive help completing the installation, or else they simply partner with another participant during the workshop who has successfully installed the software.
 
-In yet other cases, you might want attendees to have acquired a skill prior to the workshop. For example, your workshop might involve teaching some intermediate-level skill with Jupyter notebooks, and so you require that attendees have basic knowledge of Python and Jupyter.  In this case, you could specify a [Morea Prerequisite](/docs/instructors/entity-types#prerequisite): a separate Module with its own Readings and Experiences that attendees should work through prior to the workshop to make sure they have the necessary knowledge for your workshop. For example, the [Change-HI HPC Workshop](https://change-hi.github.io/modules/hpc/) has a prerequisite module.
+In yet other cases, you might want participants to have acquired a skill prior to the workshop. For example, your workshop might involve teaching some intermediate-level skill with Jupyter notebooks, and so you require that participants have basic knowledge of Python and Jupyter.  In this case, you could specify a [Morea Prerequisite](/docs/instructors/entity-types#prerequisite): a separate Module with its own Readings and Experiences that participants should work through prior to the workshop to make sure they have the necessary knowledge for your workshop. For example, the [Change-HI HPC Workshop](https://change-hi.github.io/modules/hpc/) has a prerequisite module.
 
 ### The in-workshop phase
 
 A workshop can be organized in many different ways.  Sometimes, it makes sense to interleave short lectures with activities. In this case, you might want to create one or more Morea Readings with the label "In-workshop" that points to the slides associated with your lectures, as well as one or more Morea Experiences with instructions on how to carry out the activities. 
 
-Some workshops might not have any "lecture" at all. Instead, the instructor guides the attendees interactively through the use of a tool or problem solving scenario. In this case, you might want to provide a sequence of [Morea Experiences](/docs/instructors/entity-types#experience) with the label "In-workshop" that document what you the attendees to do for each logical section of the material.
+Some workshops might not have any "lecture" at all. Instead, the instructor guides the participants interactively through the use of a tool or problem solving scenario. In this case, you might want to provide a sequence of [Morea Experiences](/docs/instructors/entity-types#experience) with the label "In-workshop" that document what you want the participants to do for each logical section of the material.
 
 If you want to show a video at some point during the workshop, you can either [embed the video](/docs/instructors/embed-video) at the appropriate point in an Experience, or else include it as a Reading.
 
@@ -49,27 +49,27 @@ Your workshop should always conclude by asking participants to evaluate the expe
   * Are there skills that you wish were covered in the workshop, but weren't?
   * Do you have any suggestions for how the workshop could be improved in future? 
 
-In order to maximize the response rate, it's best to build this assessment right into the workshop and not ask attendees to fill it out later.
+In order to maximize the response rate, it's best to build this assessment right into the workshop and not ask participants to fill it out later.
 
 ### The post-workshop phase
 
-A well-designed workshop provides attendees with a clear path forward if they want to start using the skill in their work.  There are a variety of ways to help attendees to move forward:
+A well-designed workshop provides participants with a clear path forward if they want to start using the skill in their work.  There are a variety of ways to help participants to move forward:
 
   * Provide Morea Readings to API documentation, more advanced tutorials, videos, or the like.  Label these Readings with "Post-workshop".
-  * Provide Morea Experiences that challenge attendees to practice the skills in various ways. Label these Experiences with "Post-workshop".
+  * Provide Morea Experiences that challenge participants to practice the skills in various ways. Label these Experiences with "Post-workshop".
   * Provide recommendations for future workshops that build upon these skills.
 
 ## What about Outcomes?
 
 You might think you should begin your workshop design by deciding on the learning outcomes, but I recommend you leave these until last.  The reason is that you are often too ambitious in what you think you can accomplish.
 
-So, instead, leave the specification of learning outcomes until you have finished the workshop design. Then think about what you hope attendees will be able to do as a result of the material you actually have.
+So, instead, leave the specification of learning outcomes until you have finished the workshop design. Then think about what you hope participants will be able to do as a result of the material you actually have.
 
 Learning outcomes are generally directly related to the skills you hope the participants will acquire, and so you can ask whether or not each learning outcome was achieved for a as part of the assessment.
 
 Naturally, your learning outcomes will be represented as [Morea Outcomes](/docs/instructors/entity-types#outcome).
 
-When designing your outcomes, it's important to take a look at the [existing set of Change-HI outcomes](https://change-hi.github.io/outcomes/). Are there outcomes already associated with other workshops that you also hope attendees will acquire in yours? If so, just include that outcome ID in your module definition file (don't make a copy of the outcome file). Having the same learning outcome for multiple workshops helps tie them together, and increases the odds that attendees will actually learn the skill!
+When designing your outcomes, it's important to take a look at the [existing set of Change-HI outcomes](https://change-hi.github.io/outcomes/). Are there outcomes already associated with other workshops that you also hope participants will acquire in yours? If so, just include that outcome ID in your module definition file (don't make a copy of the outcome file). Having the same learning outcome for multiple workshops helps tie them together, and increases the odds that participants will actually learn the skill!
 
 ## Start with a sketch
 
@@ -85,3 +85,11 @@ Until you are comfortable with Morea, you might want to start by sketching out y
 Feel free to share that sketch with others for feedback. They might have ideas for additional and/or replacement Readings, for example.
 
 Once you have that sketch in hand, then go ahead and implement it as actual Morea constructs. 
+
+## Development timeline
+
+As you can see, designing and implementing a workshop for the first time requires some time to determine the components, then implement them as Morea constructs, and finally ensure that the site builds correctly so that you can issue the pull request (as discussed in the previous section).  
+
+In most cases, it is sufficient to reserve a week for initial design and implementation. That said, I do not recommend you issue the pull request the night before the workshop is scheduled to take place!  For one thing, if you do that, then there's no opportunity for participants to do any pre-workshop readings. For another, it does not allow any time for review and fine-tuning of your workshop materials.
+
+So, it's best to plan to complete your initial implementation and issue your pull request around 7-10 days prior to the workshop date. That leaves a few days for your workshop to be integrated into the site, and circulated for review by other instructors who might have feedback on your approach.  Making small changes to a workshop module, once successfully integrated, is typically quick and easy, and so if you follow this schedule, you should be able to send your participants a link to the workshop module page around 5-7 days prior to the workshop date. 
