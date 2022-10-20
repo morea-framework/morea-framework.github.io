@@ -1,19 +1,47 @@
 ---
 title: Misc Tips
-hide_table_of_contents: true
 ---
 
 Here's some tips for using Morea. 
 
-## Skim the Morea reference guide
+## Skim the guide
 
 It's important that you have a basic understanding of how Morea works.  We recommend that you skim through the "Reference" section of the Instructor Guide (see the sidebar at left for links). Skimming through the Reference section will give you a sense for where to go for help if you need it later during development of your workshop.
 
-## Understand the "anatomy" of a workshop module
+## Understand workshop "anatomy"
 
-It can be helpful to take an existing module and examine all of the files in its associated directory and the resulting user interface. There is a one-to-one correspondance between files and UI elements. 
+It can be helpful to take an existing module and examine all of the files in its associated directory and the resulting user interface. There is a one-to-one correspondance between files and UI elements.
 
-## Copy existing Reading, Outcome, Experience, and Assessment files
+If you are adapting a workshop in Software Carpentries format to Morea, then it can be helpful to take a look at the HPC workshop for an example:
+
+HPC Workshop (Software Carpentry format): 
+  * [Site](https://ci-tracs.github.io/High_Performance_Computing/)
+  * [Source](https://github.com/CI-TRACS/High_Performance_Computing)
+
+HPC Workshop (Morea format):
+  * [Site](https://change-hi.github.io/modules/hpc/)
+  * [Source](https://github.com/change-hi/change-hi.github.io/tree/main/morea/hpc)
+
+## Use heading conventions
+
+When creating a reading or experience, our convention is to start the contents of each page with a title. To do this in markdown, you start a line with the `#` element, followed by a space, followed by the title of the page. This creates the equivalent of an HTML `<h1>` element, for those who know HTML.
+
+In general, only the title should use the `#` markdown element.  Subsequent parts of the page should be "subsections", so they should be delineated using the `##` markdown element, or `###`, and so forth. 
+
+## Make images responsive
+
+A "responsive" image is one that automatically resizes itself to fit within the width of the browser window. 
+
+To make it easy to create responsive images, the Change-HI Morea site has an ["include" file](../instructors/include-files) called [figure.html](https://github.com/change-hi/change-hi.github.io/blob/main/_includes/figure.html). If you search within your local copy of the change-hi.github.io repository for the string "figure.html", you can find many examples of its use. 
+
+For a couple of examples, see the [HPC Workshop Deep Learning Page](https://change-hi.github.io/morea/hpc/experience-hpc-deep-learning.html). The first image on that page is responsive, and it was created using the following call to figure.html:
+
+```
+{% include figure.html url="" max-width="50%" file="/morea/hpc/fig/ood_form.png" alt="Connect to cluster" caption="" %}
+```
+
+
+## Use files as templates
 
 Rather than try to write a new Reading, Outcome, Experience, or Assessment from scratch, it's far easier to make a copy of a pre-existing file and then edit it. 
 
@@ -21,7 +49,7 @@ So, look for similar files in other modules, and copy them over.
 
 Note: You will always need to change the morea_id field!  Otherwise Morea will terminate with an error that a duplicate ID has been found.
 
-## Make your module images square
+## Make module images square
 
 In many cases, the module you are implementing already has a module image. But if not, you want to make it square. 
 
@@ -33,7 +61,7 @@ morea_icon_url: /morea/introduction/introduction.jpg
 
 To ensure that those images look good, please make sure to crop them into squares (I.e. a 1:1 aspect ratio) and ensure that they are at least 200 pixels wide. 
 
-## Consider reusing Outcomes and/or Readings
+## Reuse Outcomes and/or Readings
 
 When developing your workshop, it is worth taking a look at the already existing Outcomes and Readings. You can see the full list by navigating to the [Change-HI Outcomes page](https://change-hi.github.io/outcomes/) and the [Change-HI Readings page](https://change-hi.github.io/readings/) in the navbar. For example:
 
@@ -41,7 +69,7 @@ When developing your workshop, it is worth taking a look at the already existing
 
 While you almost never want to reuse Experiences or Assessments, since they will be very specific to your workshop, you might often want to reuse Readings (i.e. background information) or Outcomes (since a high-level Outcome could apply to multiple workshops). 
 
-## Use Change-HI conventions for admonitions
+## Use admonitions
 
 Morea provides [admonitions](../instructors/admonitions) (a.k.a. callouts). The [HPC workshop tutorial section on Deep Learning CPU vs GPU](https://change-hi.github.io/morea/hpc/experience-hpc-deep-learning.html) provides a nice example of the various forms of admonitions and how they can be used in a workshop tutorial. Let's look at a few examples:
 
@@ -70,3 +98,9 @@ Note the use of the HTML "details" element to provide a toggle-able "Solution" i
 Finally, to provide a "warning", the tutorial uses the "warning" admonition:
 
 ![](/img/change-hi/admonition-warning.png)
+
+## Assess some learning outcomes
+
+The "O" in Morea stands for "outcomes", and the "A" in Morea stands for "assessment". When you develop a workshop, you will come up with some Learning Outcomes, and the last 10 minutes of each workshop is set aside for participants to fill out an assessment questionnaire. 
+
+Although Philip will be responsible for creating the questionnaire and adding the Assessment to your workshop module, you should be thoughtful about designing at least some of your learning outcomes to be "testable" at the end of the workshop.  Think about a few key concepts or skills you hope your participants will come away from the workshop with, and then tell Philip what they are so he can add them to the assessment.   
