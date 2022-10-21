@@ -18,7 +18,6 @@ There are many potential ways to support collaborative workshop curriculum devel
 Once the pull request is merged, you're done, at least until the next time you need to create another workshop (or update the materials associated with your original workshop).  At that point, the process is a bit simpler:
 
 1. Update your fork so that it contains the most recent version of the Change-HI Morea site repository.
-2. Make a new branch to hold your next set of updates. 
 3. Update the site to your satisfaction.
 4. Push your changes.
 5. Create a new pull request.
@@ -194,3 +193,21 @@ You can add additional information if you like as a message to the Change-HI adm
 ![](/img/change-hi/change-hi.github.io-pull-request-2.png)
 
 In this screen image, since I am actually an administrator, I will get a button to merge the pull request, but regular users will see a slightly different page. 
+
+## Updating your fork
+
+So, let's say you've followed all of the above instructions, developed your workshop materials, issued your pull request, and it's been incorporated into the published site. 
+
+Then, let's say a Change-HI administrator notices an opportunity to improve your workshop, and so they make changes to your workshop materials and incorporate them into the published site. 
+
+Now, after that's happened, let's say *you* realize you want to add some additional material. In this situation, what you want to do is:
+
+1. Incorporate the changes made to your workshop materials by the administrator into your local fork.
+2. Update your fork with your additional material.
+3. Create a new pull request from your fork.
+
+You already know how to do (2) and (3), the only question is how to do (1). This turns out to be easy in GitHub Desktop: simply select "Update from upstream/main" in the "Branch" menubar:
+
+![](/img/change-hi/update-from-upstream-main.png)
+
+This will incorporate the changes and you can now proceed with your own modifications.
