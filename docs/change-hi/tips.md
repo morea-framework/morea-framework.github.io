@@ -99,13 +99,38 @@ Finally, to provide a "warning", the tutorial uses the "warning" admonition:
 
 ![](/img/change-hi/admonition-warning.png)
 
-## Use the "Next" button
+## Provide start times
 
-There is an include file called next-button.html that builds a right-justified button to go to the next Experience (or to the final Assessment) page.  You can use this to provide an easy way for participants to navigate from the bottom of one Experience to the start of the next one. Here's the next button at the bottom of a [FAIR Data Management Experience page](https://change-hi.github.io/morea/fair/08-Reusable.html):
+As noted in the Workshop Design page, to keep the workshop on track, it is helpful to label each Experience (and the final Assessment) with its start time. Here is an example excerpt from the [FAIR Data Management Workshop](https://change-hi.github.io/modules/fair/):
+
+![](/img/change-hi/experience-start-times.png)
+
+As you can see, there is a label associated with each Experience page that indicates when that Experience should start.
+
+You add this label using the `morea_labels` property in the front matter associated with the page. For example:
+
+```
+---
+title: "1. Introduction"
+published: true
+morea_id: FairIntroduction
+morea_type: experience
+morea_summary: "Who are we and what are we going to learn?"
+morea_sort_order: 1
+morea_labels:
+  - 2:00pm
+---
+```
+
+Also as noted in the Workshop Design page, try to keep the time for each Experience to 20 minutes or less.
+
+## Provide "Next" buttons
+
+There is an include file called next-button.html that builds a right-justified button to go to the next Experience (or to the final Assessment) page.  You can use this to provide an easy way for participants to navigate from the bottom of each Experience to the start of the next one. Here's the next button at the bottom of a [FAIR Data Management Experience page](https://change-hi.github.io/morea/fair/08-Reusable.html):
 
 ![](/img/change-hi/next-button.png)
 
-Notice that the Next button includes both the name of the next Experience to be covered, as well as it's start time.  That enables the instructor to easily check to see if they are on time each time they move to a new Experience page. 
+Notice that the Next button includes both the name of the next Experience to be covered, as well as its start time.  That enables the instructor to easily check to see if they are on time each time they move to a new Experience page. 
 
 The code for creating a Next button is pretty simple. Here's the code for creating that button:
 
@@ -114,6 +139,49 @@ The code for creating a Next button is pretty simple. Here's the code for creati
            top-label="Metadata ->" 
            bottom-label="3:00pm" 
            url="/morea/fair/09-Metadata.html" %}
+```
+
+Be sure to include a Next button to go from the final Experience to the Assessment page.
+
+## Provide a "bio break" callout
+
+It's nice to provide a five minute break about half way through the workshop for folks to stretch. A nice way to indicate this is through a bio break callout.  Here's an example from the bottom of a [FAIR Data Management Experience page](https://change-hi.github.io/morea/fair/08-Reusable.html):
+
+![](/img/change-hi/bio-break.png)
+
+The code for that is:
+
+```
+<div class="alert alert-warning" role="alert" markdown="1">
+<i class="fa-solid fa-circle-info fa-xl"></i> **Bio Break!**
+<hr/>
+Let's take a brief break to stretch before moving on to the next page.  See you in a few minutes.
+</div>
+```
+
+## Use "For more information" for supplemental info
+
+It is often useful to provide links to additional information to support participants who want to delve deeper into the topic(s) covered in an Experience.  This also provides a way to indicate which material in an Experience can be skipped if the Workshop is running behind schedule.
+
+To indicate supplemental material, or material that can be skipped if necessary, use a "For more information" callout.  For example, from the [FAIR Data Management Repositories page](https://change-hi.github.io/morea/fair/09-Repositories.html):
+
+![](/img/change-hi/for-more-information.png)
+
+The code for this callout looks like this:
+
+```
+<div class="alert alert-info" role="alert" markdown="1">
+<i class="fa-solid fa-circle-info fa-xl"></i> **For more information**
+<hr/>
+
+An interesting take can be found at Peter Murray-Rust's blog post [Criteria for successful repositories](https://blogs.ch.cam.ac.uk/pmr/2011/08/19/criteria-for-successful-repositories/).
+
+The content of this chapter was adapted or inspired by:
+* [FAIR principles](https://www.go-fair.org/fair-principles/)
+* [BioRDM suggested data repositories](https://www.wiki.ed.ac.uk/display/RDMS/Suggested+data+repositories)
+* [DCC - How can we evaluate data repositories?](https://www.dcc.ac.uk/news/how-can-we-evaluate-data-repositories-pointers-dryaduk)
+* [Criteria for succesful repositories](https://blogs.ch.cam.ac.uk/pmr/2011/08/19/criteria-for-successful-repositories/)
+</div>
 ```
 
 

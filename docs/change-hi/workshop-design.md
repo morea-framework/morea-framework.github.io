@@ -95,7 +95,7 @@ When designing the start times for the workshop, we recommend the following guid
 * It's nice to include a "bio break" around 3pm.  For example, in the FAIR Data Management workshop, there is a call-out for a bio break at the end of the [FAIR: Reusable](https://change-hi.github.io/morea/fair/08-Reusable.html) Experience, and an extra five minutes is allocated to that Experience for that purpose.
 * Always reserve the last ten minutes of the workshop (from 3:50-4:00pm) for the Assessment.
 
-Finally, it's a good idea to limit each Experience to 15-20 minutes, so that your Workshop contains at least a half dozen Experiences.  That helps you check your timing periodically so that you can make adjustments if you're falling behind. 
+Finally, it's a good idea to limit the time for each Experience to 20 minutes or less, so that your Workshop contains at least a half dozen Experiences.  That helps you check your timing periodically so that you can make adjustments if you're falling behind. 
 
 ## Development timeline
 
