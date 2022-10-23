@@ -42,3 +42,15 @@ Once the site is built, invoke `bundle exec htmlproofer ./_site` to check for br
  HTML-Proofer finished successfully.
  $
  ```
+
+Note that if you encounter the following error:
+
+```
+htmlproofer 4.3.2 | Error:  "\xCA" on US-ASCII
+```
+
+You can fix it by setting LC_TYPE:
+
+```
+export LC_CTYPE="utf-8"
+```
