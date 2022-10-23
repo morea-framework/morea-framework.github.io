@@ -81,6 +81,22 @@ Feel free to share that sketch with others for feedback. They might have ideas f
 
 Once you have that sketch in hand, then go ahead and implement it as actual Morea constructs. 
 
+## Determine Experience start times
+
+Staying on track during the workshop can be difficult. To facilitate this, we recommend that each Experience (and the concluding Assessment) be assigned a start time. Here is an example excerpt from the [FAIR Data Management Workshop](https://change-hi.github.io/modules/fair/):
+
+![](/img/change-hi/experience-start-times.png)
+
+As you can see, there is a label associated with each Experience page that indicates when that Experience should start. 
+
+When designing the start times for the workshop, we recommend the following guidelines:
+
+* While the workshop formally starts at 2pm, a few people are often a couple of minutes late. So, allocate maybe 5 extra minutes for the very first Experience.
+* It's nice to include a "bio break" around 3pm.  For example, in the FAIR Data Management workshop, there is a call-out for a bio break at the end of the [FAIR: Reusable](https://change-hi.github.io/morea/fair/08-Reusable.html) Experience, and an extra five minutes is allocated to that Experience for that purpose.
+* Always reserve the last ten minutes of the workshop (from 3:50-4:00pm) for the Assessment.
+
+Finally, it's a good idea to limit each Experience to 15-20 minutes, so that your Workshop contains at least a half dozen Experiences.  That helps you check your timing periodically so that you can make adjustments if you're falling behind. 
+
 ## Development timeline
 
 As you can see, designing and implementing a workshop for the first time requires some time to determine the components, then implement them as Morea constructs, and finally ensure that the site builds correctly so that you can issue the pull request (as discussed in the previous section).  

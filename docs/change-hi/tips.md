@@ -99,6 +99,24 @@ Finally, to provide a "warning", the tutorial uses the "warning" admonition:
 
 ![](/img/change-hi/admonition-warning.png)
 
+## Use the "Next" button
+
+There is an include file called next-button.html that builds a right-justified button to go to the next Experience (or to the final Assessment) page.  You can use this to provide an easy way for participants to navigate from the bottom of one Experience to the start of the next one. Here's the next button at the bottom of a [FAIR Data Management Experience page](https://change-hi.github.io/morea/fair/08-Reusable.html):
+
+![](/img/change-hi/next-button.png)
+
+Notice that the Next button includes both the name of the next Experience to be covered, as well as it's start time.  That enables the instructor to easily check to see if they are on time each time they move to a new Experience page. 
+
+The code for creating a Next button is pretty simple. Here's the code for creating that button:
+
+```
+{% include next-button.html 
+           top-label="Metadata ->" 
+           bottom-label="3:00pm" 
+           url="/morea/fair/09-Metadata.html" %}
+```
+
+
 ## Assess some learning outcomes
 
 The "O" in Morea stands for "outcomes", and the "A" in Morea stands for "assessment". When you develop a workshop, you will come up with some Learning Outcomes, and the last 10 minutes of each workshop is set aside for participants to fill out an assessment questionnaire. 
