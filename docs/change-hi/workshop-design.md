@@ -97,6 +97,14 @@ When designing the start times for the workshop, we recommend the following guid
 
 Finally, it's a good idea to limit the time for each Experience to 20 minutes or less, so that your Workshop contains at least a half dozen Experiences.  That helps you check your timing periodically so that you can make adjustments if you're falling behind. 
 
+## Facilitate interdisciplinary collaboration
+
+One goal of the Change-HI workshops, in addition to helping participants learn new skills, is to facilitate new collaborations amongst members of the community.  To do this, it's important to design your workshops in such a way that participants get a chance to learn about each other.  There are at least a couple of ways you can accomplish this:
+
+1. Start the workshop with some sort of "ice breaker", where participants break up into small groups and introduce themselves to each other and perhaps perform some simple task. The goal is for them to learn about each other's background and skills.  
+
+2. During the workshop, provide exercises that involve participants working together in small groups. If some of the participants are using Zoom, then you'll need to create breakout rooms.  In addition to having the participants work together, design some interaction into the exercise that enables them to learn about each other's background and skills.
+
 ## Development timeline
 
 As you can see, designing and implementing a workshop for the first time requires some time to determine the components, then implement them as Morea constructs, and finally ensure that the site builds correctly so that you can issue the pull request (as discussed in the previous section).  
