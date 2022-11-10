@@ -2,7 +2,7 @@
 title: Misc Tips
 ---
 
-Here's some tips for using Morea. 
+Here's some tips for using Morea to design HI-DSI workshops. 
 
 ## Skim the guide
 
@@ -22,6 +22,15 @@ HPC Workshop (Morea format):
   * [Site](https://change-hi.github.io/modules/hpc/)
   * [Source](https://github.com/change-hi/change-hi.github.io/tree/main/morea/hpc)
 
+## Software Carpentry workshops are different from HI-DSI workshops
+
+While we're talking about Software Carpentry workshops, it is important to be aware that you can't simply transliterate an SC workshop into Morea format. There are two principal reasons:
+
+1. Software Carpentry workshops are generally designed for individuals to work on at their own pace without any guidance. HI-DSI workshops should be designed for small groups to work on with guidance by an instructor.
+2. Software Carpentry workshops are "asynchronous" and can require many hours of work to complete. HI-DSI workshops are "synchronous" and are constrained to two hours. 
+
+So, while Software Carpentry workshops can be a source of high quality material, it will need extensive redesign to fit the constraints of the HI-DSI workshop format.
+
 ## Use heading conventions
 
 When creating a reading or experience, our convention is to start the contents of each page with a title. To do this in markdown, you start a line with the `#` element, followed by a space, followed by the title of the page. This creates the equivalent of an HTML `<h1>` element, for those who know HTML.
@@ -39,7 +48,6 @@ For a couple of examples, see the [HPC Workshop Deep Learning Page](https://chan
 ```
 {% include figure.html url="" max-width="50%" file="/morea/hpc/fig/ood_form.png" alt="Connect to cluster" caption="" %}
 ```
-
 
 ## Use files as templates
 

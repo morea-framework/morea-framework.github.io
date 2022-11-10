@@ -4,16 +4,16 @@ title: Getting started
 
 ## Our development process
 
-There are many potential ways to support collaborative workshop curriculum development for Change-HI. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
+There are many potential ways to support collaborative workshop curriculum development for HI-DSI. We would like to use a "Fork-and-Pull-Request" approach to development. This means you will develop and maintain workshop curriculum using the following process:
 
 1. Install the required tools and libraries for Morea.
 2. Request a stub module if necessary
-3. Create a fork of the Change-HI Morea site repository in your personal GitHub account, and clone that repository to your computer.
-4. Build and run your local copy of the Change-HI Morea site.
+3. Create a fork of the Change-HI/EDU Morea site repository in your personal GitHub account, and clone that repository to your computer.
+4. Build and run your local copy of the Change-HI/EDU Morea site.
 5. Create a branch to hold your changes to the site.
 6. Edit files to update the site with your changes, and review the results locally. 
 7. Once you are satisfied with your changes, commit them and push your branch to GitHub.
-8. Create a pull request so that the Change-HI site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
+8. Create a pull request so that the Change-HI/EDU site administrators can review your changes prior to merging them into the published version of the site. Sometimes, the administrators might request a few changes prior to merging, in which case you can easily update the file in the pull request.
 
 Once the pull request is merged, you're done, at least until the next time you need to create another workshop (or update the materials associated with your original workshop).  At that point, the process is a bit simpler:
 
@@ -52,11 +52,11 @@ To verify that you've installed Jekyll correctly, please go through the [Jekyll 
 
 ## Request a stub module if necessary
 
-The Change-HI site ([https://change-hi.github.io/modules](https://change-hi.github.io/modules)) contains a set of "stub" modules for upcoming workshops during AY 2022-23.  In most cases, a stub module will already exist, but if not, please ask Philip Johnson to create one for you.  That will simplify content creation when you are just getting started with Morea.  
+The Change-HI/EDU site ([https://change-hi.github.io/modules](https://change-hi.github.io/modules)) contains a set of "stub" modules for upcoming workshops during AY 2022-23.  In most cases, a stub module will already exist, but if not, please ask Philip Johnson to create one for you.  That will simplify content creation when you are just getting started with Morea.  
 
-## Fork the Change-HI site
+## Fork the Change-HI/EDU site
 
-Once you have installed a git client, an editor, and Jekyll, the next step is to fork a copy of the Change-HI Morea site, download it, and get it to run locally on your computer.  
+Once you have installed a git client, an editor, and Jekyll, the next step is to fork a copy of the Change-HI/EDU Morea site, download it, and get it to run locally on your computer.  
 
 ### Go to site
 
