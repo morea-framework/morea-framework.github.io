@@ -98,4 +98,7 @@ Once both of them are complete, you should be able to see your changes live at t
 
 ## What if things go horribly, horribly wrong? 
 
-Fortunately, they can't. No matter what you do, we can always revert back to a previous state. So don't worry too much.  Just contact Philip if you run into problems.    
+Fortunately, they can't. There are only two ways things can go wrong, neither of which is horrible
+
+1. You commit a change that breaks the build. In this case, if you go to the Actions page, GitHub will indicate that one of the actions did not complete successfully.  If that happens, just contact Philip and he will fix it. Until it's fixed, the site will remain up, but in its previous state.
+2. You commit a change that doesn't break the build, but when you look at the published page, it's not right. If that happens, just contact Philip and he will fix it.  The page will be published in an incorrect way until Philip fixes it, but that will only be for a few minutes or hours. 
