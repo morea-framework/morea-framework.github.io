@@ -17,16 +17,16 @@ To make changes to a WordPress site, an administrator can:
 
 To make changes to the Change-HI/EDU site, an administrator can:
 
-1. Log into GitHub, and traverses to the Change-HI/EDU github repository.
+1. Log into GitHub, and traverse to the Change-HI/EDU github repository.
 2. Edit one or more Markdown files using a browser-based editor.
 3. Commit those files after making changes to save them to the repository. 
 4. Step (3) automatically kicks off a build of the site. If no mistakes were made during editing, then the changes will be live on the public site within a couple of minutes. If not, then the site stays the way it was before.
 
-At first glance, changing the Change-HI/EDU seems much more humbug. First, the files are in a weird format called "Markdown". Second, it seems like you can't "preview" your work before publishing it. Third, what happens if there are mistakes? How do you even know?
+At first glance, changing the Change-HI/EDU site seems much more humbug. First, the files are in a weird format called "Markdown". Second, it seems like you can't "preview" your work before publishing it. Third, what happens if there are mistakes? How do you even know?
 
 All of these problems can be addressed, but requires a certain amount of tool installation and training (which the Data Fellows are receiving as part of their workshop development).
 
-To simplify things for Change-HI administrators, we will use the following process at present:
+To simplify things for Change-HI administrators, let's try the following process to start:
 
 1. Drafts of documents to be posted on the Change-HI/EDU site are developed initially as Google Docs and circulated for review. 
 2. When ready for publication, Philip will create a new page in the Change-HI/EDU site that contains the document, translated into Markdown format.
@@ -64,7 +64,7 @@ Finally, click on the reading-data-fellows-expectations.md link to see the sourc
 
 ![](/img/change-hi/change-hi-github-repo-expectations.png)
 
-This might look a bit strange, but if you are just making a simple change to the file, you don't have to worry about it.
+This might look a bit strange, but don't worry.
 
 ### Edit the file
 
