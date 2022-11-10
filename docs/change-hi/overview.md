@@ -3,16 +3,13 @@ title: Overview
 hide_table_of_contents: true
 ---
 
-This section of the site provides documentation concerning the use of Morea for the [University of Hawaii Change-HI site](https://change-hi.github.io). 
+This chapter provides documentation concerning the design and implementation of workshops that are hosted at the [Change-HI/EDU](https://change-hi.github.io) Morea site. 
 
-The Change-HI program sponsors a set of workshops, which are generally two hours in length and that introduce participants to a particular technology or skill that can prove helpful to their research or professional practice.  
+The Change-HI program, in partnership with the University of Hawaii Data Science Institute (HI-DSI),sponsors a set of two hour workshops, which introduce participants to a particular technology or skill that can prove helpful to their research or professional practice. These workshops are also intended as a mechanism for students to learn educational skills as they develop and deliver the workshops to participants. 
 
-Previously, Change-HI workshops were developed using Software Carpentry. Some of the potential benefits for using Morea for Change-HI include:
+The following sections in this chapter provide information on:
 
-* Morea implements a single "point of entry" where each workshop is represented as a module. This makes it easy to: represent (and inter-relate) all of the workshops; browse all of the workshops; and show relationships between workshops.  The Software Carpentry approach results in entirely independent sites for each workshop, so the "point of entry" is the [CI-TRACS github organization home page](https://github.com/CI-TRACS), which is not particularly user friendly.
-
-* Morea implements a [pedagogical pattern](https://morea-framework.github.io/docs/instructors/pedagogical-pattern) (Outcomes, Readings, Experiences, Assessments). This pattern helps instructors represent workshops in a consistent manner, and helps them to assess whether or not they are missing useful pedagogical elements (for example, Assessments seems to be lacking in most of the Workshops).  In addition to helping instructors structure their workshops consistently and completely, it is possible in Morea to share elements across multiple modules.  For example, the "CI-TRACS Code of Conduct" reading is defined once, and then included as a reading in all workshops. Similarly, the "Python and Jupyter" module is a prerequisite for multiple workshops.
-
-* Unlike Software Carpentry, Morea is not designed specifically for workshops. This makes it easier to expand Change-HI to support other kinds of educational activities.
-
-* Morea makes it easy to provide useful non-workshop material as a separate module. For example, the  "CI-TRACS Introduction" module provides background material on the CI-TRACS program within Change-HI and information on how to get involved.  We can create additional introductory modules for other programs, such as CITRUS, Data Fellows, etc.
+* How do you get started with workshop development? What are the mechanics of cloning, updating, and merging the Change-HI/EDU github repo with a new (or improved) workshop module?
+* How do you design and implement a high quality workshop? How do you create a high quality workshop? How does a workshop differ from a seminar or a class?
+* What are tips and strategies for the nuts and bolts of workshop implementation with Morea?
+* How can Change-HI administrators make edits to the live site? 

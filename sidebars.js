@@ -72,6 +72,7 @@ module.exports = {
         'change-hi/getting-started',
         'change-hi/workshop-design',
         'change-hi/tips',
+        'change-hi/admin-editing',
       ],
     },
     {
