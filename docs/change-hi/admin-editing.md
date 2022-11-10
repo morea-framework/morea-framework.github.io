@@ -52,15 +52,17 @@ This is a public repo, so anyone can see it, but only GitHub users who have "wri
 
 Make sure you are logged in to GitHub (check the upper right corner) and that Philip has given you "write" permission before proceeding.
 
-The Change-HI source files are in the "morea" subdirectory. Click on the "morea" link at the top level to navigate into it:
+The Change-HI source files are in the `morea/` directory. Click on the "morea" link at the top level to navigate into that directory:
 
 ![](/img/change-hi/change-hi-github-repo-morea.png)
 
-Let's say we want to edit the page regarding Data Fellows expectations. That's in the Introduction module, so click on the "intro" subdirectory link to see all of the files in that module:
+You can see that the `morea/` directory itself contains of a bunch of directories. Each of these directories contains files that implement a single module in the published site. 
+
+Let's say we want to edit the page regarding Data Fellows expectations. That's in the Introduction module, so click on the "intro" link to see all of the files in that directory:
 
 ![](/img/change-hi/change-hi-github-repo-intro.png)
 
-Finally, click on the reading-data-fellows-expectations.md link to see the source for the file:
+Finally, click on the "reading-data-fellows-expectations.md" link to see the source for the file:
 
 ![](/img/change-hi/change-hi-github-repo-expectations.png)
 
@@ -68,13 +70,13 @@ This might look a bit strange, but don't worry.
 
 ### Edit the file
 
-This page contains an editor. To access it, locate the pencil icon (right hand side, about a third of the way down the page), click the down arrow, and select "Edit this file". Or, just type "E". Either way, you will get the following screen:
+GitHub allows you to edit any page using your browser. To access the browser editor, locate the pencil icon (right hand side, about a third of the way down the page), click the down arrow, and select "Edit this file". Or, just type "E". Either way, you will get the following screen:
 
 ![](/img/change-hi/change-hi-github-repo-edit.png)
 
-As you can see, this file is in "Markdown" format. If you want, you can stop now and read this [simple tutorial on Markdown](https://www.markdowntutorial.com/).
+Notice that the text in this file is written using a format called "Markdown". If you want, you can stop now and read this [simple tutorial on Markdown](https://www.markdowntutorial.com/).
 
-But let's say we just want to change the date associated with the Onboarding to the following Friday, September 30. 
+Let's say you just want to change the date listed in the Onboarding section of this page from Friday, September 23 to the following Friday, September 30. 
 
 Just edit that text like you would any document:
 
@@ -88,7 +90,7 @@ Finally, click the green "Commit changes" button. That will save your changes at
 
 ![](/img/change-hi/change-hi-github-repo-edit-4.png)
 
-At this point, GitHub will start rebuilding the site. If you want, you can click on the "Actions" tab to monitor the progress.  There are two parts, the "Jekyll deploy" followed by "Pages build and deployment". Here's an example screenshot after the Jekyll deploy action has completed, but the Pages Build and Deploy is still in progress:
+At this point, GitHub will start rebuilding the site. If you want, you can click on the "Actions" tab to monitor the progress.  There are two actions that must run to publish the site: "Jekyll deploy" followed by "Pages build and deployment". Here's an example screenshot after the Jekyll deploy action has completed, but the Pages Build and Deploy action is still in progress:
 
 ![](/img/change-hi/change-hi-github-repo-edit-5.png)
 
@@ -98,7 +100,7 @@ Once both of them are complete, you should be able to see your changes live at t
 
 ## What if things go horribly, horribly wrong? 
 
-Fortunately, they can't. There are only two ways things can go wrong, neither of which is horrible
+Fortunately, they can't. There are only two ways things can go wrong, neither of which is horrible:
 
 1. You commit a change that breaks the build. In this case, if you go to the Actions page, GitHub will indicate that one of the actions did not complete successfully.  If that happens, just contact Philip and he will fix it. Until it's fixed, the site will remain up, but in its previous state.
 2. You commit a change that doesn't break the build, but when you look at the published page, it's not right. If that happens, just contact Philip and he will fix it.  The page will be published in an incorrect way until Philip fixes it, but that will only be for a few minutes or hours. 
