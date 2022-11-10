@@ -54,7 +54,13 @@ The Change-HI source files are in the "morea" subdirectory. Click on the "morea"
 
 ![](/img/change-hi/change-hi-github-repo-morea.png)
 
+Let's say we want to edit the page regarding Data Fellows expectations. That's in the Introduction module, so click on the "intro" subdirectory link to see all of the files in that module:
 
+![](/img/change-hi/change-hi-github-repo-intro.png)
+
+Finally, click on the reading-data-fellows-expectations.md link to see the source for the file:
+
+![](/img/change-hi/change-hi-github-repo-expectations.png)
 
 
 ### Edit the 
