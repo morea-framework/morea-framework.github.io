@@ -32,7 +32,9 @@ To simplify things for Change-HI administrators, we will use the following proce
 2. When ready for publication, Philip will create a new page in the Change-HI/EDU site that contains the document, translated into Markdown format.
 3. If minor changes need to be made, then a Change-HI administrator can use the following process to make the edits. 
 
-## Editing an existing Change-HI/EDU document
+## Edit a document
+
+Later, you will learn how to create and add new documents. For now, let's just learn how to make changes to an existing document, which is thankfully pretty easy.
 
 ### Login to GitHub
 
@@ -62,5 +64,38 @@ Finally, click on the reading-data-fellows-expectations.md link to see the sourc
 
 ![](/img/change-hi/change-hi-github-repo-expectations.png)
 
+This might look a bit strange, but if you are just making a simple change to the file, you don't have to worry about it.
 
-### Edit the 
+### Edit the file
+
+This page contains an editor. To access it, locate the pencil icon (right hand side, about a third of the way down the page), click the down arrow, and select "Edit this file". Or, just type "E". Either way, you will get the following screen:
+
+![](/img/change-hi/change-hi-github-repo-edit.png)
+
+As you can see, this file is in "Markdown" format. If you want, you can stop now and read this [simple tutorial on Markdown](https://www.markdowntutorial.com/).
+
+But let's say we just want to change the date associated with the Onboarding to the following Friday, September 30. 
+
+Just edit that text like you would any document:
+
+![](/img/change-hi/change-hi-github-repo-edit-2.png)
+
+Now scroll to the bottom of the page.  Type in a short comment describing the change (in my case, I wrote "Changed due date for onboarding"):
+
+![](/img/change-hi/change-hi-github-repo-edit-3.png)
+
+Finally, click the green "Commit changes" button. That will save your changes at the site, and take you back to the display of the page. Notice that this change is now visible:
+
+![](/img/change-hi/change-hi-github-repo-edit-4.png)
+
+At this point, GitHub will start rebuilding the site. If you want, you can click on the "Actions" tab to monitor the progress.  There are two parts, the "Jekyll deploy" followed by "Pages build and deployment". Here's an example screenshot after the Jekyll deploy action has completed, but the Pages Build and Deploy is still in progress:
+
+![](/img/change-hi/change-hi-github-repo-edit-5.png)
+
+Once both of them are complete, you should be able to see your changes live at the site:
+
+![](/img/change-hi/change-hi-github-repo-edit-6.png)
+
+## What if things go horribly, horribly wrong? 
+
+Fortunately, they can't. No matter what you do, we can always revert back to a previous state. So don't worry too much.  Just contact Philip if you run into problems.    
