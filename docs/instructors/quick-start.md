@@ -33,17 +33,25 @@ When you are done, click on "Create repository from template". After the repo is
 
 ![image](/img/quick-start/morea-repo-page-3.png)
 
+## Configure workflow permissions
+
+In order for GitHub to build your Morea site automatically whenever you commit a change to the repo, you must ensure that the workflow permissions for the site allow both read and write access. To do this, click on the "Settings" tab at the top of the page for your new repo, then click on the "Actions" tab in the left sidebar, and finally click on the "General" link inside the Actions tab. You should see a page that looks like this:
+
+![image](/img/quick-start/workflow-permissions-1.png)
+
+In this example, the bottom section, "Workflow permissions", indicates that the default permissions are "Read repository contents and package permissions".  If this is the case for your repo, you need to click the radio button for "Read and write permissions", then click the "Save" button to save this change.  Afterwards, this page should look like this:
+
+![image](/img/quick-start/workflow-permissions-2.png)
+
 ## Configure the config.yml file
 
-Next, scroll down the list of files until you see "_config.yml", and click it:
+Now, click on the "Code" tab at the top of the page to return to the listing of files in this repository. Scroll down the list of files until you see "_config.yml", and click it. You should see the following:
 
 ![image](/img/quick-start/morea-repo-page-4.png)
-
 
 Click on the pencil icon to edit this file within your browser:
 
 ![image](/img/quick-start/morea-repo-page-5.png)
-
 
 Make the following changes to this file:
 
