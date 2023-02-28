@@ -29,8 +29,26 @@ module.exports = {
           collapsed: true,
           items: [
             'instructors/quick-start',
-            'instructors/local-installation',
-            'instructors/local-development',
+            {
+              type: 'category',
+              label: 'Cloud',
+              collapsed: true,
+              items: [
+                'instructors/cloud-installation',
+                'instructors/cloud-development',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Local',
+              collapsed: true,
+              items: [
+                'instructors/local-installation',
+                'instructors/local-development',
+              ]
+            },
+
+
           ]
         },
         {

@@ -97,4 +97,18 @@ Unfortunately, apart from the site name in the menubar ("CS 299 Fall 2021"), non
 
 Before proceeding, you might want to spend a few minutes clicking around your newly site.  This site illustrates many (though not all) of the features of a Morea site.
 
-The next two sections guide you through the tools you need to install to develop a Morea site on your computer as well as some simple examples of modifications to your sample site.
+## Choose local or cloud development
+
+Once you're ready to move on, you need to decide whether you want to develop your site "locally", by running programs directly on your laptop, or "in the cloud", using a browser to do everything. 
+
+Here are some of the pros and cons of these two alternatives:
+
+**"Local" development.**  Local development requires you to install a few tools on your computer, including GitHub Desktop, an editor, and Jekyll.  If you are a software developer, you might have most or all of these tools installed already.  If you are using MacOS (Unix), then installing these tools are relatively easy.  Once you have the tools installed, then development (particularly if you have a favorite editor) is pretty easy.
+
+The big downside of local development is the need to install tools--particularly Jekyll, and particularly if your laptop uses Windows.  Many people have a hard time installing Jekyll successfully on Windows.  If you can't get Jekyll installed, then it's very difficult to develop your Morea site efficiently. 
+
+**"Cloud" development.** Cloud development involves using a cloud-based based package called [Gitpod](https://gitpod.io/). Basically, Gitpod provides a unix box pre-installed with all the tools you need to develop your Morea site in the cloud. You access everything through a browser, and edit your site using a browser-based version of Visual Studio Code. 
+
+For many people, cloud development is the clear winner: you don't have to install anything locally, and so it doesn't matter if you are using Unix or Windows.  In fact, the only significant reason I can think of to choose Local development over Cloud development is if you prefer a different editor to Visual Studio Code. 
+
+The good news about making this "choice" is that it isn't permanent: you can switch back and forth between these alternatives at any time.  So, just pick the approach that seems most likely to work for you right now, and if it doesn't, then come back and switch to the other one.
