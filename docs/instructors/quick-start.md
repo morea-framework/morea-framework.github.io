@@ -85,6 +85,8 @@ Now click on the Settings tab, then click "Pages". You should see the following:
 
 ![image](/img/quick-start/morea-repo-page-8.png)
 
+## Enforce HTTPS
+
 Please click the "Enforce HTTPS" checkbox.
 
 ## Display your published course website
