@@ -71,12 +71,6 @@ Next, click on the "Actions" tab. You will see a workflow running. This task is 
 
 ![image](/img/quick-start/morea-repo-page-7.png)
 
-:::tip
-If the site does not build correctly, first check to make sure the baseurl field matches the repository name. If it doesn't, then just edit the file, commit the change, and wait for the build to conclude.
-
-If that doesn't fix it, please contact a Morea developer (i.e. Philip Johnson (johnson@hawaii.edu)).
-:::
-
 The first couple of workflow runs could take several minutes, but these runs result in caching that should decrease subsequent build times substantially.  After this initial setup, your site should typically build in less than a minute.
 
 ## Verify that the site is published
@@ -98,6 +92,12 @@ Now click on the link in the GitHub Pages page to see your newly published Morea
 Unfortunately, apart from the site name in the menubar ("CS 299 Fall 2021"), none of this content is appropriate for your course!
 
 Before proceeding, you might want to spend a few minutes clicking around your newly site.  This site illustrates many (though not all) of the features of a Morea site.
+
+:::tip
+If the site builds successfully but you get an error when trying to retrieve the published site in your browser, check that the baseurl field in _config.yml matches the repository name. If it doesn't, then edit the _config.yml file, commit the change, and wait for the new build to conclude. Then retrieve the home page of your site again.
+
+If that doesn't fix it, please contact a Morea developer (i.e. Philip Johnson (johnson@hawaii.edu)).
+:::
 
 ## Choose local or cloud development
 
