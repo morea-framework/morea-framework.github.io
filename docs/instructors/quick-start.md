@@ -73,15 +73,20 @@ Next, click on the "Actions" tab. You will see a workflow running. This task is 
 
 The first couple of workflow runs could take several minutes, but these runs result in caching that should decrease subsequent build times substantially.  After this initial setup, your site should typically build in less than a minute.
 
-## Verify that the site is published
+## Verify the GitHub Pages settings
 
-Now click on the Settings tab, then click "Pages". You should see the following:
+Now click on the Settings tab, then click "Pages". You should see something like the following:
 
 ![image](/img/quick-start/morea-repo-page-8.png)
 
-## Enforce HTTPS
+Check the following things:
 
-Please click the "Enforce HTTPS" checkbox.
+1. In the "Build and Deployment" section, make sure that "Source" is "Deploy from a branch", and that the branch is "gh-pages". If you have to change this setting, then this should trigger a rebuild of the site which you can follow from the Actions tab.
+
+2. In the "Custom domain" setting, click the "Enforce HTTPS" checkbox.
+
+When everything is configured correctly and the site is built and deployed, then this page should display a link to the publicly available URL to your site.
+
 
 ## Display your published course website
 
