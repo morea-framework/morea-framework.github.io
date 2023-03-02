@@ -5,6 +5,21 @@ hide_table_of_contents: true
 
 We recommend Gitpod for cloud-based development of Morea. Here are the steps to set up your Gitpod workspace. We assume that you have already completed the "Quick start" instructions, resulting in a working Morea site, or have cloned (or forked) a pre-existing Morea site that you now want to continue working on. 
 
+:::tip
+While the following instructions assume no prior experience with Gitpod, you might find it useful to watch some introductory videos either prior to following these instructions, or later when you want to get more familiar with the platform. 
+
+Here is a nice series of screencasts on getting started with Gitpod. 
+* <https://www.youtube.com/playlist?list=PL3TSF5whlprXVp-7Br2oKwQgU4bji1S7H>
+
+Here is the reference guide:
+* <https://www.gitpod.io/docs/introduction>
+
+As you will see below, we will need only a small fraction of the features available in Gitpod. In fact, most of your questions will center on appropriate use of the editor. Here are some pointers to editor reference material to get you started:
+
+* <https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser>
+
+:::
+
 ## Login to Gitpod
 
 To start, go to <https://gitpod.io/>.
