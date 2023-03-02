@@ -4,10 +4,18 @@
         <title>Morea Framework Blog</title>
         <link>https://morea-framework.github.io/blog</link>
         <description>Morea Framework Blog</description>
-        <lastBuildDate>Tue, 28 Jun 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Module icons]]></title>
+            <link>https://morea-framework.github.io/blog/2023/03/02/module-icons</link>
+            <guid>https://morea-framework.github.io/blog/2023/03/02/module-icons</guid>
+            <pubDate>Thu, 02 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Some folks have fun creating the "module icon": the square image that appears on each card on the Modules page.  Other folks find this to be an irritating waste of time.]]></description>
+            <content:encoded><![CDATA[<p>Some folks have fun creating the "module icon": the square image that appears on each card on the Modules page.  Other folks find this to be an irritating waste of time. </p><p>If you are in the latter camp, we have some potentially good news for you. The Morea template module now comes with a directory containing over 50 PNG files that have been used as module icons. With any luck, you might be able to use some of these icons in your upcoming Morea site and save time looking for an appropriate icon. </p><p>For details, see <a href="https://morea-framework.github.io/docs/instructors/icons#module-icons" target="_blank" rel="noopener noreferrer">Module Icons documentation</a>.</p><p>Have fun and let us know if you run into problems.</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Morea Version 3.1 release]]></title>
             <link>https://morea-framework.github.io/blog/2022/06/28/morea-version-3.1</link>
