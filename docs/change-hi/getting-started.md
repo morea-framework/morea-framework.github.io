@@ -24,6 +24,8 @@ Once the pull request is merged, you're done, at least until the next time you n
 
 So, that's the basic process. Let's now provide examples for some of these steps. 
 
+## Step Examples
+
 ### Fork the repo
 
 Click the "Fork" button in the top right of the page to bring up the fork window:
@@ -35,7 +37,7 @@ You can see that this window selects my personal account, which is typically whe
 ![](/img/change-hi/change-hi.github.io-forked.png)
 
 
-## Create the pull request
+### Create the pull request
 
 Let's say you have made some enhancements, and now you want to ask the administrators to incorporate this change into the official Change-HI site.  The first step is to commit your change to your local repository and push those changes to GitHub. The actual process used depends upon whether you are doing [local development](/docs/instructors/local-development) or [cloud-based development](/docs/instructors/cloud-development). 
 
@@ -55,7 +57,7 @@ You can add additional information if you like as a message to the Change-HI adm
 
 In this screen image, since I am actually an administrator, I will get a button to merge the pull request, but regular users will see a slightly different page. 
 
-## Updating your fork
+### Updating your fork
 
 So, let's say you've followed all of the above instructions, developed your workshop materials, issued your pull request, and it's been incorporated into the published site. 
 
