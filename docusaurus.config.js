@@ -77,6 +77,10 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
+        blog: {
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateAuthor: true,
