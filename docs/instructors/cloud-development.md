@@ -121,18 +121,14 @@ Once that's done, develop your site by an iterative process of:
 
 1. Type `bundle exec jekyll serve` to build your site and display it in a browser window.
 2. Edit source files and directories to change your course content.
-3. Type `control-c` followed by `bundle exec jekyll serve` to rebuild and redisplay your site.
+3. Type `control-c` followed by `control-p` (which retrieves the `bundle exec jekyll serve` command) to rebuild and redisplay your site.
 
 Finally, once you're ready to publish your changes, go to the Source Control panel:
 
 1. Stage All Changes to make ensure all new files are tracked by GitHub.
 2. Commit your changes to your local repository and push them to the GitHub copy of your repository.
-3. Monitor the GitHub actions to build and deploy your site, then check to see that your changes are public (usually takes about one minute).
+3. Monitor the GitHub actions as they build and deploy your site, then check to see that your changes are public (usually takes about one minute).
 
 ## Continuing on
 
 There are other changes you will need to make to ready your site for publication: configuring the [Schedule Page](schedule-page.md), the [Nav Bar](navbar-configuration.md), and so forth. The Reference Guide contains pages on these and other important topics. It is useful to at least skim all of the pages in the Reference Guide so you are aware of the different features of Morea when developing your site.
-
-Now that you understand the mechanics of Morea site development, let's take a step back and provide some background concepts, starting with a comparison to similar systems. 
-
-To get there, please skip over the next section on Local Development and start reading the first section of the Reference Guide.
