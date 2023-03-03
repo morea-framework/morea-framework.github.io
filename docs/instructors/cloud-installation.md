@@ -1,9 +1,13 @@
 ---
 title: Cloud installation
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 We recommend Gitpod for cloud-based development of Morea. Here are the steps to set up your Gitpod workspace. We assume that you have already completed the "Quick start" instructions, resulting in a working Morea site, or have cloned (or forked) a pre-existing Morea site that you now want to continue working on. 
+
+The following video provides a walkthrough of the instructions in this page.
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/tQn89_CJJV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 :::tip
 While the following instructions assume no prior experience with Gitpod, you might find it useful to watch some introductory videos either prior to following these instructions, or later when you want to get more familiar with the platform. 
@@ -42,7 +46,7 @@ This image shows that if you click on the three dots by the GitHub provider entr
 
 Look carefully at this image.  You want the "read:user", "public_repo", "repo", and "workflow" permissions selected, and you do **not** want the "read:org" permission selected. If your permissions need adjusting, please do so now and click "Update Permissions" to save your changes. 
 
-### Open the workspace for your Morea site
+## Open the workspace for your Morea site
 
 Now click the "Workspaces" tab at the top of the page to return to the Workspace page. 
 

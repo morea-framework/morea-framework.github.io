@@ -1,8 +1,13 @@
 ---
 title: Cloud development
+pagination_next: instructors/related-work
 ---
 
 If you've completed the Quick Start and Cloud Installation sections, you now have your own Morea website in a GitHub repository, and you've set up GitPod to access your code, build the site, and display it in a browser. 
+
+The following video provides a walkthrough of the instructions in this page.
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/M0v-lRPzxw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Customize your content
 

@@ -4,6 +4,10 @@ title: Quick start
 
 This quick start takes you through the steps necessary to set up and publish a new Morea course site with "default" content.
 
+The following video provides a walkthrough of the instructions in this page. 
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/c_zSbqrMX4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Join GitHub
 
 If you haven't already, [sign up for GitHub](https://help.github.com/articles/signing-up-for-a-new-github-account). There are two common types of GitHub accounts:
@@ -20,8 +24,9 @@ Login to GitHub and go to [https://github.com/morea-framework/morea](https://git
 
 Next, click "Use this template" and fill out the page:
 
+ * Select the appropriate owner (either your personal account or an organization)
  * Provide a repository name (typically the course number and semester).
- * Make the repo private (if the organization associated with this repo is on the Team plan). Otherwise, you must keep the repo public so that you can publish your site using GitHub Pages.
+ * Optionally, make the repo private (if the organization associated with this repo is on the Team plan). Otherwise, you must keep the repo public so that you can publish your site using GitHub Pages.
  * Include all branches.
 
 It should look like this:
@@ -33,7 +38,7 @@ When you are done, click on "Create repository from template". After the repo is
 
 ![image](/img/quick-start/morea-repo-page-3.png)
 
-## Configure workflow permissions
+## Check workflow permissions
 
 In order for GitHub to build your Morea site automatically whenever you commit a change to the repo, you must ensure that the workflow permissions for the site allow both read and write access. To do this, click on the "Settings" tab at the top of the page for your new repo, then click on the "Actions" tab in the left sidebar, and finally click on the "General" link inside the Actions tab. You should see a page that looks like this:
 
@@ -43,7 +48,7 @@ In this example, the bottom section, "Workflow permissions", indicates that the 
 
 ![image](/img/quick-start/workflow-permissions-2.png)
 
-## Configure the config.yml file
+## Edit the config.yml file
 
 Now, click on the "Code" tab at the top of the page to return to the listing of files in this repository. Scroll down the list of files until you see "_config.yml", and click it. You should see the following:
 
