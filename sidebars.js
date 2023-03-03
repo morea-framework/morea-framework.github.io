@@ -56,7 +56,6 @@ module.exports = {
           label: 'Reference',
           collapsed: true,
           items: [
-            'instructors/related-work',
             'instructors/pedagogical-pattern',
             'instructors/entity-types',
             'instructors/link-errors',
@@ -78,6 +77,7 @@ module.exports = {
             'instructors/themes',
             'instructors/advanced-customization',
             'instructors/updating',
+            'instructors/related-work',
           ]
         },
       ],
