@@ -333,6 +333,114 @@ Now the module is really coming together:
 
 ![](/img/module-design/module-design-10.png)
 
-## Define schedule
+## Define the module schedule
+
+You may have noticed some dates associated with modules and experiences, and a "Schedule" page that appears to be empty. Let's fix that now.
+
+### Edit schedule/index.html
+
+First, open the schedule/index.html page.  It looks like this:
+
+```md
+---
+layout: default
+title: Schedule
+---
+{% include breadcrumb-2.html %}
+
+<!--
+  Load FullCalendar for schedule page.
+  Documentation available at: http://fullcalendar.io/
+
+  Things to do to configure your Schedule page:
+  (1) Edit the holidayData variable to include holidays appropriate for this semester.
+  (2) Delete the initialDate field in the FullCalendar constructor so that the calendar automatically
+      displays the current month.
+-->
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css">
+<script src="//cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+
+<!-- This script defines the moreaEventData variable containing an array of events from Morea pages. -->
+<script src="schedule-info.js"></script>
+
+<script>
+  var holidayData = {color: 'green',
+    events: [
+      {title: "Classes start", start: "2021-07-06"},
+      {title: "Holiday: Independence Day (Observed)", start: "2021-07-05"},
+      {title: "Classes end", start: "2021-07-30"},
+    ]};
+</script>
+
+<div style="margin-bottom: 10px" class="container">
+  <h1>Schedule</h1>
+  <div id='calendar'></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      eventColor: '#446e9b',
+      initialDate: '2021-07-01',
+      eventSources: [{events: moreaEventData}, holidayData]
+    });
+    calendar.render();
+  });
+</script>
+```
+
+The comment at the top indicates two things you usually want to do to set up the schedule page:
+
+1. Edit the holidayData variable to include holidays appropriate for this semester.
+2. Delete the initialDate field in the FullCalendar constructor so that the calendar automatically displays the current month.
+
+We won't deal with the `holidayData` variable for this tutorial, but definitely delete the `initialDate` so that the calendar displays the current month. 
+
+### Edit module start and end dates
+
+Now edit the `morea_start_date:` and `morea_end_date:` fields in module-dart.md. The Dart design document said this module was a week long, but did not indicate exactly which week. Go ahead and edit these fields so that the module lasts for one week during the current month. For example:
+
+```md
+morea_start_date: "2023-03-06"
+morea_end_date: "2023-03-13"
+```
+
+Do a `control-c`, `control-p`, `return` and refresh the Schedule page to see if the module is now listed for the current month.
+
+### Edit experience due dates
+
+Let's now edit the `morea_start_date:` fields associated with our two experiences. These dates (and times) will indicate the "due date" associated with the experience. 
+
+Our design document said that the Intro to Dart for Java Developers experience was due on Day 4, and the Cool Features of Dart experience was due on Day 7, so let's update the fields appropriately.
+
+When you're all finished, do a `control-c`, `control-p`, `return` and refresh the Schedule page. It should look something like this:
+
+![](/img/module-design/module-design-11.png)
+
+
+Notice that all of the schedule entries are clickable URLs: the module entry takes you to the module page, and the experience entries take you to their pages as well. 
 
 ## Commit, push, and publish 
+
+Our module is looking pretty good, so let's publish our changes. 
+
+First, click on the "Source Control" icon in the left sidebar (it should have a badge listing a dozen or so changes). You will see a list of files, so marked with an "M" indicating that they've been modified, and some marked with a "U", indicating that they are "untracked" by git.
+
+Second, we want all files to be tracked, so click on the "..." at the top of the pane, select "Changes", and then select "Stage All Changes".  After you do this, all the "U" marks will change to "A", indicating that the files are marked for "adding" to the repo. That's good.
+
+Third, enter a commit message, such as "Publish dart module", pull down the "Commit" menu button bar, and select "Commit and Push".  This will commit the changes to the local repo at Gitpod, and push those changes to your repository at GitHub. 
+
+Fourth, visit your repo on GitHub. You should see, just above the code directory, the commit message you just entered indicating that the commit was received at GitHub:
+
+![](/img/module-design/module-design-12.png)
+
+Furthermore, if you click on the "Actions" tab, you will see that GitHub is now rebuilding and republishing your site. 
+
+Finally, once GitHub has finished rebuilding the site, click on the URL to see the published and publicly available version of your site:
+
+![](/img/module-design/module-design-13.png)
+
+## Other 
