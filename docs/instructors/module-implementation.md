@@ -443,4 +443,11 @@ Finally, once GitHub has finished rebuilding the site, click on the URL to see t
 
 ![](/img/module-design/module-design-13.png)
 
-## Other 
+## Additional edits
+
+Just FYI, there remains a few additional edits to make this site your own:
+
+1. `home.md`.  Edit this file to change the content appearing on your home page.
+2. `footer.md`. Edit this file to change the content appearing in the footer of all pages. 
+3. `introduction/`. You probably want an Introduction module, but you probably want to change its contents.
+4. `morea/prerequisites`. If you want to define prerequisite modules for any of our modules, use the file in this directory as an example. 
