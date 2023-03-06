@@ -66,7 +66,7 @@ As you will see, we will incrementally "publish" the files in the dart directory
 
 Let's now edit the contents of the `module-dart.md` file. It currently looks like this:
 
-```dart
+```md
 ---
 title: "CHANGE ME"
 published: false
@@ -109,7 +109,7 @@ Now, in the Terminal window, type `control-c` , `control-p`, `return` to restart
 
 ![](/img/module-design/module-design-6.png)
 
-Clicking into the actual module is currently not very exciting:
+Clicking into the actual Dart module page is currently not very exciting:
 
 ![](/img/module-design/module-design-7.png)
 
@@ -117,9 +117,221 @@ Let's fix that next.
 
 ## Define outcomes
 
+The Dart design document defines a single outcome. Here's what the outcome-dart.md file looks like after editing to conform to the design:
+
+```md
+---
+title: "You can develop simple programs in Dart"
+published: true
+morea_id: outcome-dart
+morea_type: outcome
+morea_sort_order: 7
+---
+
+* You have a basic understanding of Dart programming language concepts.
+* You can write snippets of Dart code to solve simple problems using DartPad.
+* You can create GitHub repos containing small Dart applications.
+```
+
+Next, we have to update the module-dart.md file to include this Morea entity by providing its `morea_id` in the `morea_outcomes:` section:
+
+```md
+---
+title: "Introduction to Dart"
+published: true
+morea_coming_soon: false
+morea_id: module-dart
+morea_prerequisites:
+morea_outcomes:
+  - outcome-dart
+morea_readings:
+  # - reading-CHANGE-ME
+morea_experiences:
+  # - experience-CHANGE-ME
+morea_assessments:
+  # - assessment-CHANGE-ME
+morea_type: module
+morea_icon_url: /morea/dart/dart.png
+morea_start_date: "2021-07-12"
+morea_end_date: "2021-07-16T23:00"
+morea_labels:
+morea_sort_order: 21
+---
+
+Provides an overview of elementary Dart programming constructs and tools.
+```
+
+Now `control-c`, `control-p`, and `return` to restart Jekyll. Refresh your browser window and the Dart module page should look like this:
+
+![](/img/module-design/module-design-8.png)
+
 ## Define readings
 
+The Dart design document defines two readings.  After updating, reading-dart-language-tour.md will look like this:
+
+```md
+---
+title: "Dart Language Tour"
+published: true
+morea_id: reading-dart-language-tour
+morea_summary: "How to use each major Dart feature"
+morea_url: https://dart.dev/guides/language/language-tour
+morea_type: reading
+morea_labels:
+---
+```
+
+The reading-effective-dart.md file will look like this:
+
+```md
+---
+title: "Effective Dart"
+published: true
+morea_id: reading-effective-dart
+morea_summary: "How to write consistent, fast, and robust Dart code."
+morea_url: https://dart.dev/guides/language/effective-dart
+morea_type: reading
+morea_labels:
+---
+```
+
+And after updating the module-dart.md file to include these two readings, it will look like this:
+
+```md
+---
+title: "Introduction to Dart"
+published: true
+morea_coming_soon: false
+morea_id: module-dart
+morea_prerequisites:
+morea_outcomes:
+  - outcome-dart
+morea_readings:
+  - reading-dart-language-tour
+  - reading-effective-dart
+morea_experiences:
+  # - experience-CHANGE-ME
+morea_assessments:
+  # - assessment-CHANGE-ME
+morea_type: module
+morea_icon_url: /morea/dart/dart.png
+morea_start_date: "2021-07-12"
+morea_end_date: "2021-07-16T23:00"
+morea_labels:
+morea_sort_order: 21
+---
+
+Provides an overview of elementary Dart programming constructs and tools.
+```
+
+Let's `control-c`, `control-p`, and `return` to restart Jekyll, and voila:
+
+![](/img/module-design/module-design-9.png)
+
+
+As you can infer from the screenshot, clicking on the reading card takes you directly to the Dart documentation page. 
+
 ## Define experiences
+
+The Dart design document defines two experiences.  After updating, experience-dart-for-java-developers.md might look like this:
+
+```md
+---
+title: "Introduction to Dart for Java Developers"
+published: true
+morea_id: experience-dart-for-java-developers
+morea_type: experience
+morea_summary: "Follow the codelab and build a GitHub respository with your code."
+morea_start_date: "2021-07-15T23:00"
+morea_labels:
+  - Codelab
+---
+
+# Introduction to Dart for Java Developers
+
+For this experience, please go through the Intro to Dart for Java Developers codelab: <https://developers.google.com/codelabs/from-java-to-dart#0>
+
+During the codelab, you should use the embedded DartPad environment to execute the examples.
+
+Take your time, don’t rush, and make sure you understand every line of code and every sentence in this codelab! If you have questions or get stuck, post a message to our Discord server.
+
+When you are done with the codelab, please do the following:
+  * Create a private GitHub repository called “dart-scream”.
+  * Clone it to your laptop.
+  * Edit the scream application to produce the same output as Section 6 of this codelab
+  * Commit your changes when finished.
+
+## Submission instructions:
+By the date and time associated with this assignment in Laulima, please submit the URL to your github repository.
+```
+
+The experience-dart-cool-features.md file might look like this:
+
+```md
+---
+title: "Cool features of Dart"
+published: true
+morea_id: experience-dart-cool-features
+morea_type: experience
+morea_summary: "Explore useful and unique features of Dart"
+morea_start_date: "2021-07-15T23:00"
+morea_labels:
+  - Codelab
+---
+
+# Cool features of Dart
+
+For this experience, please go through the Dart Cheatsheet codelab:
+<https://dart.dev/codelabs/dart-cheatsheet>
+
+This codelab introduces a lot of interesting language features, including:
+  * ??= assignment, ?? operator, null-shorting cascade: ?.., initializer lists, redirecting constructor.
+
+When you are done with the codelab, please do the following:
+  * Create a private GitHub repository called “dart-recipe”.
+  * Clone it to your laptop.
+  * Run “dart create recipe” to create a template Dart application.
+  * Edit the recipe application to include the (corrected) code from the bottom of the final section of this codelab (“Const constructors”).
+  * Commit your changes when finished.
+
+## Submission instructions:
+
+By the date and time associated with this assignment in Laulima, please submit the URL to your github repository.
+```
+
+Update module-dart.md to include these two experiences:
+
+```md
+---
+title: "Introduction to Dart"
+published: true
+morea_coming_soon: false
+morea_id: module-dart
+morea_prerequisites:
+morea_outcomes:
+  - outcome-dart
+morea_readings:
+  - reading-dart-language-tour
+  - reading-effective-dart
+morea_experiences:
+  - experience-dart-for-java-developers
+  - experience-dart-cool-features
+morea_assessments:
+  # - assessment-CHANGE-ME
+morea_type: module
+morea_icon_url: /morea/dart/dart.png
+morea_start_date: "2021-07-12"
+morea_end_date: "2021-07-16T23:00"
+morea_labels:
+morea_sort_order: 21
+---
+
+Provides an overview of elementary Dart programming constructs and tools.
+```
+
+Now the module is really coming together:
+
+![](/img/module-design/module-design-10.png)
 
 ## Define schedule
 
