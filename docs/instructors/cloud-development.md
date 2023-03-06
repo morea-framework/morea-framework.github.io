@@ -1,6 +1,6 @@
 ---
 title: Cloud development
-pagination_next: instructors/related-work
+pagination_next: instructors/module-design
 ---
 
 If you've completed the Quick Start and Cloud Installation sections, you now have your own Morea website in a GitHub repository, and you've set up GitPod to access your code, build the site, and display it in a browser. 
@@ -129,6 +129,6 @@ Finally, once you're ready to publish your changes, go to the Source Control pan
 2. Commit your changes to your local repository and push them to the GitHub copy of your repository.
 3. Monitor the GitHub actions as they build and deploy your site, then check to see that your changes are public (usually takes about one minute).
 
-## Continuing on
+## Next step: module design!
 
-There are other changes you will need to make to ready your site for publication: configuring the [Schedule Page](schedule-page.md), the [Nav Bar](navbar-configuration.md), and so forth. The Reference Guide contains pages on these and other important topics. It is useful to at least skim all of the pages in the Reference Guide so you are aware of the different features of Morea when developing your site.
+Now that you have a basic understanding of using Morea, let's get to the real reason you are here: to create actual modules for actual courses.

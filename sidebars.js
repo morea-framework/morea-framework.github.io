@@ -31,7 +31,7 @@ module.exports = {
             'instructors/quick-start',
             {
               type: 'category',
-              label: 'Cloud',
+              label: 'Cloud development',
               collapsed: true,
               items: [
                 'instructors/cloud-installation',
@@ -40,14 +40,15 @@ module.exports = {
             },
             {
               type: 'category',
-              label: 'Local',
+              label: 'Local development',
               collapsed: true,
               items: [
                 'instructors/local-installation',
                 'instructors/local-development',
               ]
             },
-
+            'instructors/module-design',
+            'instructors/module-implementation',
 
           ]
         },
