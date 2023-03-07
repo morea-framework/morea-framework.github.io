@@ -8,6 +8,10 @@ Now that you have designed your module, let's get to the fun part: implementatio
 In this section, we will illustrate the activities using cloud-based development (Gitpod), but there are very few differences for local development (and we'll point them out as we go).
 :::
 
+The following video provides a walkthrough of the instructions in this page.
+
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/twz1YXF-JFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Prepare your workspace
 
 I assume that you've already gone through the local or cloud-based "installation" and "development" sections, so you have a running Morea template site. To start, make sure that you can build and view the site without error. This means you can run `bundle exec jekyll serve` and (1) no error messages result, and (2) you can display the site successfully at the URL listed in the "Server address" field. For example:
