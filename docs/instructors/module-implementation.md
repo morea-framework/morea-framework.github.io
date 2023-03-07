@@ -20,7 +20,7 @@ I assume that you've already gone through the local or cloud-based "installation
 
 Notice that there are no errors following the invocation of `bundle exec jekyll serve`. 
 
-:::warning Restarting a workspace requires re-running `bundle install`
+:::warning Restarting a Gitpod workspace requires re-running `bundle install`
 Gitpod automatically "stops" workspaces after 30 minutes of inactivity.  To resume work, you need to "restart" the workspace.
 
 When a stopped Gitpod workspace is restarted, you will need to run `bundle install` again. If you get an error when you run `bundle exec jekyll serve`, this might be the reason.
@@ -501,6 +501,10 @@ Notice that all of the schedule entries are clickable URLs: the module entry tak
 ## Commit, push, and publish 
 
 Our module is looking pretty good, so let's publish our changes. 
+
+:::tip **Modifications for local development**
+If you are doing local development, you will use GitHub Desktop (or your favorite local git client) rather than using the facilities inside VS Code for the Browser. 
+:::
 
 First, click on the "Source Control" icon in the left sidebar (it should have a badge listing a dozen or so changes). You will see a list of files, so marked with an "M" indicating that they've been modified, and some marked with a "U", indicating that they are "untracked" by git.
 
