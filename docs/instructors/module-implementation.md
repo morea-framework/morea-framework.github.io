@@ -10,7 +10,7 @@ In this section, we will illustrate the activities using cloud-based development
 
 The following video provides a walkthrough of the instructions in this page.
 
-<iframe width="100%" height="415" src="https://www.youtube.com/embed/twz1YXF-JFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="415" src="https://www.youtube.com/embed/4FYZN5ZqoSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Prepare your workspace
 
