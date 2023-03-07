@@ -39,13 +39,17 @@ Readings are passive learning opportunities.  Experiences are active learning op
 
 In the Dart Design module, there are two readings and two experiences, which seems to be a reasonable first cut at a design.  Please note that it is difficult to know a priori if you have achieved the right balance. The only way to know for sure is by getting feedback from the students in some fashion. You could ask them, and/or you could test them. If, for example, you test them and they do poorly, then this might mean that you have not provided them with the appropriate set of readings and experiences.
 
-### Outcome descriptions are important
+### High quality outcome descriptions are important
 
-In Morea, providing high quality module Outcome descriptions are important for two reasons.
+Providing high quality Outcome descriptions for each module are important for several reasons.
 
 First, when they are aggregated together on the Outcomes page of a Morea site, the result is a high quality description of what students will obtain from the entire course.
 
-Second, high quality module descriptions encourage reusability, by making it clear what students can be expected to know and do following the module.
+Second, high quality Outcome descriptions facilitate reusability, by making it clear what students can be expected to know and do (and, conversely, what students should not be expected to know and do) following the completion of the Module.
+
+Third, high quality Outcome descriptions are "assessable": it should be possible to determine (via one or more Assessments) whether or not students have actually acquired the Outcome by the end of the Module. This is important because if students do poorly on the Assessment, it might indicate the need to revise the Readings, Experiences, and/or Outcomes.
+
+Thus, to obtain and maintain a high quality Outcome description, you should review it when adding or revising Readings, Experiences, and Assessments.  For example, you may need to modify your Assessment activity in light of your specified Outcome, or vice-versa.   
 
 
 ### Experiences should collectively assess all outcomes
