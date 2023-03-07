@@ -21,18 +21,21 @@ module.exports = {
       type: 'category',
       label: 'Instructor Guide',
       collapsed: false,
+      link: {type: 'generated-index'},
       items: [
         'instructors/overview',
         {
           type: 'category',
           label: 'Getting Started',
           collapsed: true,
+          link: {type: 'generated-index'},
           items: [
             'instructors/quick-start',
             {
               type: 'category',
               label: 'Cloud development',
               collapsed: true,
+              link: {type: 'generated-index'},
               items: [
                 'instructors/cloud-installation',
                 'instructors/cloud-development',
@@ -42,6 +45,7 @@ module.exports = {
               type: 'category',
               label: 'Local development',
               collapsed: true,
+              link: {type: 'generated-index'},
               items: [
                 'instructors/local-installation',
                 'instructors/local-development',
@@ -56,6 +60,7 @@ module.exports = {
           type: 'category',
           label: 'Reference',
           collapsed: true,
+          link: {type: 'generated-index'},
           items: [
             'instructors/pedagogical-pattern',
             'instructors/entity-types',
@@ -87,6 +92,7 @@ module.exports = {
       type: 'category',
       label: 'Change-HI',
       collapsed: false,
+      link: {type: 'generated-index'},
       items: [
         'change-hi/overview',
         'change-hi/getting-started',
@@ -99,6 +105,7 @@ module.exports = {
       type: 'category',
       label: 'Developer Guide',
       collapsed: true,
+      link: {type: 'generated-index'},
       items: [
           'developers/overview',
           'developers/morea-generator',
@@ -111,6 +118,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Evaluation',
+      link: {type: 'generated-index'},
       collapsed: true,
       items: [
         'evaluation/case-study-may-2015',

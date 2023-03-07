@@ -143,6 +143,19 @@ morea_sort_order: 7
 * You can create GitHub repos containing small Dart applications.
 ```
 
+:::info Morea uses Markdown
+When writing outcomes, readings, experiences, and assessments, you'll use Markdown to format your code. If you're not familiar with Markdown, here are a few resources:
+* [Overview of Markdown](https://www.markdownguide.org/getting-started/)
+* [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+In addition, Morea provides some useful extensions. For example, see the Reference pages on
+[equation support](/docs/instructors/equation-support), 
+[formatting code](/docs/instructors/formatting-code), 
+[embedding video](/docs/instructors/embed-video), 
+[icons](/docs/instructors/icons), 
+[tables](/docs/instructors/tables), and
+[admonitions](/docs/instructors/admonitions).
+:::
 Next, we have to update the module-dart.md file to include this Morea entity by providing its `morea_id` in the `morea_outcomes:` section:
 
 ```md
@@ -493,7 +506,7 @@ Our design document said that the Intro to Dart for Java Developers experience w
 
 When you're all finished, do a `control-c`, `control-p`, `return` and refresh the Schedule page. It should look something like this:
 
-![](/img/module-design/module-design-11.png)
+![](/img/module-design/module-design-15.png)
 
 
 Notice that all of the schedule entries are clickable URLs: the module entry takes you to the module page, and the experience and assessment entries take you to their pages as well. 
