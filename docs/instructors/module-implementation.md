@@ -20,6 +20,12 @@ I assume that you've already gone through the local or cloud-based "installation
 
 Notice that there are no errors following the invocation of `bundle exec jekyll serve`. 
 
+:::warning Restarting a workspace requires re-running `bundle install`
+Gitpod automatically "stops" workspaces after 30 minutes of inactivity.  To resume work, you need to "restart" the workspace.
+
+When a stopped Gitpod workspace is restarted, you will need to run `bundle install` again. If you get an error when you run `bundle exec jekyll serve`, this might be the reason.
+:::
+
 Clicking on the Server address link (`http://127.0.0.1:4000/ics888s23`) brings up the home page for my site in a new browser tab:
 
 ![](/img/module-design/module-design-2.png)
@@ -337,9 +343,74 @@ Now the module is really coming together:
 
 ![](/img/module-design/module-design-10.png)
 
+## Define assessments
+
+The Dart design document defines one assessment. After updating, assessment-dart.md might look like this:
+
+```md
+---
+title: "Solve a problem with Dart"
+published: true
+morea_id: assessment-dart
+morea_summary: "So simple you'll need less than 30 minutes"
+morea_outcomes_assessed:
+ - outcome-dart
+morea_type: assessment
+morea_labels:
+morea_start_date: "2021-07-16T09:00"
+morea_sort_order: 2
+---
+
+# Solve a problem with Dart
+
+For this assessment, you will be given a problem to solve using Dart within 30 minutes in class. 
+
+It will require you to:
+* Have the Dart SDK, GitHub Desktop, and IntelliJ installed on your laptop.
+* Create a GitHub repo.
+* Use DartPad and the Dart programming language to solve a problem.
+
+You must work alone, but you can use any non-human Internet resources (Google, ChatGPT, etc.)
+
+The actual problem, and submission instructions, will be provided in-class on the day of this assessment.
+```
+Update module-dart.md to include this assessment:
+
+```md
+---
+title: "Introduction to Dart"
+published: true
+morea_coming_soon: false
+morea_id: module-dart
+morea_prerequisites:
+morea_outcomes:
+  - outcome-dart
+morea_readings:
+  - reading-dart-language-tour
+  - reading-effective-dart
+morea_experiences:
+  - experience-dart-for-java-developers
+  - experience-dart-cool-features
+morea_assessments:
+  - assessment-dart
+morea_type: module
+morea_icon_url: /morea/dart/dart.png
+morea_start_date: "2023-03-06"
+morea_end_date: "2023-03-13"
+morea_labels:
+morea_sort_order: 21
+---
+
+Provides an overview of elementary Dart programming constructs and tools.
+```
+
+And the module structure is complete:
+
+![](/img/module-design/module-design-14.png)
+
 ## Define the module schedule
 
-You may have noticed some dates associated with modules and experiences, and a "Schedule" page that appears to be empty. Let's fix that now.
+You may have noticed some dates associated with modules, experiences, and assessments. Also, the "Schedule" page appears to be empty. Let's fix that now.
 
 ### Edit schedule/index.html
 
@@ -405,27 +476,27 @@ We won't deal with the `holidayData` variable for this tutorial, but definitely 
 
 ### Edit module start and end dates
 
-Now edit the `morea_start_date:` and `morea_end_date:` fields in module-dart.md. The Dart design document said this module was a week long, but did not indicate exactly which week. Go ahead and edit these fields so that the module lasts for one week during the current month. For example:
+Now edit the `morea_start_date:` and `morea_end_date:` fields in module-dart.md. The Dart design document said this module was a week long, but did not indicate exactly which week. Go ahead and edit these fields so that the module lasts for one week during the current month, starting on Tuesday and ending on the following Monday. For example:
 
 ```md
-morea_start_date: "2023-03-06"
-morea_end_date: "2023-03-13"
+morea_start_date: "2023-03-07"
+morea_end_date: "2023-03-14"
 ```
 
 Do a `control-c`, `control-p`, `return` and refresh the Schedule page to see if the module is now listed for the current month.
 
-### Edit experience due dates
+### Edit experience and assessment due dates
 
-Let's now edit the `morea_start_date:` fields associated with our two experiences. These dates (and times) will indicate the "due date" associated with the experience. 
+Let's now edit the `morea_start_date:` fields associated with our experiences and assessments. These dates (and times) will indicate the "due date" associated with the experience. 
 
-Our design document said that the Intro to Dart for Java Developers experience was due on Day 4, and the Cool Features of Dart experience was due on Day 7, so let's update the fields appropriately.
+Our design document said that the Intro to Dart for Java Developers experience was due on Day 4, the Cool Features of Dart experience was due on Day 6, and assessment was due on Day 7 (in class). Let's update the fields appropriately.
 
 When you're all finished, do a `control-c`, `control-p`, `return` and refresh the Schedule page. It should look something like this:
 
 ![](/img/module-design/module-design-11.png)
 
 
-Notice that all of the schedule entries are clickable URLs: the module entry takes you to the module page, and the experience entries take you to their pages as well. 
+Notice that all of the schedule entries are clickable URLs: the module entry takes you to the module page, and the experience and assessment entries take you to their pages as well. 
 
 ## Commit, push, and publish 
 
