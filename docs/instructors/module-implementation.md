@@ -526,4 +526,4 @@ Just FYI, there remains a few additional edits to make this site your own:
 2. `footer.md`. Edit this file to change the content appearing in the footer of all pages. 
 3. `introduction/`. You probably want an Introduction module, but you probably want to change its contents.
 4. `morea/prerequisites`. If you want to define prerequisite modules for any of our modules, use the file in this directory as an example. 
-5. `morea_sort_order`. As the number of modules and outcomes grow, 
+5. `morea_sort_order:`. As the number of modules and outcomes grow, you should adjust the `morea_sort_order:` field in the front matter associated with each module and outcome file so that the modules and outcomes appear in an appropriate order in their respective index pages.  
