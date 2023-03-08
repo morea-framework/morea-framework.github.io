@@ -76,19 +76,17 @@ Just because you provide a solution doesn't mean you can't require submission of
 
 ### Assessments collectively cover all Outcomes
 
-Assessments differ from Experiences in that they typically occur at the end of the module, and they also do not provide the solution along with the problem. Assessments enable both students and instructors to determine if they have studied the Readings and engaged with the Experiences in sufficient depth to achieve the Outcomes associated with the module. 
+Assessments differ from Experiences in that they typically occur at the end of the module, and they do not provide the solution along with the problem. Assessments enable both the student and the instructor to determine if the student has studied the Readings and engaged with the Experiences in sufficient depth to achieve the Outcomes associated with the module. 
 
 Assessments should be designed such that success demonstrates facility with all of the Outcomes associated with the module. If they do not, then you should adjust either the Outcomes or the Assessments so that they are compatible. 
 
-Assessments thus provide a "quality assurance" check on your Learning Outcomes: an Outcome that cannot be assessed is not a good Outcome. 
+Assessments thus provide a "quality assurance" check on your Learning Outcomes: an Outcome description that cannot be assessed should be re-written.
 
 ### Midterm and final exams fall outside the scope of Morea
 
-By definition, midterm and final exams assess material spanning multiple modules.  While midterms and finals can be useful, they generally fall outside the scope of Morea and typically do not serve the function of Morea Assessments.
+By definition, midterm and final exams assess material spanning multiple modules.  While midterms and finals can be useful, they generally fall outside the scope of Morea and typically do not fulfill the function of Morea Assessments.
 
-If your course currently includes only a midterm and final, then converting it to Morea will have significant benefits for your students. The new structure will provide them with a more "incremental" assessment of whether or not they are learning what you desire for them to learn from the course.  These assessment results will enable them to make adjustments to their study habits and engagement with the course, and you as the instructor to make adjustments to the material and pedagogy (based on aggregate assessment results), all of which should improve the odds of success. 
-
-
+If your course currently includes only a midterm and final as the sole manner of assessing student learning, then redesigning it to use Morea will have significant benefits for your students. The new structure will provide them with a more "incremental" assessment of whether or not they are learning what you desire for them to learn from the course.  These assessment results will enable them to make adjustments to improve their study habits and engagement with the course, and they will also help you as the instructor to make adjustments to the material and pedagogy (based on aggregate assessment results).
 
 ### BTW, Laulima "modules" often don't conform to Morea best practices
 
