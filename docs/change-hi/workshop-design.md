@@ -112,20 +112,3 @@ As you can see, designing and implementing a workshop for the first time require
 In most cases, it is sufficient to reserve a week for initial design and implementation. That said, I do not recommend you issue the pull request the night before the workshop is scheduled to take place!  For one thing, if you do that, then there's no opportunity for participants to do any pre-workshop readings. For another, it does not allow any time for review and fine-tuning of your workshop materials.
 
 So, it's best to plan to complete your initial implementation and issue your pull request around 7-10 days prior to the workshop date. That leaves a few days for your workshop to be integrated into the site, and circulated for review by other instructors who might have feedback on your approach.  Making small changes to a workshop module, once successfully integrated, is typically quick and easy, and so if you follow this schedule, you should be able to send your participants a link to the workshop module page around 5-7 days prior to the workshop date. 
-
-For example, here is a proposed timeline and instructor assignments for workshop development for AY 2022-2023, based on the schedule as of Sept 13, 2022.  Please check [here](https://docs.google.com/spreadsheets/d/1zwCIk9x__sVek02c8cz1w1Vl_L8LiyNKwzomQ2j-vSs/edit#gid=0) for the current schedule and instructor assignments, which may differ from that shown below.
-
-| Workshop                   | Instructor(s)     | Start Development | Issue Pull Request | Run Workshop |
-|----------------------------|-------------------|-------------------|--------------------|--------------|
-| FAIR                       | Cleveland         | 10/7              | 10/14              | 10/21        | 
-| Scientific Software Basics | Merrill           | 10/14             | 10/21              | 10/28        | 
-| HPC                        | Schanzenbach      | 10/21             | 10/28              | 11/4         | 
-| Data Movement              | Whinery/Cleveland | 11/18             | 11/25              | 12/2         | 
-| Data Wrangling             | Belcaid           | 1/20              | 1/27               | 2/3          | 
-| Machine Learning           | Sadowski          | 2/3               | 2/10               | 2/17         | 
-| Visualization              | Leigh/Marshall    | 2/10              | 2/17               | 2/24         | 
-| Smart Sensors              | McLean            | 3/10              | 3/17               | 3/24         | 
-| Creative Thinking          | Leigh/Kirshenbaum | 3/7               | 3/14               | 3/21         |
-| Scientific Workflows       | Geis              | 4/7               | 4/14               | 4/21         |
-| Data Biases                | Tipton            | ?                 | ?                  | ?            |
-| JEDI                       | Stokes/Turner     | ?                 | ?                  | ?            |

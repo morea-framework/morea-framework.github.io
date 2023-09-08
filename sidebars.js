@@ -99,6 +99,7 @@ module.exports = {
         'change-hi/workshop-design',
         'change-hi/tips',
         'change-hi/admin-editing',
+        'change-hi/workshop-design-checklist',
       ],
     },
     {
