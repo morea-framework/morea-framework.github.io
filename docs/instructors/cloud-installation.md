@@ -54,7 +54,17 @@ Click the "New Workspace" button, which should bring up a pull-down menu that al
 
 ![](/img/cloud-development/gitpod-1.3.png)
 
-Select your repository and you should see a page like this:
+:::info No repository in the menu? No problem!
+If you just created your repo recently, it may not appear in the pull-down menu. In this case, just type the URL to your repo directly into the text field and type return.  For example, if your repo is called `ics299s24.github.io` and is located in the organization `philipmjohnson`, then you would type the following into the text field:
+
+```
+https://github.com/philipmjohnson/ics299s24.github.io
+```
+
+After you type return, the pull-down menu should refresh to display a workspace for that repo. Just select it and you should now be on your way.
+:::
+
+After selecting your repository, you should see a page like this:
 
 ![](/img/cloud-development/gitpod-1.4.png)
 
