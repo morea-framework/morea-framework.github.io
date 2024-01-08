@@ -48,6 +48,17 @@ In this example, the bottom section, "Workflow permissions", indicates that the 
 
 ![image](/img/quick-start/workflow-permissions-2.png)
 
+## Configure "Build and Deployment"
+
+Next, click on the "Pages" link in the left sidebar. A page like this should show up: 
+
+![image](/img/quick-start/pages-1.png)
+
+Pull down the menu item displaying "Deploy from a branch", and set it to "GitHub Actions" instead:
+
+![image](/img/quick-start/pages-2.png)
+
+
 ## Edit the config.yml file
 
 Now, click on the "Code" tab at the top of the page to return to the listing of files in this repository. Scroll down the list of files until you see "_config.yml", and click it. You should see the following:
